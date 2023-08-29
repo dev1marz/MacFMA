@@ -333,7 +333,7 @@ FullNavMenu As CanvasComponent:
                 HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =280
-                OnSelect: =Navigate(Persons)
+                OnSelect: =Navigate(StaffScreen)
                 PaddingBottom: =5.00
                 PaddingLeft: =5.00
                 Size: =18.00

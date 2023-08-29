@@ -8,7 +8,7 @@ AddEditScreenTemplate As screen:
     "'(GalleryScreenName)' As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         BorderColor: =RGBA(243, 245, 245, 1)
         Height: =329.00
-        Items: = If(IsBlank('SearchInput(ScreenName)'.Text),MarzV2Persons,Filter(MarzV2Persons,('SearchInput(ScreenName)'.Text in PersonID Or 'SearchInput(ScreenName)'.Text in EmailAddress)))
+        Items: = If(IsBlank('SearchInput(ScreenName)'.Text),macfmastaffs,Filter(macfmastaffs,('SearchInput(ScreenName)'.Text in PersonID Or 'SearchInput(ScreenName)'.Text in EmailAddress)))
         Layout: =Layout.Vertical
         OnSelect: =
         Selectable: =If(ScreenState =0, true)
@@ -58,7 +58,7 @@ AddEditScreenTemplate As screen:
 
     "'Form(ScreenName)' As form":
         BorderColor: =RGBA(197, 203, 207, 1)
-        DataSource: =MarzV2Persons
+        DataSource: =macfmastaffs
         DefaultMode: =If(ScreenState = 1,FormMode.Edit,FormMode.View)
         Height: =430.00
         Item: ='(GalleryScreenName)'.Selected
@@ -75,10 +75,10 @@ AddEditScreenTemplate As screen:
             DataField: ="crf01_surname"
             Default: =ThisItem.Surname
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MarzV2Persons],DataSourceInfo.DisplayName,"crf01_surname")
+            DisplayName: =DataSourceInfo([@macfmastaffs],DataSourceInfo.DisplayName,"crf01_surname")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@MarzV2Persons], DataSourceInfo.MaxLength, "crf01_surname")
+            MaxLength: =DataSourceInfo([@macfmastaffs], DataSourceInfo.MaxLength, "crf01_surname")
             Required: =false
             Update: =DataCardValue36_1.Text
             Width: =640
@@ -166,10 +166,10 @@ AddEditScreenTemplate As screen:
             DataField: ="emailaddress"
             Default: =ThisItem.EmailAddress
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MarzV2Persons],DataSourceInfo.DisplayName,"emailaddress")
+            DisplayName: =DataSourceInfo([@macfmastaffs],DataSourceInfo.DisplayName,"emailaddress")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@MarzV2Persons], DataSourceInfo.MaxLength, "emailaddress")
+            MaxLength: =DataSourceInfo([@macfmastaffs], DataSourceInfo.MaxLength, "emailaddress")
             Required: =false
             Update: =DataCardValue25_1.Text
             Width: =640
@@ -257,10 +257,10 @@ AddEditScreenTemplate As screen:
             DataField: ="crf01_cellnumber"
             Default: =ThisItem.CellNumber
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MarzV2Persons],DataSourceInfo.DisplayName,"crf01_cellnumber")
+            DisplayName: =DataSourceInfo([@macfmastaffs],DataSourceInfo.DisplayName,"crf01_cellnumber")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@MarzV2Persons], DataSourceInfo.MaxLength, "crf01_cellnumber")
+            MaxLength: =DataSourceInfo([@macfmastaffs], DataSourceInfo.MaxLength, "crf01_cellnumber")
             Required: =false
             Update: =DataCardValue29_1.Text
             Width: =640
@@ -349,10 +349,10 @@ AddEditScreenTemplate As screen:
             DataField: ="crf01_personid"
             Default: =ThisItem.PersonID
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MarzV2Persons],DataSourceInfo.DisplayName,"crf01_personid")
+            DisplayName: =DataSourceInfo([@macfmastaffs],DataSourceInfo.DisplayName,"crf01_personid")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@MarzV2Persons], DataSourceInfo.MaxLength, "crf01_personid")
+            MaxLength: =DataSourceInfo([@macfmastaffs], DataSourceInfo.MaxLength, "crf01_personid")
             Required: =true
             Update: =DataCardValue23_1.Text
             Width: =640

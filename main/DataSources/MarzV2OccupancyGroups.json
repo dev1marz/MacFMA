@@ -6,7 +6,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_marzv2occupancygroups",
-    "MaxGetRowsCount": 500,
     "Name": "MarzV2OccupancyGroups",
     "NativeCDSDataSourceInfoNameMapping": {
       "createdby": "Created By",

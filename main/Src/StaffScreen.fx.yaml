@@ -1,4 +1,4 @@
-Persons As screen:
+StaffScreen As screen:
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
     OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Persons");
@@ -7,7 +7,7 @@ Persons As screen:
     "PersonsGallery As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         BorderColor: =RGBA(243, 245, 245, 1)
         Height: =329.00
-        Items: = If(IsBlank(PersonSearchInput.Text),MarzV2Persons,Filter(MarzV2Persons,(PersonSearchInput.Text in PersonID Or PersonSearchInput.Text in EmailAddress)))
+        Items: = If(IsBlank(PersonSearchInput.Text),MacFMAStaffs,Filter(MacFMAStaffs,(PersonSearchInput.Text in StaffID Or PersonSearchInput.Text in Surname)))
         Layout: =Layout.Vertical
         OnSelect: =
         Selectable: =If(ScreenState =0, true)
@@ -29,7 +29,7 @@ Persons As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20.00
-            Text: =ThisItem.PersonID
+            Text: =ThisItem.StaffID
             VerticalAlign: =VerticalAlign.Top
             Width: =300
             X: =17
@@ -48,7 +48,7 @@ Persons As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20.00
-            Text: =ThisItem.EmailAddress
+            Text: =ThisItem.Surname
             VerticalAlign: =VerticalAlign.Top
             Width: =255
             X: =321
@@ -57,7 +57,7 @@ Persons As screen:
 
     PersonsForm As form:
         BorderColor: =RGBA(197, 203, 207, 1)
-        DataSource: =MarzV2Persons
+        DataSource: =MacFMAStaffs
         DefaultMode: =If(ScreenState = 1,FormMode.Edit,FormMode.View)
         Height: =430.00
         Item: =PersonsGallery.Selected
@@ -68,24 +68,24 @@ Persons As screen:
         Y: =87
         ZIndex: =2
 
-        Surname_DataCard1 As typedDataCard.textualEditCard:
+        IDNumber_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="crf01_surname"
-            Default: =ThisItem.Surname
+            DataField: ="crf01_idnumber"
+            Default: =ThisItem.IDNumber
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MarzV2Persons],DataSourceInfo.DisplayName,"crf01_surname")
+            DisplayName: =DataSourceInfo([@MacFMAStaffs],DataSourceInfo.DisplayName,"crf01_idnumber")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@MarzV2Persons], DataSourceInfo.MaxLength, "crf01_surname")
-            Required: =false
-            Update: =DataCardValue36.Text
+            MaxLength: =DataSourceInfo([@MacFMAStaffs], DataSourceInfo.MaxLength, "crf01_idnumber")
+            Required: =true
+            Update: =DataCardValue3.Text
             Width: =640
             X: =0
-            Y: =1
+            Y: =4
             ZIndex: =1
 
-            DataCardKey43 As label:
+            DataCardKey4 As label:
                 AutoHeight: =true
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -98,7 +98,7 @@ Persons As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue36 As text:
+            DataCardValue3 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
@@ -124,10 +124,10 @@ Persons As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey43.Y + DataCardKey43.Height + 5
+                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
                 ZIndex: =2
 
-            ErrorMessage53 As label:
+            ErrorMessage2 As label:
                 AutoHeight: =true
                 Color: =RGBA(255, 51, 51, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -143,53 +143,144 @@ Persons As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue36.Y + DataCardValue36.Height
+                Y: =DataCardValue3.Y + DataCardValue3.Height
                 ZIndex: =3
 
-            StarVisible53 As label:
+            StarVisible2 As label:
                 Align: =Align.Center
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey43.Height
+                Height: =DataCardKey4.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey43.Y
+                Y: =DataCardKey4.Y
                 ZIndex: =4
 
-        EmailAddress_DataCard1 As typedDataCard.textualEditCard:
+        Surname_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="emailaddress"
-            Default: =ThisItem.EmailAddress
+            DataField: ="crf01_surname"
+            Default: =ThisItem.Surname
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MarzV2Persons],DataSourceInfo.DisplayName,"emailaddress")
+            DisplayName: =DataSourceInfo([@MacFMAStaffs],DataSourceInfo.DisplayName,"crf01_surname")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@MarzV2Persons], DataSourceInfo.MaxLength, "emailaddress")
-            Required: =false
-            Update: =DataCardValue25.Text
+            MaxLength: =DataSourceInfo([@MacFMAStaffs], DataSourceInfo.MaxLength, "crf01_surname")
+            Required: =true
+            Update: =DataCardValue5.Text
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey5 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                ZIndex: =2
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey5.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey5.Y
+                ZIndex: =4
+
+        Position_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_position"
+            Default: =ThisItem.Position
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAStaffs],DataSourceInfo.DisplayName,"crf01_position")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MacFMAStaffs], DataSourceInfo.MaxLength, "crf01_position")
+            Required: =true
+            Update: =DataCardValue6.Text
             Width: =640
             X: =0
             Y: =2
             ZIndex: =1
 
-            DataCardKey30 As label:
+            DataCardKey6 As label:
                 AutoHeight: =true
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
                 Size: =21
-                Text: ="Email Address"
+                Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue25 As text:
+            DataCardValue6 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
@@ -215,10 +306,10 @@ Persons As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey30.Y + DataCardKey30.Height + 5
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
                 ZIndex: =2
 
-            ErrorMessage51 As label:
+            ErrorMessage4 As label:
                 AutoHeight: =true
                 Color: =RGBA(255, 51, 51, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -234,54 +325,53 @@ Persons As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue25.Y + DataCardValue25.Height
+                Y: =DataCardValue6.Y + DataCardValue6.Height
                 ZIndex: =3
 
-            StarVisible51 As label:
+            StarVisible4 As label:
                 Align: =Align.Center
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey30.Height
+                Height: =DataCardKey6.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey30.Y
+                Y: =DataCardKey6.Y
                 ZIndex: =4
 
-        CellNumber_DataCard1 As typedDataCard.textualEditCard:
+        ContactNumber_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="crf01_cellnumber"
-            Default: =ThisItem.CellNumber
+            DataField: ="crf01_contactnumber"
+            Default: =ThisItem.ContactNumber
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MarzV2Persons],DataSourceInfo.DisplayName,"crf01_cellnumber")
+            DisplayName: =DataSourceInfo([@MacFMAStaffs],DataSourceInfo.DisplayName,"crf01_contactnumber")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@MarzV2Persons], DataSourceInfo.MaxLength, "crf01_cellnumber")
-            Required: =false
-            Update: =DataCardValue29.Text
+            MaxLength: =DataSourceInfo([@MacFMAStaffs], DataSourceInfo.MaxLength, "crf01_contactnumber")
+            Required: =true
+            Update: =DataCardValue7.Text
             Width: =640
             X: =0
             Y: =3
             ZIndex: =1
 
-            DataCardKey34 As label:
+            DataCardKey7 As label:
                 AutoHeight: =true
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
                 Size: =21
-                Text: |
-                    ="Cell Number"
+                Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue29 As text:
+            DataCardValue7 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
@@ -307,10 +397,10 @@ Persons As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey34.Y + DataCardKey34.Height + 5
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
                 ZIndex: =2
 
-            ErrorMessage52 As label:
+            ErrorMessage5 As label:
                 AutoHeight: =true
                 Color: =RGBA(255, 51, 51, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -326,53 +416,53 @@ Persons As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue29.Y + DataCardValue29.Height
+                Y: =DataCardValue7.Y + DataCardValue7.Height
                 ZIndex: =3
 
-            StarVisible52 As label:
+            StarVisible5 As label:
                 Align: =Align.Center
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey34.Height
+                Height: =DataCardKey7.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey34.Y
+                Y: =DataCardKey7.Y
                 ZIndex: =4
 
-        PersonID_DataCard2 As typedDataCard.textualEditCard:
+        StaffID_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="crf01_personid"
-            Default: =ThisItem.PersonID
+            DataField: ="crf01_staffid"
+            Default: =ThisItem.StaffID
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MarzV2Persons],DataSourceInfo.DisplayName,"crf01_personid")
+            DisplayName: =DataSourceInfo([@MacFMAStaffs],DataSourceInfo.DisplayName,"crf01_staffid")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@MarzV2Persons], DataSourceInfo.MaxLength, "crf01_personid")
+            MaxLength: =DataSourceInfo([@MacFMAStaffs], DataSourceInfo.MaxLength, "crf01_staffid")
             Required: =true
-            Update: =DataCardValue23.Text
+            Update: =DataCardValue1.Text
             Width: =640
             X: =0
             Y: =0
             ZIndex: =3
 
-            DataCardKey28 As label:
+            DataCardKey1 As label:
                 AutoHeight: =true
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
                 Size: =21
-                Text: ="Person Name"
+                Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue23 As text:
+            DataCardValue1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
@@ -398,10 +488,10 @@ Persons As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey28.Y + DataCardKey28.Height + 5
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage50 As label:
+            ErrorMessage1 As label:
                 AutoHeight: =true
                 Color: =RGBA(255, 51, 51, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -417,20 +507,20 @@ Persons As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue23.Y + DataCardValue23.Height
+                Y: =DataCardValue1.Y + DataCardValue1.Height
                 ZIndex: =3
 
-            StarVisible50 As label:
+            StarVisible1 As label:
                 Align: =Align.Center
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey28.Height
+                Height: =DataCardKey1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey28.Y
+                Y: =DataCardKey1.Y
                 ZIndex: =4
 
     FormButtonContainer As groupContainer.horizontalAutoLayoutContainer:

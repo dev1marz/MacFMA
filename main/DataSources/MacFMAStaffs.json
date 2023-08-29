@@ -1,0 +1,102 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmastaffses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmastaffs",
+    "Name": "MacFMAStaffs",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_contactnumber": "ContactNumber",
+      "crf01_crf01_macfmafacilities_HeadOfFacility_crf": "MacFMAFacilities",
+      "crf01_crf01_macfmamaintainances_CompletedBy_crf": "MacFMAMaintainances",
+      "crf01_crf01_macfmaresidents_Caretaker_crf01_mac": "MacFMAResidents",
+      "crf01_crf01_macfmaworkorders_CreatedBy_crf01_ma": "MacFMAWorkOrders",
+      "crf01_department": "Department",
+      "crf01_idnumber": "IDNumber",
+      "crf01_macfmastaffs_AsyncOperations": "System Jobs",
+      "crf01_macfmastaffs_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmastaffs_DuplicateBaseRecord": "Duplicate Records (crf01_macfmastaffs_DuplicateBaseRecord)",
+      "crf01_macfmastaffs_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmastaffs_DuplicateMatchingRecord)",
+      "crf01_macfmastaffs_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmastaffs_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmastaffs_ProcessSession": "Process Sessions",
+      "crf01_macfmastaffs_SyncErrors": "Sync Errors",
+      "crf01_macfmastaffsid": "MacFMAStaffs",
+      "crf01_position": "Position",
+      "crf01_staffid": "StaffID",
+      "crf01_surname": "Surname",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAStaffs",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAStaffs (Views)",
+    "Name": "_crf01_macfmastaffs_views",
+    "RelatedEntityName": "MacFMAStaffs",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "29b3828c-d6e8-4c86-ade1-9c03d5bf7a78": "MacFMAStaffs Associated View",
+      "3df3dabb-4d1d-4ff1-bba2-ddfebc6d88f9": "Active MacFMAStaffs",
+      "5b39e31a-422a-49ff-b5f1-2b07d94a22ef": "MacFMAStaffs Advanced Find View",
+      "5ed83691-81fa-4135-b068-6fed08549c17": "MacFMAStaffs Lookup View",
+      "71847015-adc5-4003-8052-9f680096b810": "Inactive MacFMAStaffs"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAStaffs)",
+    "Name": "crf01_macfmastaffs_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAStaffs"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAStaffs",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAStaffs)",
+    "Name": "crf01_macfmastaffs_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAStaffs"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAStaffs",
+    "Type": "OptionSetInfo"
+  }
+]

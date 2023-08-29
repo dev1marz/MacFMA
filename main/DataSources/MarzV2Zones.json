@@ -6,7 +6,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_marzv2zones",
-    "MaxGetRowsCount": 500,
     "Name": "MarzV2Zones",
     "NativeCDSDataSourceInfoNameMapping": {
       "createdby": "Created By",
