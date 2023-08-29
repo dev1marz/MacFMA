@@ -1,0 +1,103 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_marzv2fuelrecordses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_marzv2fuelrecords",
+    "MaxGetRowsCount": 500,
+    "Name": "MarzV2FuelRecords",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_attachment": "Attachment",
+      "crf01_literspurchased": "LitersPurchased",
+      "crf01_marzv2fuelrecords_AsyncOperations": "System Jobs",
+      "crf01_marzv2fuelrecords_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_marzv2fuelrecords_DuplicateBaseRecord": "Duplicate Records (crf01_marzv2fuelrecords_DuplicateBaseRecord)",
+      "crf01_marzv2fuelrecords_DuplicateMatchingRecord": "Duplicate Records (crf01_marzv2fuelrecords_DuplicateMatchingRecord)",
+      "crf01_marzv2fuelrecords_FileAttachments": "FileAttachments",
+      "crf01_marzv2fuelrecords_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_marzv2fuelrecords_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_marzv2fuelrecords_ProcessSession": "Process Sessions",
+      "crf01_marzv2fuelrecords_SyncErrors": "Sync Errors",
+      "crf01_marzv2fuelrecordsid": "MarzV2FuelRecords",
+      "crf01_odometerreading": "OdometerReading",
+      "crf01_recordid": "RecordID",
+      "crf01_submissionmethod": "SubmissionMethod",
+      "crf01_submittedby": "SubmittedBy",
+      "crf01_totalvalue": "TotalValue",
+      "crf01_transactiondate": "TransactionDate",
+      "crf01_Vehicle": "Vehicle",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MarzV2FuelRecords",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MarzV2FuelRecords (Views)",
+    "Name": "_crf01_marzv2fuelrecords_views",
+    "RelatedEntityName": "MarzV2FuelRecords",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "82c98f78-9737-430f-adbc-205e38cea105": "Inactive MarzV2FuelRecords",
+      "a9fc0d1f-c1ed-4b12-9906-cbf53faa3ea3": "MarzV2FuelRecords Associated View",
+      "dd51f2a0-f393-4de1-be32-ac109b0c6f49": "Active MarzV2FuelRecords",
+      "deb63f86-5e7d-47ad-888d-cac5c866e9c0": "MarzV2FuelRecords Lookup View",
+      "e87dedda-418d-4a72-8a05-d65cf8622ebe": "MarzV2FuelRecords Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (MarzV2FuelRecords)",
+    "Name": "crf01_marzv2fuelrecords_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MarzV2FuelRecords"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MarzV2FuelRecords",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MarzV2FuelRecords)",
+    "Name": "crf01_marzv2fuelrecords_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MarzV2FuelRecords"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MarzV2FuelRecords",
+    "Type": "OptionSetInfo"
+  }
+]

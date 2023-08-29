@@ -1,0 +1,96 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_marzv2subslinklockses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_marzv2subslinklocks",
+    "MaxGetRowsCount": 500,
+    "Name": "MarzV2SubsLinkLocks",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_linkid": "LinkID",
+      "crf01_Lock": "Lock",
+      "crf01_marzv2subslinklocks_AsyncOperations": "System Jobs",
+      "crf01_marzv2subslinklocks_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_marzv2subslinklocks_DuplicateBaseRecord": "Duplicate Records (crf01_marzv2subslinklocks_DuplicateBaseRecord)",
+      "crf01_marzv2subslinklocks_DuplicateMatchingRecord": "Duplicate Records (crf01_marzv2subslinklocks_DuplicateMatchingRecord)",
+      "crf01_marzv2subslinklocks_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_marzv2subslinklocks_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_marzv2subslinklocks_ProcessSession": "Process Sessions",
+      "crf01_marzv2subslinklocks_SyncErrors": "Sync Errors",
+      "crf01_marzv2subslinklocksid": "MarzV2SubsLinkLocks",
+      "crf01_Sub": "Sub",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MarzV2SubsLinkLocks",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MarzV2SubsLinkLocks (Views)",
+    "Name": "_crf01_marzv2subslinklocks_views",
+    "RelatedEntityName": "MarzV2SubsLinkLocks",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1496dc73-282a-4144-86b7-ad7f77b55f2f": "Inactive MarzV2SubsLinkLocks",
+      "1799661a-35de-4236-9bc2-4ed82656ec3a": "MarzV2SubsLinkLocks Lookup View",
+      "34eeee21-9f21-4720-b903-ac8e4a663bb1": "MarzV2SubsLinkLocks Associated View",
+      "89f8d19d-7b10-4899-971f-3dca88bf4988": "MarzV2SubsLinkLocks Advanced Find View",
+      "c8641f32-05a8-4a01-a10e-629cd91a78e3": "Active MarzV2SubsLinkLocks"
+    }
+  },
+  {
+    "DisplayName": "Status (MarzV2SubsLinkLocks)",
+    "Name": "crf01_marzv2subslinklocks_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MarzV2SubsLinkLocks"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MarzV2SubsLinkLocks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MarzV2SubsLinkLocks)",
+    "Name": "crf01_marzv2subslinklocks_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MarzV2SubsLinkLocks"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MarzV2SubsLinkLocks",
+    "Type": "OptionSetInfo"
+  }
+]

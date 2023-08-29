@@ -1,0 +1,628 @@
+ZoneScreen As screen:
+    Fill: =RGBA(29, 29, 29, 1)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Zones");
+
+    "ZoneGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Height: =346.00
+        Items: |-
+            = If(IsBlank(ZoneSearchInput.Text),MarzV2Zones,Filter(MarzV2Zones,(ZoneSearchInput.Text in ZoneID
+             Or ZoneSearchInput.Text in OccupantGroup.OccupancyGroupID
+             )))
+        Layout: =Layout.Vertical
+        OnSelect: =
+        Selectable: =If(ScreenState = 0,true)
+        TemplatePadding: =0.00
+        TemplateSize: =82.00
+        Width: =585
+        X: =31
+        Y: =777
+        ZIndex: =1
+
+        ZoneItem As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =51
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20.00
+            Text: =ThisItem.ZoneID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =282
+            Y: =17.00
+            ZIndex: =1
+
+        OccupantGroupItem As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =51
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20.00
+            Text: =ThisItem.OccupantGroup.OccupancyGroupID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =282
+            X: =297
+            Y: =17
+            ZIndex: =2
+
+    ZoneForm As form:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DataSource: =MarzV2Zones
+        DefaultMode: =If(ScreenState = 1,FormMode.Edit,FormMode.View)
+        Height: =427
+        Item: =ZoneGallery.Selected
+        OnFailure: =Notify("Error!", NotificationType.Error)
+        OnReset: =FormMode.New
+        OnSuccess: =Notify("Success",NotificationType.Success)
+        Width: =640
+        Y: =89.00
+        ZIndex: =2
+
+        ZoneID_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_zoneid"
+            Default: =ThisItem.ZoneID
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2Zones],DataSourceInfo.DisplayName,"crf01_zoneid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MarzV2Zones], DataSourceInfo.MaxLength, "crf01_zoneid")
+            Required: =true
+            Update: =DataCardValue27.Text
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey32 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: ="Zone ID"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue27 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey32.Y + DataCardKey32.Height + 5
+                ZIndex: =2
+
+            ErrorMessage31 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue27.Y + DataCardValue27.Height
+                ZIndex: =3
+
+            StarVisible31 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey32.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey32.Y
+                ZIndex: =4
+
+        OccupantGroup_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_OccupantGroup"
+            Default: =ThisItem.OccupantGroup
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2Zones],DataSourceInfo.DisplayName,"crf01_OccupantGroup")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue28.Selected
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey33 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: ="Occupant Group"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue28 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["crf01_occupancygroupid"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =70
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Items: =Choices([@MarzV2Zones].crf01_OccupantGroup)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SearchFields: =["crf01_occupancygroupid"]
+                SearchItems: =Search(Choices([@MarzV2Zones].crf01_OccupantGroup),DataCardValue28.SearchText,"crf01_occupancygroupid")
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey33.Y + DataCardKey33.Height + 5
+                ZIndex: =2
+
+            ErrorMessage39 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue28.Y + DataCardValue28.Height
+                ZIndex: =3
+
+            StarVisible40 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey33.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey33.Y
+                ZIndex: =4
+
+        Address_DataCard1 As typedDataCard.textualMultiLineEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_address"
+            Default: =ThisItem.Address
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2Zones],DataSourceInfo.DisplayName,"crf01_address")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue44.Text
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey53 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue44 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =140
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey53.Y + DataCardKey53.Height + 5
+                ZIndex: =2
+
+            ErrorMessage41 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue44.Y + DataCardValue44.Height
+                ZIndex: =3
+
+            StarVisible42 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey53.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey53.Y
+                ZIndex: =4
+
+        ZoneContactNumber_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_zonecontactnumber"
+            Default: =ThisItem.ZoneContactNumber
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2Zones],DataSourceInfo.DisplayName,"crf01_zonecontactnumber")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MarzV2Zones], DataSourceInfo.MaxLength, "crf01_zonecontactnumber")
+            Required: =false
+            Update: =DataCardValue42.Text
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey51 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: ="Zone Contact Number"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue42 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey51.Y + DataCardKey51.Height + 5
+                ZIndex: =2
+
+            ErrorMessage40 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue42.Y + DataCardValue42.Height
+                ZIndex: =3
+
+            StarVisible41 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey51.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey51.Y
+                ZIndex: =4
+
+    ZoneSearchInput As text:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: |
+            =If(ScreenState =1,DisplayMode.Disabled)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderThickness: =4
+        Height: =61.00
+        HintText: ="Search Zone by Number"
+        HoverBorderColor: =RGBA(197, 203, 207, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(62, 74, 83, 1)
+        PaddingBottom: =5.00
+        PaddingLeft: =12.00
+        Size: =21.00
+        Width: =577
+        X: =31
+        Y: =626
+        ZIndex: =3
+
+    ZoneEditAddBtnContainer As groupContainer.horizontalAutoLayoutContainer:
+        Height: =124.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Visible: =If(ScreenState = 0,true)
+        Width: =640
+        Y: =516.00
+        ZIndex: =4
+
+        EditZoneBtn As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =Set(ScreenState,1);ZoneForm.DisplayMode.Edit
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Edit Selected"
+            Visible: =If(ScreenState,0,true)
+            Width: =280
+            Y: =0.00
+            ZIndex: =1
+
+        NewZoneBtn As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(NavigationMenu = 1,DisplayMode.Disabled)
+            Fill: =RGBA(102, 182, 227, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: |-
+                =Set(ScreenState,1);NewForm(ZoneForm
+                )
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="New Zone"
+            Width: =280
+            Y: =0.00
+            ZIndex: =2
+
+    ZoneEditBtnContainer As groupContainer.horizontalAutoLayoutContainer:
+        Height: =124.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Visible: =If(ScreenState =1,true)
+        Width: =640
+        Y: =516.00
+        ZIndex: =5
+
+        ShopConfirmButton As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =SubmitForm(ZoneForm);Set(ScreenState,0)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Confirm"
+            Width: =280
+            Y: =0.00
+            ZIndex: =1
+
+        ShopCancelBtn As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 51, 51, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =ViewForm(ZoneForm);Set(ScreenState,0)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Cancel"
+            Width: =280
+            Y: =0.00
+            ZIndex: =2
+
+    ZoneLabels As groupContainer.horizontalAutoLayoutContainer:
+        BorderColor: =RGBA(220, 224, 226, 1)
+        Height: =71.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Width: =640
+        Y: =706
+        ZIndex: =8
+
+        ZoneNameLabel As label:
+            BorderColor: =RGBA(232, 234, 236, 1)
+            BorderStyle: =
+            BorderThickness: =
+            Color: =RGBA(243, 245, 245, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =70.00
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =21.00
+            Text: |-
+                ="Zone Name
+                "
+            Width: =290
+            X: =290
+            Y: =0.00
+            ZIndex: =1
+
+        OccupantGroupLabel As label:
+            BorderColor: =RGBA(232, 234, 236, 1)
+            BorderStyle: =
+            BorderThickness: =2
+            Color: =RGBA(243, 245, 245, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =70.00
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =21.00
+            Text: ="Occupant Group"
+            Width: =290
+            X: =27
+            Y: =0.00
+            ZIndex: =2
+
+    FullNavMenuV2_12 As FullNavMenuV2:
+        Width: =640
+        ZIndex: =9
+

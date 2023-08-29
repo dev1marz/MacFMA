@@ -1,0 +1,23 @@
+"'bad541a0-212f-4465-bf45-963cc8ae22eb' As TestSuite":
+    Description: =""
+    DisplayName: ="Suite"
+
+    "'f771c017-3357-4d2e-8f6b-f90b2a0b4c8f' As TestCase":
+        Description: =""
+        DisplayName: ="Case"
+
+        Step3 As TestStep:
+            Description: ="Select 'DocumentCapturingNavigation'"
+            Screen: =HomePage
+            Value: =Select(DocumentCapturingNavigation)
+
+        Step2 As TestStep:
+            Description: ="Select 'NavigateManageFacility'"
+            Screen: =HomePage
+            Value: =Select(NavigateManageFacility)
+
+        Step1 As TestStep:
+            Description: ="Select 'NavigateFleetManagment'"
+            Screen: =HomePage
+            Value: =Select(NavigateFleetManagment)
+

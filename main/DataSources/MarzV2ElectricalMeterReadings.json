@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_marzv2electricalmeterreadingses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_marzv2electricalmeterreadings",
+    "MaxGetRowsCount": 500,
+    "Name": "MarzV2ElectricalMeterReadings",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_attachment": "Attachment",
+      "crf01_attachmentid": "crf01_AttachmentId",
+      "crf01_CapturedBy": "CapturedBy",
+      "crf01_dateofreading": "DateOfReading",
+      "crf01_ElectricalMeter": "ElectricalMeter",
+      "crf01_electricalmeterreadingid": "ElectricalMeterReadingID",
+      "crf01_marzv2electricalmeterreadings_AsyncOperations": "System Jobs",
+      "crf01_marzv2electricalmeterreadings_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_marzv2electricalmeterreadings_DuplicateBaseRecord": "Duplicate Records (crf01_marzv2electricalmeterreadings_DuplicateBaseRecord)",
+      "crf01_marzv2electricalmeterreadings_DuplicateMatchingRecord": "Duplicate Records (crf01_marzv2electricalmeterreadings_DuplicateMatchingRecord)",
+      "crf01_marzv2electricalmeterreadings_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_marzv2electricalmeterreadings_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_marzv2electricalmeterreadings_ProcessSession": "Process Sessions",
+      "crf01_marzv2electricalmeterreadings_SyncErrors": "Sync Errors",
+      "crf01_marzv2electricalmeterreadingsid": "MarzV2ElectricalMeterReadings",
+      "crf01_notes": "Notes",
+      "crf01_reading": "Reading",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MarzV2ElectricalMeterReadings",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MarzV2ElectricalMeterReadings (Views)",
+    "Name": "_crf01_marzv2electricalmeterreadings_views",
+    "RelatedEntityName": "MarzV2ElectricalMeterReadings",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "05861a32-d4fd-4f1e-a59b-4f0207257484": "MarzV2ElectricalMeterReadings Advanced Find View",
+      "18edeb58-dfab-47e1-80fc-2a2d54f9a367": "MarzV2ElectricalMeterReadings Associated View",
+      "687b2213-1312-4d88-a408-4d6118c83bd1": "Inactive MarzV2ElectricalMeterReadings",
+      "76a2ffd2-742a-4b93-968f-90952497e77d": "Active MarzV2ElectricalMeterReadings",
+      "9435a940-cc3e-447f-a3c7-07e835f41451": "MarzV2ElectricalMeterReadings Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (MarzV2ElectricalMeterReadings)",
+    "Name": "crf01_marzv2electricalmeterreadings_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MarzV2ElectricalMeterReadings"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MarzV2ElectricalMeterReadings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MarzV2ElectricalMeterReadings)",
+    "Name": "crf01_marzv2electricalmeterreadings_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MarzV2ElectricalMeterReadings"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MarzV2ElectricalMeterReadings",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_marzv2vehicleinspectionrecordses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_marzv2vehicleinspectionrecords",
+    "MaxGetRowsCount": 500,
+    "Name": "MarzV2VehicleInspectionRecords",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_CompletedBy": "CompletedBy",
+      "crf01_completionstatus": "CompletionStatus",
+      "crf01_condition": "Condition",
+      "crf01_dateofrecord": "DateOfRecord",
+      "crf01_image": "Image",
+      "crf01_imageid": "crf01_ImageId",
+      "crf01_marzv2vehicleinspectionrecords_AsyncOperations": "System Jobs",
+      "crf01_marzv2vehicleinspectionrecords_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_marzv2vehicleinspectionrecords_DuplicateBaseRecord": "Duplicate Records (crf01_marzv2vehicleinspectionrecords_DuplicateBaseRecord)",
+      "crf01_marzv2vehicleinspectionrecords_DuplicateMatchingRecord": "Duplicate Records (crf01_marzv2vehicleinspectionrecords_DuplicateMatchingRecord)",
+      "crf01_marzv2vehicleinspectionrecords_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_marzv2vehicleinspectionrecords_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_marzv2vehicleinspectionrecords_ProcessSession": "Process Sessions",
+      "crf01_marzv2vehicleinspectionrecords_SyncErrors": "Sync Errors",
+      "crf01_marzv2vehicleinspectionrecordsid": "MarzV2VehicleInspectionRecords",
+      "crf01_VehcleID": "Vehicle",
+      "crf01_vehicleinspectionrecords": "VehicleInspectionRecordID",
+      "crf01_VehicleInspectionTask": "VehicleInspectionTask",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MarzV2VehicleInspectionRecords",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MarzV2VehicleInspectionRecords (Views)",
+    "Name": "_crf01_marzv2vehicleinspectionrecords_views",
+    "RelatedEntityName": "MarzV2VehicleInspectionRecords",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "07ae6032-b2d6-4550-97d5-19044fb9c268": "MarzV2VehicleInspectionRecords Associated View",
+      "1e9c4a83-3a56-4218-a43d-862d58ffd375": "Active MarzV2VehicleInspectionRecords",
+      "2fd392bb-7e5b-4b20-86f5-de939b9c9d8e": "MarzV2VehicleInspectionRecords Lookup View",
+      "d09260e1-f262-43ba-a982-6bc747a3ce34": "Inactive MarzV2VehicleInspectionRecords",
+      "fd8ff20f-c2d0-4fa0-9f98-5726d0602cea": "MarzV2VehicleInspectionRecords Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (MarzV2VehicleInspectionRecords)",
+    "Name": "crf01_marzv2vehicleinspectionrecords_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MarzV2VehicleInspectionRecords"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MarzV2VehicleInspectionRecords",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MarzV2VehicleInspectionRecords)",
+    "Name": "crf01_marzv2vehicleinspectionrecords_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MarzV2VehicleInspectionRecords"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MarzV2VehicleInspectionRecords",
+    "Type": "OptionSetInfo"
+  }
+]

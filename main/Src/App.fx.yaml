@@ -1,0 +1,24 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =
+        Set(varNavHeaderHeight,60);
+        Set(varNavPaneHeight,60);
+        Set(varNavPaneWidth,300);
+        
+        
+        Set(varNavPaneBtnsHeight,60);
+        Set(varNavPaneGapHeight,15);
+        
+        
+        Set(varNavCompHeight,varNavHeaderHeight);
+        Set(varNavCompWidth,App.ActiveScreen.Width);
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

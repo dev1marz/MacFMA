@@ -1,0 +1,473 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_organization_forms",
+      "Namespace": "Organizations (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_new_employeeonboarding_forms",
+      "Namespace": "Employee Onboarding (Forms)",
+      "Values": {
+        "Information": "f9a0da50-40c5-47e9-9bcd-58ed8d2060ba"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2zones_forms",
+      "Namespace": "MarzV2Zones (Forms)",
+      "Values": {
+        "Information": "94db4e45-17f7-45a7-b76f-829eebbfb5d2"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2vehicles_forms",
+      "Namespace": "MarzV2Vehicles (Forms)",
+      "Values": {
+        "Information": "118489bf-5cea-4d3d-977a-1a6dc4d8a9da"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2transactions_forms",
+      "Namespace": "MarzV2Transactions (Forms)",
+      "Values": {
+        "Information": "4449ac4c-22dc-4776-a90a-b4051f4ac666"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2subslinklocks_forms",
+      "Namespace": "MarzV2SubsLinkLocks (Forms)",
+      "Values": {
+        "Information": "60632040-84a9-40d8-aa0e-fb84bb93c054"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2subs_forms",
+      "Namespace": "MarzV2Subs (Forms)",
+      "Values": {
+        "Information": "47a0ead5-ef98-4f47-aa58-d911e95d8698"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2persons_forms",
+      "Namespace": "MarzV2Persons (Forms)",
+      "Values": {
+        "Information": "add957ab-d6fa-443e-b0d9-cedacdcaaf19"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2occupancygroups_forms",
+      "Namespace": "MarzV2OccupancyGroups (Forms)",
+      "Values": {
+        "Information": "9f0c971b-8c8e-41d8-a2eb-f34a0e6a9f99"
+      }
+    },
+    {
+      "Kind": "default.cds_sharepointsite_forms",
+      "Namespace": "SharePoint Sites (Forms)",
+      "Values": {
+        "Information": "ba6522af-e71b-df11-aa01-00155d2a9006"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2locks_forms",
+      "Namespace": "MarzV2Locks (Forms)",
+      "Values": {
+        "Information": "a873d2e9-b27a-43a6-bad1-d10e2a9f884c"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2keys_forms",
+      "Namespace": "MarzV2Keys (Forms)",
+      "Values": {
+        "Information": "814c9ec0-12fb-4b7b-98b8-bf7939db5af4"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2fuelrecords_forms",
+      "Namespace": "MarzV2FuelRecords (Forms)",
+      "Values": {
+        "Information": "aa771bce-d562-4ced-b673-fc4ba45d2d2b"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2expenseaccounts_forms",
+      "Namespace": "MarzV2ExpenseAccounts (Forms)",
+      "Values": {
+        "Information": "912d0dfd-1fd2-4816-a718-9535d874a858"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2vehicleinspectiontasks_forms",
+      "Namespace": "MarzV2VehicleInspectionTasks (Forms)",
+      "Values": {
+        "Information": "96a95452-3894-4ab5-9b33-c561daf803a4"
+      }
+    },
+    {
+      "Kind": "default.cds_annotation_forms",
+      "Namespace": "Notes (Forms)",
+      "Values": {
+        "Information": "69e5bd50-3d3e-47ca-aabc-d47bcbe59775",
+        "Note Quick Create Form": "56edcfe7-b4f3-4378-bab5-fc8f40db3af3"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2vehicleinspectionrecords_forms",
+      "Namespace": "MarzV2VehicleInspectionRecords (Forms)",
+      "Values": {
+        "Information": "b2c41384-bc9b-4880-a417-d9a6d595278f"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2watermeters_forms",
+      "Namespace": "MarzV2WaterMeters (Forms)",
+      "Values": {
+        "Information": "a264097a-56c5-4df9-86bc-b25771a889db"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2watermeterreadings_forms",
+      "Namespace": "MarzV2WaterMeterReadings (Forms)",
+      "Values": {
+        "Information": "94eb3e59-ea30-4757-8e41-b51dac7c2c1f"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2electricalmeters_forms",
+      "Namespace": "MarzV2ElectricalMeters (Forms)",
+      "Values": {
+        "Information": "bee21b77-2c3e-4859-83d7-e4cd029382d1"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2electricalmeterreadings_forms",
+      "Namespace": "MarzV2ElectricalMeterReadings (Forms)",
+      "Values": {
+        "Information": "db5e77e4-8295-480c-a563-e9535d734fe8"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2facilityinspecttasks_forms",
+      "Namespace": "MarzV2FacilityInspectTasks (Forms)",
+      "Values": {
+        "Information": "9dde64a4-0eef-4c1e-9c31-e40299090877"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzv2facilityinspectrecords_forms",
+      "Namespace": "MarzV2FacilityInspectRecords (Forms)",
+      "Values": {
+        "Information": "7015f93e-1823-478d-95d1-bfdcdcb8be13"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1occupancygroups_forms",
+      "Namespace": "TR1OccupancyGroups (Forms)",
+      "Values": {
+        "Information": "7e284534-e50b-46af-ac06-8caa3e17b08b"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1zones_forms",
+      "Namespace": "TR1Zones (Forms)",
+      "Values": {
+        "Information": "5df12f40-c365-45d5-bbf4-d90259ed1af4"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1locks_forms",
+      "Namespace": "TR1Locks (Forms)",
+      "Values": {
+        "Information": "6e3b5757-5315-40e2-a57c-edba7ab4f0a0"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1linksublocks_forms",
+      "Namespace": "TR1LinkSubLocks (Forms)",
+      "Values": {
+        "Information": "1b032efa-d140-47d6-9128-f8b8724d2845"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1persons_forms",
+      "Namespace": "TR1Persons (Forms)",
+      "Values": {
+        "Information": "241a8cec-cdd6-49fe-8a01-ff299ce865f4"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1keys_forms",
+      "Namespace": "TR1Keys (Forms)",
+      "Values": {
+        "Information": "90bcbc93-f2cd-427c-93b2-d1157f0553d4"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1subs_forms",
+      "Namespace": "TR1Subs (Forms)",
+      "Values": {
+        "Information": "652a47e6-6611-4789-9f31-c99ea8a5dfd4"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1expenseaccounts_forms",
+      "Namespace": "TR1ExpenseAccounts (Forms)",
+      "Values": {
+        "Information": "5f3c8fe5-b80e-42f2-97bb-ecc46cd6d944"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1fuelrecords_forms",
+      "Namespace": "TR1FuelRecords (Forms)",
+      "Values": {
+        "Information": "46657574-c426-4ad4-9822-e98457b9748d"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1vehicles_forms",
+      "Namespace": "TR1Vehicles (Forms)",
+      "Values": {
+        "Information": "b3f31c09-0d07-4644-aaf2-de348074d594"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tr1transactions_forms",
+      "Namespace": "TR1Transactions (Forms)",
+      "Values": {
+        "Information": "6a823917-9007-4d3a-bf2f-9131a6fa79c5"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzpersons_forms",
+      "Namespace": "MarzPersons (Forms)",
+      "Values": {
+        "Information": "fe046e74-4cda-4291-ae4e-f23780a6d036"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzkeys_forms",
+      "Namespace": "MarzKeys (Forms)",
+      "Values": {
+        "Information": "e65d6563-fb23-433e-8ca8-b9849a5f5ffb"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzsubs_forms",
+      "Namespace": "MarzSubs (Forms)",
+      "Values": {
+        "Information": "e95d3805-c25d-4f6e-909d-a9e2afb491d4"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marsubslinklocks_forms",
+      "Namespace": "MarSubsLinkLocks (Forms)",
+      "Values": {
+        "Information": "a3afecc1-b7d9-44cf-a813-83b83feb6e34"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzfuelrecords_forms",
+      "Namespace": "MarzFuelRecords (Forms)",
+      "Values": {
+        "Information": "d853e9c6-f404-48bd-b198-ab4c6ea51c7e"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzexpenseaccount_forms",
+      "Namespace": "MarzExpenseAccounts (Forms)",
+      "Values": {
+        "Information": "3717d2d8-b6ab-4ff4-b7a0-f43c5457f2c7"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marztransactions_forms",
+      "Namespace": "MarzTransactions (Forms)",
+      "Values": {
+        "Information": "255e57cd-6c2a-4f4f-8fb9-c82735d607e3"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzzones_forms",
+      "Namespace": "MarzZones (Forms)",
+      "Values": {
+        "Information": "41c08072-ccb0-447d-9f80-e8c699cdbfd6"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzoccupancygroup_forms",
+      "Namespace": "MarzOccupancyGroups (Forms)",
+      "Values": {
+        "Information": "5934da81-9d53-4ee5-bd44-96a07190bf26"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzlocks_forms",
+      "Namespace": "MarzLocks (Forms)",
+      "Values": {
+        "Information": "6e8fb236-ed73-4164-9307-de396d9c14dd"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marzvehicles_forms",
+      "Namespace": "MarzVehicles (Forms)",
+      "Values": {
+        "Information": "684f9734-c1a0-4026-a6c9-d00b07e4afa1"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_employee_forms",
+      "Namespace": "Employees (Forms)",
+      "Values": {
+        "Employee main form": "5116856d-cdfd-ec11-82e5-6045bd955b8e",
+        "Information": "6d3c8ffe-75f8-4eab-95fc-7d851a69e2a1"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_fuelrecord_forms",
+      "Namespace": "Fuel Records (Forms)",
+      "Values": {
+        "Information": "a9372973-2891-4c70-997b-a162409a109c"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Users (Forms)",
+      "Values": {
+        "Application User": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "Information": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "User": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452"
+      }
+    },
+    {
+      "Kind": "default.cds_account_forms",
+      "Namespace": "Accounts (Forms)",
+      "Values": {
+        "Account": "8448b78f-8f42-454e-8e2a-f8196b0419af",
+        "account card": "b028db32-3619-48a5-ac51-cf3f947b0ef3",
+        "Account Card form": "cccff382-2b92-467e-bf1b-3db179512af8",
+        "Account for Interactive experience": "a72c7955-442b-4ea4-9499-b10cd18b4256",
+        "Account Hierarchy Tile Form": "69cff312-cfb6-4289-9631-249ab85d2c62",
+        "Account Quick Create": "c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b",
+        "Account Reference Panel": "098ae145-1567-41ec-8398-86dbaac70c9b",
+        "Information": "b053a39a-041a-4356-acef-ddf00182762b",
+        "Social Profiles": "2205c86d-ed88-4a2f-a447-3b86a8781f2e"
+      }
+    },
+    {
+      "Kind": "default.cds_team_forms",
+      "Namespace": "Teams (Forms)",
+      "Values": {
+        "Information": "f5cfab6a-d4c2-4519-b68f-6e7485432e29",
+        "Team": "7ba7fac1-1418-4335-935f-f7f8dfd73fcc",
+        "Team form – Business": "4aabf594-b30a-490d-bf97-89c67c6777fe"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_vehicles_forms",
+      "Namespace": "Vehicles (Forms)",
+      "Values": {
+        "Information": "612f7018-6891-432d-9a9b-c9778823fad8"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_marsubslinklocks_forms",
+      "Namespace": "MarzLinkSubsLocks (Forms)",
+      "Values": {
+        "Information": "a3afecc1-b7d9-44cf-a813-83b83feb6e34"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tfykeys_forms",
+      "Namespace": "TFYKeys (Forms)",
+      "Values": {
+        "Information": "eead0a45-62ce-4c13-bce2-cff139fc198e"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_t1persons_forms",
+      "Namespace": "t1Persons (Forms)",
+      "Values": {
+        "Information": "c2d1c9e2-3233-4b95-a1e4-c602ed053c93"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_t1tenant_forms",
+      "Namespace": "T1Tenants (Forms)",
+      "Values": {
+        "Information": "d1423cb7-6a26-43d6-84cf-7256520df699"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_t1shop_forms",
+      "Namespace": "T1Shops (Forms)",
+      "Values": {
+        "Information": "a9a59a2c-247a-4c30-8b5c-a9769eab9e9c"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_t1lock_forms",
+      "Namespace": "t1Locks (Forms)",
+      "Values": {
+        "Information": "e3e4cfc2-bc87-4060-a3d6-9cc8d8c1f7fe"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_t1key_forms",
+      "Namespace": "t1keys (Forms)",
+      "Values": {
+        "Information": "00cd0ba8-643d-44a5-9b3d-cffaf5a7d4f5"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_t1sub_forms",
+      "Namespace": "t1subs (Forms)",
+      "Values": {
+        "Information": "f215f1a2-d7fc-4384-aa67-d6a56939cd82"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tenant_forms",
+      "Namespace": "TenantDBS (Forms)",
+      "Values": {
+        "Information": "8a2e0266-deef-4d74-b192-30366edc72f4"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_tenants_forms",
+      "Namespace": "Tenants (Forms)",
+      "Values": {
+        "Information": "26f0790f-5c48-469c-95bd-ee993faf14d2"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_shopsdb_forms",
+      "Namespace": "ShopsDBS (Forms)",
+      "Values": {
+        "Information": "339309bd-e000-4381-9897-8d1ea84fd460"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_propsvehicles_forms",
+      "Namespace": "PropSVehicles (Forms)",
+      "Values": {
+        "Information": "1799dd0a-5e77-4abf-8ee8-ea0fc940ab77"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_propstransactions_forms",
+      "Namespace": "PropSTransactions (Forms)",
+      "Values": {
+        "Information": "367f99f4-0ef0-43bb-b91c-f3c0115550dd"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_propsexpenseaccount_forms",
+      "Namespace": "PropSExpenseAccounts (Forms)",
+      "Values": {
+        "Information": "aae08838-9e95-4051-8aaf-ebf37e4adcda"
+      }
+    }
+  ]
+}

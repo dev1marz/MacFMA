@@ -1,0 +1,1032 @@
+AccessOverViewScreen As screen:
+    Fill: =RGBA(29, 29, 29, 1)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: |-
+        =Set(IsSelectedPerson,false);
+        Set(IsSelectedKey,false);
+        Set(IsSelectedLock,false);
+        Set(IsSelectedSub,false);
+        Set(IsSelectedSubLinkLock,false);
+        Set(IsSelectedZone,false);
+        
+        ClearCollect(collectionPersonsRecord, MarzV2Persons);
+        ClearCollect(collectionKeysRecord, MarzV2Keys);
+        ClearCollect(collectionSubsRecord, MarzV2Subs);
+        ClearCollect(collectionLinksRecord, MarzV2SubsLinkLocks);
+        ClearCollect(collectionLocksRecord, MarzV2Locks);
+        ClearCollect(collectionZonesRecord, MarzV2Zones);
+        
+        Set(SelectedPerson,Blank());
+        Set(SelectedKey,Blank());
+        Set(SelectedSub,Blank());
+        Set(SelectedLink,Blank());
+        Set(SelectedLock,Blank());
+        Set(SelectedZone,Blank());
+        
+        Set(ScreenDisplayName,"Access Overview Screen");
+
+    Label1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Persons" 
+        Width: =133
+        X: =13
+        Y: =82
+        ZIndex: =4
+
+    KeysLabel As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Keys"
+        Width: =125
+        X: =221
+        Y: =82
+        ZIndex: =5
+
+    KeySubs As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Subs"
+        Width: =146
+        X: =427
+        Y: =82
+        ZIndex: =6
+
+    "GalleryMarzV2Link As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =2
+        Height: =300
+        Items: =collectionLinksRecord
+        Layout: =Layout.Vertical
+        TemplateFill: |-
+            =If(IsSelectedSubLinkLock,If(ThisItem.IsSelected, 
+            MarzAccentColour, RGBA(0, 0, 0, 0)),RGBA(0, 0, 0, 0))
+        TemplatePadding: =0
+        TemplateSize: =75
+        Width: =200
+        X: =13
+        Y: =530
+        ZIndex: =7
+
+        Title2_3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =83
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: =ThisItem.LinkID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =152
+            ZIndex: =2
+
+        NextArrow2_3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(90, 106, 119, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Select(Parent);
+                Set(SelectedLink,ThisItem);
+                
+                Set(IsSelectedPerson,false);
+                Set(IsSelectedKey,false);
+                Set(IsSelectedLock,false);
+                Set(IsSelectedSub,false);
+                Set(IsSelectedSubLinkLock,true);
+                Set(IsSelectedZone,false);
+                
+                
+                
+                Clear(collectionLocksRecord);
+                Clear(collectionPersonsRecord);
+                Clear(collectionKeysRecord);
+                Clear(collectionSubsRecord);
+                
+                
+                Clear(collectionLocksID);
+                Clear(collectionPersonsID);
+                Clear(collectionKeysID);
+                Clear(collectionSubsID);
+                
+                
+                
+                
+                
+                //Locks
+                
+                ClearCollect(collectionLocksRecord, Filter(MarzV2Locks, LockID = SelectedLink.Lock.LockID));
+                ClearCollect(collectionLocksID, Distinct( ForAll(collectionLocksRecord, {TempLock: LockID}), TempLock ) );
+                
+                //Zones
+                ClearCollect(collectionZonesID, Distinct( ForAll(collectionLocksRecord, {TempZone: Zone.ZoneID}), TempZone ) ); 
+                ClearCollect(collectionZonesRecord,Filter(MarzV2Zones, ZoneID in collectionZonesID) );
+                
+                //Subs 
+                ClearCollect(collectionSubsRecord, Filter(MarzV2Subs, SubID = SelectedLink.Sub.SubID)); 
+                ClearCollect(collectionSubsID, Distinct( ForAll(collectionSubsRecord, {TempSub: SubID}),  TempSub)); 
+                
+                //Keys 
+                If(CountRows(collectionSubsRecord)>0,
+                ClearCollect(collectionKeysRecord, Filter(MarzV2Keys,Sub.SubID in collectionSubsID));
+                ClearCollect(collectionKeysID, Distinct(ForAll(collectionKeysRecord, {TempKey: KeyID}), TempKey)); 
+                ,
+                Clear(collectionKeysRecord);
+                Clear(collectionKeysID);
+                );
+                
+                //Person
+                ClearCollect(collectionPersonsID, Distinct( ForAll(collectionKeysRecord, {TempPerson: Person.PersonID}), TempPerson));
+                ClearCollect(collectionPersonsRecord, Filter(MarzV2Persons,PersonID in collectionPersonsID));
+                 
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =50
+            X: =138
+            Y: =16
+            ZIndex: =4
+
+        Separator7_3 As rectangle:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Fill: =RGBA(197, 203, 207, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Label4_4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =52
+        Size: =21
+        Text: ="Link"
+        Width: =135
+        X: =11
+        Y: =478
+        ZIndex: =8
+
+    "GalleryMarzV2Lock As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =2
+        Fill: =RGBA(26, 26, 26, 1)
+        Height: =300
+        Items: |+
+            =
+            collectionLocksRecord
+            
+            
+        Layout: =Layout.Vertical
+        TemplateFill: |-
+            =If(IsSelectedLock,If(ThisItem.IsSelected, 
+            MarzAccentColour, RGBA(0, 0, 0, 0)),RGBA(0, 0, 0, 0))
+        TemplatePadding: =0
+        TemplateSize: =75
+        Width: =200
+        X: =220
+        Y: =530
+        ZIndex: =9
+
+        Title2_4 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =72
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: =ThisItem.LockID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =130
+            X: =10
+            Y: =19
+            ZIndex: =2
+
+        NextArrow2_4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(90, 106, 119, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Select(Parent);
+                
+                Set(IsSelectedPerson,false);
+                Set(IsSelectedKey,false);
+                Set(IsSelectedLock,true);
+                Set(IsSelectedSub,false);
+                Set(IsSelectedSubLinkLock,false);
+                Set(IsSelectedZone,false);
+                
+                
+                Clear(collectionPersonsRecord);
+                Clear(collectionZonesRecord);
+                Clear(collectionKeysRecord);
+                Clear(collectionSubsRecord);
+                Clear(collectionLinksRecord);
+                Clear(collectionPersonsID);
+                Clear(collectionZonesID);
+                Clear(collectionKeysID);
+                Clear(collectionSubsID);
+                Clear(collectionLinksID);
+                
+                Set(SelectedLock,ThisItem);
+                
+                //Link 
+                ClearCollect(collectionLinksRecord, Filter(MarzV2SubsLinkLocks, Lock.LockID = SelectedLock.LockID) ); 
+                ClearCollect(collectionLinksID, Distinct( ForAll(collectionLinksRecord, {TempLink: LinkID}), TempLink ));
+                
+                //Subs 
+                ClearCollect(collectionSubsID, Distinct( ForAll(collectionLinksRecord, {TempSub: Sub.SubID}),  TempSub)); 
+                ClearCollect(collectionSubsRecord, Filter(MarzV2Subs, SubID in collectionSubsID)); 
+                
+                //Keys 
+                If(CountRows(collectionSubsRecord)>0,
+                ClearCollect(collectionKeysRecord, Filter(MarzV2Keys,Sub.SubID in collectionSubsID));
+                ClearCollect(collectionKeysID, Distinct(ForAll(collectionKeysRecord, {TempKey: KeyID}), TempKey)); 
+                ,
+                Clear(collectionKeysRecord);
+                Clear(collectionKeysID);
+                );
+                //Person
+                ClearCollect(collectionPersonsID, Distinct( ForAll(collectionKeysRecord, {TempPerson: Person.PersonID}), TempPerson));
+                ClearCollect(collectionPersonsRecord, Filter(MarzV2Persons,PersonID in collectionPersonsID));
+                
+                
+                //Zones
+                ClearCollect(collectionZonesRecord,Filter(MarzV2Zones, ZoneID = SelectedLock.Zone.ZoneID));
+                ClearCollect(collectionZonesID, Distinct( ForAll(collectionZonesRecord, {TempZone: ZoneID}), TempZone )); 
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =50
+            X: =130
+            Y: =15
+            ZIndex: =4
+
+        Separator7_4 As rectangle:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Fill: =RGBA(197, 203, 207, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Label4_5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =52
+        Size: =21
+        Text: ="Lock"
+        Width: =133
+        X: =220
+        Y: =469
+        ZIndex: =10
+
+    "GalleryMarzV2Zone As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =2
+        Height: =300
+        Items: =collectionZonesRecord
+        Layout: =Layout.Vertical
+        TemplateFill: |-
+            =If(IsSelectedZone,If(ThisItem.IsSelected, 
+            MarzAccentColour, RGBA(0, 0, 0, 0)),RGBA(0, 0, 0, 0))
+        TemplatePadding: =0
+        TemplateSize: =75
+        Width: =200
+        X: =427
+        Y: =530
+        ZIndex: =11
+
+        Title2_5 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =63
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: =ThisItem.ZoneID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =130
+            X: =10
+            Y: =19
+            ZIndex: =2
+
+        NextArrow2_5 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(90, 106, 119, 1)
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Select(Parent);
+                
+                Set(IsSelectedPerson,false);
+                Set(IsSelectedKey,false);
+                Set(IsSelectedLock,false);
+                Set(IsSelectedSub,false);
+                Set(IsSelectedSubLinkLock,false);
+                Set(IsSelectedZone,true);
+                
+                Clear(collectionPersonsRecord);
+                Clear(collectionKeysRecord);
+                Clear(collectionSubsRecord);
+                Clear(collectionLinksRecord);
+                Clear(collectionLocksRecord);
+                
+                Clear(collectionPersonsID);
+                Clear(collectionKeysID);
+                Clear(collectionSubsID);
+                Clear(collectionLinksID);
+                Clear(collectionLocksID);
+                
+                Set(SelectedZone,ThisItem);
+                
+                
+                //Locks
+                ClearCollect(collectionLocksRecord, Filter(MarzV2Locks,  Zone.ZoneID = SelectedZone.ZoneID));
+                ClearCollect(collectionLocksID, Distinct( ForAll(collectionLocksRecord, {TempLock: LockID}), TempLock ) );
+                
+                
+                //Link 
+                If(CountRows(collectionLocksRecord)>0,
+                ClearCollect(collectionLinksRecord, Filter(MarzV2SubsLinkLocks, Lock.LockID in collectionLocksID)); 
+                ClearCollect(collectionLinksID, Distinct( ForAll(collectionLinksRecord, {TempLink: LinkID}), TempLink ));
+                ,
+                Clear(collectionLinksRecord);
+                Clear(collectionLinksID);
+                );
+                //Subs 
+                ClearCollect(collectionSubsID, Distinct( ForAll(collectionLinksRecord, {TempSub: Sub.SubID}),  TempSub)); 
+                ClearCollect(collectionSubsRecord, Filter(MarzV2Subs, SubID in collectionSubsID)); 
+                
+                //Keys 
+                If(CountRows(collectionSubsRecord)>0,
+                ClearCollect(collectionKeysRecord, Filter(MarzV2Keys,Sub.SubID in collectionSubsID));
+                ClearCollect(collectionKeysID, Distinct(ForAll(collectionKeysRecord, {TempKey: KeyID}), TempKey)); 
+                ,
+                Clear(collectionKeysRecord);
+                Clear(collectionKeysID);
+                );
+                //Person
+                ClearCollect(collectionPersonsID, Distinct( ForAll(collectionKeysRecord, {TempPerson: Person.PersonID}), TempPerson));
+                ClearCollect(collectionPersonsRecord, Filter(MarzV2Persons,PersonID in collectionPersonsID));
+                 
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =50
+            X: =143
+            Y: =2
+            ZIndex: =4
+
+        Separator7_5 As rectangle:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Fill: =RGBA(197, 203, 207, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Label4_6 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =52
+        Size: =21
+        Text: ="Zone"
+        Width: =146
+        X: =423
+        Y: =469
+        ZIndex: =12
+
+    Button2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: |
+            =false
+        Size: =24
+        Text: |-
+            ="Check Data
+            "
+        Width: =546
+        X: =55
+        Y: =1002
+        ZIndex: =13
+
+    Button2_1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(100, 118, 132, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+        OnSelect: |-
+            =Set(IsSelectedPerson,false);
+            Set(IsSelectedKey,false);
+            Set(IsSelectedLock,false);
+            Set(IsSelectedSub,false);
+            Set(IsSelectedSubLinkLock,false);
+            Set(IsSelectedZone,false);
+            
+            ClearCollect(collectionPersonsRecord, MarzV2Persons);
+            ClearCollect(collectionKeysRecord, MarzV2Keys);
+            ClearCollect(collectionSubsRecord, MarzV2Subs);
+            ClearCollect(collectionLinksRecord, MarzV2SubsLinkLocks);
+            ClearCollect(collectionLocksRecord, MarzV2Locks);
+            Refresh(MarzV2Zones);
+            ClearCollect(collectionZonesRecord, MarzV2Zones);
+            
+            Set(SelectedPerson,Blank());
+            Set(SelectedKey,Blank());
+            Set(SelectedSub,Blank());
+            Set(SelectedLink,Blank());
+            Set(SelectedLock,Blank());
+            Set(SelectedZone,Blank());
+        Size: =24
+        Text: |-
+            ="Clear Filters
+            "
+        Width: =546
+        X: =55
+        Y: =885
+        ZIndex: =14
+
+    Label1_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: =CountRows(GalleryMarzV2Persons.AllItems)
+        Width: =67
+        X: =146
+        Y: =82
+        ZIndex: =15
+
+    Label1_2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: =CountRows(GalleryMarzV2Keys.AllItems)
+        Width: =67
+        X: =353
+        Y: =82
+        ZIndex: =16
+
+    Label1_3 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: =CountRows(GalleryMarzV2Subs.AllItems)
+        Width: =67
+        X: =573
+        Y: =82
+        ZIndex: =17
+
+    Label1_4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: =CountRows(GalleryMarzV2Link.AllItems)
+        Width: =67
+        X: =146
+        Y: =460
+        ZIndex: =18
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =18
+
+        "GalleryMarzV2Persons As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Height: =300
+            Items: =collectionPersonsRecord
+            Layout: =Layout.Vertical
+            TemplateFill: |-
+                =If(IsSelectedPerson,If(ThisItem.IsSelected, 
+                MarzAccentColour, RGBA(0, 0, 0, 0)),RGBA(0, 0, 0, 0))
+            TemplatePadding: =0
+            TemplateSize: =75
+            Width: =200
+            X: =13
+            Y: =152
+            ZIndex: =1
+
+            Title2_1 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.PersonID
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 104
+                X: =10
+                Y: =19
+                ZIndex: =2
+
+            SelectPerson As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(90, 106, 119, 1)
+                Height: =50
+                Icon: =Icon.ChevronRight
+                OnSelect: |-
+                    =Select(Parent);
+                    Set(
+                        IsSelectedPerson,
+                        true
+                    );
+                    Set(
+                        IsSelectedKey,
+                        false
+                    );
+                    Set(
+                        IsSelectedLock,
+                        false
+                    );
+                    Set(
+                        IsSelectedSub,
+                        false
+                    );
+                    Set(
+                        IsSelectedSubLinkLock,
+                        false
+                    );
+                    Set(
+                        IsSelectedZone,
+                        false
+                    );
+                    Set(
+                        SelectedPerson,
+                        ThisItem
+                    );
+                    Clear(collectionLocksRecord);
+                    Clear(collectionZonesRecord);
+                    Clear(collectionKeysRecord);
+                    Clear(collectionSubsRecord);
+                    Clear(collectionLinksRecord);
+                    Clear(collectionLocksID);
+                    Clear(collectionZonesID);
+                    Clear(collectionKeysID);
+                    Clear(collectionSubsID);
+                    Clear(collectionLinksID);
+                    //Keys 
+                    ClearCollect(
+                        collectionKeysRecord,
+                        Filter(
+                            MarzV2Keys,
+                            Person.PersonID = SelectedPerson.PersonID)
+                    );
+                    ClearCollect(
+                        collectionKeysID,
+                        Distinct(
+                            ForAll(
+                                collectionKeysRecord,
+                                {TempKey: KeyID}
+                            ),
+                            TempKey
+                        )
+                    );
+                    //Subs
+                        ClearCollect(
+                            collectionSubsID,
+                            Distinct(
+                                ForAll(
+                                    collectionKeysRecord,
+                                    {TempSub: Sub.SubID}
+                                ),
+                                TempSub
+                            )
+                        );
+                        ClearCollect(
+                            collectionSubsRecord,
+                            Filter(
+                                MarzV2Subs,
+                                SubID in collectionSubsID
+                            )
+                        );
+                    //Link 
+                    
+                    If(
+                        CountRows(collectionSubsID) > 0,
+                    ClearCollect(
+                        collectionLinksRecord,
+                        Filter(
+                            MarzV2SubsLinkLocks,
+                            Sub.SubID in collectionSubsID
+                        )
+                    );
+                    ClearCollect(
+                        collectionLinksID,
+                        Distinct(
+                            ForAll(
+                                collectionLinksRecord,
+                                {TempLink: LinkID}
+                            ),
+                            TempLink
+                        )
+                    );
+                    ,
+                        Clear(collectionLinksID);
+                        Clear(collectionLinksRecord)
+                    );
+                    //Lock 
+                    ClearCollect(
+                        collectionLocksID,
+                        Distinct(
+                            ForAll(
+                                collectionLinksRecord,
+                                {TempLock: Lock.LockID}
+                            ),
+                            TempLock
+                        )
+                    );
+                    ClearCollect(
+                        collectionLocksRecord,
+                        Filter(
+                            MarzV2Locks,
+                            LockID in collectionLocksID
+                        )
+                    );
+                    
+                    //Zones
+                    ClearCollect(
+                        collectionZonesID,
+                        Distinct(
+                            ForAll(
+                                collectionLocksRecord,
+                                {TempZone: Zone.ZoneID}
+                            ),
+                            TempZone
+                        )
+                    );
+                    ClearCollect(
+                        collectionZonesRecord,
+                        Filter(
+                            MarzV2Zones,
+                            ZoneID in collectionZonesID
+                        )
+                    );
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =50
+                X: =136
+                Y: =12
+                ZIndex: =4
+
+            Separator7_1 As rectangle:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Fill: =RGBA(197, 203, 207, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =5
+
+        "GalleryMarzV2Keys As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Height: =300
+            Items: =collectionKeysRecord
+            Layout: =Layout.Vertical
+            TemplateFill: |-
+                =If(IsSelectedKey,If(ThisItem.IsSelected, 
+                MarzAccentColour, RGBA(0, 0, 0, 0)),RGBA(0, 0, 0, 0))
+            TemplatePadding: =0
+            TemplateSize: =75
+            Width: =200
+            X: =220
+            Y: =152
+            ZIndex: =2
+
+            Title2 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =36
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.KeyID
+                VerticalAlign: =VerticalAlign.Top
+                Width: =112
+                X: =10
+                Y: =19
+                ZIndex: =2
+
+            NextArrow2 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(100, 118, 132, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                Height: =50
+                Icon: =Icon.ChevronRight
+                OnSelect: |
+                    =Select(Parent);
+                    
+                    Set(IsSelectedPerson,false);
+                    Set(IsSelectedKey,true);
+                    Set(IsSelectedLock,false);
+                    Set(IsSelectedSub,false);
+                    Set(IsSelectedSubLinkLock,false);
+                    Set(IsSelectedZone,false);
+                    
+                    Set(SelectedKey,ThisItem);
+                    
+                    Clear(collectionLocksRecord);
+                    Clear(collectionZonesRecord);
+                    Clear(collectionPersonsRecord);
+                    Clear(collectionSubsRecord);
+                    Clear(collectionLinksRecord);
+                    Clear(collectionLocksID);
+                    Clear(collectionZonesID);
+                    Clear(collectionPersonsID);
+                    Clear(collectionSubsID);
+                    Clear(collectionLinksID);
+                    
+                    //Person
+                    ClearCollect(collectionPersonsRecord, Filter(MarzV2Persons,PersonID = SelectedKey.Person.PersonID));
+                    ClearCollect(collectionPersonsID, Distinct( ForAll(collectionPersonsRecord, {TempPerson: PersonID}), TempPerson));
+                    
+                    //Subs  
+                    ClearCollect(collectionSubsRecord, Filter(MarzV2Subs, SubID = SelectedKey.Sub.SubID)); 
+                    ClearCollect(collectionSubsID, Distinct( ForAll(collectionSubsRecord, {TempSub: SubID}),  TempSub ) ); 
+                    
+                    //Link 
+                    
+                    If(
+                        CountRows(collectionSubsID) > 0,
+                    ClearCollect(collectionLinksRecord, Filter(MarzV2SubsLinkLocks, Sub.SubID in collectionSubsID) ); 
+                    ClearCollect(collectionLinksID, Distinct( ForAll(collectionLinksRecord, {TempLink: LinkID}), TempLink )); 
+                    //Lock 
+                    ClearCollect(collectionLocksID, Distinct( ForAll(collectionLinksRecord, {TempLock: Lock.LockID}), TempLock ) );
+                    ClearCollect(collectionLocksRecord, Filter(MarzV2Locks, LockID in collectionLocksID) ); 
+                    ,
+                        Clear(collectionLinksID);
+                        Clear(collectionLinksRecord)
+                    );
+                    //Zones
+                    ClearCollect(collectionZonesID, Distinct( ForAll(collectionLocksRecord, {TempZone: Zone.ZoneID}), TempZone ) ); 
+                    ClearCollect(collectionZonesRecord,Filter(MarzV2Zones, ZoneID in collectionZonesID) );
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =50
+                X: =131
+                Y: =12
+                ZIndex: =4
+
+            Separator7 As rectangle:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                BorderThickness: =2
+                Fill: =RGBA(197, 203, 207, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =5
+
+        "GalleryMarzV2Subs As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Height: =300
+            Items: =collectionSubsRecord
+            Layout: =Layout.Vertical
+            TemplateFill: |-
+                =If(IsSelectedSub,If(ThisItem.IsSelected, 
+                MarzAccentColour, RGBA(0, 0, 0, 0)),RGBA(0, 0, 0, 0))
+            TemplatePadding: =0
+            TemplateSize: =75
+            Width: =200
+            X: =427
+            Y: =152
+            ZIndex: =3
+
+            Title2_2 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =47
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.SubID
+                VerticalAlign: =VerticalAlign.Top
+                Width: =117
+                X: =10
+                Y: =19
+                ZIndex: =2
+
+            NextArrow2_2 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                Height: =50
+                Icon: =Icon.ChevronRight
+                OnSelect: |+
+                    =Select(Parent);
+                    
+                    Set(IsSelectedPerson,false);
+                    Set(IsSelectedKey,false);
+                    Set(IsSelectedLock,false);
+                    Set(IsSelectedSub,true);
+                    Set(IsSelectedSubLinkLock,false);
+                    Set(IsSelectedZone,false);
+                    
+                    Clear(collectionLocksRecord);
+                    Clear(collectionZonesRecord);
+                    Clear(collectionKeysRecord);
+                    Clear(collectionPersonsRecord);
+                    Clear(collectionLinksRecord);
+                    Clear(collectionLocksID);
+                    Clear(collectionZonesID);
+                    Clear(collectionKeysID);
+                    Clear(collectionPersonsID);
+                    Clear(collectionLinksID);
+                    
+                    Set(SelectedSub,ThisItem);
+                    
+                    //Keys 
+                    ClearCollect(collectionKeysRecord, Filter(MarzV2Keys,Sub.SubID = SelectedSub.SubID));
+                    ClearCollect(collectionKeysID, Distinct(ForAll(collectionKeysRecord, {TempKey: KeyID}), TempKey)); 
+                    
+                    //Person
+                    ClearCollect(collectionPersonsID, Distinct( ForAll(collectionKeysRecord, {TempPerson: Person.PersonID}), TempPerson));
+                    ClearCollect(collectionPersonsRecord, Filter(MarzV2Persons,PersonID in collectionPersonsID));
+                    
+                    //Link 
+                    ClearCollect(collectionLinksRecord, Filter(MarzV2SubsLinkLocks, SelectedSub.SubID = Sub.SubID) ); 
+                    ClearCollect(collectionLinksID, Distinct( ForAll(collectionLinksRecord, {TempLink: LinkID}), TempLink )); 
+                    
+                    //Lock 
+                    ClearCollect(collectionLocksID, Distinct( ForAll(collectionLinksRecord, {TempLock: Lock.LockID}), TempLock ) );
+                    ClearCollect(collectionLocksRecord, Filter(MarzV2Locks, LockID in collectionLocksID) ); 
+                    
+                    //Zones
+                    ClearCollect(collectionZonesID, Distinct( ForAll(collectionLocksRecord, {TempZone: Zone.ZoneID}), TempZone ) ); 
+                    ClearCollect(collectionZonesRecord,Filter(MarzV2Zones, ZoneID in collectionZonesID) );
+                    
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =50
+                X: =Parent.TemplateWidth - Self.Width - 5
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =4
+
+            Separator7_2 As rectangle:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Fill: =RGBA(197, 203, 207, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =5
+
+    Label1_5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: =CountRows(GalleryMarzV2Lock.AllItems)
+        Width: =67
+        X: =356
+        Y: =456
+        ZIndex: =19
+
+    Label1_6 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: =CountRows(GalleryMarzV2Zone.AllItems)
+        Width: =67
+        X: =560
+        Y: =460
+        ZIndex: =20
+
+    FullNavMenuV2_4 As FullNavMenuV2:
+        Width: =640
+        ZIndex: =21
+

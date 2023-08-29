@@ -1,0 +1,1028 @@
+FacilityInspectionTasks As screen:
+    Fill: =RGBA(29, 29, 29, 1)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Facility Inspection Tasks");
+    Width: =
+
+    "GalleryFacilityTasks As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        BorderColor: =RGBA(243, 245, 245, 1)
+        Height: =329.00
+        Items: = If(IsBlank(SearchInputFacilityTasks.Text),MarzV2FacilityInspectTasks,Filter(MarzV2FacilityInspectTasks,(SearchInputFacilityTasks.Text in FacilityInspectTasksID Or SearchInputFacilityTasks.Text in 'Person(AssignedTo)'.PersonID)))
+        Layout: =Layout.Vertical
+        OnSelect: =
+        Selectable: =If(ScreenState = 0, true)
+        TemplatePadding: =0.00
+        TemplateSize: =79
+        Width: =585
+        X: =27
+        Y: =777
+        ZIndex: =1
+
+        Title4_11 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20.00
+            Text: =ThisItem.FacilityInspectTasksID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =260
+            X: =17
+            Y: =16.00
+            ZIndex: =1
+
+        Title4_13 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20.00
+            Text: =ThisItem.'Person(AssignedTo)'.PersonID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =260
+            X: =301
+            Y: =16
+            ZIndex: =2
+
+    FormFacilityTasks As form:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DataSource: =MarzV2FacilityInspectTasks
+        DefaultMode: =If(ScreenState = 1,FormMode.Edit,FormMode.View)
+        Height: =430.00
+        Item: =GalleryFacilityTasks.Selected
+        OnFailure: =NewForm(FormFacilityTasks);Notify("Error!", NotificationType.Error)
+        OnReset: =FormMode.New
+        OnSuccess: =Notify("Success",NotificationType.Success)
+        Width: =640
+        Y: =87
+        ZIndex: =2
+
+        DueDate_DataCard1 As typedDataCard.dateTimeEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_duedate"
+            Default: =ThisItem.DueDate
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2FacilityInspectTasks],DataSourceInfo.DisplayName,"crf01_duedate")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DateValue5.SelectedDate + Time(Value(HourValue5.Selected.Value), Value(MinuteValue5.Selected.Value), 0)
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey72 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DateValue5 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                CalendarHeaderFill: =RGBA(100, 118, 132, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DefaultDate: =Parent.Default
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =70
+                HoverDateFill: =RGBA(62, 74, 83, 1)
+                IconBackground: =RGBA(100, 118, 132, 1)
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SelectedDateFill: =RGBA(100, 118, 132, 1)
+                Size: =24
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) / 2
+                X: =30
+                Y: =DataCardKey72.Y + DataCardKey72.Height + 5
+                ZIndex: =2
+
+            HourValue5 As dropdown:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Text(Hour(Parent.Default),"00")
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =DateValue5.Height
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =DateValue5.Width / 2 - 10
+                X: =DateValue5.X + DateValue5.Width + 10
+                Y: =DateValue5.Y
+                ZIndex: =3
+
+            Separator5 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =HourValue5.Height
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: |-
+                    =":"
+                Width: =10
+                Wrap: =false
+                X: =HourValue5.X + HourValue5.Width
+                Y: =HourValue5.Y
+                ZIndex: =4
+
+            MinuteValue5 As dropdown:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Text(Minute(Parent.Default),"00")
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =HourValue5.Height
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =HourValue5.Width
+                X: =HourValue5.X + HourValue5.Width + Separator5.Width
+                Y: =HourValue5.Y
+                ZIndex: =5
+
+            ErrorMessage61 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =HourValue5.Y + HourValue5.Height
+                ZIndex: =6
+
+            StarVisible61 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey72.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey72.Y
+                ZIndex: =7
+
+        Frequency_DataCard2 As typedDataCard.numberEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_frequency"
+            Default: =ThisItem.Frequency
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2FacilityInspectTasks],DataSourceInfo.DisplayName,"crf01_frequency")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue64.Text)
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey73 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue64 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Format: =TextFormat.Number
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey73.Y + DataCardKey73.Height + 5
+                ZIndex: =2
+
+            ErrorMessage62 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue64.Y + DataCardValue64.Height
+                ZIndex: =3
+
+            StarVisible62 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey73.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey73.Y
+                ZIndex: =4
+
+        "'Person(AssignedTo)_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_PersonAssignedTo"
+            Default: =ThisItem.'Person(AssignedTo)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2FacilityInspectTasks],DataSourceInfo.DisplayName,"crf01_PersonAssignedTo")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue65.Selected
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey74 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue65 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["crf01_personid"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =70
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Items: =Choices([@MarzV2FacilityInspectTasks].crf01_PersonAssignedTo)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SearchFields: =["crf01_personid"]
+                SearchItems: =Search(Choices([@MarzV2FacilityInspectTasks].crf01_PersonAssignedTo),DataCardValue65.SearchText,"crf01_personid")
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey74.Y + DataCardKey74.Height + 5
+                ZIndex: =2
+
+            ErrorMessage63 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue65.Y + DataCardValue65.Height
+                ZIndex: =3
+
+            StarVisible63 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey74.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey74.Y
+                ZIndex: =4
+
+        Notes_DataCard4 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_notes"
+            Default: =ThisItem.Notes
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2FacilityInspectTasks],DataSourceInfo.DisplayName,"crf01_notes")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MarzV2FacilityInspectTasks], DataSourceInfo.MaxLength, "crf01_notes")
+            Required: =false
+            Update: =DataCardValue66.Text
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey75 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue66 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey75.Y + DataCardKey75.Height + 5
+                ZIndex: =2
+
+            ErrorMessage64 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue66.Y + DataCardValue66.Height
+                ZIndex: =3
+
+            StarVisible64 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey75.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey75.Y
+                ZIndex: =4
+
+        "'Person(ApprovedBy)_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_PersonApprovedBy"
+            Default: =ThisItem.'Person(ApprovedBy)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2FacilityInspectTasks],DataSourceInfo.DisplayName,"crf01_PersonApprovedBy")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue67.Selected
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey76 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue67 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["crf01_personid"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =70
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Items: =Choices([@MarzV2FacilityInspectTasks].crf01_PersonApprovedBy)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SearchFields: =["crf01_personid"]
+                SearchItems: =Search(Choices([@MarzV2FacilityInspectTasks].crf01_PersonApprovedBy),DataCardValue67.SearchText,"crf01_personid")
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey76.Y + DataCardKey76.Height + 5
+                ZIndex: =2
+
+            ErrorMessage65 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue67.Y + DataCardValue67.Height
+                ZIndex: =3
+
+            StarVisible65 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey76.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey76.Y
+                ZIndex: =4
+
+        Zone_DataCard3 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_Zone"
+            Default: =ThisItem.Zone
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2FacilityInspectTasks],DataSourceInfo.DisplayName,"crf01_Zone")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue68.Selected
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey77 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue68 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["crf01_zoneid"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =70
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Items: =Choices([@MarzV2FacilityInspectTasks].crf01_Zone)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SearchFields: =["crf01_zoneid"]
+                SearchItems: =Search(Choices([@MarzV2FacilityInspectTasks].crf01_Zone),DataCardValue68.SearchText,"crf01_zoneid")
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey77.Y + DataCardKey77.Height + 5
+                ZIndex: =2
+
+            ErrorMessage66 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue68.Y + DataCardValue68.Height
+                ZIndex: =3
+
+            StarVisible66 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey77.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey77.Y
+                ZIndex: =4
+
+        TaskType_DataCard2 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_tasktype"
+            Default: =ThisItem.TaskType
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2FacilityInspectTasks],DataSourceInfo.DisplayName,"crf01_tasktype")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MarzV2FacilityInspectTasks], DataSourceInfo.MaxLength, "crf01_tasktype")
+            Required: =false
+            Update: =DataCardValue69.Text
+            Width: =640
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey78 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue69 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey78.Y + DataCardKey78.Height + 5
+                ZIndex: =2
+
+            ErrorMessage67 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue69.Y + DataCardValue69.Height
+                ZIndex: =3
+
+            StarVisible67 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey78.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey78.Y
+                ZIndex: =4
+
+        FacilityInspectTasksID_DataCard1 As typedDataCard.textualViewCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_facilityinspecttasksid"
+            Default: =ThisItem.FacilityInspectTasksID
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@MarzV2FacilityInspectTasks],DataSourceInfo.DisplayName,"crf01_facilityinspecttasksid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+            DataCardKey70 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue62 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey70.Y + DataCardKey70.Height + 5
+                ZIndex: =2
+
+    ConfirmCancelBtnsFacilityTasks As groupContainer.horizontalAutoLayoutContainer:
+        Height: =124.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Visible: =If(ScreenState = 1,true)
+        Width: =640
+        Y: =502
+        ZIndex: =3
+
+        BtnConfirmAddFacilityTasks As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =SubmitForm(FormFacilityTasks);Set(ScreenState,0)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Confirm"
+            Width: =280
+            Y: =0.00
+            ZIndex: =1
+
+        BtnCancelFacilityTasks As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 51, 51, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =ViewForm(FormFacilityTasks);Set(ScreenState,0)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Cancel"
+            Width: =280
+            Y: =0.00
+            ZIndex: =2
+
+    SearchInputFacilityTasks As text:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: |
+            =If(ScreenState =1,DisplayMode.Disabled)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderThickness: =4
+        Height: =69.00
+        HintText: =" Search Task by ID or Person Assigned "
+        HoverBorderColor: =RGBA(197, 203, 207, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(62, 74, 83, 1)
+        PaddingBottom: =5.00
+        PaddingLeft: =0.00
+        Size: =21.00
+        Width: =573
+        X: =38
+        Y: =626
+        ZIndex: =4
+
+    AddEditBtnsFacilityTasks As groupContainer.horizontalAutoLayoutContainer:
+        Height: =124.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Visible: =If(ScreenState = 0,true)
+        Width: =640
+        Y: =502
+        ZIndex: =5
+
+        BtnEditFacilityTasks As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =Set(ScreenState,1);FormFacilityTasks.DisplayMode.Edit
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Edit Selected"
+            Visible: =If(ScreenState,0,true)
+            Width: =280
+            Y: =27.00
+            ZIndex: =1
+
+        BtnAddFacilityTasks As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(NavigationMenu = 1,DisplayMode.Disabled)
+            Fill: =RGBA(102, 182, 227, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =Set(ScreenState,1);NewForm(FormFacilityTasks)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Add Task"
+            Width: =280
+            Y: =27.00
+            ZIndex: =2
+
+    GalleryLabelsFacilityTasks As groupContainer.horizontalAutoLayoutContainer:
+        BorderColor: =RGBA(220, 224, 226, 1)
+        Height: =71.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =10.00
+        Width: =600
+        X: =27
+        Y: =706
+        ZIndex: =6
+
+        PersonNameLabel_5 As label:
+            BorderColor: =RGBA(232, 234, 236, 1)
+            BorderStyle: =
+            BorderThickness: =
+            Color: =RGBA(243, 245, 245, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =70.00
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =21.00
+            Text: ="Task ID"
+            Width: =300
+            X: =290
+            Y: =1.00
+            ZIndex: =1
+
+        PersonNameLabel_6 As label:
+            BorderColor: =RGBA(232, 234, 236, 1)
+            BorderStyle: =
+            BorderThickness: =
+            Color: =RGBA(243, 245, 245, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =70.00
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =21.00
+            Text: ="Assigned To"
+            Width: =300
+            X: =290
+            Y: =1.00
+            ZIndex: =2
+
+    FullNavMenuV2_26 As FullNavMenuV2:
+        Width: =640
+        ZIndex: =7
+

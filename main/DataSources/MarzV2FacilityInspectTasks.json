@@ -1,0 +1,102 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_marzv2facilityinspecttaskses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_marzv2facilityinspecttasks",
+    "MaxGetRowsCount": 500,
+    "Name": "MarzV2FacilityInspectTasks",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_crf01_marzv2facilityinspectrecords_Facili": "MarzV2FacilityInspectRecords",
+      "crf01_duedate": "DueDate",
+      "crf01_facilityinspecttasksid": "FacilityInspectTasksID",
+      "crf01_frequency": "Frequency",
+      "crf01_marzv2facilityinspecttasks_AsyncOperations": "System Jobs",
+      "crf01_marzv2facilityinspecttasks_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_marzv2facilityinspecttasks_DuplicateBaseRecord": "Duplicate Records (crf01_marzv2facilityinspecttasks_DuplicateBaseRecord)",
+      "crf01_marzv2facilityinspecttasks_DuplicateMatchingRecord": "Duplicate Records (crf01_marzv2facilityinspecttasks_DuplicateMatchingRecord)",
+      "crf01_marzv2facilityinspecttasks_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_marzv2facilityinspecttasks_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_marzv2facilityinspecttasks_ProcessSession": "Process Sessions",
+      "crf01_marzv2facilityinspecttasks_SyncErrors": "Sync Errors",
+      "crf01_marzv2facilityinspecttasksid": "MarzV2FacilityInspectTasks",
+      "crf01_notes": "Notes",
+      "crf01_PersonApprovedBy": "Person(ApprovedBy)",
+      "crf01_PersonAssignedTo": "Person(AssignedTo)",
+      "crf01_tasktype": "TaskType",
+      "crf01_Zone": "Zone",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MarzV2FacilityInspectTasks",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MarzV2FacilityInspectTasks (Views)",
+    "Name": "_crf01_marzv2facilityinspecttasks_views",
+    "RelatedEntityName": "MarzV2FacilityInspectTasks",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "101c60e7-f1b7-4897-a2bb-ea47a61628dc": "MarzV2FacilityInspectTasks Associated View",
+      "1f55910b-3da0-4ac9-acc6-ebe6b2fbf8c1": "Active MarzV2FacilityInspectTasks",
+      "2ded73a0-e215-40ef-b5e8-86138f26e35f": "MarzV2FacilityInspectTasks Lookup View",
+      "444b0543-927e-4c79-96fc-1add5fd8d038": "MarzV2FacilityInspectTasks Advanced Find View",
+      "f5b1362c-07d9-4ed4-89b0-f32ea9c6fc97": "Inactive MarzV2FacilityInspectTasks"
+    }
+  },
+  {
+    "DisplayName": "Status (MarzV2FacilityInspectTasks)",
+    "Name": "crf01_marzv2facilityinspecttasks_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MarzV2FacilityInspectTasks"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MarzV2FacilityInspectTasks",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MarzV2FacilityInspectTasks)",
+    "Name": "crf01_marzv2facilityinspecttasks_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MarzV2FacilityInspectTasks"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MarzV2FacilityInspectTasks",
+    "Type": "OptionSetInfo"
+  }
+]

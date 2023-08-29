@@ -1,0 +1,84 @@
+FuelTable As screen:
+    Fill: =RGBA(29, 29, 29, 1)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenDisplayName,"Fuel Submission Records");
+
+    FuelRecordingDataTable As dataTable.datatable:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        BorderStyle: =BorderStyle.Solid
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Open Sans'
+        FontWeight: =FontWeight.Normal
+        HeadingColor: =RGBA(255, 255, 255, 1)
+        HeadingFill: =RGBA(100, 118, 132, 1)
+        HeadingFont: =Font.'Open Sans'
+        HeadingFontWeight: =FontWeight.Normal
+        HeadingSize: =21
+        Height: =1065
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(62, 74, 83, .2)
+        InputFill: =RGBA(0, 0, 0, 1)
+        InvertedColor: =RGBA(255, 255, 255, 1)
+        Items: =MarzV2FuelRecords
+        LinkColor: =ColorFade(RGBA(0, 134, 208, 1), 30%)
+        NoDataText: ="No Data to Display"
+        PrimaryColor1: =RGBA(100, 118, 132, 1)
+        PrimaryColor2: =RGBA(197, 203, 207, 1)
+        PrimaryColor3: =RGBA(62, 74, 83, 1)
+        SelectedColor: =RGBA(255, 255, 255, 1)
+        SelectedFill: =RGBA(100, 118, 132, .2)
+        Size: =21.00
+        Width: =640
+        X: =0
+        Y: =71
+        ZIndex: =1
+
+        "'Record Number_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Record Number"
+            FieldName: ="crf01_recordnumber"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.RecordID
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        "'Created On_Column1' As dataTableColumn.dateTimeColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Created On"
+            FieldName: ="createdon"
+            FieldVariantName: ="dateTimeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =Text(ThisItem.'Created On',DateTimeFormat.LongDateTime)
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Vehicle_Column1 As dataTableColumn.complexTypeColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Vehicle"
+            FieldName: ="crf01_Vehicle"
+            FieldVariantName: ="complexTypeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Vehicle.MarzV2Vehicles
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+    FullNavMenuV2_17 As FullNavMenuV2:
+        Width: =640
+        ZIndex: =2
+

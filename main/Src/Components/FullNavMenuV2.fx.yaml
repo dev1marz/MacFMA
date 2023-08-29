@@ -1,0 +1,931 @@
+FullNavMenuV2 As CanvasComponent:
+    ContentLanguage: =""
+    Fill: =colMenu
+    Height: |-
+        =//Parent.Height
+        varNavCompHeight
+    OnReset: |+
+        =
+        
+    Width: |-
+        =//Parent.Width
+        varNavCompWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    contMenu As groupContainer.verticalAutoLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        EnableChildFocus: =false
+        Fill: =colMenu
+        Height: |
+            =Parent.Height-iconMenu.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingTop: =10
+        Width: =varContMenuWidth
+        Y: =contHeaderBar.Height
+        ZIndex: =23
+
+        contHomeBtn As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =varNavPaneBtnsHeight
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =1
+
+            iconHome As icon.Document:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                Height: =Parent.Height
+                Icon: =Icon.Home
+                LayoutMinHeight: =0
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(HomePage);
+                PaddingBottom: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =Parent.Height
+                ZIndex: =1
+
+            btnHome As button:
+                Align: =Align.Left
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                FillPortions: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =10
+                OnSelect: |-
+                    =Set(contDocCapMenuVis, false );
+                    Set(contFacManMenuVis, false );
+                    Set(contFleetManMenuVis,false);
+                    Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(HomePage);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =24
+                Text: ="Home"
+                Width: =varContMenuWidth
+                ZIndex: =2
+
+        contDocCapBtn As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =varNavPaneBtnsHeight
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =2
+
+            iconDocCap As icon.Document:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                Height: =Parent.Height
+                Icon: =Icon.Document
+                LayoutMinHeight: =0
+                OnSelect: =If(varContMenuWidth=varNavPaneBtnsHeight,Set(varContMenuWidth, varNavPaneWidth),Set(varContMenuWidth,varNavPaneBtnsHeight));
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =Parent.Height
+                ZIndex: =1
+
+            btnDocCap As button:
+                Align: =Align.Left
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                FillPortions: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =10
+                OnSelect: |-
+                    =If(contDocCapMenu.Visible= true ,Set(contDocCapMenuVis, false ),Set(contDocCapMenuVis, true ));
+                    Set(contFacManMenuVis, false );
+                    Set(contFleetManMenuVis,false);
+                    Set(contUtilManMenuVis,false);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =12
+                Text: ="Document Capturing"
+                Width: =varContMenuWidth
+                ZIndex: =2
+
+        contDocCapMenu As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderStyle: =BorderStyle.None
+            Height: =3*varNavPaneBtnsHeight*0.75+2*varNavPaneGapHeight
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =varNavPaneGapHeight
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =varNavPaneBtnsHeight+varNavPaneGapHeight
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Visible: =contDocCapMenuVis
+            Width: =varContMenuWidth
+            ZIndex: =3
+
+            btnExpenseAccounts As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(ExpenseAccounts)
+                Size: =12
+                Text: ="Expense Acocunt"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =1
+
+            btnTransactions As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(Transactions);
+                Size: =12
+                Text: ="Transactions"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =2
+
+            btnFileUpload As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(FileUpload);
+                Size: =12
+                Text: ="File Upload"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =3
+
+        contFacManBtn As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =varNavPaneBtnsHeight
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =4
+
+            iconFacMan As icon.Document:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                Height: =Parent.Height
+                Icon: =Icon.OfficeBuilding
+                LayoutMinHeight: =0
+                OnSelect: =If(varContMenuWidth=varNavPaneBtnsHeight,Set(varContMenuWidth, varNavPaneWidth),Set(varContMenuWidth,varNavPaneBtnsHeight));
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =Parent.Height
+                ZIndex: =1
+
+            btnFacMan As button:
+                Align: =Align.Left
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FillPortions: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =10
+                OnSelect: |-
+                    =If(contFacManMenu.Visible=true,Set(contFacManMenuVis,false),Set(contFacManMenuVis,true));
+                    Set(contDocCapMenuVis,false);
+                    Set(contFleetManMenuVis,false);
+                    Set(contUtilManMenuVis,false);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =12
+                Text: ="Facility Management"
+                Width: =280
+                ZIndex: =2
+
+        contFacManMenu As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: |
+                =9*varNavPaneBtnsHeight*0.75+9*varNavPaneGapHeight+If(contUtilManMenu.Visible=true,
+                contUtilManMenu.Height,-varNavPaneGapHeight)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =varNavPaneGapHeight
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =varNavPaneBtnsHeight+varNavPaneGapHeight
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Visible: =contFacManMenuVis
+            Width: =varContMenuWidth
+            ZIndex: =5
+
+            btnKeys As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(Keys);
+                Size: =12
+                Text: ="Keys"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =3
+
+            btnLinks As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(LinksScreen);
+                Size: =12
+                Text: ="Links"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =4
+
+            btnLocks As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(Locks);
+                Size: =12
+                Text: ="Locks"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =5
+
+            btnPersons As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(Persons);
+                Size: =12
+                Text: ="Persons"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =6
+
+            btnZones As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(ZoneScreen);
+                Size: =12
+                Text: ="Zones"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =7
+
+            btnSubs As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(SubsScreen);
+                Size: =12
+                Text: ="Access Groups (Subs)"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =8
+
+            btnOccupants As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(OccupancyGroupScreen);
+                Size: =12
+                Text: ="Occupants"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =9
+
+            btnAccessControlOverview As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(AccessOverViewScreen);
+                Size: =12
+                Text: ="Access Control Overview"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =10
+
+            btnUtilityManagement As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: =If(contUtilManMenu.Visible=true,Set(contUtilManMenuVis,false),Set(contUtilManMenuVis,true));
+                Size: =12
+                Text: ="Utility Management"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =11
+
+            contUtilManMenu As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =6*varNavPaneBtnsHeight*0.75+5*varNavPaneGapHeight
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =varNavPaneGapHeight
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =varNavPaneBtnsHeight+varNavPaneGapHeight
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Visible: =contUtilManMenuVis
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =12
+
+                btnFacilityTaskManagement As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(100, 118, 132, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =varNavPaneBtnsHeight*0.75
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |-
+                        =Set(varNavCompHeight,contHeaderBar.Height);
+                        Navigate(FacilityInspectionTasks);
+                    Size: =12
+                    Text: ="Facility Task Management"
+                    Width: =Parent.Width-Parent.PaddingLeft
+                    ZIndex: =1
+
+                btnFacilityTaskRecords As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(100, 118, 132, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =varNavPaneBtnsHeight*0.75
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |-
+                        =Set(varNavCompHeight,contHeaderBar.Height);
+                        Navigate(FacilityInspectionRecords);
+                    Size: =12
+                    Text: ="Facility Task Records"
+                    Width: =Parent.Width-Parent.PaddingLeft
+                    ZIndex: =2
+
+                btnElectricityMeters As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(100, 118, 132, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =varNavPaneBtnsHeight*0.75
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |-
+                        =Set(varNavCompHeight,contHeaderBar.Height);
+                        Navigate(ElectricityMeters);
+                    Size: =12
+                    Text: ="Electricity Meters"
+                    Width: =Parent.Width-Parent.PaddingLeft
+                    ZIndex: =3
+
+                btnElectricityMeterRecords As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(100, 118, 132, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =varNavPaneBtnsHeight*0.75
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |-
+                        =Set(varNavCompHeight,contHeaderBar.Height);
+                        Navigate(ElectricityMeterRecords);
+                    Size: =12
+                    Text: ="Electricity Meter Records"
+                    Width: =Parent.Width-Parent.PaddingLeft
+                    ZIndex: =4
+
+                btnWaterMeters As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(100, 118, 132, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =varNavPaneBtnsHeight*0.75
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |-
+                        =Set(varNavCompHeight,contHeaderBar.Height);
+                        Navigate(WaterMetersScreen);
+                    Size: =12
+                    Text: ="Water Meters"
+                    Width: =Parent.Width-Parent.PaddingLeft
+                    ZIndex: =5
+
+                btnWaterMeterRecords As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(100, 118, 132, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =varNavPaneBtnsHeight*0.75
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |-
+                        =Set(varNavCompHeight,contHeaderBar.Height);
+                        Navigate(WaterMeterReadingsScreen);
+                    Size: =12
+                    Text: ="Water Meter Records"
+                    Width: =Parent.Width-Parent.PaddingLeft
+                    ZIndex: =6
+
+        contFleetManBtn As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =varNavPaneBtnsHeight
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =6
+
+            iconFleetMan As icon.Document:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                Height: =Parent.Height
+                Icon: =Icon.Cars
+                LayoutMinHeight: =0
+                OnSelect: =If(varContMenuWidth=varNavPaneBtnsHeight,Set(varContMenuWidth, varNavPaneWidth),Set(varContMenuWidth,varNavPaneBtnsHeight));
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =Parent.Height
+                ZIndex: =1
+
+            btnFleetMan As button:
+                Align: =Align.Left
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FillPortions: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =20
+                OnSelect: |-
+                    =If(contFleetManMenu.Visible=true,Set(contFleetManMenuVis,false),Set(contFleetManMenuVis,true));
+                    Set(contDocCapMenuVis,false);
+                    Set(contFacManMenuVis,false);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =12
+                Text: ="Fleet Management"
+                Width: =280
+                ZIndex: =2
+
+        contFleetManMenu As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderStyle: =BorderStyle.None
+            FillPortions: =0
+            Height: =5*varNavPaneBtnsHeight*0.75+4*varNavPaneGapHeight
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =varNavPaneGapHeight
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =varNavPaneBtnsHeight+varNavPaneGapHeight
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Visible: =contFleetManMenuVis
+            Width: =varContMenuWidth
+            ZIndex: =7
+
+            btnFuelSubmissions As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(FuelRecording);
+                Size: =12
+                Text: ="Fuel Submission"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =3
+
+            btnFuelRecords As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(FuelTable);
+                Size: =12
+                Text: ="Fuel Records"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =4
+
+            btnVehicles As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(VehiclesScreen);
+                Size: =12
+                Text: ="Vehicles"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =5
+
+            btnVehicleInspection As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(VehicleInspectionTasks);
+                Size: =12
+                Text: ="Vehicle Inspection"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =6
+
+            btnVehicleInspectionRecords As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(VehicleInspectionRecords);
+                Size: =12
+                Text: ="Vehicle Inspection Records"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =7
+
+            iconMenu_1 As icon.Hamburger:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                Height: =varNavPaneBtnsHeight
+                Icon: =Icon.Hamburger
+                OnSelect: |-
+                    =Set(contDocCapMenuVis, false);
+                    Set(contFacManMenuVis, false);
+                    Set(contFleetManMenuVis, false);
+                    Set(contUtilManMenuVis,false);
+                    Set(contMenuWidth, 300);
+                    Set(colBtn, RGBA(100, 118, 132, 1));
+                    Set(colMenu, RGBA(0, 0, 0, 0.3));
+                    If(varContMenuWidth=0,Set(varContMenuWidth,contMenuWidth),Set(varContMenuWidth,0));
+                    
+                    If(varNavMenuHeight=0,Set(varContMenuWidth,contMenuWidth),Set(varContMenuWidth,0));
+                Width: =varNavPaneBtnsHeight
+                ZIndex: =8
+
+        contClose As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =varNavPaneBtnsHeight
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =8
+
+            iconClose As icon.ChevronUp:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                Height: =Parent.Height
+                Icon: =Icon.Cancel
+                OnSelect: =Set(varNavCompHeight,contHeaderBar.Height);
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =Parent.Height
+                ZIndex: =1
+
+            btnClose As button:
+                Align: =Align.Justify
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                FillPortions: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =20
+                OnSelect: =Set(varNavCompHeight,contHeaderBar.Height);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =12
+                Text: ="Close Menu"
+                Width: =280
+                ZIndex: =2
+
+    contHeaderBar As groupContainer.horizontalAutoLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        Fill: =colMenu
+        Height: =varNavHeaderHeight
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =26
+
+        iconMenu As icon.Hamburger:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(197, 203, 207, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =colBtn
+            Height: =Parent.Height
+            Icon: =Icon.Hamburger
+            OnSelect: |-
+                =Set(contDocCapMenuVis, false);
+                Set(contFacManMenuVis, false);
+                Set(contFleetManMenuVis, false);
+                Set(contUtilManMenuVis,false);
+                Set(colBtn, RGBA(100, 118, 132, 1));
+                Set(colMenu, RGBA(0, 0, 0, 0.2));
+                //If(varContMenuWidth=0;Set(varContMenuWidth;contMenuWidth);Set(varContMenuWidth;0));;
+                //checking if the nav pav is displayed
+                If(varNavCompHeight=iconMenu.Height,Set(varNavCompHeight,App.ActiveScreen.Height);Set(varContMenuWidth,varNavPaneWidth),Set(varNavCompHeight,iconMenu.Height));
+            PaddingBottom: =3
+            PaddingLeft: =3
+            PaddingRight: =3
+            PaddingTop: =3
+            Width: =Parent.Height
+            ZIndex: =2
+
+        HeaderTitle As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =5
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =5
+            Height: =Parent.Height
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            Size: =21
+            Text: =ScreenDisplayName
+            Width: =Parent.Width-iconMenu.Width-iconBack.Width
+            ZIndex: =3
+
+        iconBack As icon.BackArrow:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(197, 203, 207, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: |
+                =If(App.ActiveScreen.Name="HomePage",Color.Red,colBtn)
+            Height: =Parent.Height
+            HoverFill: =Color.DarkRed
+            Icon: |
+                =If(App.ActiveScreen.Name="HomePage",Icon.Leave,Icon.BackArrow)
+            OnSelect: |-
+                =
+                Set(varNavMenuHeight,iconMenu.Height);
+                If(App.ActiveScreen.Name="HomePage",Exit(0),Back())
+            PaddingBottom: =3
+            PaddingLeft: =3
+            PaddingRight: =3
+            Width: =Parent.Height
+            X: =Parent.Width-iconBack.Width
+            ZIndex: =4
+

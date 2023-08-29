@@ -1,0 +1,61 @@
+"'Menu Buttons' As CanvasComponent":
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =App.Height/16
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container3 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(29, 29, 29, 1)
+        Height: =71.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =20.00
+        PaddingRight: =20
+        Width: =App.Width
+        Y: =0.00
+        ZIndex: =1
+
+        Icon1_1 As icon.Hamburger:
+            AccessibleLabel: ="Men"
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(197, 203, 207, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =64.00
+            Icon: =Icon.Hamburger
+            OnSelect: |+
+                =If(ViewDocumentCapMenu = 1, Set(ViewDocumentCapMenu,0));
+                If(ViewFacilityMenu = 1, Set(ViewFacilityMenu,0));
+                If(ViewUtilityMenu = 1,Set(ViewFacilityMenu,0));
+                If(FleetManagementMenu = 1, Set(FleetManagementMenu,0));
+                
+                
+                
+                If(ViewMainMenu = 0,Set(ViewMainMenu, 1),[Set(ViewMainMenu,0)]);
+                
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Width: =73
+            X: =35
+            Y: =0.00
+            ZIndex: =1
+
+        Icon2_1 As icon.ArrowLeft:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(197, 203, 207, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =79.00
+            Icon: =Icon.ArrowLeft
+            OnSelect: =Back()
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Width: =88
+            X: =481
+            Y: =0.00
+            ZIndex: =3
+

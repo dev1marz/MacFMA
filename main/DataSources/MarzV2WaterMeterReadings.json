@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_marzv2watermeterreadingses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_marzv2watermeterreadings",
+    "MaxGetRowsCount": 500,
+    "Name": "MarzV2WaterMeterReadings",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_attachment": "Attachment",
+      "crf01_attachmentid": "crf01_AttachmentId",
+      "crf01_CapturedBy": "CapturedBy",
+      "crf01_dateofreading": "DateOfReading",
+      "crf01_marzv2watermeterreadings_AsyncOperations": "System Jobs",
+      "crf01_marzv2watermeterreadings_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_marzv2watermeterreadings_DuplicateBaseRecord": "Duplicate Records (crf01_marzv2watermeterreadings_DuplicateBaseRecord)",
+      "crf01_marzv2watermeterreadings_DuplicateMatchingRecord": "Duplicate Records (crf01_marzv2watermeterreadings_DuplicateMatchingRecord)",
+      "crf01_marzv2watermeterreadings_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_marzv2watermeterreadings_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_marzv2watermeterreadings_ProcessSession": "Process Sessions",
+      "crf01_marzv2watermeterreadings_SyncErrors": "Sync Errors",
+      "crf01_marzv2watermeterreadingsid": "MarzV2WaterMeterReadings",
+      "crf01_notes": "Notes",
+      "crf01_reading": "Reading",
+      "crf01_WaterMeter": "WaterMeter",
+      "crf01_watermeterreadingid": "WaterMeterReadingID",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MarzV2WaterMeterReadings",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MarzV2WaterMeterReadings (Views)",
+    "Name": "_crf01_marzv2watermeterreadings_views",
+    "RelatedEntityName": "MarzV2WaterMeterReadings",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "73292b75-281e-42bc-8e3b-68cb84c760c0": "MarzV2WaterMeterReadings Advanced Find View",
+      "87f2d951-e0e9-4eec-be5b-620cf3275518": "MarzV2WaterMeterReadings Associated View",
+      "a6d156d4-e822-4244-a434-4baae6181f73": "Active MarzV2WaterMeterReadings",
+      "b08708b9-c4bc-4b0f-8d52-5a109ace20f0": "Inactive MarzV2WaterMeterReadings",
+      "cd70b27f-ad62-4653-8f2a-f5d13428af19": "MarzV2WaterMeterReadings Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (MarzV2WaterMeterReadings)",
+    "Name": "crf01_marzv2watermeterreadings_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MarzV2WaterMeterReadings"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MarzV2WaterMeterReadings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MarzV2WaterMeterReadings)",
+    "Name": "crf01_marzv2watermeterreadings_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MarzV2WaterMeterReadings"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MarzV2WaterMeterReadings",
+    "Type": "OptionSetInfo"
+  }
+]

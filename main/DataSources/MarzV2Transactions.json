@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_marzv2transactionses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_marzv2transactions",
+    "MaxGetRowsCount": 500,
+    "Name": "MarzV2Transactions",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_attachment": "Attachment",
+      "crf01_date": "Date",
+      "crf01_ExpenseAccount": "ExpenseAccount",
+      "crf01_marzv2transactions_AsyncOperations": "System Jobs",
+      "crf01_marzv2transactions_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_marzv2transactions_DuplicateBaseRecord": "Duplicate Records (crf01_marzv2transactions_DuplicateBaseRecord)",
+      "crf01_marzv2transactions_DuplicateMatchingRecord": "Duplicate Records (crf01_marzv2transactions_DuplicateMatchingRecord)",
+      "crf01_marzv2transactions_FileAttachments": "FileAttachments",
+      "crf01_marzv2transactions_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_marzv2transactions_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_marzv2transactions_ProcessSession": "Process Sessions",
+      "crf01_marzv2transactions_SyncErrors": "Sync Errors",
+      "crf01_marzv2transactionsid": "MarzV2Transactions",
+      "crf01_notes": "Notes",
+      "crf01_totalvalue": "TotalValue",
+      "crf01_transactionid": "TransactionID",
+      "crf01_transactiontype": "TransactionType",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MarzV2Transactions",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MarzV2Transactions (Views)",
+    "Name": "_crf01_marzv2transactions_views",
+    "RelatedEntityName": "MarzV2Transactions",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "454e21a3-fcf3-4ca7-a94f-bd99d7bf4ef9": "MarzV2Transactions Lookup View",
+      "55f17e40-a694-412b-9b5e-cd3ab23b53d1": "MarzV2Transactions Associated View",
+      "8c9d2103-64ea-4739-9747-a9460ca99501": "MarzV2Transactions Advanced Find View",
+      "babdef97-041f-46df-9d80-1a1f86d070e7": "Inactive MarzV2Transactions",
+      "bc355b9f-423f-4dfb-9190-d5a7469c4297": "Active MarzV2Transactions"
+    }
+  },
+  {
+    "DisplayName": "Status (MarzV2Transactions)",
+    "Name": "crf01_marzv2transactions_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MarzV2Transactions"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MarzV2Transactions",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MarzV2Transactions)",
+    "Name": "crf01_marzv2transactions_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MarzV2Transactions"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MarzV2Transactions",
+    "Type": "OptionSetInfo"
+  }
+]

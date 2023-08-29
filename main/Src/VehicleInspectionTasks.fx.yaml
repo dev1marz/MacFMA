@@ -1,0 +1,665 @@
+VehicleInspectionTasks As screen:
+    Fill: =RGBA(29, 29, 29, 1)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Vehicle Inspection Tasks");
+    Width: =
+
+    "GalleryVehicleInspectionTasks As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        BorderColor: =RGBA(243, 245, 245, 1)
+        Height: =329.00
+        Items: = If(IsBlank(SearchInputVehicleInspections.Text),MarzV2VehicleInspectionTasks,Filter(MarzV2VehicleInspectionTasks,(SearchInputVehicleInspections.Text in VehicleInspectionTaskID)))
+        Layout: =Layout.Vertical
+        OnSelect: =
+        Selectable: =If(ScreenState =0, true)
+        TemplatePadding: =0.00
+        TemplateSize: =104.00
+        Width: =585
+        X: =27
+        Y: =777
+        ZIndex: =1
+
+        Title4_8 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =40.00
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20.00
+            Text: =ThisItem.VehicleInspectionTaskID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =300
+            X: =17
+            Y: =16.00
+            ZIndex: =1
+
+    FormVehicleInspectionTasks As form:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DataSource: =MarzV2VehicleInspectionTasks
+        DefaultMode: =If(ScreenState = 1,FormMode.Edit,FormMode.View)
+        Height: =430.00
+        Item: =GalleryVehicleInspectionTasks.Selected
+        OnFailure: =NewForm(FormVehicleInspectionTasks);Notify("Error!", NotificationType.Error)
+        OnReset: =FormMode.New
+        OnSuccess: =Notify("Success",NotificationType.Success)
+        Width: =640
+        Y: =87
+        ZIndex: =2
+
+        VehicleInspectionTaskID_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_vehicleinspectiontaskid"
+            Default: =ThisItem.VehicleInspectionTaskID
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2VehicleInspectionTasks],DataSourceInfo.DisplayName,"crf01_vehicleinspectiontaskid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MarzV2VehicleInspectionTasks], DataSourceInfo.MaxLength, "crf01_vehicleinspectiontaskid")
+            Required: =true
+            Update: =DataCardValue12.Text
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey17 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue12 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey17.Y + DataCardKey17.Height + 5
+                ZIndex: =2
+
+            ErrorMessage29 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue12.Y + DataCardValue12.Height
+                ZIndex: =3
+
+            StarVisible29 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey17.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey17.Y
+                ZIndex: =4
+
+        Description_DataCard1 As typedDataCard.textualMultiLineEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_description"
+            Default: =ThisItem.Description
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2VehicleInspectionTasks],DataSourceInfo.DisplayName,"crf01_description")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue13.Text
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey44 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue13 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =140
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey44.Y + DataCardKey44.Height + 5
+                ZIndex: =2
+
+            ErrorMessage32 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue13.Y + DataCardValue13.Height
+                ZIndex: =3
+
+            StarVisible32 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey44.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey44.Y
+                ZIndex: =4
+
+        ExampleImage_DataCard1 As typedDataCard.addLargePictureCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_exampleimage"
+            Default: =ThisItem.ExampleImage
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2VehicleInspectionTasks],DataSourceInfo.DisplayName,"crf01_exampleimage")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Image3.Image
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey18 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            Image3 As image:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Height: =AddPicture3.Height
+                Image: =If(IsBlank(AddPicture3.Media), Parent.Default, AddPicture3.Media)
+                Tooltip: =Parent.DisplayName
+                Width: =AddPicture3.Width
+                X: =AddPicture3.X
+                Y: =AddPicture3.Y
+                ZIndex: =2
+
+            AddPicture3 As addMedia:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =320
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey18.Y + DataCardKey18.Height + 5
+                ZIndex: =3
+
+            ErrorMessage30 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Image3.Y + Image3.Height
+                ZIndex: =4
+
+            StarVisible30 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey18.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey18.Y
+                ZIndex: =5
+
+        Frequency_DataCard1 As typedDataCard.numberEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_frequency"
+            Default: =ThisItem.Frequency
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2VehicleInspectionTasks],DataSourceInfo.DisplayName,"crf01_frequency")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue37.Text)
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey45 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue37 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Format: =TextFormat.Number
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey45.Y + DataCardKey45.Height + 5
+                ZIndex: =2
+
+            ErrorMessage35 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue37.Y + DataCardValue37.Height
+                ZIndex: =3
+
+            StarVisible34 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey45.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey45.Y
+                ZIndex: =4
+
+        TaskType_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_tasktype"
+            Default: =ThisItem.TaskType
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2VehicleInspectionTasks],DataSourceInfo.DisplayName,"crf01_tasktype")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MarzV2VehicleInspectionTasks], DataSourceInfo.MaxLength, "crf01_tasktype")
+            Required: =false
+            Update: =DataCardValue38.Text
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey46 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue38 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey46.Y + DataCardKey46.Height + 5
+                ZIndex: =2
+
+            ErrorMessage36 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue38.Y + DataCardValue38.Height
+                ZIndex: =3
+
+            StarVisible37 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey46.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey46.Y
+                ZIndex: =4
+
+    ConfirmCancelBtnsVehicleInspectionTasks As groupContainer.horizontalAutoLayoutContainer:
+        Height: =124.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Visible: =If(ScreenState = 1,true)
+        Width: =640
+        Y: =502
+        ZIndex: =3
+
+        "'BtnConfirmAdd(AddingItem)_1' As button":
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =SubmitForm(FormVehicleInspectionTasks);Set(ScreenState,0)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Confirm"
+            Width: =280
+            Y: =0.00
+            ZIndex: =1
+
+        "'BtnCancel(ScreenName)_1' As button":
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 51, 51, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =ViewForm(FormVehicleInspectionTasks);Set(ScreenState,0)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Cancel"
+            Width: =280
+            Y: =0.00
+            ZIndex: =2
+
+    SearchInputVehicleInspections As text:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: |
+            =If(ScreenState =1,DisplayMode.Disabled)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderThickness: =4
+        Height: =69.00
+        HintText: =""
+        HoverBorderColor: =RGBA(197, 203, 207, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(62, 74, 83, 1)
+        PaddingBottom: =5.00
+        PaddingLeft: =0.00
+        Size: =21.00
+        Width: =573
+        X: =38
+        Y: =626
+        ZIndex: =4
+
+    VehicleInspectionAddEditBtns As groupContainer.horizontalAutoLayoutContainer:
+        Height: =124.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Visible: =If(ScreenState = 0,true)
+        Width: =640
+        Y: =502
+        ZIndex: =5
+
+        BtnEditVehicleInspectionTask As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =Set(ScreenState,1);FormVehicleInspectionTasks.DisplayMode.Edit
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Edit Selected"
+            Visible: =If(ScreenState,0,true)
+            Width: =280
+            Y: =27.00
+            ZIndex: =1
+
+        BtnAddInspectionTask As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(NavigationMenu = 1,DisplayMode.Disabled)
+            Fill: =RGBA(102, 182, 227, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =Set(ScreenState,1);NewForm(FormVehicleInspectionTasks)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Add (Item to add)"
+            Width: =280
+            Y: =27.00
+            ZIndex: =2
+
+    GalleryLabelsVehicleInspectionTasks As groupContainer.horizontalAutoLayoutContainer:
+        BorderColor: =RGBA(220, 224, 226, 1)
+        Height: =71.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =10.00
+        Width: =600
+        X: =27
+        Y: =706
+        ZIndex: =6
+
+        PersonNameLabel_3 As label:
+            BorderColor: =RGBA(232, 234, 236, 1)
+            BorderStyle: =
+            BorderThickness: =
+            Color: =RGBA(243, 245, 245, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =70.00
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =21.00
+            Text: ="Inspect Task ID"
+            Width: =300
+            X: =290
+            Y: =1.00
+            ZIndex: =1
+
+    FullNavMenuV2_20 As FullNavMenuV2:
+        Width: =640
+        ZIndex: =7
+

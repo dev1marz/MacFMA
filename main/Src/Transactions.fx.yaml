@@ -1,0 +1,747 @@
+Transactions As screen:
+    Fill: =RGBA(29, 29, 29, 1)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Transactions");
+
+    TransactionsForm As form:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DataSource: =MarzV2Transactions
+        DefaultMode: =If(ScreenState = 1,FormMode.New,FormMode.View)
+        Height: =445
+        Item: =TransactionsGallery.Selected
+        OnFailure: =Notify("Error!", NotificationType.Error)
+        OnSuccess: =Notify("Success",NotificationType.Success)
+        Width: =640
+        Y: =81
+        ZIndex: =1
+
+        Attachment_DataCard3 As typedDataCard.fileEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_attachment"
+            Default: |-
+                =If(!IsBlank(ThisItem.Attachment.FileName), Table({DisplayName: ThisItem.Attachment.FileName, Value: ThisItem.Attachment.Value}), Blank())
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,"crf01_attachment")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue19.Attachments
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey24 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue19 As attachments:
+                AddAttachmentText: ="Upload file"
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =170
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                IsInDataCard: =true
+                ItemColor: =RGBA(255, 255, 255, 1)
+                ItemFill: =RGBA(100, 118, 132, 1)
+                ItemHoverColor: =RGBA(255, 255, 255, 1)
+                ItemHoverFill: =RGBA(62, 74, 83, 1)
+                Items: =Parent.Default
+                MaxAttachments: =1
+                MaxAttachmentsText: =""
+                NoAttachmentsText: ="There is no file."
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey24.Y + DataCardKey24.Height + 5
+                ZIndex: =2
+
+            ErrorMessage23 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue19.Y + DataCardValue19.Height
+                ZIndex: =3
+
+            StarVisible23 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey24.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey24.Y
+                ZIndex: =4
+
+        ExpenseAccount_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_ExpenseAccount"
+            Default: =ThisItem.ExpenseAccount
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,"crf01_ExpenseAccount")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue21.Selected
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey26 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: ="Expense Account"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue21 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["crf01_expenseaccountsid"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =70
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Items: =Choices([@MarzV2Transactions].crf01_ExpenseAccount)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SearchFields: =["crf01_expenseaccountsid"]
+                SearchItems: =Search(Choices([@MarzV2Transactions].crf01_ExpenseAccount),DataCardValue21.SearchText,"crf01_expenseaccountsid")
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey26.Y + DataCardKey26.Height + 5
+                ZIndex: =2
+
+            ErrorMessage25 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue21.Y + DataCardValue21.Height
+                ZIndex: =3
+
+            StarVisible25 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey26.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey26.Y
+                ZIndex: =4
+
+        Notes_DataCard1 As typedDataCard.textualMultiLineEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_notes"
+            Default: =ThisItem.Notes
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,"crf01_notes")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue30.Text
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey36 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue30 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =140
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey36.Y + DataCardKey36.Height + 5
+                ZIndex: =2
+
+            ErrorMessage33 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue30.Y + DataCardValue30.Height
+                ZIndex: =3
+
+            StarVisible33 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey36.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey36.Y
+                ZIndex: =4
+
+        TotalValue_DataCard2 As typedDataCard.numberEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_totalvalue"
+            Default: =ThisItem.TotalValue
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,"crf01_totalvalue")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue31.Text)
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey37 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: ="Total Value"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue31 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Format: =TextFormat.Number
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey37.Y + DataCardKey37.Height + 5
+                ZIndex: =2
+
+            ErrorMessage34 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue31.Y + DataCardValue31.Height
+                ZIndex: =3
+
+            StarVisible35 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey37.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey37.Y
+                ZIndex: =4
+
+        TransactionType_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_transactiontype"
+            Default: =ThisItem.TransactionType
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,"crf01_transactiontype")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MarzV2Transactions], DataSourceInfo.MaxLength, "crf01_transactiontype")
+            Required: =false
+            Update: =DataCardValue32.Text
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey38 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: ="Transaction Type"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue32 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey38.Y + DataCardKey38.Height + 5
+                ZIndex: =2
+
+            ErrorMessage42 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue32.Y + DataCardValue32.Height
+                ZIndex: =3
+
+            StarVisible36 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey38.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey38.Y
+                ZIndex: =4
+
+        TransactionID_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_transactionid"
+            Default: =ThisItem.TransactionID
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,"crf01_transactionid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MarzV2Transactions], DataSourceInfo.MaxLength, "crf01_transactionid")
+            Required: =true
+            Update: =DataCardValue35.Text
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey39 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: ="Transaction ID"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue35 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey39.Y + DataCardKey39.Height + 5
+                ZIndex: =2
+
+            ErrorMessage44 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue35.Y + DataCardValue35.Height
+                ZIndex: =3
+
+            StarVisible43 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey39.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey39.Y
+                ZIndex: =4
+
+    "TransactionsGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DisplayMode: =If(ScreenState = 1,DisplayMode.Disabled)
+        Height: =309.00
+        Items: = If(IsBlank(TransactionSearchInput.Text),MarzV2Transactions,Filter(MarzV2Transactions,TransactionSearchInput.Text in TransactionID ))
+        Layout: =Layout.Vertical
+        OnSelect: =
+        Selectable: =If(ScreenState = 1,false)
+        TemplatePadding: =0.00
+        TemplateSize: =96.00
+        Width: =579
+        X: =30
+        Y: =777
+        ZIndex: =3
+
+        TransactionNumber As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =58
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20.00
+            Text: =ThisItem.TransactionID
+            VerticalAlign: =VerticalAlign.Top
+            Width: =213
+            X: =24
+            Y: =18
+            ZIndex: =2
+
+    TransactionSearchInput As text:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: |
+            =If(ScreenState =1,DisplayMode.Disabled)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderThickness: =4
+        Height: =63.00
+        HintText: ="Search Transaction by Number"
+        HoverBorderColor: =RGBA(197, 203, 207, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(62, 74, 83, 1)
+        PaddingBottom: =5.00
+        PaddingLeft: =12.00
+        Size: =21.00
+        Width: =579
+        X: =30
+        Y: =626
+        ZIndex: =4
+
+    TransactionButtonContainer As groupContainer.horizontalAutoLayoutContainer:
+        Height: =124.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Visible: =If(ScreenState = 0,true)
+        Width: =640
+        Y: =516.00
+        ZIndex: =5
+
+        AddTransaction As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(NavigationMenu = 1, DisplayMode.Disabled)
+            Fill: =RGBA(102, 182, 227, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: |-
+                =Set(ScreenState,1);NewForm(TransactionsForm);/*ForAll(fileUploadControl.Attachments As Document ,TR1ExpenseTransactions.Run(
+                     {
+                         contentBytes: Document.Value,
+                        name: Document.Name
+                     }
+                 )) */
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Add Transaction"
+            Width: =280
+            Y: =0.00
+            ZIndex: =2
+
+    TransactionConfirmCancelBtnContainer As groupContainer.horizontalAutoLayoutContainer:
+        Height: =109.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Visible: =If(ScreenState = 1,true)
+        Width: =640
+        Y: =531.00
+        ZIndex: =6
+
+        TransactionConfirm As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =SubmitForm(TransactionsForm);Set(ScreenState,0)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Confirm"
+            Width: =280
+            Y: =0.00
+            ZIndex: =1
+
+        TransactionCancel As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 51, 51, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =Set(ScreenState,0)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Cancel"
+            Width: =280
+            Y: =0.00
+            ZIndex: =2
+
+    Label7_7 As label:
+        BorderColor: =RGBA(232, 234, 236, 1)
+        BorderStyle: =
+        BorderThickness: =
+        Color: =RGBA(243, 245, 245, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =21.00
+        Text: |-
+            ="Transaction Number
+            "
+        Width: =301
+        X: =30
+        Y: =698
+        ZIndex: =7
+
+    FullNavMenuV2_8 As FullNavMenuV2:
+        Width: =640
+        ZIndex: =8
+

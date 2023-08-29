@@ -1,0 +1,103 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_marzv2vehicleses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_marzv2vehicles",
+    "MaxGetRowsCount": 500,
+    "Name": "MarzV2Vehicles",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_crf01_marzv2fuelrecords_Vehicle_crf01_mar": "MarzV2FuelRecords",
+      "crf01_crf01_marzv2vehicleinspectionrecords_Vehc": "MarzV2VehicleInspectionRecords",
+      "crf01_licensediskexpirydate": "LicenseDiskExpiryDate",
+      "crf01_licensediskimage": "LicenseDiskImage",
+      "crf01_licensediskimageid": "crf01_LicenseDiskImageId",
+      "crf01_make": "Make",
+      "crf01_marzv2vehicles_AsyncOperations": "System Jobs",
+      "crf01_marzv2vehicles_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_marzv2vehicles_DuplicateBaseRecord": "Duplicate Records (crf01_marzv2vehicles_DuplicateBaseRecord)",
+      "crf01_marzv2vehicles_DuplicateMatchingRecord": "Duplicate Records (crf01_marzv2vehicles_DuplicateMatchingRecord)",
+      "crf01_marzv2vehicles_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_marzv2vehicles_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_marzv2vehicles_ProcessSession": "Process Sessions",
+      "crf01_marzv2vehicles_SyncErrors": "Sync Errors",
+      "crf01_marzv2vehiclesid": "MarzV2Vehicles",
+      "crf01_model": "Model",
+      "crf01_numberplate": "NumberPlate",
+      "crf01_odometerreading": "OdometerReading",
+      "crf01_purchasedate": "PurchaseDate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MarzV2Vehicles",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MarzV2Vehicles (Views)",
+    "Name": "_crf01_marzv2vehicles_views",
+    "RelatedEntityName": "MarzV2Vehicles",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "6b6833e1-1423-4838-8838-bdb4f3c7c21e": "Inactive MarzV2Vehicles",
+      "75edd2b4-d628-4747-91aa-06c847531cbe": "MarzV2Vehicles Associated View",
+      "769a45bc-32a9-4686-b31e-3c6d696f74b8": "Active MarzV2Vehicles",
+      "c8c89339-f3a9-45c0-8e3c-93dc57299d47": "MarzV2Vehicles Lookup View",
+      "f909e6fe-d781-4dd0-8581-ba0510dc9152": "MarzV2Vehicles Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (MarzV2Vehicles)",
+    "Name": "crf01_marzv2vehicles_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MarzV2Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MarzV2Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MarzV2Vehicles)",
+    "Name": "crf01_marzv2vehicles_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MarzV2Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MarzV2Vehicles",
+    "Type": "OptionSetInfo"
+  }
+]
