@@ -773,7 +773,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Navigate(VehicleInspectionRecords);
+                    //Navigate(VehicleInspectionRecords);
                 Size: =12
                 Text: ="Vehicle Inspection Records"
                 Width: =Parent.Width-Parent.PaddingLeft

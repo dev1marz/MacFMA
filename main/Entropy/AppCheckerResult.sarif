@@ -8588,46 +8588,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "FullNavMenuV2.contMenu.contFleetManMenu.btnVehicleInspectionRecords.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FullNavMenuV2.contMenu.contFleetManMenu.btnVehicleInspectionRecords.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 24,
-                  "charOffset": 53,
-                  "snippet": {
-                    "text": "VehicleInspectionRecords"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "FullNavMenuV2",
-                "type": "FullNavMenuV2.contMenu.contFleetManMenu.btnVehicleInspectionRecords"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "VehicleInspectionRecords"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "MainMenuComponent.Width"
                 }
               ],
