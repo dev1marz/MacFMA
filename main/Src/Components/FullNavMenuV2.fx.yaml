@@ -146,7 +146,7 @@ FullNavMenuV2 As CanvasComponent:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =12
-                Text: ="Document Capturing"
+                Text: ="Staff"
                 Width: =varContMenuWidth
                 ZIndex: =2
 
@@ -280,7 +280,7 @@ FullNavMenuV2 As CanvasComponent:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =12
-                Text: ="Facility Management"
+                Text: ="Residents"
                 Width: =280
                 ZIndex: =2
 
