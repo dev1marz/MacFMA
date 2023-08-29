@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macvendorvisitses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macvendorvisits",
+    "Name": "MacVendorVisits",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_dateofvisit": "DateOfVisit",
+      "crf01_LocationOfVisit": "LocationOfVisit",
+      "crf01_macvendorvisits_AsyncOperations": "System Jobs",
+      "crf01_macvendorvisits_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macvendorvisits_DuplicateBaseRecord": "Duplicate Records (crf01_macvendorvisits_DuplicateBaseRecord)",
+      "crf01_macvendorvisits_DuplicateMatchingRecord": "Duplicate Records (crf01_macvendorvisits_DuplicateMatchingRecord)",
+      "crf01_macvendorvisits_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macvendorvisits_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macvendorvisits_ProcessSession": "Process Sessions",
+      "crf01_macvendorvisits_SyncErrors": "Sync Errors",
+      "crf01_macvendorvisitsid": "MacVendorVisits",
+      "crf01_reasonforvisit": "ReasonForVisit",
+      "crf01_Vendor": "Vendor",
+      "crf01_vendorrepname": "VendorRepName",
+      "crf01_vendorrepnumber": "VendorRepNumber",
+      "crf01_visitid": "VisitID",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacVendorVisits",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacVendorVisits (Views)",
+    "Name": "_crf01_macvendorvisits_views",
+    "RelatedEntityName": "MacVendorVisits",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "7c8b73a0-89bf-4d91-acd0-afe6ae44f6d2": "Active MacVendorVisits",
+      "a7a0ce9f-1746-4b03-8f2f-82763bc70e85": "MacVendorVisits Advanced Find View",
+      "b2055beb-6737-4e3d-b2c8-b60a4b963cf5": "Inactive MacVendorVisits",
+      "c7df3499-6c72-4df5-8eb8-6e5995307193": "MacVendorVisits Lookup View",
+      "cf05027c-8796-4ad6-bac6-a09fe57a54fa": "MacVendorVisits Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (MacVendorVisits)",
+    "Name": "crf01_macvendorvisits_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacVendorVisits"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacVendorVisits",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacVendorVisits)",
+    "Name": "crf01_macvendorvisits_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacVendorVisits"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacVendorVisits",
+    "Type": "OptionSetInfo"
+  }
+]

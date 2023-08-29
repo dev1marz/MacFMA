@@ -517,6 +517,20 @@
       "Values": {
         "Information": "2dfe63fb-45cd-4d02-a94e-c7c3b3aa9a68"
       }
+    },
+    {
+      "Kind": "default.cds_crf01_macvendorsandcontracs_forms",
+      "Namespace": "MacVendorsAndContracs (Forms)",
+      "Values": {
+        "Information": "a1163133-d401-4605-a4d1-f536247b6840"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_macvendorvisits_forms",
+      "Namespace": "MacVendorVisits (Forms)",
+      "Values": {
+        "Information": "092702f9-5e52-4322-a673-b0fdf4bd6903"
+      }
     }
   ]
 }

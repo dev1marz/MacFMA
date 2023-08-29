@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macvendorsandcontracses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macvendorsandcontracs",
+    "Name": "MacVendorsAndContracs",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_address": "Address",
+      "crf01_contactnumber": "ContactNumber",
+      "crf01_crf01_macvendorvisits_Vendor_crf01_macven": "MacVendorVisits",
+      "crf01_macvendorsandcontracs_AsyncOperations": "System Jobs",
+      "crf01_macvendorsandcontracs_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macvendorsandcontracs_DuplicateBaseRecord": "Duplicate Records (crf01_macvendorsandcontracs_DuplicateBaseRecord)",
+      "crf01_macvendorsandcontracs_DuplicateMatchingRecord": "Duplicate Records (crf01_macvendorsandcontracs_DuplicateMatchingRecord)",
+      "crf01_macvendorsandcontracs_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macvendorsandcontracs_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macvendorsandcontracs_ProcessSession": "Process Sessions",
+      "crf01_macvendorsandcontracs_SyncErrors": "Sync Errors",
+      "crf01_macvendorsandcontracsid": "MacVendorsAndContracs",
+      "crf01_vatnumber": "VATNumber",
+      "crf01_vendorcontactperson": "VendorContactPerson",
+      "crf01_vendorid": "VendorID",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacVendorsAndContracs",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacVendorsAndContracs (Views)",
+    "Name": "_crf01_macvendorsandcontracs_views",
+    "RelatedEntityName": "MacVendorsAndContracs",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0d6f7f46-dc18-4d3d-b65b-33909d11ab4c": "MacVendorsAndContracs Lookup View",
+      "56678ce1-9543-4261-84cc-46bc3a225e1a": "MacVendorsAndContracs Advanced Find View",
+      "db9b821a-5995-4dad-a30a-81365f1e046f": "Inactive MacVendorsAndContracs",
+      "e5191214-b913-461c-b89a-2f05f40b1249": "Active MacVendorsAndContracs",
+      "e5630c53-5259-40f2-ab14-4588b2e27d74": "MacVendorsAndContracs Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (MacVendorsAndContracs)",
+    "Name": "crf01_macvendorsandcontracs_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacVendorsAndContracs"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacVendorsAndContracs",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacVendorsAndContracs)",
+    "Name": "crf01_macvendorsandcontracs_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacVendorsAndContracs"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacVendorsAndContracs",
+    "Type": "OptionSetInfo"
+  }
+]
