@@ -110,7 +110,7 @@ MaintainanceScreen As screen:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayFields: =["crf01_assetid"]
+                DisplayFields: =["crf01_equiptmentname"]
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 1)
                 Height: =70
@@ -120,8 +120,8 @@ MaintainanceScreen As screen:
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(197, 203, 207, 1)
-                SearchFields: =["crf01_assetid"]
-                SearchItems: =Search(Choices([@MacFMAMaintainances].crf01_Equiptment),DataCardValue42.SearchText,"crf01_assetid")
+                SearchFields: =["crf01_equiptmentname"]
+                SearchItems: =Search(Choices([@MacFMAMaintainances].crf01_Equiptment),DataCardValue42.SearchText,"crf01_equiptmentname")
                 SelectionFill: =RGBA(100, 118, 132, 1)
                 SelectMultiple: =false
                 Size: =21
