@@ -95,7 +95,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 192,
+    "BindingErrorCount": 191,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -130,12 +130,12 @@
   "ScreenOrder": [
     "HomePage",
     "AddEditScreenTemplate",
+    "ViewTemplate",
+    "ViewAddTemplate",
     "VendorScreen",
     "VendorVisitScreen",
     "MaintainanceScreen",
     "WorkOrderScreen",
-    "ViewAddTemplate",
-    "ViewTemplate",
     "StaffScreen",
     "ResidentsScreen",
     "LocationScreen",
