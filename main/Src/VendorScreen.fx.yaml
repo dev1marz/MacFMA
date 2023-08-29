@@ -2,7 +2,7 @@ VendorScreen As screen:
     ContentLanguage: =""
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Vendors");
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Vendors & Contractors");
     Width: =
 
     "'(GalleryScreenName)_3' As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
@@ -651,7 +651,7 @@ VendorScreen As screen:
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
-            Text: ="Add (Item to add)"
+            Text: ="Add Vendor"
             Width: =280
             Y: =27.00
             ZIndex: =2
