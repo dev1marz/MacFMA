@@ -829,7 +829,7 @@ VendorVisitScreen As screen:
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
-            Text: ="Add Vendor"
+            Text: ="Add Vendor Visit"
             Width: =280
             Y: =27.00
             ZIndex: =2
