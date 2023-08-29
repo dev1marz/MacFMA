@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmalocationses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmalocations",
+    "Name": "MacFMALocations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_crf01_macfmaassets_Location_crf01_macfmal": "MacFMAAssets",
+      "crf01_crf01_macfmaresidents_RoomNumber_crf01_ma": "MacFMAResidents",
+      "crf01_crf01_macfmaworkorders_Location_crf01_mac": "MacFMAWorkOrders",
+      "crf01_crf01_macvendorvisits_LocationOfVisit_crf": "MacVendorVisits",
+      "crf01_department": "Department",
+      "crf01_Facility": "Facility",
+      "crf01_locationid": "LocationID",
+      "crf01_macfmalocations_AsyncOperations": "System Jobs",
+      "crf01_macfmalocations_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmalocations_DuplicateBaseRecord": "Duplicate Records (crf01_macfmalocations_DuplicateBaseRecord)",
+      "crf01_macfmalocations_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmalocations_DuplicateMatchingRecord)",
+      "crf01_macfmalocations_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmalocations_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmalocations_ProcessSession": "Process Sessions",
+      "crf01_macfmalocations_SyncErrors": "Sync Errors",
+      "crf01_macfmalocationsid": "MacFMALocations",
+      "crf01_roomcontactnumber": "RoomContactNumber",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMALocations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMALocations (Views)",
+    "Name": "_crf01_macfmalocations_views",
+    "RelatedEntityName": "MacFMALocations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "44bb2c78-8f7d-4563-81c7-3299c7ddc025": "Inactive MacFMALocations",
+      "6202e9b4-2081-4c80-bb33-22a58d13a20b": "MacFMALocations Advanced Find View",
+      "743e0b8a-1411-4ed3-b398-2af4d2cc043c": "Active MacFMALocations",
+      "b4b8f104-c635-447a-b6fe-e4e1192bc92e": "MacFMALocations Lookup View",
+      "d7d02837-f07a-45c6-be99-90c486b91044": "MacFMALocations Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMALocations)",
+    "Name": "crf01_macfmalocations_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMALocations"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMALocations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMALocations)",
+    "Name": "crf01_macfmalocations_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMALocations"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMALocations",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmaworkorderses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmaworkorders",
+    "Name": "MacFMAWorkOrders",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_completedby": "CompletedBy",
+      "crf01_CreatedBy": "CreatedBy",
+      "crf01_datecompleted": "DateCompleted",
+      "crf01_datecreated": "DateCreated",
+      "crf01_dateissued": "DateIssued",
+      "crf01_Location": "Location",
+      "crf01_macfmaworkorders_AsyncOperations": "System Jobs",
+      "crf01_macfmaworkorders_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmaworkorders_DuplicateBaseRecord": "Duplicate Records (crf01_macfmaworkorders_DuplicateBaseRecord)",
+      "crf01_macfmaworkorders_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmaworkorders_DuplicateMatchingRecord)",
+      "crf01_macfmaworkorders_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmaworkorders_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmaworkorders_ProcessSession": "Process Sessions",
+      "crf01_macfmaworkorders_SyncErrors": "Sync Errors",
+      "crf01_macfmaworkordersid": "MacFMAWorkOrders",
+      "crf01_orderid": "OrderID",
+      "crf01_priority": "Priority",
+      "crf01_typeofworkorder": "TypeOfWorkOrder",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAWorkOrders",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAWorkOrders (Views)",
+    "Name": "_crf01_macfmaworkorders_views",
+    "RelatedEntityName": "MacFMAWorkOrders",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "195e7d61-8d0b-44a1-8b33-4c431f2fd634": "MacFMAWorkOrders Advanced Find View",
+      "2acdb299-2cb0-4276-91c6-01078ed4d9c5": "Inactive MacFMAWorkOrders",
+      "2ff81461-5c73-4b75-8e55-f058bb9b94de": "MacFMAWorkOrders Lookup View",
+      "4606b0c3-e05a-4d64-bd5e-617d66647338": "MacFMAWorkOrders Associated View",
+      "f9a49b91-ae00-4100-a239-3c8aa5f1c5fe": "Active MacFMAWorkOrders"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAWorkOrders)",
+    "Name": "crf01_macfmaworkorders_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAWorkOrders"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAWorkOrders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAWorkOrders)",
+    "Name": "crf01_macfmaworkorders_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAWorkOrders"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAWorkOrders",
+    "Type": "OptionSetInfo"
+  }
+]

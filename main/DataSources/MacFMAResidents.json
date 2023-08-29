@@ -1,0 +1,105 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmaresidentses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmaresidents",
+    "Name": "MacFMAResidents",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_Caretaker": "Caretaker",
+      "crf01_contactnumber": "ContactNumber",
+      "crf01_dateofbirth": "DateOfBirth",
+      "crf01_emergencycontactname": "EmergencyContactName",
+      "crf01_emergencycontactnumber": "EmergencyContactNumber",
+      "crf01_macfmaresidents_AsyncOperations": "System Jobs",
+      "crf01_macfmaresidents_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmaresidents_DuplicateBaseRecord": "Duplicate Records (crf01_macfmaresidents_DuplicateBaseRecord)",
+      "crf01_macfmaresidents_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmaresidents_DuplicateMatchingRecord)",
+      "crf01_macfmaresidents_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmaresidents_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmaresidents_ProcessSession": "Process Sessions",
+      "crf01_macfmaresidents_SyncErrors": "Sync Errors",
+      "crf01_macfmaresidentsid": "MacFMAResidents",
+      "crf01_name": "Name",
+      "crf01_notes": "Notes",
+      "crf01_residentid": "ResidentID",
+      "crf01_RoomNumber": "RoomNumber",
+      "crf01_surname": "Surname",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAResidents",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAResidents (Views)",
+    "Name": "_crf01_macfmaresidents_views",
+    "RelatedEntityName": "MacFMAResidents",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2b097f4b-dc33-4381-b616-7ad1588c8509": "Inactive MacFMAResidents",
+      "3b69853b-27b5-4ba4-9d13-2f6a53ab4aa0": "MacFMAResidents Associated View",
+      "b314a4c2-79ac-4024-98b9-b2c39ad61dcf": "Active MacFMAResidents",
+      "d9965d2d-9490-40d8-8fab-f7c45a9f5d98": "MacFMAResidents Lookup View",
+      "e85ab5de-0cf5-47db-8e19-76dd2c9bd41f": "MacFMAResidents Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAResidents)",
+    "Name": "crf01_macfmaresidents_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAResidents"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAResidents",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAResidents)",
+    "Name": "crf01_macfmaresidents_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAResidents"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAResidents",
+    "Type": "OptionSetInfo"
+  }
+]

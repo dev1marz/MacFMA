@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmamaintainanceses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmamaintainances",
+    "Name": "MacFMAMaintainances",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_CompletedBy": "CompletedBy",
+      "crf01_date": "Date",
+      "crf01_Equiptment": "Equiptment",
+      "crf01_macfmamaintainances_AsyncOperations": "System Jobs",
+      "crf01_macfmamaintainances_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmamaintainances_DuplicateBaseRecord": "Duplicate Records (crf01_macfmamaintainances_DuplicateBaseRecord)",
+      "crf01_macfmamaintainances_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmamaintainances_DuplicateMatchingRecord)",
+      "crf01_macfmamaintainances_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmamaintainances_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmamaintainances_ProcessSession": "Process Sessions",
+      "crf01_macfmamaintainances_SyncErrors": "Sync Errors",
+      "crf01_macfmamaintainancesid": "MacFMAMaintainances",
+      "crf01_notes": "Notes",
+      "crf01_scheduleid": "ScheduleID",
+      "crf01_status": "Status (crf01_status)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status (statecode)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAMaintainances",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAMaintainances (Views)",
+    "Name": "_crf01_macfmamaintainances_views",
+    "RelatedEntityName": "MacFMAMaintainances",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "51992b37-2aef-4273-a9d6-2b56e507fbf6": "MacFMAMaintainances Advanced Find View",
+      "8e07406b-7855-43ad-bbf0-76f59f68452c": "MacFMAMaintainances Lookup View",
+      "b4baf497-bac9-4880-9697-e1e09de4584d": "MacFMAMaintainances Associated View",
+      "eb626ab5-1f26-4471-ab7b-ec815de670ce": "Active MacFMAMaintainances",
+      "f5cd3f7b-af4a-43c2-a22f-8e22675f8583": "Inactive MacFMAMaintainances"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAMaintainances)",
+    "Name": "crf01_macfmamaintainances_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAMaintainances"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAMaintainances",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAMaintainances)",
+    "Name": "crf01_macfmamaintainances_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAMaintainances"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAMaintainances",
+    "Type": "OptionSetInfo"
+  }
+]

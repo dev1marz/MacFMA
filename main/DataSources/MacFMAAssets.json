@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmaassetses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmaassets",
+    "Name": "MacFMAAssets",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_assetid": "AssetID",
+      "crf01_crf01_macfmamaintainances_Equiptment_crf0": "MacFMAMaintainances",
+      "crf01_equiptmentname": "EquiptmentName",
+      "crf01_Facility": "Facility",
+      "crf01_Location": "Location",
+      "crf01_macfmaassets_AsyncOperations": "System Jobs",
+      "crf01_macfmaassets_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmaassets_DuplicateBaseRecord": "Duplicate Records (crf01_macfmaassets_DuplicateBaseRecord)",
+      "crf01_macfmaassets_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmaassets_DuplicateMatchingRecord)",
+      "crf01_macfmaassets_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmaassets_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmaassets_ProcessSession": "Process Sessions",
+      "crf01_macfmaassets_SyncErrors": "Sync Errors",
+      "crf01_macfmaassetsid": "MacFMAAssets",
+      "crf01_type": "Type",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAAssets",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAAssets (Views)",
+    "Name": "_crf01_macfmaassets_views",
+    "RelatedEntityName": "MacFMAAssets",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "279acb4b-8c6c-4176-ac6a-3ed4b9483cf1": "Inactive MacFMAAssets",
+      "5eb70edd-bf8b-479b-bbfc-39ca5f7bcb43": "Active MacFMAAssets",
+      "653706c8-43fc-4d97-92d6-6c81f636a66c": "MacFMAAssets Lookup View",
+      "710cc09d-12b7-4b27-b1e3-7cd127a6a8a8": "MacFMAAssets Associated View",
+      "9ad8c9a3-880a-48cd-aab9-0b152eabfcc7": "MacFMAAssets Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAAssets)",
+    "Name": "crf01_macfmaassets_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAAssets"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAAssets",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAAssets)",
+    "Name": "crf01_macfmaassets_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAAssets"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAAssets",
+    "Type": "OptionSetInfo"
+  }
+]

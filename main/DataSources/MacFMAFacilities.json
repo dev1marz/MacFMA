@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmafacilitieses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmafacilities",
+    "Name": "MacFMAFacilities",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_address": "Address",
+      "crf01_contactnumber": "ContactNumber",
+      "crf01_crf01_macfmaassets_Facility_crf01_macfmaf": "MacFMAAssets",
+      "crf01_crf01_macfmalocations_Facility_crf01_macf": "MacFMALocations",
+      "crf01_facilityid": "FacilityID",
+      "crf01_HeadOfFacility": "HeadOfFacility",
+      "crf01_macfmafacilities_AsyncOperations": "System Jobs",
+      "crf01_macfmafacilities_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmafacilities_DuplicateBaseRecord": "Duplicate Records (crf01_macfmafacilities_DuplicateBaseRecord)",
+      "crf01_macfmafacilities_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmafacilities_DuplicateMatchingRecord)",
+      "crf01_macfmafacilities_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmafacilities_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmafacilities_ProcessSession": "Process Sessions",
+      "crf01_macfmafacilities_SyncErrors": "Sync Errors",
+      "crf01_macfmafacilitiesid": "MacFMAFacilities",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAFacilities",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAFacilities (Views)",
+    "Name": "_crf01_macfmafacilities_views",
+    "RelatedEntityName": "MacFMAFacilities",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "44873ee2-db0f-4042-a2f1-dcf8c8e85215": "Active MacFMAFacilities",
+      "4b464147-814a-4a1a-9aae-03e7a6cd1ff5": "MacFMAFacilities Associated View",
+      "6b9b73a6-68c4-4c42-b21e-f56901156aa2": "Inactive MacFMAFacilities",
+      "9dcfc8d3-4dab-47a1-8503-83134887255a": "MacFMAFacilities Advanced Find View",
+      "f29140dd-9a62-4ccf-98a0-d87c22f429a1": "MacFMAFacilities Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAFacilities)",
+    "Name": "crf01_macfmafacilities_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAFacilities"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAFacilities",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAFacilities)",
+    "Name": "crf01_macfmafacilities_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAFacilities"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAFacilities",
+    "Type": "OptionSetInfo"
+  }
+]

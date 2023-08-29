@@ -475,6 +475,48 @@
       "Values": {
         "Information": "bb12be76-563b-4339-977b-faaa83310d3d"
       }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmaresidents_forms",
+      "Namespace": "MacFMAResidents (Forms)",
+      "Values": {
+        "Information": "2fe81fff-431e-40b7-9cb8-db9aafdfd905"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmaassets_forms",
+      "Namespace": "MacFMAAssets (Forms)",
+      "Values": {
+        "Information": "7a694b35-8972-4cf7-b848-e5bc30dc6181"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmafacilities_forms",
+      "Namespace": "MacFMAFacilities (Forms)",
+      "Values": {
+        "Information": "4ad29468-90e3-4d4f-bd20-b92318b700ad"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmalocations_forms",
+      "Namespace": "MacFMALocations (Forms)",
+      "Values": {
+        "Information": "1c019ff5-3124-41c7-acb0-924ab2b86a34"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmamaintainances_forms",
+      "Namespace": "MacFMAMaintainances (Forms)",
+      "Values": {
+        "Information": "1f21e4e1-3f17-4bc3-9f34-926655b4f927"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmaworkorders_forms",
+      "Namespace": "MacFMAWorkOrders (Forms)",
+      "Values": {
+        "Information": "2dfe63fb-45cd-4d02-a94e-c7c3b3aa9a68"
+      }
     }
   ]
 }
