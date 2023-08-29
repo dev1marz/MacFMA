@@ -1,7 +1,7 @@
 StaffScreen As screen:
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Persons");
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Staff");
     Width: =
 
     "PersonsGallery As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
