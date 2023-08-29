@@ -130,6 +130,8 @@
   "ScreenOrder": [
     "HomePage",
     "AddEditScreenTemplate",
+    "MaintainanceScreen",
+    "WorkOrderScreen",
     "ViewAddTemplate",
     "ViewTemplate",
     "StaffScreen",
