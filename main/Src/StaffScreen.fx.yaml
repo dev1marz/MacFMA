@@ -651,7 +651,7 @@ StaffScreen As screen:
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
-            Text: ="Add Person"
+            Text: ="Add Staff"
             Width: =280
             Y: =27.00
             ZIndex: =2
