@@ -1,4 +1,4 @@
-EquiptmentAndAssestsScreen As screen:
+EquiptmentAndAssetsScreen As screen:
     ContentLanguage: =""
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)

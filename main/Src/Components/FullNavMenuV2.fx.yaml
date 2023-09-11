@@ -288,7 +288,7 @@ FullNavMenuV2 As CanvasComponent:
             AlignInContainer: =AlignInContainer.SetByContainer
             FillPortions: =0
             Height: |
-                =9*varNavPaneBtnsHeight*0.75+9*varNavPaneGapHeight+If(contUtilManMenu.Visible=true,
+                =11*varNavPaneBtnsHeight*0.75+11*varNavPaneGapHeight+If(contUtilManMenu.Visible=true,
                 contUtilManMenu.Height,-varNavPaneGapHeight)
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =varNavPaneGapHeight
@@ -456,7 +456,7 @@ FullNavMenuV2 As CanvasComponent:
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =8
 
-            btnAccessControlOverview As button:
+            btnEquiptmentAssets As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -469,13 +469,13 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);//Navigate(AccessOverViewScreen);
+                    Set(contUtilManMenuVis,false);Navigate(EquiptmentAndAssetsScreen);
                 Size: =12
-                Text: ="Access Control Overview"
+                Text: ="Equipment & Assets"
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =9
 
-            btnUtilityManagement As button:
+            btnMaintanance As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -486,11 +486,32 @@ FullNavMenuV2 As CanvasComponent:
                 HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =280
-                OnSelect: =If(contUtilManMenu.Visible=true,Set(contUtilManMenuVis,false),Set(contUtilManMenuVis,true));
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(MaintainanceScreen);
                 Size: =12
-                Text: ="Utility Management"
+                Text: ="Maintanance Schedule"
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =10
+
+            btnWorkOrder As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(WorkOrderScreen);
+                Size: =12
+                Text: ="Work Order"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =11
 
             contUtilManMenu As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -509,7 +530,7 @@ FullNavMenuV2 As CanvasComponent:
                 RadiusTopRight: =4
                 Visible: =contUtilManMenuVis
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =11
+                ZIndex: =12
 
                 btnFacilityTaskManagement As button:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
