@@ -9594,7 +9594,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 140,
+                  "charOffset": 125,
                   "snippet": {
                     "text": "in"
                   }
@@ -9634,7 +9634,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 110,
+                  "charOffset": 100,
                   "snippet": {
                     "text": "Or"
                   }
@@ -17610,19 +17610,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.DateOfVisit_DataCard1.DateValue5.AccessibleLabel"
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.DateOfVisit_DataCard1.DateValue5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.DateOfVisit_DataCard1.DateValue5.AccessibleLabel",
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.DateOfVisit_DataCard1.DateValue5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "VendorVisitScreen",
-                "type": "VendorVisitScreen.'Form(ScreenName)_4'.DateOfVisit_DataCard1.DateValue5"
+                "type": "VendorVisitScreen.VendorVisitForm.DateOfVisit_DataCard1.DateValue5"
               }
             }
           ],
@@ -17640,19 +17640,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.DateOfVisit_DataCard1.HourValue5.AccessibleLabel"
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.DateOfVisit_DataCard1.HourValue5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.DateOfVisit_DataCard1.HourValue5.AccessibleLabel",
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.DateOfVisit_DataCard1.HourValue5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "VendorVisitScreen",
-                "type": "VendorVisitScreen.'Form(ScreenName)_4'.DateOfVisit_DataCard1.HourValue5"
+                "type": "VendorVisitScreen.VendorVisitForm.DateOfVisit_DataCard1.HourValue5"
               }
             }
           ],
@@ -17670,19 +17670,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.DateOfVisit_DataCard1.MinuteValue5.AccessibleLabel"
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.DateOfVisit_DataCard1.MinuteValue5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.DateOfVisit_DataCard1.MinuteValue5.AccessibleLabel",
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.DateOfVisit_DataCard1.MinuteValue5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "VendorVisitScreen",
-                "type": "VendorVisitScreen.'Form(ScreenName)_4'.DateOfVisit_DataCard1.MinuteValue5"
+                "type": "VendorVisitScreen.VendorVisitForm.DateOfVisit_DataCard1.MinuteValue5"
               }
             }
           ],
@@ -17700,19 +17700,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.LocationOfVisit_DataCard1.DataCardValue56.AccessibleLabel"
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.LocationOfVisit_DataCard1.DataCardValue19.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.LocationOfVisit_DataCard1.DataCardValue56.AccessibleLabel",
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.LocationOfVisit_DataCard1.DataCardValue19.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "VendorVisitScreen",
-                "type": "VendorVisitScreen.'Form(ScreenName)_4'.LocationOfVisit_DataCard1.DataCardValue56"
+                "type": "VendorVisitScreen.VendorVisitForm.LocationOfVisit_DataCard1.DataCardValue19"
               }
             }
           ],
@@ -17730,19 +17730,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.ReasonForVisit_DataCard1.DataCardValue57.AccessibleLabel"
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.ReasonForVisit_DataCard1.DataCardValue57.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.ReasonForVisit_DataCard1.DataCardValue57.AccessibleLabel",
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.ReasonForVisit_DataCard1.DataCardValue57.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "VendorVisitScreen",
-                "type": "VendorVisitScreen.'Form(ScreenName)_4'.ReasonForVisit_DataCard1.DataCardValue57"
+                "type": "VendorVisitScreen.VendorVisitForm.ReasonForVisit_DataCard1.DataCardValue57"
               }
             }
           ],
@@ -17760,19 +17760,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.VendorRepName_DataCard1.DataCardValue58.AccessibleLabel"
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.VendorRepName_DataCard1.DataCardValue58.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.VendorRepName_DataCard1.DataCardValue58.AccessibleLabel",
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.VendorRepName_DataCard1.DataCardValue58.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "VendorVisitScreen",
-                "type": "VendorVisitScreen.'Form(ScreenName)_4'.VendorRepName_DataCard1.DataCardValue58"
+                "type": "VendorVisitScreen.VendorVisitForm.VendorRepName_DataCard1.DataCardValue58"
               }
             }
           ],
@@ -17790,19 +17790,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.VendorRepNumber_DataCard1.DataCardValue59.AccessibleLabel"
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.VendorRepNumber_DataCard1.DataCardValue59.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.VendorRepNumber_DataCard1.DataCardValue59.AccessibleLabel",
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.VendorRepNumber_DataCard1.DataCardValue59.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "VendorVisitScreen",
-                "type": "VendorVisitScreen.'Form(ScreenName)_4'.VendorRepNumber_DataCard1.DataCardValue59"
+                "type": "VendorVisitScreen.VendorVisitForm.VendorRepNumber_DataCard1.DataCardValue59"
               }
             }
           ],
@@ -17820,19 +17820,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.Vendor_DataCard1.DataCardValue60.AccessibleLabel"
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.Vendor_DataCard1.DataCardValue60.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "VendorVisitScreen.'Form(ScreenName)_4'.Vendor_DataCard1.DataCardValue60.AccessibleLabel",
+                  "fullyQualifiedName": "VendorVisitScreen.VendorVisitForm.Vendor_DataCard1.DataCardValue60.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "VendorVisitScreen",
-                "type": "VendorVisitScreen.'Form(ScreenName)_4'.Vendor_DataCard1.DataCardValue60"
+                "type": "VendorVisitScreen.VendorVisitForm.Vendor_DataCard1.DataCardValue60"
               }
             }
           ],
@@ -18240,19 +18240,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AreaScreen.LoocationsSearchInput.AccessibleLabel"
+                  "fullyQualifiedName": "AreaScreen.AreasSearchInput.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AreaScreen.LoocationsSearchInput.AccessibleLabel",
+                  "fullyQualifiedName": "AreaScreen.AreasSearchInput.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "AreaScreen",
-                "type": "AreaScreen.LoocationsSearchInput"
+                "type": "AreaScreen.AreasSearchInput"
               }
             }
           ],

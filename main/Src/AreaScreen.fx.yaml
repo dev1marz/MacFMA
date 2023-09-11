@@ -7,8 +7,8 @@ AreaScreen As screen:
         BorderColor: =RGBA(197, 203, 207, 1)
         Height: =346.00
         Items: |-
-            = If(IsBlank(LoocationsSearchInput.Text),MacFMAAreas,Filter(MacFMAAreas,(LoocationsSearchInput.Text in AreaID
-             Or LoocationsSearchInput.Text in Facility.FacilityID
+            = If(IsBlank(AreasSearchInput.Text),MacFMAAreas,Filter(MacFMAAreas,(AreasSearchInput.Text in AreaID
+             Or AreasSearchInput.Text in Facility.FacilityID
              )))
         Layout: =Layout.Vertical
         OnSelect: =
@@ -253,7 +253,7 @@ AreaScreen As screen:
                 Y: =DataCardKey9.Y
                 ZIndex: =4
 
-    LoocationsSearchInput As text:
+    AreasSearchInput As text:
         BorderColor: =RGBA(197, 203, 207, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
