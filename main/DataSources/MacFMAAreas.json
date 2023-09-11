@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macfmaareas",
+    "MaxGetRowsCount": 500,
     "Name": "MacFMAAreas",
     "NativeCDSDataSourceInfoNameMapping": {
       "{Attachments}": "Attachments",
