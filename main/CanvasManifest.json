@@ -129,6 +129,7 @@
   "ScreenOrder": [
     "HomePage",
     "AddEditScreenTemplate",
+    "EstateScreen",
     "ViewTemplate",
     "ViewAddTemplate",
     "VendorScreen",

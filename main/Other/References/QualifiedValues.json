@@ -545,6 +545,13 @@
       "Values": {
         "Information": "d19c3a41-baac-46da-a823-7c426548cbc9"
       }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmaestate_forms",
+      "Namespace": "MacFMAEstates (Forms)",
+      "Values": {
+        "Information": "7073df6e-9b54-470b-ad19-eec054431c66"
+      }
     }
   ]
 }
