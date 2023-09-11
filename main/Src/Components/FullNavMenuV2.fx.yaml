@@ -280,7 +280,7 @@ FullNavMenuV2 As CanvasComponent:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =12
-                Text: ="Residents"
+                Text: ="Facility Management"
                 Width: =280
                 ZIndex: =2
 
@@ -304,7 +304,7 @@ FullNavMenuV2 As CanvasComponent:
             Width: =varContMenuWidth
             ZIndex: =5
 
-            btnKeys As button:
+            btnRooms As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -317,51 +317,13 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);//Navigate(Keys);
+                    Set(contUtilManMenuVis,false);//Navigate(RoomScreen);
                 Size: =12
-                Text: ="Keys"
+                Text: ="Rooms"
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =3
+                ZIndex: =1
 
-            btnLinks As button:
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(100, 118, 132, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =varNavPaneBtnsHeight*0.75
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                LayoutMinHeight: =70
-                LayoutMinWidth: =280
-                OnSelect: |-
-                    =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);//Navigate(LinksScreen);
-                Size: =12
-                Text: ="Links"
-                Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =4
-
-            btnLocks As button:
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(100, 118, 132, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =varNavPaneBtnsHeight*0.75
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                LayoutMinHeight: =70
-                LayoutMinWidth: =280
-                OnSelect: |-
-                    =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);//Navigate(Locks);
-                Size: =12
-                Text: ="Locks"
-                Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =5
-
-            btnPersons As button:
+            btnStaff As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -376,11 +338,30 @@ FullNavMenuV2 As CanvasComponent:
                     =Set(varNavCompHeight,contHeaderBar.Height);
                     Set(contUtilManMenuVis,false);Navigate(StaffScreen);
                 Size: =12
-                Text: ="Persons"
+                Text: ="Staff"
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =6
+                ZIndex: =2
 
-            btnZones As button:
+            btnResidents As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(ResidentsScreen);
+                Size: =12
+                Text: ="Links"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =3
+
+            btnAreas As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -395,11 +376,68 @@ FullNavMenuV2 As CanvasComponent:
                     =Set(varNavCompHeight,contHeaderBar.Height);
                     Set(contUtilManMenuVis,false);Navigate(AreaScreen);
                 Size: =12
-                Text: ="Zones"
+                Text: ="Areas"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =4
+
+            btnFacilities As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(FacilityScreen);
+                Size: =12
+                Text: ="Facilities"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =5
+
+            btnEstates As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(EstateScreen);
+                Size: =12
+                Text: ="Estates"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =6
+
+            btnVendors As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(VendorScreen);
+                Size: =12
+                Text: ="Vendors"
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =7
 
-            btnSubs As button:
+            btnVendorVisit As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -412,30 +450,11 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);//Navigate(SubsScreen);
+                    Set(contUtilManMenuVis,false);Navigate(VendorVisitScreen);
                 Size: =12
-                Text: ="Access Groups (Subs)"
+                Text: ="Vendor Visits"
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =8
-
-            btnOccupants As button:
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(100, 118, 132, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =varNavPaneBtnsHeight*0.75
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                LayoutMinHeight: =70
-                LayoutMinWidth: =280
-                OnSelect: |-
-                    =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);//Navigate(OccupancyGroupScreen);
-                Size: =12
-                Text: ="Occupants"
-                Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =9
 
             btnAccessControlOverview As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -454,7 +473,7 @@ FullNavMenuV2 As CanvasComponent:
                 Size: =12
                 Text: ="Access Control Overview"
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =10
+                ZIndex: =9
 
             btnUtilityManagement As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -471,7 +490,7 @@ FullNavMenuV2 As CanvasComponent:
                 Size: =12
                 Text: ="Utility Management"
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =11
+                ZIndex: =10
 
             contUtilManMenu As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -490,7 +509,7 @@ FullNavMenuV2 As CanvasComponent:
                 RadiusTopRight: =4
                 Visible: =contUtilManMenuVis
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =12
+                ZIndex: =11
 
                 btnFacilityTaskManagement As button:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)

@@ -139,7 +139,7 @@
     "StaffScreen",
     "ResidentsScreen",
     "AreaScreen",
-    "FaciltyScreen",
+    "FacilityScreen",
     "EquiptmentAndAssestsScreen"
   ]
 }
