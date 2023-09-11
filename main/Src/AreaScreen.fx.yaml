@@ -3,11 +3,11 @@ AreaScreen As screen:
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
     OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Areas");
 
-    "LocationsGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+    "AreasGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(197, 203, 207, 1)
         Height: =346.00
         Items: |-
-            = If(IsBlank(LoocationsSearchInput.Text),MacFMALocations,Filter(MacFMALocations,(LoocationsSearchInput.Text in LocationID
+            = If(IsBlank(LoocationsSearchInput.Text),MacFMAAreas,Filter(MacFMAAreas,(LoocationsSearchInput.Text in AreaID
              Or LoocationsSearchInput.Text in Facility.FacilityID
              )))
         Layout: =Layout.Vertical
@@ -31,7 +31,7 @@ AreaScreen As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20.00
-            Text: =ThisItem.LocationID
+            Text: =ThisItem.AreaID
             VerticalAlign: =VerticalAlign.Top
             Width: =282
             Y: =17.00
@@ -48,19 +48,19 @@ AreaScreen As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20.00
-            Text: =ThisItem.RoomContactNumber
+            Text: =ThisItem.Facility.FacilityID
             VerticalAlign: =VerticalAlign.Top
             Width: =282
             X: =297
             Y: =17
             ZIndex: =2
 
-    LocationsForm As form:
+    AreasForm As form:
         BorderColor: =RGBA(197, 203, 207, 1)
-        DataSource: =MacFMALocations
+        DataSource: =MacFMAAreas
         DefaultMode: =If(ScreenState = 1,FormMode.Edit,FormMode.View)
         Height: =427
-        Item: =LocationsGallery.Selected
+        Item: =AreasGallery.Selected
         OnFailure: =Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New
         OnSuccess: =Notify("Success",NotificationType.Success)
@@ -74,17 +74,17 @@ AreaScreen As screen:
             DataField: ="crf01_Facility"
             Default: =ThisItem.Facility
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MacFMALocations],DataSourceInfo.DisplayName,"crf01_Facility")
+            DisplayName: =DataSourceInfo([@MacFMAAreas],DataSourceInfo.DisplayName,"crf01_Facility")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue19.Selected
+            Update: =DataCardValue18.Selected
             Width: =640
             X: =0
             Y: =1
             ZIndex: =1
 
-            DataCardKey20 As label:
+            DataCardKey19 As label:
                 AutoHeight: =true
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -97,7 +97,7 @@ AreaScreen As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue19 As combobox:
+            DataCardValue18 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 ChevronBackground: =RGBA(100, 118, 132, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -115,22 +115,22 @@ AreaScreen As screen:
                 Height: =70
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(62, 74, 83, 1)
-                Items: =Choices([@MacFMALocations].crf01_Facility)
+                Items: =Choices([@MacFMAAreas].crf01_Facility)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(197, 203, 207, 1)
                 SearchFields: =["crf01_facilityid"]
-                SearchItems: =Search(Choices([@MacFMALocations].crf01_Facility),DataCardValue19.SearchText,"crf01_facilityid")
+                SearchItems: =Search(Choices([@MacFMAAreas].crf01_Facility),DataCardValue18.SearchText,"crf01_facilityid")
                 SelectionFill: =RGBA(100, 118, 132, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey20.Y + DataCardKey20.Height + 5
+                Y: =DataCardKey19.Y + DataCardKey19.Height + 5
                 ZIndex: =2
 
-            ErrorMessage16 As label:
+            ErrorMessage54 As label:
                 AutoHeight: =true
                 Color: =RGBA(255, 51, 51, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -146,222 +146,40 @@ AreaScreen As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue19.Y + DataCardValue19.Height
+                Y: =DataCardValue18.Y + DataCardValue18.Height
                 ZIndex: =3
 
-            StarVisible16 As label:
+            StarVisible54 As label:
                 Align: =Align.Center
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey20.Height
+                Height: =DataCardKey19.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey20.Y
+                Y: =DataCardKey19.Y
                 ZIndex: =4
 
-        RoomContactNumber_DataCard1 As typedDataCard.textualEditCard:
+        AreaID_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="crf01_roomcontactnumber"
-            Default: =ThisItem.RoomContactNumber
+            DataField: ="crf01_areaid"
+            Default: =ThisItem.AreaID
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MacFMALocations],DataSourceInfo.DisplayName,"crf01_roomcontactnumber")
+            DisplayName: =DataSourceInfo([@MacFMAAreas],DataSourceInfo.DisplayName,"crf01_areaid")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@MacFMALocations], DataSourceInfo.MaxLength, "crf01_roomcontactnumber")
-            Required: =false
-            Update: =DataCardValue20.Text
-            Width: =640
-            X: =0
-            Y: =2
-            ZIndex: =1
-
-            DataCardKey21 As label:
-                AutoHeight: =true
-                Color: =RGBA(197, 203, 207, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue20 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(255, 255, 255, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                Fill: =RGBA(0, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Height: =70
-                HoverBorderColor: =RGBA(197, 203, 207, 1)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(62, 74, 83, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey21.Y + DataCardKey21.Height + 5
-                ZIndex: =2
-
-            ErrorMessage17 As label:
-                AutoHeight: =true
-                Color: =RGBA(255, 51, 51, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue20.Y + DataCardValue20.Height
-                ZIndex: =3
-
-            StarVisible17 As label:
-                Align: =Align.Center
-                Color: =RGBA(197, 203, 207, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey21.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey21.Y
-                ZIndex: =4
-
-        Department_DataCard1 As typedDataCard.textualEditCard:
-            BorderColor: =RGBA(197, 203, 207, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="crf01_department"
-            Default: =ThisItem.Department
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MacFMALocations],DataSourceInfo.DisplayName,"crf01_department")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@MacFMALocations], DataSourceInfo.MaxLength, "crf01_department")
-            Required: =false
-            Update: =DataCardValue21.Text
-            Width: =640
-            X: =0
-            Y: =3
-            ZIndex: =1
-
-            DataCardKey22 As label:
-                AutoHeight: =true
-                Color: =RGBA(197, 203, 207, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue21 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(255, 255, 255, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                Fill: =RGBA(0, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Height: =70
-                HoverBorderColor: =RGBA(197, 203, 207, 1)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(62, 74, 83, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey22.Y + DataCardKey22.Height + 5
-                ZIndex: =2
-
-            ErrorMessage18 As label:
-                AutoHeight: =true
-                Color: =RGBA(255, 51, 51, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue21.Y + DataCardValue21.Height
-                ZIndex: =3
-
-            StarVisible18 As label:
-                Align: =Align.Center
-                Color: =RGBA(197, 203, 207, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey22.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey22.Y
-                ZIndex: =4
-
-        LocationID_DataCard1 As typedDataCard.textualEditCard:
-            BorderColor: =RGBA(197, 203, 207, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="crf01_locationid"
-            Default: =ThisItem.LocationID
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MacFMALocations],DataSourceInfo.DisplayName,"crf01_locationid")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@MacFMALocations], DataSourceInfo.MaxLength, "crf01_locationid")
+            MaxLength: =DataSourceInfo([@MacFMAAreas], DataSourceInfo.MaxLength, "crf01_areaid")
             Required: =true
-            Update: =DataCardValue17.Text
+            Update: =DataCardValue9.Text
             Width: =640
             X: =0
             Y: =0
             ZIndex: =3
 
-            DataCardKey18 As label:
+            DataCardKey9 As label:
                 AutoHeight: =true
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -374,7 +192,7 @@ AreaScreen As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue17 As text:
+            DataCardValue9 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
@@ -400,10 +218,10 @@ AreaScreen As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey18.Y + DataCardKey18.Height + 5
+                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
                 ZIndex: =2
 
-            ErrorMessage15 As label:
+            ErrorMessage53 As label:
                 AutoHeight: =true
                 Color: =RGBA(255, 51, 51, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -419,20 +237,20 @@ AreaScreen As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue17.Y + DataCardValue17.Height
+                Y: =DataCardValue9.Y + DataCardValue9.Height
                 ZIndex: =3
 
-            StarVisible15 As label:
+            StarVisible53 As label:
                 Align: =Align.Center
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey18.Height
+                Height: =DataCardKey9.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey18.Y
+                Y: =DataCardKey9.Y
                 ZIndex: =4
 
     LoocationsSearchInput As text:
@@ -460,7 +278,7 @@ AreaScreen As screen:
         Y: =626
         ZIndex: =3
 
-    LocationsEditAddBtnContainer As groupContainer.horizontalAutoLayoutContainer:
+    AreasEditAddBtnContainer As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutGap: =10
@@ -484,7 +302,7 @@ AreaScreen As screen:
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
-            OnSelect: =Set(ScreenState,1);LocationsForm.DisplayMode.Edit
+            OnSelect: =Set(ScreenState,1);AreasForm.DisplayMode.Edit
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
@@ -507,7 +325,7 @@ AreaScreen As screen:
             LayoutMinHeight: =70
             LayoutMinWidth: =280
             OnSelect: |-
-                =Set(ScreenState,1);NewForm(LocationsForm
+                =Set(ScreenState,1);NewForm(AreasForm
                 )
             PaddingBottom: =5.00
             PaddingLeft: =5.00
@@ -517,7 +335,7 @@ AreaScreen As screen:
             Y: =0.00
             ZIndex: =2
 
-    LocationsEditBtnContainer As groupContainer.horizontalAutoLayoutContainer:
+    AreasEditBtnContainer As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutGap: =10
@@ -541,7 +359,7 @@ AreaScreen As screen:
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
-            OnSelect: =SubmitForm(LocationsForm);Set(ScreenState,0)
+            OnSelect: =SubmitForm(AreasForm);Set(ScreenState,0)
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
@@ -561,7 +379,7 @@ AreaScreen As screen:
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
-            OnSelect: =ViewForm(LocationsForm);Set(ScreenState,0)
+            OnSelect: =ViewForm(AreasForm);Set(ScreenState,0)
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
@@ -570,7 +388,7 @@ AreaScreen As screen:
             Y: =0.00
             ZIndex: =2
 
-    LocationsLabels As groupContainer.horizontalAutoLayoutContainer:
+    AreasLabels As groupContainer.horizontalAutoLayoutContainer:
         BorderColor: =RGBA(220, 224, 226, 1)
         Height: =71.00
         LayoutAlignItems: =LayoutAlignItems.Center
@@ -597,7 +415,7 @@ AreaScreen As screen:
             PaddingLeft: =5.00
             Size: =21.00
             Text: |-
-                ="Location Name
+                ="Area Name
                 "
             Width: =290
             X: =290
@@ -617,7 +435,9 @@ AreaScreen As screen:
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =21.00
-            Text: ="Room Contact Number"
+            Text: |-
+                ="Facility Name
+                "
             Width: =290
             X: =27
             Y: =0.00
