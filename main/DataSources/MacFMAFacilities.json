@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macfmafacilities",
+    "MaxGetRowsCount": 500,
     "Name": "MacFMAFacilities",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
@@ -14,8 +15,9 @@
       "createdonbehalfby": "Created By (Delegate)",
       "crf01_address": "Address",
       "crf01_contactnumber": "ContactNumber",
-      "crf01_crf01_macfmaassets_Facility_crf01_macfmaf": "MacFMAAssets",
+      "crf01_crf01_macfmaareas_Facility_crf01_macfmafa": "MacFMAAreas",
       "crf01_crf01_macfmalocations_Facility_crf01_macf": "MacFMALocations",
+      "crf01_Estate": "Estate",
       "crf01_facilityid": "FacilityID",
       "crf01_HeadOfFacility": "HeadOfFacility",
       "crf01_macfmafacilities_AsyncOperations": "System Jobs",

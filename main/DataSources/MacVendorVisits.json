@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macvendorvisits",
+    "MaxGetRowsCount": 500,
     "Name": "MacVendorVisits",
     "NativeCDSDataSourceInfoNameMapping": {
       "createdby": "Created By",

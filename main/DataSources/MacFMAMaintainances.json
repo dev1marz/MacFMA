@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macfmamaintainances",
+    "MaxGetRowsCount": 500,
     "Name": "MacFMAMaintainances",
     "NativeCDSDataSourceInfoNameMapping": {
       "createdby": "Created By",

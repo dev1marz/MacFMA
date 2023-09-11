@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmaareases",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmaareas",
+    "Name": "MacFMAAreas",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_areaid": "AreaID",
+      "crf01_crf01_macfmaassets_Area_crf01_macfmaareas": "MacFMAAssets",
+      "crf01_crf01_macfmarooms_Area_crf01_macfmaareas": "MacFMARooms",
+      "crf01_crf01_macfmaworkorders_Area_crf01_macfmaa": "MacFMAWorkOrders",
+      "crf01_crf01_macvendorvisits_LocationOfVisit_crf": "MacVendorVisits",
+      "crf01_Facility": "Facility",
+      "crf01_macfmaareas_Annotations": "Notes",
+      "crf01_macfmaareas_AsyncOperations": "System Jobs",
+      "crf01_macfmaareas_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmaareas_DuplicateBaseRecord": "Duplicate Records (crf01_macfmaareas_DuplicateBaseRecord)",
+      "crf01_macfmaareas_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmaareas_DuplicateMatchingRecord)",
+      "crf01_macfmaareas_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmaareas_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmaareas_ProcessSession": "Process Sessions",
+      "crf01_macfmaareas_SyncErrors": "Sync Errors",
+      "crf01_macfmaareasid": "MacFMAAreas",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAAreas",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAAreas (Views)",
+    "Name": "_crf01_macfmaareas_views",
+    "RelatedEntityName": "MacFMAAreas",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "62570a04-3eaf-4eef-8112-6662202a1fff": "MacFMAAreas Lookup View",
+      "b63bbe08-4735-4380-8e28-cec8d36ae72a": "Active MacFMAAreas",
+      "c00ff8cf-0e0a-442e-a92a-46d99d946819": "MacFMAAreas Advanced Find View",
+      "d786697b-17ae-49fe-b2ec-8bdfdba5321c": "MacFMAAreas Associated View",
+      "dc5d0800-76d5-4af0-9d6a-b85412420478": "Inactive MacFMAAreas"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAAreas)",
+    "Name": "crf01_macfmaareas_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAAreas"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAAreas",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAAreas)",
+    "Name": "crf01_macfmaareas_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAAreas"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAAreas",
+    "Type": "OptionSetInfo"
+  }
+]

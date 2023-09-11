@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macfmastaffs",
+    "MaxGetRowsCount": 500,
     "Name": "MacFMAStaffs",
     "NativeCDSDataSourceInfoNameMapping": {
       "createdby": "Created By",

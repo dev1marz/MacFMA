@@ -160,12 +160,13 @@ ViewTemplate As screen:
                 Height: =70
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(62, 74, 83, 1)
+                IsSearchable: =false
                 Items: =Choices([@MarzV2Transactions].crf01_ExpenseAccount)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(197, 203, 207, 1)
                 SearchFields: =["crf01_expenseaccountsid"]
-                SearchItems: =Search(Choices([@MarzV2Transactions].crf01_ExpenseAccount),DataCardValue21_2.SearchText,"crf01_expenseaccountsid")
+                SearchItems: =[]
                 SelectionFill: =RGBA(100, 118, 132, 1)
                 SelectMultiple: =false
                 Size: =21

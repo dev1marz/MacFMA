@@ -14,7 +14,6 @@
       "appinsightserrortracing": false,
       "appinstrumentationcorrelationtracing": false,
       "autocreateenvironmentvariables": false,
-      "backfromhostaction": true,
       "behaviorpropertyui": false,
       "blockmovingcontrol": true,
       "cdsdataformatting": false,
@@ -95,7 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 191,
+    "BindingErrorCount": 181,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -138,7 +137,7 @@
     "WorkOrderScreen",
     "StaffScreen",
     "ResidentsScreen",
-    "LocationScreen",
+    "AreaScreen",
     "FaciltyScreen",
     "EquiptmentAndAssestsScreen"
   ]

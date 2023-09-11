@@ -1,0 +1,95 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmaroomses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmarooms",
+    "Name": "MacFMARooms",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_Area": "Area",
+      "crf01_crf01_macfmaresidents_RoomNumber_crf01_ma": "MacFMAResidents",
+      "crf01_macfmarooms_AsyncOperations": "System Jobs",
+      "crf01_macfmarooms_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmarooms_DuplicateBaseRecord": "Duplicate Records (crf01_macfmarooms_DuplicateBaseRecord)",
+      "crf01_macfmarooms_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmarooms_DuplicateMatchingRecord)",
+      "crf01_macfmarooms_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmarooms_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmarooms_ProcessSession": "Process Sessions",
+      "crf01_macfmarooms_SyncErrors": "Sync Errors",
+      "crf01_macfmaroomsid": "MacFMARooms",
+      "crf01_roomid": "RoomID",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMARooms",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMARooms (Views)",
+    "Name": "_crf01_macfmarooms_views",
+    "RelatedEntityName": "MacFMARooms",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "10041824-6eb9-4b04-88d1-8f91f5ee8c74": "Inactive MacFMARooms",
+      "51f9a508-be93-459e-b220-88362a2de8c2": "MacFMARooms Advanced Find View",
+      "ab48b2da-ee9c-40c2-a74c-56e67b899e6b": "Active MacFMARooms",
+      "c3d1d1c0-ef99-4aeb-81d3-4b426fa76780": "MacFMARooms Associated View",
+      "f74a9429-2709-4549-b761-f0cc27c77a8f": "MacFMARooms Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMARooms)",
+    "Name": "crf01_macfmarooms_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMARooms"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMARooms",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMARooms)",
+    "Name": "crf01_macfmarooms_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMARooms"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMARooms",
+    "Type": "OptionSetInfo"
+  }
+]

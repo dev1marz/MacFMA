@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macfmaresidents",
+    "MaxGetRowsCount": 500,
     "Name": "MacFMAResidents",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
@@ -26,7 +27,6 @@
       "crf01_macfmaresidents_ProcessSession": "Process Sessions",
       "crf01_macfmaresidents_SyncErrors": "Sync Errors",
       "crf01_macfmaresidentsid": "MacFMAResidents",
-      "crf01_name": "Name",
       "crf01_notes": "Notes",
       "crf01_residentid": "ResidentID",
       "crf01_RoomNumber": "RoomNumber",
