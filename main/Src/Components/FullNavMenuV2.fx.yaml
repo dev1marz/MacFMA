@@ -181,7 +181,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Navigate(ExpenseAccounts)
+                    //Navigate(ExpenseAccounts)
                 Size: =12
                 Text: ="Expense Acocunt"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -200,7 +200,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Navigate(Transactions);
+                    //Navigate(Transactions);
                 Size: =12
                 Text: ="Transactions"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -219,7 +219,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Navigate(FileUpload);
+                    //Navigate(FileUpload);
                 Size: =12
                 Text: ="File Upload"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -317,7 +317,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);Navigate(Keys);
+                    Set(contUtilManMenuVis,false);//Navigate(Keys);
                 Size: =12
                 Text: ="Keys"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -336,7 +336,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);Navigate(LinksScreen);
+                    Set(contUtilManMenuVis,false);//Navigate(LinksScreen);
                 Size: =12
                 Text: ="Links"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -355,7 +355,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);Navigate(Locks);
+                    Set(contUtilManMenuVis,false);//Navigate(Locks);
                 Size: =12
                 Text: ="Locks"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -412,7 +412,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);Navigate(SubsScreen);
+                    Set(contUtilManMenuVis,false);//Navigate(SubsScreen);
                 Size: =12
                 Text: ="Access Groups (Subs)"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -431,7 +431,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);Navigate(OccupancyGroupScreen);
+                    Set(contUtilManMenuVis,false);//Navigate(OccupancyGroupScreen);
                 Size: =12
                 Text: ="Occupants"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -450,7 +450,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);Navigate(AccessOverViewScreen);
+                    Set(contUtilManMenuVis,false);//Navigate(AccessOverViewScreen);
                 Size: =12
                 Text: ="Access Control Overview"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -505,7 +505,7 @@ FullNavMenuV2 As CanvasComponent:
                     LayoutMinWidth: =280
                     OnSelect: |-
                         =Set(varNavCompHeight,contHeaderBar.Height);
-                        Navigate(FacilityInspectionTasks);
+                        //Navigate(FacilityInspectionTasks);
                     Size: =12
                     Text: ="Facility Task Management"
                     Width: =Parent.Width-Parent.PaddingLeft
@@ -524,7 +524,7 @@ FullNavMenuV2 As CanvasComponent:
                     LayoutMinWidth: =280
                     OnSelect: |-
                         =Set(varNavCompHeight,contHeaderBar.Height);
-                        Navigate(FacilityInspectionRecords);
+                        //Navigate(FacilityInspectionRecords);
                     Size: =12
                     Text: ="Facility Task Records"
                     Width: =Parent.Width-Parent.PaddingLeft
@@ -543,7 +543,7 @@ FullNavMenuV2 As CanvasComponent:
                     LayoutMinWidth: =280
                     OnSelect: |-
                         =Set(varNavCompHeight,contHeaderBar.Height);
-                        Navigate(ElectricityMeters);
+                        //Navigate(ElectricityMeters);
                     Size: =12
                     Text: ="Electricity Meters"
                     Width: =Parent.Width-Parent.PaddingLeft
@@ -562,7 +562,7 @@ FullNavMenuV2 As CanvasComponent:
                     LayoutMinWidth: =280
                     OnSelect: |-
                         =Set(varNavCompHeight,contHeaderBar.Height);
-                        Navigate(ElectricityMeterRecords);
+                        //Navigate(ElectricityMeterRecords);
                     Size: =12
                     Text: ="Electricity Meter Records"
                     Width: =Parent.Width-Parent.PaddingLeft
@@ -581,7 +581,7 @@ FullNavMenuV2 As CanvasComponent:
                     LayoutMinWidth: =280
                     OnSelect: |-
                         =Set(varNavCompHeight,contHeaderBar.Height);
-                        Navigate(WaterMetersScreen);
+                        //Navigate(WaterMetersScreen);
                     Size: =12
                     Text: ="Water Meters"
                     Width: =Parent.Width-Parent.PaddingLeft
@@ -600,7 +600,7 @@ FullNavMenuV2 As CanvasComponent:
                     LayoutMinWidth: =280
                     OnSelect: |-
                         =Set(varNavCompHeight,contHeaderBar.Height);
-                        Navigate(WaterMeterReadingsScreen);
+                        //Navigate(WaterMeterReadingsScreen);
                     Size: =12
                     Text: ="Water Meter Records"
                     Width: =Parent.Width-Parent.PaddingLeft
@@ -697,7 +697,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Navigate(FuelRecording);
+                    //Navigate(FuelRecording);
                 Size: =12
                 Text: ="Fuel Submission"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -716,7 +716,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Navigate(FuelTable);
+                    //Navigate(FuelTable);
                 Size: =12
                 Text: ="Fuel Records"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -735,7 +735,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Navigate(VehiclesScreen);
+                    //Navigate(VehiclesScreen);
                 Size: =12
                 Text: ="Vehicles"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -752,9 +752,7 @@ FullNavMenuV2 As CanvasComponent:
                 HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =280
-                OnSelect: |-
-                    =Set(varNavCompHeight,contHeaderBar.Height);
-                    Navigate(VehicleInspectionTasks);
+                OnSelect: =Set(varNavCompHeight,contHeaderBar.Height);
                 Size: =12
                 Text: ="Vehicle Inspection"
                 Width: =Parent.Width-Parent.PaddingLeft
