@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macfmaestate",
+    "MaxGetRowsCount": 500,
     "Name": "MacFMAEstates",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
