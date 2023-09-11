@@ -153,10 +153,11 @@ FullNavMenuV2 As CanvasComponent:
         contDocCapMenu As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             BorderStyle: =BorderStyle.None
+            FillPortions: =0
             Height: =3*varNavPaneBtnsHeight*0.75+2*varNavPaneGapHeight
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =varNavPaneGapHeight
-            LayoutMinHeight: =112
+            LayoutMinHeight: =80
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             PaddingLeft: =varNavPaneBtnsHeight+varNavPaneGapHeight
