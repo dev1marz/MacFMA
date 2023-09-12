@@ -6,6 +6,276 @@ CaptureWorkOrderScreen As screen:
         Set(varEstateDrop,0);Set(varFacDrop,0);Set(varAreaDrop,0);
         Set(varFilterCont,1)
 
+    WorkOrderDataTable As dataTable.datatable:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        BorderStyle: =BorderStyle.Solid
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Open Sans'
+        FontWeight: =FontWeight.Normal
+        HeadingColor: =RGBA(255, 255, 255, 1)
+        HeadingFill: =RGBA(100, 118, 132, 1)
+        HeadingFont: =Font.'Open Sans'
+        HeadingFontWeight: =FontWeight.Normal
+        HeadingSize: =21
+        Height: =406
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(62, 74, 83, .2)
+        InputFill: =RGBA(0, 0, 0, 1)
+        InvertedColor: =RGBA(255, 255, 255, 1)
+        Items: =MacFMAWorkOrders
+        LinkColor: =ColorFade(RGBA(0, 134, 208, 1), 30%)
+        PrimaryColor1: =RGBA(100, 118, 132, 1)
+        PrimaryColor2: =RGBA(197, 203, 207, 1)
+        PrimaryColor3: =RGBA(62, 74, 83, 1)
+        SelectedColor: =RGBA(255, 255, 255, 1)
+        SelectedFill: =RGBA(100, 118, 132, .2)
+        Size: =21
+        Width: =640
+        X: =0
+        Y: =727
+        ZIndex: =1
+
+        "'Created On_Column2' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Created On"
+            FieldName: ="createdon"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =ThisItem.'Created On'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        Area_Column1 As dataTableColumn.complexTypeColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Area"
+            FieldName: ="crf01_Area"
+            FieldVariantName: ="complexTypeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =ThisItem.Area.AreaID
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+        Priority_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Priority"
+            FieldName: ="crf01_priority"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.Priority
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+        ActionRequired_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="ActionRequired"
+            FieldName: ="crf01_actionrequired"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.ActionRequired
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =9
+
+        Problem_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Problem"
+            FieldName: ="crf01_problem"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Problem
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =10
+
+        PersonResponsible_Column1 As dataTableColumn.complexTypeColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="PersonResponsible"
+            FieldName: ="crf01_PersonResponsible"
+            FieldVariantName: ="complexTypeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.PersonResponsible.MacFMAStaffs
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =11
+
+    FilterContainer As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =320
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =!ScreenState
+        Width: =579
+        X: =30
+        Y: =92
+        ZIndex: =2
+
+        Label1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =70
+            Size: =21
+            Text: ="Filter By"
+            Width: =560
+            X: =16
+            ZIndex: =1
+
+        EstateDropdown As dropdown:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            ChevronBackground: =RGBA(100, 118, 132, 1)
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =62
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(62, 74, 83, 1)
+            Items: =MacFMAEstates
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(197, 203, 207, 1)
+            SelectionFill: =RGBA(100, 118, 132, 1)
+            Size: =21
+            Visible: =varEstateDrop
+            Width: =252
+            X: =306
+            Y: =70
+            ZIndex: =2
+
+        EstateCheckbox As checkbox:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            CheckboxBackgroundFill: =RGBA(0, 0, 0, 1)
+            CheckboxBorderColor: =RGBA(197, 203, 207, 1)
+            CheckmarkFill: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =62
+            HoverColor: =RGBA(197, 203, 207, 1)
+            OnCheck: =Set(varEstateDrop,1)
+            OnUncheck: =Set(varEstateDrop,0)
+            Size: =21
+            Text: ="Estates"
+            Width: =260
+            X: =33
+            Y: =70
+            ZIndex: =3
+
+        FacilityCheckbox As checkbox:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            CheckboxBackgroundFill: =RGBA(0, 0, 0, 1)
+            CheckboxBorderColor: =RGBA(197, 203, 207, 1)
+            CheckmarkFill: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =62
+            HoverColor: =RGBA(197, 203, 207, 1)
+            OnCheck: =Set(varFacDrop,1)
+            OnUncheck: =Set(varFacDrop,0)
+            Size: =21
+            Text: ="Facility"
+            Width: =260
+            X: =33
+            Y: =152
+            ZIndex: =4
+
+        FacilityDropdown As dropdown:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            ChevronBackground: =RGBA(100, 118, 132, 1)
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =62
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(62, 74, 83, 1)
+            Items: =MacFMAFacilities
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(197, 203, 207, 1)
+            SelectionFill: =RGBA(100, 118, 132, 1)
+            Size: =21
+            Visible: =varFacDrop
+            Width: =252
+            X: =306
+            Y: =152
+            ZIndex: =5
+
+        AreaCheckbox As checkbox:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            CheckboxBackgroundFill: =RGBA(0, 0, 0, 1)
+            CheckboxBorderColor: =RGBA(197, 203, 207, 1)
+            CheckmarkFill: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =62
+            HoverColor: =RGBA(197, 203, 207, 1)
+            OnCheck: =Set(varAreaDrop,1)
+            OnUncheck: =Set(varAreaDrop,0)
+            Size: =21
+            Text: ="Area"
+            Width: =260
+            X: =33
+            Y: =233
+            ZIndex: =6
+
+        AreaDropdown As dropdown:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            ChevronBackground: =RGBA(100, 118, 132, 1)
+            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =62
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(62, 74, 83, 1)
+            Items: =MacFMAAreas
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(197, 203, 207, 1)
+            SelectionFill: =RGBA(100, 118, 132, 1)
+            Size: =21
+            Visible: =varAreaDrop
+            Width: =252
+            X: =306
+            Y: =233
+            ZIndex: =7
+
     CaptureWorkOrderAddForm As form:
         BorderColor: =RGBA(197, 203, 207, 1)
         DataSource: =MacFMAWorkOrders
@@ -17,7 +287,7 @@ CaptureWorkOrderScreen As screen:
         Visible: =ScreenState
         Width: =640
         Y: =81
-        ZIndex: =1
+        ZIndex: =3
 
         Problem_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -691,275 +961,5 @@ CaptureWorkOrderScreen As screen:
 
     FullNavMenuV2_10 As FullNavMenuV2:
         Width: =640
-        ZIndex: =8
-
-    WorkOrderDataTable As dataTable.datatable:
-        BorderColor: =RGBA(197, 203, 207, 1)
-        BorderStyle: =BorderStyle.Solid
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(0, 0, 0, 0)
-        Font: =Font.'Open Sans'
-        FontWeight: =FontWeight.Normal
-        HeadingColor: =RGBA(255, 255, 255, 1)
-        HeadingFill: =RGBA(100, 118, 132, 1)
-        HeadingFont: =Font.'Open Sans'
-        HeadingFontWeight: =FontWeight.Normal
-        HeadingSize: =21
-        Height: =406
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(62, 74, 83, .2)
-        InputFill: =RGBA(0, 0, 0, 1)
-        InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =MacFMAWorkOrders
-        LinkColor: =ColorFade(RGBA(0, 134, 208, 1), 30%)
-        PrimaryColor1: =RGBA(100, 118, 132, 1)
-        PrimaryColor2: =RGBA(197, 203, 207, 1)
-        PrimaryColor3: =RGBA(62, 74, 83, 1)
-        SelectedColor: =RGBA(255, 255, 255, 1)
-        SelectedFill: =RGBA(100, 118, 132, .2)
-        Size: =21
-        Width: =640
-        X: =0
-        Y: =727
-        ZIndex: =10
-
-        "'Created On_Column2' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Created On"
-            FieldName: ="createdon"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =6
-            Text: =ThisItem.'Created On'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =1
-
-        Area_Column1 As dataTableColumn.complexTypeColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Area"
-            FieldName: ="crf01_Area"
-            FieldVariantName: ="complexTypeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =7
-            Text: =ThisItem.Area.AreaID
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =7
-
-        Priority_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Priority"
-            FieldName: ="crf01_priority"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =8
-            Text: =ThisItem.Priority
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =8
-
-        ActionRequired_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="ActionRequired"
-            FieldName: ="crf01_actionrequired"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.ActionRequired
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =9
-
-        Problem_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Problem"
-            FieldName: ="crf01_problem"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.Problem
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =10
-
-        PersonResponsible_Column1 As dataTableColumn.complexTypeColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="PersonResponsible"
-            FieldName: ="crf01_PersonResponsible"
-            FieldVariantName: ="complexTypeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =5
-            Text: =ThisItem.PersonResponsible.MacFMAStaffs
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =11
-
-    FilterContainer As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =320
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Visible: =!ScreenState
-        Width: =579
-        X: =30
-        Y: =92
-        ZIndex: =11
-
-        Label1 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(197, 203, 207, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =70
-            Size: =21
-            Text: ="Filter By"
-            Width: =560
-            X: =16
-            ZIndex: =1
-
-        EstateDropdown As dropdown:
-            BorderColor: =RGBA(197, 203, 207, 1)
-            ChevronBackground: =RGBA(100, 118, 132, 1)
-            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-            ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-            ChevronHoverFill: =RGBA(255, 255, 255, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 0, 0, 1)
-            Height: =62
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(62, 74, 83, 1)
-            Items: =MacFMAEstates
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(197, 203, 207, 1)
-            SelectionFill: =RGBA(100, 118, 132, 1)
-            Size: =21
-            Visible: =varEstateDrop
-            Width: =252
-            X: =306
-            Y: =70
-            ZIndex: =2
-
-        EstateCheckbox As checkbox:
-            BorderColor: =RGBA(197, 203, 207, 1)
-            CheckboxBackgroundFill: =RGBA(0, 0, 0, 1)
-            CheckboxBorderColor: =RGBA(197, 203, 207, 1)
-            CheckmarkFill: =RGBA(255, 255, 255, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =62
-            HoverColor: =RGBA(197, 203, 207, 1)
-            OnCheck: =Set(varEstateDrop,1)
-            OnUncheck: =Set(varEstateDrop,0)
-            Size: =21
-            Text: ="Estates"
-            Width: =260
-            X: =33
-            Y: =70
-            ZIndex: =3
-
-        FacilityCheckbox As checkbox:
-            BorderColor: =RGBA(197, 203, 207, 1)
-            CheckboxBackgroundFill: =RGBA(0, 0, 0, 1)
-            CheckboxBorderColor: =RGBA(197, 203, 207, 1)
-            CheckmarkFill: =RGBA(255, 255, 255, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =62
-            HoverColor: =RGBA(197, 203, 207, 1)
-            OnCheck: =Set(varFacDrop,1)
-            OnUncheck: =Set(varFacDrop,0)
-            Size: =21
-            Text: ="Facility"
-            Width: =260
-            X: =33
-            Y: =152
-            ZIndex: =4
-
-        FacilityDropdown As dropdown:
-            BorderColor: =RGBA(197, 203, 207, 1)
-            ChevronBackground: =RGBA(100, 118, 132, 1)
-            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-            ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-            ChevronHoverFill: =RGBA(255, 255, 255, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 0, 0, 1)
-            Height: =62
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(62, 74, 83, 1)
-            Items: =MacFMAFacilities
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(197, 203, 207, 1)
-            SelectionFill: =RGBA(100, 118, 132, 1)
-            Size: =21
-            Visible: =varFacDrop
-            Width: =252
-            X: =306
-            Y: =152
-            ZIndex: =5
-
-        AreaCheckbox As checkbox:
-            BorderColor: =RGBA(197, 203, 207, 1)
-            CheckboxBackgroundFill: =RGBA(0, 0, 0, 1)
-            CheckboxBorderColor: =RGBA(197, 203, 207, 1)
-            CheckmarkFill: =RGBA(255, 255, 255, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =62
-            HoverColor: =RGBA(197, 203, 207, 1)
-            OnCheck: =Set(varAreaDrop,1)
-            OnUncheck: =Set(varAreaDrop,0)
-            Size: =21
-            Text: ="Area"
-            Width: =260
-            X: =33
-            Y: =233
-            ZIndex: =6
-
-        AreaDropdown As dropdown:
-            BorderColor: =RGBA(197, 203, 207, 1)
-            ChevronBackground: =RGBA(100, 118, 132, 1)
-            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-            ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-            ChevronHoverFill: =RGBA(255, 255, 255, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 0, 0, 1)
-            Height: =62
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(62, 74, 83, 1)
-            Items: =MacFMAAreas
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(197, 203, 207, 1)
-            SelectionFill: =RGBA(100, 118, 132, 1)
-            Size: =21
-            Visible: =varAreaDrop
-            Width: =252
-            X: =306
-            Y: =233
-            ZIndex: =7
+        ZIndex: =7
 
