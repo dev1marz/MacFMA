@@ -65,6 +65,7 @@ WorkOrderManagementScreen As screen:
         OnFailure: =NewForm(WorkOrderManagementForm);Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New
         OnSuccess: =Notify("Success",NotificationType.Success)
+        Visible: =ScreenState
         Width: =640
         Y: =87
         ZIndex: =2
