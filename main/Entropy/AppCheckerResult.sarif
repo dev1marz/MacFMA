@@ -15662,46 +15662,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "FullNavMenuV2.contMenu.contFacManMenu.btnManageWorkOrder.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FullNavMenuV2.contMenu.contFacManMenu.btnManageWorkOrder.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 21,
-                  "charOffset": 83,
-                  "snippet": {
-                    "text": "ManageWorkOrderScreen"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "FullNavMenuV2",
-                "type": "FullNavMenuV2.contMenu.contFacManMenu.btnManageWorkOrder"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ManageWorkOrderScreen"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "FullNavMenuV2.contHeaderBar.iconMenu.AccessibleLabel"
                 }
               ],

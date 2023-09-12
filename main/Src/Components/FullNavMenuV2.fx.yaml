@@ -527,7 +527,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);Navigate(ManageWorkOrderScreen);
+                    Set(contUtilManMenuVis,false);Navigate(WorkOrderManagementScreen);
                 Size: =12
                 Text: ="Manage Work Order"
                 Width: =Parent.Width-Parent.PaddingLeft
