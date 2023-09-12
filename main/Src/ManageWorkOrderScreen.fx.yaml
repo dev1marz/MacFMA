@@ -338,7 +338,7 @@ ManageWorkOrderScreen As screen:
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="crf01_typeofworkorder"
-            Default: =ThisItem.TypeOfWorkOrder
+            Default: =ThisItem.crf01_typeofworkorder
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_typeofworkorder")
             Fill: =RGBA(0, 0, 0, 0)
