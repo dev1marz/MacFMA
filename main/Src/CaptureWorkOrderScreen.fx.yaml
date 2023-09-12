@@ -8,7 +8,7 @@ CaptureWorkOrderScreen As screen:
         DataSource: =MacFMAWorkOrders
         DefaultMode: =If(ScreenState = 1,FormMode.New,FormMode.View)
         Height: =445
-        Item: =CaptureWorkOrderGallery.Selected
+        Item: =WorkOrderDataTable.Selected
         OnFailure: =Notify("Error!", NotificationType.Error)
         OnSuccess: =Notify("Success",NotificationType.Success)
         Width: =640
