@@ -11,6 +11,7 @@ CaptureWorkOrderScreen As screen:
         Item: =WorkOrderDataTable.Selected
         OnFailure: =Notify("Error!", NotificationType.Error)
         OnSuccess: =Notify("Success",NotificationType.Success)
+        Visible: =ScreenState
         Width: =640
         Y: =81
         ZIndex: =1
