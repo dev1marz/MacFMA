@@ -112,13 +112,44 @@ FacilityInspectionReportScreen As screen:
 
     PDFContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =515
+        Height: =620
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Width: =527
         X: =56
-        Y: =222
+        Y: =117
         ZIndex: =11
+
+        HtmlText1 As htmlViewer:
+            Fill: =RGBA(243, 245, 245, 1)
+            Height: =512
+            HtmlText: ="""<h1 alignment=centre>Facility Inspection Report</h1>"""
+            Size: =12
+            Width: =527
+            Y: =108
+            ZIndex: =1
+
+        Icon1 As icon.DocumentPDF:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(197, 203, 207, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(56, 67, 75, 1)
+            Icon: =Icon.DocumentPDF
+            X: =463
+            Y: =30
+            ZIndex: =2
+
+        Icon2 As icon.Mail:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(197, 203, 207, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(56, 67, 75, 1)
+            Icon: =Icon.Mail
+            X: =367
+            Y: =30
+            ZIndex: =3
 
