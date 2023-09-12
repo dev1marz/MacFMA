@@ -710,7 +710,7 @@ CaptureWorkOrderScreen As screen:
             Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =36.00
+            Height: =41
             OnSelect: =Select(Parent)
             PaddingBottom: =0.00
             PaddingLeft: =0.00
@@ -719,10 +719,22 @@ CaptureWorkOrderScreen As screen:
             Size: =20.00
             Text: =ThisItem.Priority
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
-            X: =40
-            Y: =30.00
+            Width: =122
+            X: =406
+            Y: =6
             ZIndex: =2
+
+        TypeOfWork As label:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =41
+            Size: =21
+            Text: =ThisItem.TypeOfWorkOrder
+            Width: =242
+            X: =16
+            Y: =6
+            ZIndex: =3
 
     CaptureWorkOrderSearchInput As text:
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -838,7 +850,7 @@ CaptureWorkOrderScreen As screen:
             Y: =0.00
             ZIndex: =2
 
-    CaptureWorkOrderLabel As label:
+    TypeOfWorkOrderLabel As label:
         BorderColor: =RGBA(232, 234, 236, 1)
         BorderStyle: =
         BorderThickness: =
@@ -850,9 +862,7 @@ CaptureWorkOrderScreen As screen:
         PaddingBottom: =5.00
         PaddingLeft: =5.00
         Size: =21.00
-        Text: |-
-            ="Transaction Number
-            "
+        Text: ="Type Of Work Order"
         Width: =343
         X: =30
         Y: =707
@@ -861,4 +871,22 @@ CaptureWorkOrderScreen As screen:
     FullNavMenuV2_10 As FullNavMenuV2:
         Width: =640
         ZIndex: =8
+
+    PriorityLabel As label:
+        BorderColor: =RGBA(232, 234, 236, 1)
+        BorderStyle: =
+        BorderThickness: =
+        Color: =RGBA(243, 245, 245, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =21.00
+        Text: ="Priority"
+        Width: =160
+        X: =419
+        Y: =707
+        ZIndex: =9
 
