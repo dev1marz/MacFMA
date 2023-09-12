@@ -9487,7 +9487,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FormButtonContainer_1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9682,7 +9682,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "FullNavMenuV2_16",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9820,7 +9820,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GalleryLabelsContainer_2",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10396,7 +10396,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_13",
-      "ParentIndex": 0,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12477,7 +12477,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "ResidentForm_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12801,7 +12801,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ResidentsEditAddBtns_1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13031,7 +13031,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ResidentsGallery_1",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13369,7 +13369,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ResidentsSearchInput_1",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

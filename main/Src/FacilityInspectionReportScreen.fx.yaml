@@ -6,7 +6,7 @@ FacilityInspectionReportScreen As screen:
     "'Gallery(ScreenName)_2' As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(197, 203, 207, 1)
         DisplayMode: =If(ScreenState = 1,DisplayMode.Disabled)
-        Height: =309.00
+        Height: =174
         Items: = If(IsBlank(SearchInput_1.Text),MacFMAWorkOrders,Filter(MacFMAWorkOrders,SearchInput_1.Text in Problem ))
         Layout: =Layout.Vertical
         OnSelect: =
@@ -15,7 +15,7 @@ FacilityInspectionReportScreen As screen:
         TemplateSize: =96.00
         Width: =579
         X: =30
-        Y: =712
+        Y: =909
         ZIndex: =3
 
         TransactionNumber_3 As label:
@@ -58,7 +58,7 @@ FacilityInspectionReportScreen As screen:
         Size: =21.00
         Width: =579
         X: =30
-        Y: =557
+        Y: =769
         ZIndex: =4
 
     "'Label(SearchItem)_2' As label":
@@ -76,7 +76,7 @@ FacilityInspectionReportScreen As screen:
         Text: ="Problem"
         Width: =343
         X: =30
-        Y: =642
+        Y: =854
         ZIndex: =7
 
     FullNavMenuV2_28 As FullNavMenuV2:
@@ -97,4 +97,28 @@ FacilityInspectionReportScreen As screen:
         Width: =640
         Y: =1083
         ZIndex: =9
+
+    PowerBIContainer As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =515
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =527
+        X: =56
+        Y: =222
+        ZIndex: =10
+
+    PDFContainer As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =515
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =527
+        X: =56
+        Y: =222
+        ZIndex: =11
 

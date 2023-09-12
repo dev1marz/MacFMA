@@ -2143,7 +2143,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CaptureWorkOrderAddBtnContainer",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2376,7 +2376,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "CaptureWorkOrderAddForm",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2533,7 +2533,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CaptureWorkOrderConfirmCancelBtnContainer",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2861,7 +2861,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CaptureWorkOrderSearchInput",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9882,7 +9882,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FilterContainer",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10052,7 +10052,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "FullNavMenuV2_10",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10442,7 +10442,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_5",
-      "ParentIndex": 0,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13127,7 +13127,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WorkOrderDataTable",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

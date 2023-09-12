@@ -83,7 +83,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "(GalleryScreenName)_2",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -297,7 +297,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AddEditBtns(ScreenName)_2",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2010,7 +2010,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ConfirmCancelBtns(ScreenName)_2",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6978,7 +6978,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "Form(ScreenName)_2",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7113,7 +7113,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "FullNavMenuV2_6",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7251,7 +7251,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GalleryLabelsContainer_5",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7827,7 +7827,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_10",
-      "ParentIndex": 0,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9542,7 +9542,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SearchInput(ScreenName)_2",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
