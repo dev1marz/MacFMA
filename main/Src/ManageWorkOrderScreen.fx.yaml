@@ -1,8 +1,8 @@
-WorkOrderScreen As screen:
+ManageWorkOrderScreen As screen:
     ContentLanguage: =""
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Work Order");
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Manage Work Order");
     Width: =
 
     "'(GalleryScreenName)_1' As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
