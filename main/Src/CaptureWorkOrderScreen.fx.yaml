@@ -920,7 +920,7 @@ CaptureWorkOrderScreen As screen:
             Y: =152
             ZIndex: =5
 
-        FacilityCheckbox_1 As checkbox:
+        AreaCheckbox As checkbox:
             BorderColor: =RGBA(197, 203, 207, 1)
             CheckboxBackgroundFill: =RGBA(0, 0, 0, 1)
             CheckboxBorderColor: =RGBA(197, 203, 207, 1)
@@ -937,7 +937,7 @@ CaptureWorkOrderScreen As screen:
             Y: =233
             ZIndex: =6
 
-        FacilityDropdown_1 As dropdown:
+        AreaDropdown As dropdown:
             BorderColor: =RGBA(197, 203, 207, 1)
             ChevronBackground: =RGBA(100, 118, 132, 1)
             ChevronDisabledBackground: =RGBA(166, 166, 166, 1)

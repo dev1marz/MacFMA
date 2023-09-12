@@ -19848,19 +19848,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CaptureWorkOrderScreen.FilterContainer.FacilityDropdown_1.AccessibleLabel"
+                  "fullyQualifiedName": "CaptureWorkOrderScreen.FilterContainer.AreaDropdown.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CaptureWorkOrderScreen.FilterContainer.FacilityDropdown_1.AccessibleLabel",
+                  "fullyQualifiedName": "CaptureWorkOrderScreen.FilterContainer.AreaDropdown.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CaptureWorkOrderScreen",
-                "type": "CaptureWorkOrderScreen.FilterContainer.FacilityDropdown_1"
+                "type": "CaptureWorkOrderScreen.FilterContainer.AreaDropdown"
               }
             }
           ],
