@@ -125,7 +125,21 @@ FacilityInspectionReportScreen As screen:
         HtmlText1 As htmlViewer:
             Fill: =RGBA(243, 245, 245, 1)
             Height: =512
-            HtmlText: ="""<h1 alignment=centre>Facility Inspection Report</h1>"""
+            HtmlText: |
+                ="<HTML>
+                
+                <h1 alignment=centre>Facility Inspection Report</h1>
+                <table border='1' width='100%'>" &
+                "<thead><tr><th>Area</th><th>Problem Type</th><th>Inspection Image</th></thead>" &
+                "<tbody>" &
+                Concat(MacFMAWorkOrders, "<tr>
+                <td>" & Area.AreaID & "</td>
+                <td>" & Problem & "</td>
+                <th> " & "Record Image coming soon"&"</th>
+                </tr>") & 
+                "</tbody></table>
+                
+                </HTML>"
             Size: =12
             Width: =527
             Y: =108
