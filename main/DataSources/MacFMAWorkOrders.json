@@ -17,7 +17,6 @@
       "crf01_completedby": "CompletedBy",
       "crf01_CreatedBy": "CreatedBy",
       "crf01_datecompleted": "DateCompleted",
-      "crf01_datecreated": "DateCreated",
       "crf01_dateissued": "DateIssued",
       "crf01_macfmaworkorders_AsyncOperations": "System Jobs",
       "crf01_macfmaworkorders_BulkDeleteFailures": "Bulk Delete Failures",
@@ -60,6 +59,29 @@
       "4606b0c3-e05a-4d64-bd5e-617d66647338": "MacFMAWorkOrders Associated View",
       "f9a49b91-ae00-4100-a239-3c8aa5f1c5fe": "Active MacFMAWorkOrders"
     }
+  },
+  {
+    "DisplayName": "MacFMA",
+    "Name": "crf01_macfma",
+    "OptionSetInfoNameMapping": {
+      "499880000": "Low",
+      "499880001": "Medium",
+      "499880002": "High",
+      "499880003": "Very High",
+      "499880004": "Emergency"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "crf01_priority",
+        "OptionSetReferenceEntityName": "MacFMAWorkOrders"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "crf01_priority",
+    "RelatedEntityName": "MacFMAWorkOrders",
+    "Type": "OptionSetInfo"
   },
   {
     "DisplayName": "Status (MacFMAWorkOrders)",
