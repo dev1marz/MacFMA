@@ -132,6 +132,7 @@
     "ViewTemplate",
     "ViewAddTemplate",
     "CaptureWorkOrderScreen",
+    "WorkOrderManagementScreen",
     "EstateScreen",
     "VendorScreen",
     "VendorVisitScreen",
