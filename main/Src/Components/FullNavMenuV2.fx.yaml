@@ -358,7 +358,7 @@ FullNavMenuV2 As CanvasComponent:
                     =Set(varNavCompHeight,contHeaderBar.Height);
                     Set(contUtilManMenuVis,false);Navigate(ResidentsScreen);
                 Size: =12
-                Text: ="Links"
+                Text: ="Residents"
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =3
 

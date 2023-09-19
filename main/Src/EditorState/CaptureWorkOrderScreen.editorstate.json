@@ -26,7 +26,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ActionRequired_Column1",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -627,7 +627,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Area_Column1",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3114,7 +3114,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Created On_Column2",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3251,7 +3251,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CreatedBy_DataCard2",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10720,7 +10720,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PersonResponsible_Column1",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10960,7 +10960,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Priority_Column1",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11097,7 +11097,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Priority_DataCard1",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11200,7 +11200,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Problem_Column1",
-      "ParentIndex": 0,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
