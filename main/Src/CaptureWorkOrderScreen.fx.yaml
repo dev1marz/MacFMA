@@ -138,7 +138,7 @@ CaptureWorkOrderScreen As screen:
             Height: =62
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(62, 74, 83, 1)
-            Items: =MacFMAEstates
+            Items: =colEstates
             OnChange: =ClearCollect(colWorkOrders,Filter(colWorkOrders,Area.Facility.Estate.EstateID=EstateDropdown.Selected.EstateID))
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(197, 203, 207, 1)
