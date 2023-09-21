@@ -21,7 +21,7 @@ CaptureWorkOrderScreen As screen:
         HeadingFont: =Font.'Open Sans'
         HeadingFontWeight: =FontWeight.Normal
         HeadingSize: =21
-        Height: =338
+        Height: =448
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(62, 74, 83, .2)
         InputFill: =RGBA(0, 0, 0, 1)
@@ -36,7 +36,7 @@ CaptureWorkOrderScreen As screen:
         Size: =14
         Width: =640
         X: =0
-        Y: =727
+        Y: =635
         ZIndex: =1
 
         crf01_problem_Column1 As dataTableColumn.textualColumn:
@@ -850,7 +850,7 @@ CaptureWorkOrderScreen As screen:
         Size: =21.00
         Width: =579
         X: =30
-        Y: =626
+        Y: =538
         ZIndex: =4
 
     CaptureWorkOrderAddBtnContainer As groupContainer.horizontalAutoLayoutContainer:
@@ -863,7 +863,7 @@ CaptureWorkOrderScreen As screen:
         PaddingLeft: =0.00
         Visible: =If(ScreenState = 0,true)
         Width: =640
-        Y: =516.00
+        Y: =412
         ZIndex: =5
 
         "'AddItemBtn(ScreenName)_1' As button":
