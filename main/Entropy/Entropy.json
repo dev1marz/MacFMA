@@ -783,7 +783,7 @@
   "DoesTestStepsMetadataExist": true,
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/21/2023 12:06:00",
+  "HeaderLastSavedDateTimeUTC": "09/21/2023 12:07:51",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "20d69bbd-af58-4f73-a548-d4a7f3e6389e": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/4f0fcf56bbe34dfba312cbd37d5777d6\"",
@@ -819,6 +819,9 @@
     "f74204c5dcec4191a73b08c68062e53e": 3
   },
   "OrderDataSource": {
+    "colArea": 216,
+    "colEstates": 214,
+    "colFacility": 215,
     "colTypeReport": 212,
     "colWorkOrders": 213,
     "ComboBoxSample": 195,

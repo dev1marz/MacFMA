@@ -5,7 +5,10 @@ CaptureWorkOrderScreen As screen:
         =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Capture Work Order");
         Set(varEstateDrop,0);Set(varFacDrop,0);Set(varAreaDrop,0);
         Set(varFilterCont,1);
-        ClearCollect(colWorkOrders,MacFMAWorkOrders)
+        ClearCollect(colWorkOrders,MacFMAWorkOrders);
+        ClearCollect(colEstates,MacFMAEstates);
+        ClearCollect(colFacility,MacFMAFacilities);
+        ClearCollect(colArea,MacFMAAreas)
 
     WorkOrderDataTable As dataTable.datatable:
         BorderColor: =RGBA(197, 203, 207, 1)
