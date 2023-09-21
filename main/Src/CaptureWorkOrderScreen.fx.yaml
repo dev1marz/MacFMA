@@ -4,7 +4,8 @@ CaptureWorkOrderScreen As screen:
     OnVisible: |-
         =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Capture Work Order");
         Set(varEstateDrop,0);Set(varFacDrop,0);Set(varAreaDrop,0);
-        Set(varFilterCont,1)
+        Set(varFilterCont,1);
+        ClearCollect(colWorkOrders,MacFMAWorkOrders)
 
     WorkOrderDataTable As dataTable.datatable:
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -25,98 +26,70 @@ CaptureWorkOrderScreen As screen:
         HoverFill: =RGBA(62, 74, 83, .2)
         InputFill: =RGBA(0, 0, 0, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =MacFMAWorkOrders
+        Items: =colWorkOrders
         LinkColor: =ColorFade(RGBA(0, 134, 208, 1), 30%)
         PrimaryColor1: =RGBA(100, 118, 132, 1)
         PrimaryColor2: =RGBA(197, 203, 207, 1)
         PrimaryColor3: =RGBA(62, 74, 83, 1)
         SelectedColor: =RGBA(255, 255, 255, 1)
         SelectedFill: =RGBA(100, 118, 132, .2)
-        Size: =21
+        Size: =14
         Width: =640
         X: =0
         Y: =727
         ZIndex: =1
 
-        "'Created On_Column2' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Created On"
-            FieldName: ="createdon"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =6
-            Text: =ThisItem.'Created On'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =1
-
-        Area_Column1 As dataTableColumn.complexTypeColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Area"
-            FieldName: ="crf01_Area"
-            FieldVariantName: ="complexTypeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =7
-            Text: =ThisItem.Area.AreaID
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =7
-
-        Priority_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Priority"
-            FieldName: ="crf01_priority"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =8
-            Text: =ThisItem.Priority
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =8
-
-        ActionRequired_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="ActionRequired"
-            FieldName: ="crf01_actionrequired"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.ActionRequired
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =9
-
-        Problem_Column1 As dataTableColumn.textualColumn:
+        crf01_problem_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Problem"
             FieldName: ="crf01_problem"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.crf01_problem
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+        crf01_PersonResponsible_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Person Responsible"
+            FieldName: ="crf01_PersonResponsible"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.crf01_PersonResponsible.StaffID
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =9
+
+        crf01_priority_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Priority"
+            FieldName: ="crf01_priority"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
             Order: =3
-            Text: =ThisItem.Problem
+            Text: =ThisItem.crf01_priority
             Width: =100
             X: =0
             Y: =0
             ZIndex: =10
 
-        PersonResponsible_Column1 As dataTableColumn.complexTypeColumn:
+        createdon_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="PersonResponsible"
-            FieldName: ="crf01_PersonResponsible"
-            FieldVariantName: ="complexTypeColumn"
+            FieldDisplayName: ="Created On"
+            FieldName: ="createdon"
+            FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            Order: =5
-            Text: =ThisItem.PersonResponsible.MacFMAStaffs
+            Order: =4
+            Text: =ThisItem.createdon
             Width: =100
             X: =0
             Y: =0
@@ -163,6 +136,7 @@ CaptureWorkOrderScreen As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(62, 74, 83, 1)
             Items: =MacFMAEstates
+            OnChange: =ClearCollect(colWorkOrders,Filter(colWorkOrders,Area.Facility.Estate.EstateID=EstateDropdown.Selected.EstateID))
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(197, 203, 207, 1)
             SelectionFill: =RGBA(100, 118, 132, 1)
@@ -182,7 +156,9 @@ CaptureWorkOrderScreen As screen:
             Height: =62
             HoverColor: =RGBA(197, 203, 207, 1)
             OnCheck: =Set(varEstateDrop,1)
-            OnUncheck: =Set(varEstateDrop,0)
+            OnUncheck: |-
+                =Set(varEstateDrop,0);
+                ClearCollect(colWorkOrders,MacFMAWorkOrders)
             Size: =21
             Text: ="Estates"
             Width: =260
