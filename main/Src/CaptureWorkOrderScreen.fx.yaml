@@ -6,7 +6,8 @@ CaptureWorkOrderScreen As screen:
         Set(varEstateDrop,0);Set(varFacDrop,0);Set(varAreaDrop,0);
         Set(varFilterCont,1);
         ClearCollect(colWorkOrders,MacFMAWorkOrders);
-        ClearCollect(colEstates,MacFMAEstates);
+        ClearCollect(colEstates," ");
+        Collect(colEstates,MacFMAEstates);
         ClearCollect(colFacility,MacFMAFacilities);
         ClearCollect(colArea,MacFMAAreas)
 
