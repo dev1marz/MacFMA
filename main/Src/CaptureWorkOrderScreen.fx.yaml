@@ -8,8 +8,9 @@ CaptureWorkOrderScreen As screen:
         ClearCollect(colWorkOrders,MacFMAWorkOrders);
         ClearCollect(colEstates," ");
         Collect(colEstates,MacFMAEstates);
-        ClearCollect(colFacility,MacFMAFacilities);
-        ClearCollect(colArea,MacFMAAreas)
+        ClearCollect(colFacility," ");
+        Collect(colFacility,MacFMAFacilities);ClearCollect(colArea," ");
+        Collect(colArea,MacFMAAreas)
 
     WorkOrderDataTable As dataTable.datatable:
         BorderColor: =RGBA(197, 203, 207, 1)
