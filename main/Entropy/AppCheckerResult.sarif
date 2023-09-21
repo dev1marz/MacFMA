@@ -11370,6 +11370,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CaptureWorkOrderScreen.FilterContainer.FacilityCheckbox.OnUncheck"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CaptureWorkOrderScreen.FilterContainer.FacilityCheckbox.OnUncheck",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnUncheck",
+                "module": "CaptureWorkOrderScreen",
+                "type": "CaptureWorkOrderScreen.FilterContainer.FacilityCheckbox"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CaptureWorkOrderScreen.FilterContainer.AreaCheckbox.OnUncheck"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CaptureWorkOrderScreen.FilterContainer.AreaCheckbox.OnUncheck",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnUncheck",
+                "module": "CaptureWorkOrderScreen",
+                "type": "CaptureWorkOrderScreen.FilterContainer.AreaCheckbox"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "MainMenuComponent.ViewDocumentCapMenu"
                 }
               ],
