@@ -6800,6 +6800,86 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 195,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ElectricalmeterReadingScreen",
+                "type": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 159,
+                  "snippet": {
+                    "text": "Or"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ElectricalmeterReadingScreen",
+                "type": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "FullNavMenuV2.contHeaderBar.iconMenu.AccessibleLabel"
                 }
               ],
@@ -11240,6 +11320,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingForm.Reading_DataCard1.DataCardValue62.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingForm.Reading_DataCard1.DataCardValue62.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ElectricalmeterReadingScreen",
+                "type": "ElectricalmeterReadingScreen.ElecmeterReadingForm.Reading_DataCard1.DataCardValue62"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "RoomScreen.RoomForm_1.MacFMAResidents_DataCard1.DataCardValue37.AccessibleLabel"
                 }
               ],
@@ -11583,6 +11693,156 @@
                 "member": "TabIndex",
                 "module": "WatermeterReadingScreen",
                 "type": "WatermeterReadingScreen.WatermeterReadingGallery_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingForm.Area_DataCard5.DataCardValue61.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingForm.Area_DataCard5.DataCardValue61.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ElectricalmeterReadingScreen",
+                "type": "ElectricalmeterReadingScreen.ElecmeterReadingForm.Area_DataCard5.DataCardValue61"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingForm.MeterID_DataCard2.DataCardValue55.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingForm.MeterID_DataCard2.DataCardValue55.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ElectricalmeterReadingScreen",
+                "type": "ElectricalmeterReadingScreen.ElecmeterReadingForm.MeterID_DataCard2.DataCardValue55"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingSearchInput.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingSearchInput.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ElectricalmeterReadingScreen",
+                "type": "ElectricalmeterReadingScreen.ElecmeterReadingSearchInput"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ElectricalmeterReadingScreen",
+                "type": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ElectricalmeterReadingScreen",
+                "type": "ElectricalmeterReadingScreen.ElecmeterReadingGallery_2"
               }
             }
           ],
