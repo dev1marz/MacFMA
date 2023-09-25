@@ -1,14 +1,14 @@
-RoomScreen As screen:
+WatermeterReadingScreen As screen:
     ContentLanguage: =""
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Rooms");
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Watermeter Reading");
     Width: =
 
-    "RoomGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+    "WatermeterReadingGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         BorderColor: =RGBA(243, 245, 245, 1)
         Height: =329.00
-        Items: = If(IsBlank(RoomSearchInput_1.Text),MacFMARooms,Filter(MacFMARooms,(RoomSearchInput_1.Text in RoomID)))
+        Items: = If(IsBlank(WatermeterReadingSearchInput_1.Text),MacFMAWatermeterReadings,Filter(MacFMAWatermeterReadings,(WatermeterReadingSearchInput_1.Text in 'Created On' Or WatermeterReadingSearchInput_1.Text in Area.AreaID)))
         Layout: =Layout.Vertical
         OnSelect: =
         Selectable: =If(ScreenState =0, true)
@@ -19,30 +19,10 @@ RoomScreen As screen:
         Y: =777
         ZIndex: =1
 
-        Title4_10 As label:
+        Title4_22 As label:
             Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =40.00
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0.00
-            PaddingLeft: =0.00
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =20.00
-            Text: =ThisItem.RoomID
-            VerticalAlign: =VerticalAlign.Top
-            Width: =300
-            X: =17
-            Y: =16.00
-            ZIndex: =1
-
-        Title4_11 As label:
-            BorderColor: =RGBA(243, 245, 245, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =40.00
             OnSelect: =Select(Parent)
             PaddingBottom: =0.00
             PaddingLeft: =0.00
@@ -51,41 +31,77 @@ RoomScreen As screen:
             Size: =20.00
             Text: =ThisItem.Area.AreaID
             VerticalAlign: =VerticalAlign.Top
-            Width: =255
-            X: =321
+            Width: =140
+            X: =17
             Y: =16.00
+            ZIndex: =1
+
+        Title4_23 As label:
+            BorderColor: =RGBA(243, 245, 245, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20.00
+            Text: =ThisItem.MeterReading
+            VerticalAlign: =VerticalAlign.Top
+            Width: =205
+            X: =168
+            Y: =16
             ZIndex: =5
 
-    RoomForm_1 As form:
+        Title4_24 As label:
+            BorderColor: =RGBA(243, 245, 245, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20.00
+            Text: =ThisItem.'Created On'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =205
+            X: =380
+            Y: =16
+            ZIndex: =6
+
+    WatermeterReadingForm_1 As form:
         BorderColor: =RGBA(197, 203, 207, 1)
-        DataSource: =MacFMARooms
+        DataSource: =MacFMAWatermeterReadings
         DefaultMode: =If(ScreenState = 1,FormMode.Edit,FormMode.View)
         Height: =430.00
-        Item: =RoomGallery_1.Selected
-        OnFailure: =NewForm(RoomForm_1);Notify("Error!", NotificationType.Error)
+        Item: =WatermeterReadingGallery_1.Selected
+        OnFailure: =NewForm(WatermeterReadingForm_1);Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New
         OnSuccess: =Notify("Success",NotificationType.Success)
         Width: =640
         Y: =87
         ZIndex: =2
 
-        Area_DataCard1 As typedDataCard.comboBoxEditCard:
+        Area_DataCard4 As typedDataCard.comboBoxEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="crf01_Area"
             Default: =ThisItem.Area
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MacFMARooms],DataSourceInfo.DisplayName,"crf01_Area")
+            DisplayName: =DataSourceInfo([@MacFMAWatermeterReadings],DataSourceInfo.DisplayName,"crf01_Area")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue35.Selected
+            Update: =DataCardValue46.Selected
             Width: =640
             X: =0
             Y: =1
             ZIndex: =1
 
-            DataCardKey36 As label:
+            DataCardKey41 As label:
                 AutoHeight: =true
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -98,7 +114,7 @@ RoomScreen As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue35 As combobox:
+            DataCardValue46 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 ChevronBackground: =RGBA(100, 118, 132, 1)
                 ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -116,22 +132,22 @@ RoomScreen As screen:
                 Height: =70
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(62, 74, 83, 1)
-                Items: =Choices([@MacFMARooms].crf01_Area)
+                Items: =Choices([@MacFMAWatermeterReadings].crf01_Area)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(197, 203, 207, 1)
                 SearchFields: =["crf01_areaid"]
-                SearchItems: =Search(Choices([@MacFMARooms].crf01_Area),DataCardValue35.SearchText,"crf01_areaid")
+                SearchItems: =Search(Choices([@MacFMAWatermeterReadings].crf01_Area),DataCardValue46.SearchText,"crf01_areaid")
                 SelectionFill: =RGBA(100, 118, 132, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey36.Y + DataCardKey36.Height + 5
+                Y: =DataCardKey41.Y + DataCardKey41.Height + 5
                 ZIndex: =2
 
-            ErrorMessage29 As label:
+            ErrorMessage32 As label:
                 AutoHeight: =true
                 Color: =RGBA(255, 51, 51, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -147,39 +163,39 @@ RoomScreen As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue35.Y + DataCardValue35.Height
+                Y: =DataCardValue46.Y + DataCardValue46.Height
                 ZIndex: =3
 
-            StarVisible29 As label:
+            StarVisible32 As label:
                 Align: =Align.Center
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey36.Height
+                Height: =DataCardKey41.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey36.Y
+                Y: =DataCardKey41.Y
                 ZIndex: =4
 
-        MacFMAResidents_DataCard1 As typedDataCard.comboBoxOptionSetMultiViewCard:
+        MeterReading_DataCard1 As typedDataCard.numberEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="crf01_crf01_macfmaresidents_RoomNumber_crf01_ma"
-            Default: =ThisItem.MacFMAResidents
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@MacFMARooms],DataSourceInfo.DisplayName,"crf01_crf01_macfmaresidents_RoomNumber_crf01_ma")
+            DataField: ="crf01_meterreading"
+            Default: =ThisItem.MeterReading
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWatermeterReadings],DataSourceInfo.DisplayName,"crf01_meterreading")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            Required: =false
-            Update: =DataCardValue37.SelectedItems
+            Required: =true
+            Update: =Value(DataCardValue49.Text)
             Width: =640
             X: =0
             Y: =2
             ZIndex: =1
 
-            DataCardKey37 As label:
+            DataCardKey42 As label:
                 AutoHeight: =true
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -192,39 +208,36 @@ RoomScreen As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue37 As combobox:
+            DataCardValue49 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                ChevronBackground: =RGBA(100, 118, 132, 1)
-                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
-                DefaultSelectedItems: =Parent.Default
+                Default: =Parent.Default
+                DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayFields: =["crf01_residentid"]
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Format: =TextFormat.Number
                 Height: =70
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(62, 74, 83, 1)
-                IsSearchable: =false
-                Items: =MacFMAResidents
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(197, 203, 207, 1)
-                SearchFields: =["crf01_residentid"]
-                SearchItems: =[]
-                SelectionFill: =RGBA(100, 118, 132, 1)
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
                 Size: =21
+                Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey37.Y + DataCardKey37.Height + 5
+                Y: =DataCardKey42.Y + DataCardKey42.Height + 5
                 ZIndex: =2
 
-            ErrorMessage30 As label:
+            ErrorMessage33 As label:
                 AutoHeight: =true
                 Color: =RGBA(255, 51, 51, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -240,40 +253,38 @@ RoomScreen As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue37.Y + DataCardValue37.Height
+                Y: =DataCardValue49.Y + DataCardValue49.Height
                 ZIndex: =3
 
-            StarVisible30 As label:
+            StarVisible33 As label:
                 Align: =Align.Center
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey37.Height
+                Height: =DataCardKey42.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey37.Y
+                Y: =DataCardKey42.Y
                 ZIndex: =4
 
-        RoomID_DataCard1 As typedDataCard.textualEditCard:
+        "'Created On_DataCard4' As typedDataCard.textualViewCard":
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="crf01_roomid"
-            Default: =ThisItem.RoomID
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@MacFMARooms],DataSourceInfo.DisplayName,"crf01_roomid")
+            DataField: ="createdon"
+            Default: =ThisItem.'Created On'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@MacFMAWatermeterReadings],DataSourceInfo.DisplayName,"createdon")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@MacFMARooms], DataSourceInfo.MaxLength, "crf01_roomid")
-            Required: =true
-            Update: =DataCardValue28.Text
+            Height: =40
+            Required: =false
             Width: =640
             X: =0
-            Y: =0
-            ZIndex: =3
+            Y: =3
+            ZIndex: =1
 
-            DataCardKey29 As label:
+            DataCardKey50 As label:
                 AutoHeight: =true
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -286,7 +297,53 @@ RoomScreen As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue28 As text:
+            DataCardValue54 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey50.Y + DataCardKey50.Height + 5
+                ZIndex: =2
+
+        MeterID_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_meterid"
+            Default: =ThisItem.MeterID
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWatermeterReadings],DataSourceInfo.DisplayName,"crf01_meterid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MacFMAWatermeterReadings], DataSourceInfo.MaxLength, "crf01_meterid")
+            Required: =true
+            Update: =DataCardValue38.Text
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+            DataCardKey39 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue38 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
@@ -312,10 +369,10 @@ RoomScreen As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey29.Y + DataCardKey29.Height + 5
+                Y: =DataCardKey39.Y + DataCardKey39.Height + 5
                 ZIndex: =2
 
-            ErrorMessage28 As label:
+            ErrorMessage31 As label:
                 AutoHeight: =true
                 Color: =RGBA(255, 51, 51, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -331,76 +388,23 @@ RoomScreen As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue28.Y + DataCardValue28.Height
+                Y: =DataCardValue38.Y + DataCardValue38.Height
                 ZIndex: =3
 
-            StarVisible28 As label:
+            StarVisible31 As label:
                 Align: =Align.Center
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey29.Height
+                Height: =DataCardKey39.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey29.Y
+                Y: =DataCardKey39.Y
                 ZIndex: =4
 
-    RoomConfirmCancelBtns_1 As groupContainer.horizontalAutoLayoutContainer:
-        Height: =124.00
-        LayoutAlignItems: =LayoutAlignItems.Center
-        LayoutGap: =10
-        LayoutJustifyContent: =LayoutJustifyContent.Center
-        LayoutMode: =LayoutMode.Auto
-        PaddingBottom: =0.00
-        PaddingLeft: =0.00
-        Visible: =If(ScreenState = 1,true)
-        Width: =640
-        Y: =502
-        ZIndex: =3
-
-        RoomBtnConfirmAdd As button:
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(141, 198, 63, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =70.00
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: =SubmitForm(RoomForm_1);Set(ScreenState,0)
-            PaddingBottom: =5.00
-            PaddingLeft: =5.00
-            Size: =24.00
-            Text: ="Confirm"
-            Width: =280
-            Y: =0.00
-            ZIndex: =1
-
-        RoomBtnCancel As button:
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(255, 51, 51, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =70.00
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: =ViewForm(RoomForm_1);Set(ScreenState,0)
-            PaddingBottom: =5.00
-            PaddingLeft: =5.00
-            Size: =24.00
-            Text: ="Cancel"
-            Width: =280
-            Y: =0.00
-            ZIndex: =2
-
-    RoomSearchInput_1 As text:
+    WatermeterReadingSearchInput_1 As text:
         BorderColor: =RGBA(197, 203, 207, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
@@ -425,7 +429,7 @@ RoomScreen As screen:
         Y: =626
         ZIndex: =4
 
-    RoomAddEditBtns_1 As groupContainer.horizontalAutoLayoutContainer:
+    WatermeterReadingAddEditBtns_1 As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutGap: =10
@@ -438,7 +442,7 @@ RoomScreen As screen:
         Y: =502
         ZIndex: =5
 
-        RoomBtnEdit As button:
+        "'BtnEdit(ScreenName)_2' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -447,7 +451,9 @@ RoomScreen As screen:
             Height: =70.00
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-            OnSelect: =Set(ScreenState,1);RoomForm_1.DisplayMode.Edit
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =Set(ScreenState,1);WatermeterReadingForm_1.DisplayMode.Edit
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
@@ -457,7 +463,7 @@ RoomScreen As screen:
             Y: =27.00
             ZIndex: =1
 
-        RoomBtnAdd As button:
+        "'BtnAdd(ScreenName)_2' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -469,16 +475,16 @@ RoomScreen As screen:
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
-            OnSelect: =Set(ScreenState,1);NewForm(RoomForm_1)
+            OnSelect: =Set(ScreenState,1);NewForm(WatermeterReadingForm_1)
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
-            Text: ="Add Room"
+            Text: ="Add Equiptment or Asset"
             Width: =280
             Y: =27.00
             ZIndex: =2
 
-    GalleryLabelsContainer_4 As groupContainer.horizontalAutoLayoutContainer:
+    GalleryLabelsContainer_10 As groupContainer.horizontalAutoLayoutContainer:
         BorderColor: =RGBA(220, 224, 226, 1)
         Height: =71.00
         LayoutAlignItems: =LayoutAlignItems.Center
@@ -490,7 +496,7 @@ RoomScreen As screen:
         Y: =706
         ZIndex: =6
 
-        RoomLabel_1 As label:
+        AreaLabel_1 As label:
             BorderColor: =RGBA(232, 234, 236, 1)
             BorderStyle: =
             BorderThickness: =
@@ -504,36 +510,57 @@ RoomScreen As screen:
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =21.00
-            Text: ="Room Name"
-            Width: =300
+            Text: ="Area"
             X: =290
             Y: =1.00
             ZIndex: =1
 
-        FacilityNameLabel_2 As label:
+        ReadingLabel_3 As label:
             BorderColor: =RGBA(232, 234, 236, 1)
             BorderStyle: =
             BorderThickness: =2
             Color: =RGBA(243, 245, 245, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
+            FillPortions: =1
             FontWeight: =FontWeight.Bold
             Height: =70.00
             LayoutMinHeight: =70
-            LayoutMinWidth: =560
+            LayoutMinWidth: |
+                =280
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =21.00
-            Text: ="Facility Name"
-            Width: =290
+            Text: ="Reading"
+            Width: =200
             X: =27
             Y: =1.00
             ZIndex: =2
 
-    FullNavMenuV2_5 As FullNavMenuV2:
+        DateLabel_2 As label:
+            BorderColor: =RGBA(232, 234, 236, 1)
+            BorderStyle: =
+            BorderThickness: =
+            Color: =RGBA(243, 245, 245, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =70.00
+            LayoutMinHeight: =70
+            LayoutMinWidth: |
+                =200
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =21.00
+            Text: ="Date"
+            X: =290
+            Y: =1.00
+            ZIndex: =3
+
+    FullNavMenuV2_14 As FullNavMenuV2:
         Width: =640
         ZIndex: =7
 
-    Label5_17 As label:
+    Label5_18 As label:
         Align: =Align.Center
         BorderColor: =RGBA(197, 203, 207, 1)
         Color: =RGBA(255, 255, 255, 1)

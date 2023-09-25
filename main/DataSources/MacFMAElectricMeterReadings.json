@@ -1,0 +1,95 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmaelectricmeterreadingses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmaelectricmeterreadings",
+    "Name": "MacFMAElectricMeterReadings",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_Area": "Area",
+      "crf01_macfmaelectricmeterreadings_AsyncOperations": "System Jobs",
+      "crf01_macfmaelectricmeterreadings_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmaelectricmeterreadings_DuplicateBaseRecord": "Duplicate Records (crf01_macfmaelectricmeterreadings_DuplicateBaseRecord)",
+      "crf01_macfmaelectricmeterreadings_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmaelectricmeterreadings_DuplicateMatchingRecord)",
+      "crf01_macfmaelectricmeterreadings_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmaelectricmeterreadings_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmaelectricmeterreadings_ProcessSession": "Process Sessions",
+      "crf01_macfmaelectricmeterreadings_SyncErrors": "Sync Errors",
+      "crf01_macfmaelectricmeterreadingsid": "MacFMAElectricMeterReadings",
+      "crf01_meterid": "MeterID",
+      "crf01_reading": "Reading",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAElectricMeterReadings",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAElectricMeterReadings (Views)",
+    "Name": "_crf01_macfmaelectricmeterreadings_views",
+    "RelatedEntityName": "MacFMAElectricMeterReadings",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "4037ace9-d64c-4753-8182-b564d6665f0a": "MacFMAElectricMeterReadings Lookup View",
+      "491dc5c4-5447-4bac-9049-9254a911dc2d": "Inactive MacFMAElectricMeterReadings",
+      "58fdb860-2baf-4d5f-b4e6-aed037b728f3": "Active MacFMAElectricMeterReadings",
+      "63bb7503-a78c-4a3f-afba-1222b1a98694": "MacFMAElectricMeterReadings Advanced Find View",
+      "d4cf0bbd-53b0-4eab-b901-1d77fe44fc1c": "MacFMAElectricMeterReadings Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAElectricMeterReadings)",
+    "Name": "crf01_macfmaelectricmeterreadings_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAElectricMeterReadings"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAElectricMeterReadings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAElectricMeterReadings)",
+    "Name": "crf01_macfmaelectricmeterreadings_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAElectricMeterReadings"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAElectricMeterReadings",
+    "Type": "OptionSetInfo"
+  }
+]

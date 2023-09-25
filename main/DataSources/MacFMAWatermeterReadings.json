@@ -1,0 +1,95 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmawatermeterreadings",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmawatermeterreading",
+    "Name": "MacFMAWatermeterReadings",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_Area": "Area",
+      "crf01_macfmawatermeterreading_AsyncOperations": "System Jobs",
+      "crf01_macfmawatermeterreading_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmawatermeterreading_DuplicateBaseRecord": "Duplicate Records (crf01_macfmawatermeterreading_DuplicateBaseRecord)",
+      "crf01_macfmawatermeterreading_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmawatermeterreading_DuplicateMatchingRecord)",
+      "crf01_macfmawatermeterreading_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmawatermeterreading_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmawatermeterreading_ProcessSession": "Process Sessions",
+      "crf01_macfmawatermeterreading_SyncErrors": "Sync Errors",
+      "crf01_macfmawatermeterreadingid": "MacFMAWatermeterReading",
+      "crf01_meterid": "MeterID",
+      "crf01_meterreading": "MeterReading",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAWatermeterReadings",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAWatermeterReadings (Views)",
+    "Name": "_crf01_macfmawatermeterreading_views",
+    "RelatedEntityName": "MacFMAWatermeterReadings",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1c9b32da-7ce8-42b3-9fc1-cbf9fe4df2fa": "MacFMAWatermeterReading Lookup View",
+      "390f0c75-9b20-40a0-92e2-53705225d7ec": "Active MacFMAWatermeterReadings",
+      "96666d44-15c0-4b69-bd0c-5a7314e5632c": "Inactive MacFMAWatermeterReadings",
+      "ab1bd4b3-452f-46d6-8753-55c1fe7e7438": "MacFMAWatermeterReading Advanced Find View",
+      "c9fc2706-2382-431e-953f-4467858ce5ab": "MacFMAWatermeterReading Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAWatermeterReadings)",
+    "Name": "crf01_macfmawatermeterreading_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAWatermeterReadings"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAWatermeterReadings",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAWatermeterReadings)",
+    "Name": "crf01_macfmawatermeterreading_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAWatermeterReadings"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAWatermeterReadings",
+    "Type": "OptionSetInfo"
+  }
+]

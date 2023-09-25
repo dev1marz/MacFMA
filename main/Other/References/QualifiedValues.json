@@ -552,6 +552,20 @@
       "Values": {
         "Information": "aae08838-9e95-4051-8aaf-ebf37e4adcda"
       }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmaelectricmeterreadings_forms",
+      "Namespace": "MacFMAElectricMeterReadings (Forms)",
+      "Values": {
+        "Information": "1037d37c-7a35-4bcf-93bb-ceda657c42fa"
+      }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmawatermeterreading_forms",
+      "Namespace": "MacFMAWatermeterReadings (Forms)",
+      "Values": {
+        "Information": "60160284-33eb-4078-8177-7623d4c5b376"
+      }
     }
   ]
 }

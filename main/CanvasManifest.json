@@ -144,9 +144,10 @@
     "MaintainanceScreen",
     "StaffScreen",
     "ResidentsScreen",
+    "RoomScreen",
     "AreaScreen",
     "FacilityScreen",
     "EquiptmentAndAssetsScreen",
-    "RoomScreen"
+    "WatermeterReadingScreen"
   ]
 }
