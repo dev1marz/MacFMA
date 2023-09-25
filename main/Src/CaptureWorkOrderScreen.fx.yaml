@@ -66,7 +66,7 @@ CaptureWorkOrderScreen As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =2
-            Text: =ThisItem.crf01_PersonResponsible.StaffID
+            Text: =ThisItem.PersonResponsible.StaffID
             Width: =100
             X: =0
             Y: =0
