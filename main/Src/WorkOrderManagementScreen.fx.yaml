@@ -13,6 +13,21 @@ WorkOrderManagementScreen As screen:
         Collect(colArea,MacFMAAreas)
     Width: =
 
+    Label5_6 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Lato Black'
+        Height: =53.00
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =21.00
+        Text: ="Made by Marz"
+        Width: =640
+        Y: =1083
+        ZIndex: =1
+
     FilterContainer_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =320
@@ -24,7 +39,7 @@ WorkOrderManagementScreen As screen:
         Width: =579
         X: =30
         Y: =92
-        ZIndex: =1
+        ZIndex: =2
 
         Label1_1 As label:
             Align: =Align.Center
@@ -179,7 +194,7 @@ WorkOrderManagementScreen As screen:
         Width: =585
         X: =27
         Y: =777
-        ZIndex: =2
+        ZIndex: =3
 
         Title4_20 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -230,7 +245,7 @@ WorkOrderManagementScreen As screen:
         Visible: =ScreenState
         Width: =640
         Y: =87
-        ZIndex: =3
+        ZIndex: =4
 
         Priority_DataCard2 As typedDataCard.comboBoxOptionSetSingleEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -1000,7 +1015,7 @@ WorkOrderManagementScreen As screen:
         Visible: =If(ScreenState = 1,true)
         Width: =640
         Y: =502
-        ZIndex: =4
+        ZIndex: =5
 
         "'BtnConfirmAdd(AddingItem)_7' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1065,7 +1080,7 @@ WorkOrderManagementScreen As screen:
         Width: =573
         X: =38
         Y: =626
-        ZIndex: =5
+        ZIndex: =6
 
     WorkOrderManagementAddEditBtns As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
@@ -1078,7 +1093,7 @@ WorkOrderManagementScreen As screen:
         Visible: =If(ScreenState = 0,true)
         Width: =640
         Y: =502
-        ZIndex: =6
+        ZIndex: =7
 
         "'BtnEdit(ScreenName)_7' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1111,7 +1126,7 @@ WorkOrderManagementScreen As screen:
         Width: =600
         X: =27
         Y: =706
-        ZIndex: =7
+        ZIndex: =8
 
         PersonNameLabel_8 As label:
             BorderColor: =RGBA(232, 234, 236, 1)
@@ -1154,20 +1169,5 @@ WorkOrderManagementScreen As screen:
 
     FullNavMenuV2_11 As FullNavMenuV2:
         Width: =640
-        ZIndex: =8
-
-    Label5_6 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(197, 203, 207, 1)
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Lato Black'
-        Height: =53.00
-        PaddingBottom: =5.00
-        PaddingLeft: =5.00
-        Size: =21.00
-        Text: ="Made by Marz"
-        Width: =640
-        Y: =1083
         ZIndex: =9
 

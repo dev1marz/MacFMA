@@ -5,6 +5,21 @@ VendorVisitScreen As screen:
     OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Vendors & Contractor Visits");
     Width: =
 
+    Label5_9 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Lato Black'
+        Height: =53.00
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =21.00
+        Text: ="Made by Marz"
+        Width: =640
+        Y: =1083
+        ZIndex: =1
+
     "VendorVisitGallery As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         BorderColor: =RGBA(243, 245, 245, 1)
         Height: =329.00
@@ -17,7 +32,7 @@ VendorVisitScreen As screen:
         Width: =585
         X: =27
         Y: =777
-        ZIndex: =1
+        ZIndex: =2
 
         Title4_16 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -67,7 +82,7 @@ VendorVisitScreen As screen:
         OnSuccess: =Notify("Success",NotificationType.Success)
         Width: =640
         Y: =87
-        ZIndex: =2
+        ZIndex: =3
 
         DateOfVisit_DataCard1 As typedDataCard.dateTimeEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -712,7 +727,7 @@ VendorVisitScreen As screen:
         Visible: =If(ScreenState = 1,true)
         Width: =640
         Y: =502
-        ZIndex: =3
+        ZIndex: =4
 
         "'BtnConfirmAdd(AddingItem)_5' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -777,7 +792,7 @@ VendorVisitScreen As screen:
         Width: =573
         X: =38
         Y: =626
-        ZIndex: =4
+        ZIndex: =5
 
     "'AddEditBtns(ScreenName)_4' As groupContainer.horizontalAutoLayoutContainer":
         Height: =124.00
@@ -790,7 +805,7 @@ VendorVisitScreen As screen:
         Visible: =If(ScreenState = 0,true)
         Width: =640
         Y: =502
-        ZIndex: =5
+        ZIndex: =6
 
         "'BtnEdit(ScreenName)_5' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -844,7 +859,7 @@ VendorVisitScreen As screen:
         Width: =600
         X: =27
         Y: =706
-        ZIndex: =6
+        ZIndex: =7
 
         PersonNameLabel_6 As label:
             BorderColor: =RGBA(232, 234, 236, 1)
@@ -887,20 +902,5 @@ VendorVisitScreen As screen:
 
     FullNavMenuV2_8 As FullNavMenuV2:
         Width: =640
-        ZIndex: =7
-
-    Label5_9 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(197, 203, 207, 1)
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Lato Black'
-        Height: =53.00
-        PaddingBottom: =5.00
-        PaddingLeft: =5.00
-        Size: =21.00
-        Text: ="Made by Marz"
-        Width: =640
-        Y: =1083
         ZIndex: =8
 

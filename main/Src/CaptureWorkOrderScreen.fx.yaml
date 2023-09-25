@@ -12,6 +12,21 @@ CaptureWorkOrderScreen As screen:
         Collect(colFacility,MacFMAFacilities);ClearCollect(colArea," ");
         Collect(colArea,MacFMAAreas)
 
+    Label5_5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Lato Black'
+        Height: =53.00
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =21.00
+        Text: ="Made by Marz"
+        Width: =640
+        Y: =1083
+        ZIndex: =1
+
     WorkOrderDataTable As dataTable.datatable:
         BorderColor: =RGBA(197, 203, 207, 1)
         BorderStyle: =BorderStyle.Solid
@@ -42,7 +57,7 @@ CaptureWorkOrderScreen As screen:
         Width: =640
         X: =0
         Y: =635
-        ZIndex: =1
+        ZIndex: =2
 
         crf01_problem_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -111,7 +126,7 @@ CaptureWorkOrderScreen As screen:
         Width: =579
         X: =30
         Y: =92
-        ZIndex: =2
+        ZIndex: =3
 
         Label1 As label:
             Align: =Align.Center
@@ -274,7 +289,7 @@ CaptureWorkOrderScreen As screen:
         Visible: =ScreenState
         Width: =640
         Y: =81
-        ZIndex: =3
+        ZIndex: =4
 
         Problem_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -858,7 +873,7 @@ CaptureWorkOrderScreen As screen:
         Width: =579
         X: =30
         Y: =538
-        ZIndex: =4
+        ZIndex: =5
 
     CaptureWorkOrderAddBtnContainer As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
@@ -871,7 +886,7 @@ CaptureWorkOrderScreen As screen:
         Visible: =If(ScreenState = 0,true)
         Width: =640
         Y: =412
-        ZIndex: =5
+        ZIndex: =6
 
         "'AddItemBtn(ScreenName)_1' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -908,7 +923,7 @@ CaptureWorkOrderScreen As screen:
         Visible: =If(ScreenState = 1,true)
         Width: =640
         Y: =531.00
-        ZIndex: =6
+        ZIndex: =7
 
         "'BtnAddItemConfirm(ScreenName)_1' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -952,20 +967,5 @@ CaptureWorkOrderScreen As screen:
 
     FullNavMenuV2_10 As FullNavMenuV2:
         Width: =640
-        ZIndex: =7
-
-    Label5_5 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(197, 203, 207, 1)
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Lato Black'
-        Height: =53.00
-        PaddingBottom: =5.00
-        PaddingLeft: =5.00
-        Size: =21.00
-        Text: ="Made by Marz"
-        Width: =640
-        Y: =1083
         ZIndex: =8
 

@@ -4,19 +4,34 @@ ResidentsScreen As screen:
     OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Residents");
     Width: =
 
+    Label5_13 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Lato Black'
+        Height: =53.00
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =21.00
+        Text: ="Made by Marz"
+        Width: =640
+        Y: =1083
+        ZIndex: =1
+
     "ResidentsGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         BorderColor: =RGBA(243, 245, 245, 1)
-        Height: =329.00
+        Height: =306
         Items: = If(IsBlank(ResidentsSearchInput_1.Text),MacFMAResidents,Filter(MacFMAResidents,(ResidentsSearchInput_1.Text in ResidentID Or ResidentsSearchInput_1.Text in Surname)))
         Layout: =Layout.Vertical
         OnSelect: =
         Selectable: =If(ScreenState =0, true)
         TemplatePadding: =0.00
-        TemplateSize: =104.00
+        TemplateSize: =51
         Width: =585
         X: =27
         Y: =777
-        ZIndex: =1
+        ZIndex: =2
 
         Title4_2 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -66,7 +81,7 @@ ResidentsScreen As screen:
         OnSuccess: =Notify("Success",NotificationType.Success)
         Width: =640
         Y: =87
-        ZIndex: =2
+        ZIndex: =3
 
         Surname_DataCard2 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -983,7 +998,7 @@ ResidentsScreen As screen:
         Visible: =If(ScreenState = 1,true)
         Width: =640
         Y: =502
-        ZIndex: =3
+        ZIndex: =4
 
         PersonConfirmBtn_1 As button:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1048,7 +1063,7 @@ ResidentsScreen As screen:
         Width: =573
         X: =38
         Y: =626
-        ZIndex: =4
+        ZIndex: =5
 
     ResidentsEditAddBtns_1 As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
@@ -1061,7 +1076,7 @@ ResidentsScreen As screen:
         Visible: =If(ScreenState = 0,true)
         Width: =640
         Y: =502
-        ZIndex: =5
+        ZIndex: =6
 
         EditPersonBtn_1 As button:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1115,7 +1130,7 @@ ResidentsScreen As screen:
         Width: =600
         X: =27
         Y: =706
-        ZIndex: =6
+        ZIndex: =7
 
         PersonNameLabel_1 As label:
             BorderColor: =RGBA(232, 234, 236, 1)
@@ -1152,9 +1167,7 @@ ResidentsScreen As screen:
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =21.00
-            Text: |-
-                ="Contact Email
-                "
+            Text: ="Surname"
             Width: =290
             X: =27
             Y: =1.00
@@ -1162,20 +1175,5 @@ ResidentsScreen As screen:
 
     FullNavMenuV2_16 As FullNavMenuV2:
         Width: =640
-        ZIndex: =7
-
-    Label5_13 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(197, 203, 207, 1)
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Lato Black'
-        Height: =53.00
-        PaddingBottom: =5.00
-        PaddingLeft: =5.00
-        Size: =21.00
-        Text: ="Made by Marz"
-        Width: =640
-        Y: =1083
         ZIndex: =8
 

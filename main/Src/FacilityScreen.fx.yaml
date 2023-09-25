@@ -3,6 +3,21 @@ FacilityScreen As screen:
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
     OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Facility");
 
+    Label5_15 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Lato Black'
+        Height: =53.00
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =21.00
+        Text: ="Made by Marz"
+        Width: =640
+        Y: =1083
+        ZIndex: =1
+
     "FaciltyGallery_1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(197, 203, 207, 1)
         Height: =346.00
@@ -18,7 +33,7 @@ FacilityScreen As screen:
         Width: =585
         X: =31
         Y: =777
-        ZIndex: =1
+        ZIndex: =2
 
         ZoneItem_1 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -66,7 +81,7 @@ FacilityScreen As screen:
         OnSuccess: =Notify("Success",NotificationType.Success)
         Width: =640
         Y: =89.00
-        ZIndex: =2
+        ZIndex: =3
 
         Address_DataCard1 As typedDataCard.textualMultiLineEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -457,7 +472,7 @@ FacilityScreen As screen:
         Width: =577
         X: =31
         Y: =626
-        ZIndex: =3
+        ZIndex: =4
 
     FacilityEditAddBtnContainer_1 As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
@@ -470,7 +485,7 @@ FacilityScreen As screen:
         Visible: =If(ScreenState = 0,true)
         Width: =640
         Y: =516.00
-        ZIndex: =4
+        ZIndex: =5
 
         EditZoneBtn_1 As button:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -527,7 +542,7 @@ FacilityScreen As screen:
         Visible: =If(ScreenState =1,true)
         Width: =640
         Y: =516.00
-        ZIndex: =5
+        ZIndex: =6
 
         ShopConfirmButton_1 As button:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -579,7 +594,7 @@ FacilityScreen As screen:
         PaddingLeft: =0.00
         Width: =640
         Y: =706
-        ZIndex: =8
+        ZIndex: =7
 
         FacilityNameLabel_1 As label:
             BorderColor: =RGBA(232, 234, 236, 1)
@@ -624,20 +639,5 @@ FacilityScreen As screen:
 
     FullNavMenuV2_13 As FullNavMenuV2:
         Width: =640
-        ZIndex: =9
-
-    Label5_15 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(197, 203, 207, 1)
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Lato Black'
-        Height: =53.00
-        PaddingBottom: =5.00
-        PaddingLeft: =5.00
-        Size: =21.00
-        Text: ="Made by Marz"
-        Width: =640
-        Y: =1083
-        ZIndex: =10
+        ZIndex: =8
 
