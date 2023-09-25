@@ -479,7 +479,7 @@ WatermeterReadingScreen As screen:
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
-            Text: ="Add Equiptment or Asset"
+            Text: ="Add Watermeter Reading"
             Width: =280
             Y: =27.00
             ZIndex: =2
