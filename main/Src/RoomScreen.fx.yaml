@@ -2,7 +2,7 @@ RoomScreen As screen:
     ContentLanguage: =""
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Equiptment and Assets");
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Rooms");
     Width: =
 
     "RoomGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":

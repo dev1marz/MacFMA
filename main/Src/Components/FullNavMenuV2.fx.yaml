@@ -318,7 +318,7 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);//Navigate(RoomScreen);
+                    Set(contUtilManMenuVis,false);Navigate(RoomScreen);
                 Size: =12
                 Text: ="Rooms"
                 Width: =Parent.Width-Parent.PaddingLeft
