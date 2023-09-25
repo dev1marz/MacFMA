@@ -7621,6 +7621,14 @@
                         "InvariantPropertyName": "OnSelect",
                         "IsLockable": false,
                         "NameMapSourceSchema": "?"
+                      },
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "",
+                        "InvariantPropertyName": "Visible",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
                       }
                     ],
                     "ControlUniqueId": "37",
@@ -7891,6 +7899,12 @@
                         "RuleProviderType": "Unknown"
                       },
                       {
+                        "Category": "Design",
+                        "InvariantScript": "false",
+                        "Property": "Visible",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
                         "Category": "Behavior",
                         "InvariantScript": "Set(varNavCompHeight,contHeaderBar.Height);\n//Navigate(FacilityInspectionTasks);",
                         "Property": "OnSelect",
@@ -7985,6 +7999,14 @@
                         "AutoRuleBindingEnabled": false,
                         "AutoRuleBindingString": "false",
                         "InvariantPropertyName": "OnSelect",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
+                      },
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "",
+                        "InvariantPropertyName": "Visible",
                         "IsLockable": false,
                         "NameMapSourceSchema": "?"
                       }
@@ -8257,6 +8279,12 @@
                         "RuleProviderType": "Unknown"
                       },
                       {
+                        "Category": "Design",
+                        "InvariantScript": "false",
+                        "Property": "Visible",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
                         "Category": "Behavior",
                         "InvariantScript": "Set(varNavCompHeight,contHeaderBar.Height);\n//Navigate(FacilityInspectionRecords);",
                         "Property": "OnSelect",
@@ -8351,6 +8379,14 @@
                         "AutoRuleBindingEnabled": false,
                         "AutoRuleBindingString": "false",
                         "InvariantPropertyName": "OnSelect",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
+                      },
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "",
+                        "InvariantPropertyName": "Visible",
                         "IsLockable": false,
                         "NameMapSourceSchema": "?"
                       }
@@ -8620,6 +8656,12 @@
                         "Category": "Design",
                         "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
                         "Property": "HoverBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "false",
+                        "Property": "Visible",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -9085,6 +9127,14 @@
                         "InvariantPropertyName": "OnSelect",
                         "IsLockable": false,
                         "NameMapSourceSchema": "?"
+                      },
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "",
+                        "InvariantPropertyName": "Visible",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
                       }
                     ],
                     "ControlUniqueId": "41",
@@ -9352,6 +9402,12 @@
                         "Category": "Design",
                         "InvariantScript": "ColorFade(Self.BorderColor, 20%)",
                         "Property": "HoverBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "false",
+                        "Property": "Visible",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -18267,7 +18323,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638312688736415924",
+    "LastModifiedTimestamp": "638312689109957852",
     "Name": "FullNavMenuV2",
     "Rules": [
       {
@@ -18338,7 +18394,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638312688736415924",
+  "LastModifiedTimestamp": "638312689109957852",
   "Name": "899ed6a3f2c04487a44312fbd2dc2e26",
   "OverridableProperties": {},
   "TemplateOriginalName": "c5c43d3ac8684d4e840b948eb7c8e796",

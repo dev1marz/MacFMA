@@ -587,6 +587,7 @@ FullNavMenuV2 As CanvasComponent:
                         //Navigate(FacilityInspectionTasks);
                     Size: =12
                     Text: ="Facility Task Management"
+                    Visible: =false
                     Width: =Parent.Width-Parent.PaddingLeft
                     ZIndex: =1
 
@@ -606,6 +607,7 @@ FullNavMenuV2 As CanvasComponent:
                         //Navigate(FacilityInspectionRecords);
                     Size: =12
                     Text: ="Facility Task Records"
+                    Visible: =false
                     Width: =Parent.Width-Parent.PaddingLeft
                     ZIndex: =2
 
@@ -625,6 +627,7 @@ FullNavMenuV2 As CanvasComponent:
                         //Navigate(ElectricityMeters);
                     Size: =12
                     Text: ="Electricity Meters"
+                    Visible: =false
                     Width: =Parent.Width-Parent.PaddingLeft
                     ZIndex: =3
 
@@ -663,6 +666,7 @@ FullNavMenuV2 As CanvasComponent:
                         //Navigate(WaterMetersScreen);
                     Size: =12
                     Text: ="Water Meters"
+                    Visible: =false
                     Width: =Parent.Width-Parent.PaddingLeft
                     ZIndex: =5
 
