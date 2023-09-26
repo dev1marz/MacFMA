@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macfmawatermeterreading",
+    "MaxGetRowsCount": 500,
     "Name": "MacFMAWatermeterReadings",
     "NativeCDSDataSourceInfoNameMapping": {
       "createdby": "Created By",
