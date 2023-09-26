@@ -15589,7 +15589,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(varNavCompHeight,contHeaderBar.Height);\nSet(contUtilManMenuVis,true);",
+                    "InvariantScript": "Set(varNavCompHeight,contHeaderBar.Height);\nSet(contUtilManMenuVis,true);\nNavigate(WatermeterReadingScreen)",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -18323,7 +18323,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638313179945371046",
+    "LastModifiedTimestamp": "638313268900312313",
     "Name": "FullNavMenuV2",
     "Rules": [
       {
@@ -18394,7 +18394,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638313179945371046",
+  "LastModifiedTimestamp": "638313268900312313",
   "Name": "899ed6a3f2c04487a44312fbd2dc2e26",
   "OverridableProperties": {},
   "TemplateOriginalName": "c5c43d3ac8684d4e840b948eb7c8e796",

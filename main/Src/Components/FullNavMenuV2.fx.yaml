@@ -547,6 +547,7 @@ FullNavMenuV2 As CanvasComponent:
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
                     Set(contUtilManMenuVis,true);
+                    Navigate(WatermeterReadingScreen)
                 Size: =12
                 Text: ="Utilities"
                 Width: =Parent.Width-Parent.PaddingLeft
