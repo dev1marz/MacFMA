@@ -289,7 +289,7 @@ FullNavMenuV2 As CanvasComponent:
             AlignInContainer: =AlignInContainer.SetByContainer
             FillPortions: =0
             Height: |
-                =13*varNavPaneBtnsHeight*0.75+13*varNavPaneGapHeight+If(contUtilManMenu.Visible=true,
+                =14*varNavPaneBtnsHeight*0.75+14*varNavPaneGapHeight+If(contUtilManMenu.Visible=true,
                 contUtilManMenu.Height,-varNavPaneGapHeight)
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =varNavPaneGapHeight
