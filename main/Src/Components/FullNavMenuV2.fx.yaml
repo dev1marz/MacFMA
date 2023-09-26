@@ -533,7 +533,7 @@ FullNavMenuV2 As CanvasComponent:
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =12
 
-            btnUtilities As button:
+            btnWatermeterRecording As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -549,9 +549,29 @@ FullNavMenuV2 As CanvasComponent:
                     Set(contUtilManMenuVis,true);
                     Navigate(WatermeterReadingScreen)
                 Size: =12
-                Text: ="Utilities"
+                Text: ="Watermeter Recording"
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =13
+
+            btnElecmeterRecording As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,true);
+                    Navigate(ElectricalmeterReadingScreen)
+                Size: =12
+                Text: ="Electrical meter Recording"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =14
 
             contUtilManMenu As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -570,7 +590,7 @@ FullNavMenuV2 As CanvasComponent:
                 RadiusTopRight: =4
                 Visible: =contUtilManMenuVis
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =14
+                ZIndex: =15
 
                 btnFacilityTaskManagement As button:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
