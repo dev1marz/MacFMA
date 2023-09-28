@@ -184,16 +184,16 @@ WorkOrderManagementScreen As screen:
 
     "WorkOrderManagementGallery As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         BorderColor: =RGBA(243, 245, 245, 1)
-        Height: =329.00
+        Height: =409
         Items: = If(IsBlank(WorkOrderManagementSearchInput.Text),MacFMAWorkOrders,Filter(MacFMAWorkOrders,(WorkOrderManagementSearchInput.Text in Problem Or WorkOrderManagementSearchInput.Text in ActionRequired)))
         Layout: =Layout.Vertical
         OnSelect: =
         Selectable: =If(ScreenState =0, true)
         TemplatePadding: =0.00
-        TemplateSize: =104.00
+        TemplateSize: =61
         Width: =585
         X: =27
-        Y: =777
+        Y: =697
         ZIndex: =3
 
         Title4_20 As label:
@@ -1077,9 +1077,10 @@ WorkOrderManagementScreen As screen:
         PaddingBottom: =5.00
         PaddingLeft: =0.00
         Size: =21.00
+        Visible: =!ScreenState
         Width: =573
-        X: =38
-        Y: =626
+        X: =36
+        Y: =536
         ZIndex: =6
 
     WorkOrderManagementAddEditBtns As groupContainer.horizontalAutoLayoutContainer:
@@ -1124,8 +1125,8 @@ WorkOrderManagementScreen As screen:
         PaddingBottom: =0.00
         PaddingLeft: =10.00
         Width: =600
-        X: =27
-        Y: =706
+        X: =19
+        Y: =626
         ZIndex: =8
 
         PersonNameLabel_8 As label:
