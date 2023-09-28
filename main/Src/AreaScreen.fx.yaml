@@ -28,6 +28,7 @@ AreaScreen As screen:
         Layout: =Layout.Vertical
         OnSelect: =
         Selectable: =If(ScreenState = 0,true)
+        TemplateFill: =If(ThisItem.IsSelected,Color.LightBlue ,RGBA(0, 0, 0, 0))
         TemplatePadding: =0.00
         TemplateSize: =82.00
         Width: =585
@@ -40,7 +41,7 @@ AreaScreen As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
             Height: =51
-            OnSelect: =Select(Parent)
+            OnSelect: =Select(Parent);
             PaddingBottom: =0.00
             PaddingLeft: =0.00
             PaddingRight: =0

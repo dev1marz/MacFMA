@@ -27,6 +27,7 @@ VendorScreen As screen:
         Layout: =Layout.Vertical
         OnSelect: =
         Selectable: =If(ScreenState =0, true)
+        TemplateFill: =If(ThisItem.IsSelected,Color.LightBlue ,RGBA(0, 0, 0, 0))
         TemplatePadding: =0.00
         TemplateSize: =104.00
         Width: =585

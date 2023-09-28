@@ -9679,7 +9679,14 @@
     "galleryTemplate2_22": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "TemplateFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
+          "InvariantPropertyName": "TemplateFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -15449,7 +15456,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WorkOrderManagementAddEditBtns",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15680,7 +15687,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WorkOrderManagementConfirmCancelBtns",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
