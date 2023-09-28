@@ -149,6 +149,7 @@
     "FacilityScreen",
     "EquiptmentAndAssetsScreen",
     "WatermeterReadingScreen",
-    "ElectricalmeterReadingScreen"
+    "ElectricalmeterReadingScreen",
+    "DashboardScreen"
   ]
 }

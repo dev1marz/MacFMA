@@ -1,0 +1,50 @@
+DashboardScreen As screen:
+    ContentLanguage: =""
+    Fill: =RGBA(29, 29, 29, 1)
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Electrical Meter Reading");
+    Width: =
+
+    Label5_20 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Lato Black'
+        Height: =53.00
+        PaddingBottom: =5.00
+        PaddingLeft: =5.00
+        Size: =21.00
+        Text: ="Made by Marz"
+        Width: =640
+        Y: =1083
+        ZIndex: =1
+
+    WatermeterPowerBI As powerbi:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DashboardId: ="84b43839-4b97-4782-bdcb-4db14bc9eb8e"
+        Height: =355
+        TileUrl: |-
+            ="https://app.powerbi.com/embed?dashboardId=84b43839-4b97-4782-bdcb-4db14bc9eb8e&tileId=633a88c0-2fbe-4ec4-b790-5a6d65b4cd54&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVNPVVRILUFGUklDQS1OT1JUSC1BLVBSSU1BUlktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQiLCJlbWJlZEZlYXR1cmVzIjp7fX0%3d"
+        Width: =545
+        WorkspaceId: ="5d778cf3-3bd3-4e31-a495-66f0665a0588"
+        X: =48
+        Y: =82
+        ZIndex: =2
+
+    ElectricmeterPowerBI As powerbi:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DashboardId: ="84b43839-4b97-4782-bdcb-4db14bc9eb8e"
+        Height: =355
+        TileUrl: |-
+            ="https://app.powerbi.com/embed?dashboardId=84b43839-4b97-4782-bdcb-4db14bc9eb8e&tileId=cb06f988-e3ae-43cc-8017-6ac9e057b678&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVNPVVRILUFGUklDQS1OT1JUSC1BLVBSSU1BUlktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQiLCJlbWJlZEZlYXR1cmVzIjp7fX0%3d"
+        Width: =545
+        WorkspaceId: ="5d778cf3-3bd3-4e31-a495-66f0665a0588"
+        X: =48
+        Y: =552
+        ZIndex: =3
+
+    FullNavMenuV2_18 As FullNavMenuV2:
+        Width: =640
+        ZIndex: =4
+
