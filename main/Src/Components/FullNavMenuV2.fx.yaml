@@ -318,7 +318,8 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);Navigate(RoomScreen);
+                    Set(contUtilManMenuVis,false);
+                    Set(DataCapContainerVis,true);
                 Size: =12
                 Text: ="Data Capture"
                 Width: =Parent.Width-Parent.PaddingLeft
@@ -334,6 +335,7 @@ FullNavMenuV2 As CanvasComponent:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
+                Visible: =DataCapContainerVis
                 Width: =208
                 ZIndex: =2
 
@@ -351,6 +353,8 @@ FullNavMenuV2 As CanvasComponent:
                     OnSelect: |-
                         =Set(varNavCompHeight,contHeaderBar.Height);
                         Set(contUtilManMenuVis,false);Navigate(RoomScreen);
+                    PaddingBottom: |
+                        =5
                     Size: =12
                     Text: ="Rooms"
                     Width: =Parent.Width-Parent.PaddingLeft
@@ -1013,6 +1017,7 @@ FullNavMenuV2 As CanvasComponent:
                 Set(contFacManMenuVis, false);
                 Set(contFleetManMenuVis, false);
                 Set(contUtilManMenuVis,false);
+                Set(DataCapContainerVis,false);
                 Set(colBtn, RGBA(100, 118, 132, 1));
                 Set(colMenu, RGBA(0, 0, 0, 0.2));
                 //If(varContMenuWidth=0;Set(varContMenuWidth;contMenuWidth);Set(varContMenuWidth;0));;

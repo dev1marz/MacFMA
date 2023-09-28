@@ -317,7 +317,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(contDocCapMenuVis, false);\nSet(contFacManMenuVis, false);\nSet(contFleetManMenuVis, false);\nSet(contUtilManMenuVis,false);\nSet(colBtn, RGBA(100, 118, 132, 1));\nSet(colMenu, RGBA(0, 0, 0, 0.2));\n//If(varContMenuWidth=0;Set(varContMenuWidth;contMenuWidth);Set(varContMenuWidth;0));;\n//checking if the nav pav is displayed\nIf(varNavCompHeight=iconMenu.Height,Set(varNavCompHeight,App.ActiveScreen.Height);Set(varContMenuWidth,varNavPaneWidth),Set(varNavCompHeight,iconMenu.Height));",
+                "InvariantScript": "Set(contDocCapMenuVis, false);\nSet(contFacManMenuVis, false);\nSet(contFleetManMenuVis, false);\nSet(contUtilManMenuVis,false);\nSet(DataCapContainerVis,false);\nSet(colBtn, RGBA(100, 118, 132, 1));\nSet(colMenu, RGBA(0, 0, 0, 0.2));\n//If(varContMenuWidth=0;Set(varContMenuWidth;contMenuWidth);Set(varContMenuWidth;0));;\n//checking if the nav pav is displayed\nIf(varNavCompHeight=iconMenu.Height,Set(varNavCompHeight,App.ActiveScreen.Height);Set(varContMenuWidth,varNavPaneWidth),Set(varNavCompHeight,iconMenu.Height));",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -6197,7 +6197,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(varNavCompHeight,contHeaderBar.Height);\nSet(contUtilManMenuVis,false);Navigate(RoomScreen);",
+                    "InvariantScript": "Set(varNavCompHeight,contHeaderBar.Height);\nSet(contUtilManMenuVis,false);\nSet(DataCapContainerVis,true);",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -6294,6 +6294,14 @@
                         "AutoRuleBindingEnabled": false,
                         "AutoRuleBindingString": "false",
                         "InvariantPropertyName": "OnSelect",
+                        "IsLockable": false,
+                        "NameMapSourceSchema": "?"
+                      },
+                      {
+                        "AFDDataSourceName": "",
+                        "AutoRuleBindingEnabled": false,
+                        "AutoRuleBindingString": "5",
+                        "InvariantPropertyName": "PaddingBottom",
                         "IsLockable": false,
                         "NameMapSourceSchema": "?"
                       }
@@ -6569,6 +6577,12 @@
                         "Category": "Design",
                         "InvariantScript": "Self.BorderColor",
                         "Property": "FocusedBorderColor",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Category": "Design",
+                        "InvariantScript": "5\r\n",
+                        "Property": "PaddingBottom",
                         "RuleProviderType": "Unknown"
                       },
                       {
@@ -9165,6 +9179,14 @@
                   }
                 ],
                 "ControlPropertyState": [
+                  {
+                    "AFDDataSourceName": "",
+                    "AutoRuleBindingEnabled": false,
+                    "AutoRuleBindingString": "true",
+                    "InvariantPropertyName": "Visible",
+                    "IsLockable": false,
+                    "NameMapSourceSchema": "?"
+                  },
                   "BorderColor",
                   "BorderStyle",
                   "Fill",
@@ -9253,6 +9275,12 @@
                 "PersistMetaDataIDKey": false,
                 "PublishOrderIndex": 811,
                 "Rules": [
+                  {
+                    "Category": "Design",
+                    "InvariantScript": "DataCapContainerVis",
+                    "Property": "Visible",
+                    "RuleProviderType": "Unknown"
+                  },
                   {
                     "Category": "Design",
                     "InvariantScript": "4",
@@ -19310,7 +19338,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638315055800623538",
+    "LastModifiedTimestamp": "638315058991579230",
     "Name": "FullNavMenuV2",
     "Rules": [
       {
@@ -19381,7 +19409,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638315055800623538",
+  "LastModifiedTimestamp": "638315058991579230",
   "Name": "899ed6a3f2c04487a44312fbd2dc2e26",
   "OverridableProperties": {},
   "TemplateOriginalName": "c5c43d3ac8684d4e840b948eb7c8e796",
