@@ -470,7 +470,7 @@ VendorScreen As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Vendor Name"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
