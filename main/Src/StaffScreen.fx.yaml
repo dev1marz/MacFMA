@@ -810,7 +810,7 @@ StaffScreen As screen:
             PaddingLeft: =5.00
             Size: =21.00
             Text: |-
-                ="Contact Email
+                ="Surname
                 "
             Width: =290
             X: =27
