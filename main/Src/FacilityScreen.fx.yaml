@@ -526,7 +526,7 @@ FacilityScreen As screen:
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
-            Text: ="New Zone"
+            Text: ="New Facility"
             Width: =280
             Y: =0.00
             ZIndex: =2
