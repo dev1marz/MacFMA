@@ -28,7 +28,7 @@ StaffScreen As screen:
         Selectable: =If(ScreenState =0, true)
         TemplateFill: =If(ThisItem.IsSelected,Color.LightBlue ,RGBA(0, 0, 0, 0))
         TemplatePadding: =0.00
-        TemplateSize: =104.00
+        TemplateSize: =56
         Width: =585
         X: =27
         Y: =777

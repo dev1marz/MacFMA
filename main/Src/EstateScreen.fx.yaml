@@ -29,7 +29,7 @@ EstateScreen As screen:
         Selectable: =If(ScreenState =0, true)
         TemplateFill: =If(ThisItem.IsSelected,Color.LightBlue ,RGBA(0, 0, 0, 0))
         TemplatePadding: =0.00
-        TemplateSize: =104.00
+        TemplateSize: =66
         Width: =585
         X: =27
         Y: =777
@@ -52,25 +52,6 @@ EstateScreen As screen:
             X: =17
             Y: =16.00
             ZIndex: =1
-
-        Title4_19 As label:
-            BorderColor: =RGBA(243, 245, 245, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =40.00
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0.00
-            PaddingLeft: =0.00
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =20.00
-            Text: =ThisItem.'Created On'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =255
-            X: =321
-            Y: =16.00
-            ZIndex: =5
 
     EstateForm As form:
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -340,25 +321,6 @@ EstateScreen As screen:
             X: =290
             Y: =1.00
             ZIndex: =1
-
-        PersonEmailLabel_7 As label:
-            BorderColor: =RGBA(232, 234, 236, 1)
-            BorderStyle: =
-            BorderThickness: =2
-            Color: =RGBA(243, 245, 245, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =70.00
-            LayoutMinHeight: =70
-            LayoutMinWidth: =560
-            PaddingBottom: =5.00
-            PaddingLeft: =5.00
-            Size: =21.00
-            Text: ="(Search criteria)"
-            Width: =290
-            X: =27
-            Y: =1.00
-            ZIndex: =2
 
     FullNavMenuV2_9 As FullNavMenuV2:
         Width: =640
