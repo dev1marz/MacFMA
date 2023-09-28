@@ -1092,7 +1092,7 @@ WorkOrderManagementScreen As screen:
         PaddingLeft: =0.00
         Visible: =If(ScreenState = 0,true)
         Width: =640
-        Y: =502
+        Y: =412
         ZIndex: =7
 
         "'BtnEdit(ScreenName)_7' As button":
