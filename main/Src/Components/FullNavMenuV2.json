@@ -6197,7 +6197,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Set(varNavCompHeight,contHeaderBar.Height);\nSet(contUtilManMenuVis,false);\nSet(DataCapContainerVis,true);",
+                    "InvariantScript": "Set(varNavCompHeight,contHeaderBar.Height);\nSet(DataCapContainerVis,true);",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -19338,7 +19338,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638315058991579230",
+    "LastModifiedTimestamp": "638315059697760494",
     "Name": "FullNavMenuV2",
     "Rules": [
       {
@@ -19409,7 +19409,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638315058991579230",
+  "LastModifiedTimestamp": "638315059697760494",
   "Name": "899ed6a3f2c04487a44312fbd2dc2e26",
   "OverridableProperties": {},
   "TemplateOriginalName": "c5c43d3ac8684d4e840b948eb7c8e796",
