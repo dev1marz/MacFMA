@@ -89,6 +89,7 @@ ReportsScreen As screen:
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =57
         Icon: =Icon.Search
+        OnSelect: =ClearCollect(colAllWorkOrders,Filter(MacFMAWorkOrders,'Created On'>=StartDatePicker && 'Created On'<=EndDatePicker))
         Width: =44
         X: =538
         Y: =123
