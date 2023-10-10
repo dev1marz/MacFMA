@@ -289,7 +289,7 @@ FullNavMenuV2 As CanvasComponent:
             AlignInContainer: =AlignInContainer.SetByContainer
             FillPortions: =0
             Height: |
-                =8*varNavPaneBtnsHeight*0.75+8*varNavPaneGapHeight+
+                =9*varNavPaneBtnsHeight*0.75+9*varNavPaneGapHeight+
                 If(DataCapContainer.Visible=true,
                 DataCapContainer.Height,-varNavPaneGapHeight)
             LayoutDirection: =LayoutDirection.Vertical
@@ -614,7 +614,7 @@ FullNavMenuV2 As CanvasComponent:
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =8
 
-            btnElecmeterRecording_1 As button:
+            btnDashboards As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -634,6 +634,26 @@ FullNavMenuV2 As CanvasComponent:
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =9
 
+            btnReporting As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,true);
+                    Navigate(ReportsScreen)
+                Size: =12
+                Text: ="Reports"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =10
+
             contUtilManMenu As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderStyle: =BorderStyle.None
@@ -651,7 +671,7 @@ FullNavMenuV2 As CanvasComponent:
                 RadiusTopRight: =4
                 Visible: =contUtilManMenuVis
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =10
+                ZIndex: =11
 
                 btnFacilityTaskManagement As button:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
