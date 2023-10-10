@@ -962,7 +962,7 @@ FullNavMenuV2 As CanvasComponent:
                 Width: =varNavPaneBtnsHeight
                 ZIndex: =8
 
-        contClose As groupContainer.horizontalAutoLayoutContainer:
+        contProfile As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             FillPortions: =0
             Height: =varNavPaneBtnsHeight
@@ -974,6 +974,64 @@ FullNavMenuV2 As CanvasComponent:
             RadiusTopLeft: =4
             RadiusTopRight: =4
             ZIndex: =8
+
+            iconClose_1 As icon.ChevronUp:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                Height: =Parent.Height
+                Icon: =Icon.Person
+                OnSelect: =Set(varNavCompHeight,contHeaderBar.Height);
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =Parent.Height
+                ZIndex: =1
+
+            btnClose_1 As button:
+                Align: =Align.Justify
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =colBtn
+                FillPortions: =1
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =20
+                OnSelect: |-
+                    =Set(contDocCapMenuVis, false );
+                    Set(contFacManMenuVis, false );
+                    Set(contFleetManMenuVis,false);
+                    Set(varNavCompHeight,contHeaderBar.Height);
+                    Navigate(ProfileScreen);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =12
+                Text: ="User Profile"
+                Width: =280
+                ZIndex: =2
+
+        contClose As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            FillPortions: =0
+            Height: =varNavPaneBtnsHeight
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =9
 
             iconClose As icon.ChevronUp:
                 BorderColor: =RGBA(197, 203, 207, 1)
