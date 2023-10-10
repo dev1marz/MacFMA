@@ -5,6 +5,19 @@ ReportsScreen As screen:
     OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Reporting Screen");
     Width: =
 
+    EndDateLabel As label:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =57
+        Size: =12
+        Text: |-
+            ="End Date:"
+        Width: =58
+        X: =291
+        Y: =123
+        ZIndex: =1
+
     Label5_21 As label:
         Align: =Align.Center
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -18,9 +31,236 @@ ReportsScreen As screen:
         Text: ="Made by Marz"
         Width: =640
         Y: =1083
-        ZIndex: =1
+        ZIndex: =2
+
+    StartDatePicker As datepicker:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        CalendarHeaderFill: =RGBA(100, 118, 132, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =57
+        HoverDateFill: =RGBA(62, 74, 83, 1)
+        IconBackground: =RGBA(100, 118, 132, 1)
+        SelectedDateFill: =RGBA(100, 118, 132, 1)
+        Size: =12
+        Width: =152
+        X: =88
+        Y: =123
+        ZIndex: =3
+
+    EndDatePicker As datepicker:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        CalendarHeaderFill: =RGBA(100, 118, 132, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =57
+        HoverDateFill: =RGBA(62, 74, 83, 1)
+        IconBackground: =RGBA(100, 118, 132, 1)
+        SelectedDateFill: =RGBA(100, 118, 132, 1)
+        Size: =12
+        Width: =152
+        X: =349
+        Y: =123
+        ZIndex: =4
+
+    StartDateLabel As label:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =57
+        Size: =12
+        Text: |-
+            ="Start Date:"
+        Width: =58
+        X: =30
+        Y: =123
+        ZIndex: =5
+
+    Icon3 As icon.Search:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        Color: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =57
+        Icon: =Icon.Search
+        Width: =44
+        X: =538
+        Y: =123
+        ZIndex: =6
+
+    HtmlText2 As htmlViewer:
+        Fill: =RGBA(243, 245, 245, 1)
+        Height: =84
+        Width: =572
+        X: =30
+        Y: =226
+        ZIndex: =7
+
+    DataTable1 As dataTable.datatable:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        BorderStyle: =BorderStyle.Solid
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Open Sans'
+        FontWeight: =FontWeight.Normal
+        HeadingColor: =RGBA(255, 255, 255, 1)
+        HeadingFill: =RGBA(100, 118, 132, 1)
+        HeadingFont: =Font.'Open Sans'
+        HeadingFontWeight: =FontWeight.Normal
+        HeadingSize: =21
+        Height: =500
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(62, 74, 83, .2)
+        InputFill: =RGBA(0, 0, 0, 1)
+        InvertedColor: =RGBA(255, 255, 255, 1)
+        Items: =MacFMAWorkOrders
+        LinkColor: =ColorFade(RGBA(0, 134, 208, 1), 30%)
+        PrimaryColor1: =RGBA(100, 118, 132, 1)
+        PrimaryColor2: =RGBA(197, 203, 207, 1)
+        PrimaryColor3: =RGBA(62, 74, 83, 1)
+        SelectedColor: =RGBA(255, 255, 255, 1)
+        SelectedFill: =RGBA(100, 118, 132, .2)
+        Size: =21
+        Width: =640
+        X: =0
+        Y: =583
+        ZIndex: =8
+
+        "'Created On_Column1' As dataTableColumn.dateTimeColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Created On"
+            FieldName: ="createdon"
+            FieldVariantName: ="dateTimeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =Text(ThisItem.'Created On',DateTimeFormat.LongDateTime)
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Area_Column1 As dataTableColumn.complexTypeColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Area"
+            FieldName: ="crf01_Area"
+            FieldVariantName: ="complexTypeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Area.AreaID
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        ActionRequired_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="ActionRequired"
+            FieldName: ="crf01_actionrequired"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.ActionRequired
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        "'Created By_Column1' As dataTableColumn.complexTypeColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Created By"
+            FieldName: ="createdby"
+            FieldVariantName: ="complexTypeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.'Created By'.systemuserid
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        DateIssued_Column1 As dataTableColumn.dateTimeColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="DateIssued"
+            FieldName: ="crf01_dateissued"
+            FieldVariantName: ="dateTimeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =Text(ThisItem.DateIssued,DateTimeFormat.LongDateTime)
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+        DateCompleted_Column1 As dataTableColumn.dateTimeColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="DateCompleted"
+            FieldName: ="crf01_datecompleted"
+            FieldVariantName: ="dateTimeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =Text(ThisItem.DateCompleted,DateTimeFormat.LongDateTime)
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+        Priority_Column1 As dataTableColumn.complexOptionSetColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Priority"
+            FieldName: ="crf01_priority"
+            FieldVariantName: ="complexOptionSetColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.Priority
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+        PersonResponsible_Column1 As dataTableColumn.complexTypeColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="PersonResponsible"
+            FieldName: ="crf01_PersonResponsible"
+            FieldVariantName: ="complexTypeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =9
+            Text: =ThisItem.PersonResponsible.MacFMAStaffs
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =9
+
+        Problem_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Problem"
+            FieldName: ="crf01_problem"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =10
+            Text: =ThisItem.Problem
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =10
 
     FullNavMenuV2_19 As FullNavMenuV2:
         Width: =640
-        ZIndex: =4
+        ZIndex: =9
 
