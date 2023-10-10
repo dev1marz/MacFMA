@@ -1476,7 +1476,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnDataCapture",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14333,7 +14333,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contUtilManMenu",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14503,7 +14503,14 @@
         "LayoutDirection",
         "LayoutAlignItems",
         "LayoutJustifyContent",
-        "LayoutGap",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "LayoutGap",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "LayoutOverflowX",
         "LayoutOverflowY",
         {
@@ -14576,7 +14583,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataCapContainer",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -332,6 +332,7 @@ FullNavMenuV2 As CanvasComponent:
                 FillPortions: =0
                 Height: =6*varNavPaneBtnsHeight*0.75+6*varNavPaneGapHeight
                 LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =8
                 LayoutMinHeight: =112
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
