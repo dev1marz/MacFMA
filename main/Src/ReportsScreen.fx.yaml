@@ -96,7 +96,10 @@ ReportsScreen As screen:
 
     HtmlText2 As htmlViewer:
         Fill: =RGBA(243, 245, 245, 1)
-        Height: =332
+        Height: =597
+        HtmlText: |-
+            ="<h4>Report from " & StartDatePicker & " to " & EndDatePicker &"</h4>"
+            & "<h5>Work Orders</h5>"
         Width: =572
         X: =30
         Y: =226
