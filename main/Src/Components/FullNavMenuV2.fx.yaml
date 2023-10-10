@@ -325,10 +325,13 @@ FullNavMenuV2 As CanvasComponent:
                 ZIndex: =1
 
             DataCapContainer As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 FillPortions: =0
                 Height: =6*varNavPaneBtnsHeight*0.75+6*varNavPaneGapHeight
                 LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4

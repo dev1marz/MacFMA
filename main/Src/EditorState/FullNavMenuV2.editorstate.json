@@ -2108,7 +2108,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnElectricityMeterRecords",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10711,7 +10711,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnWaterMeters",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10992,7 +10992,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contClose",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12479,7 +12479,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contFleetManMenu",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13652,12 +13652,30 @@
           "PropertyName": "FillPortions"
         },
         {
+          "ControlPropertyState": "AlignInContainer",
+          "Property": {
+            "Category": "Design",
+            "PropertyName": "AlignInContainer",
+            "RuleProviderType": "Unknown"
+          },
           "PropertyName": "AlignInContainer"
         },
         {
+          "ControlPropertyState": "LayoutMinWidth",
+          "Property": {
+            "Category": "Design",
+            "PropertyName": "LayoutMinWidth",
+            "RuleProviderType": "Unknown"
+          },
           "PropertyName": "LayoutMinWidth"
         },
         {
+          "ControlPropertyState": "LayoutMinHeight",
+          "Property": {
+            "Category": "Design",
+            "PropertyName": "LayoutMinHeight",
+            "RuleProviderType": "Unknown"
+          },
           "PropertyName": "LayoutMinHeight"
         }
       ],
