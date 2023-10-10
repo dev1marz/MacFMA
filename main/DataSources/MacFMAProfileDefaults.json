@@ -1,0 +1,95 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmaprofiledefaultses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmaprofiledefaults",
+    "Name": "MacFMAProfileDefaults",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_contactemail": "ContactEmail",
+      "crf01_DefaultFacility": "DefaultFacility",
+      "crf01_macfmaprofiledefaults_AsyncOperations": "System Jobs",
+      "crf01_macfmaprofiledefaults_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmaprofiledefaults_DuplicateBaseRecord": "Duplicate Records (crf01_macfmaprofiledefaults_DuplicateBaseRecord)",
+      "crf01_macfmaprofiledefaults_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmaprofiledefaults_DuplicateMatchingRecord)",
+      "crf01_macfmaprofiledefaults_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmaprofiledefaults_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmaprofiledefaults_ProcessSession": "Process Sessions",
+      "crf01_macfmaprofiledefaults_SyncErrors": "Sync Errors",
+      "crf01_macfmaprofiledefaultsid": "MacFMAProfileDefaults",
+      "crf01_name": "Name",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "organizationid": "Organization Id",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAProfileDefaults",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAProfileDefaults (Views)",
+    "Name": "_crf01_macfmaprofiledefaults_views",
+    "RelatedEntityName": "MacFMAProfileDefaults",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "5655d257-6a31-4589-a372-ffca2079b450": "MacFMAProfileDefaults Associated View",
+      "5dea6201-c2a7-4688-ab08-a793c8f1f788": "MacFMAProfileDefaults Advanced Find View",
+      "62b7a01c-2976-47a6-9d03-8b0644ebadf7": "Inactive MacFMAProfileDefaults",
+      "a9e7e98a-b183-448b-a3ed-b0be0a5dcfa6": "MacFMAProfileDefaults Lookup View",
+      "e536e943-4f1b-43b3-86f2-d162ada31f54": "Active MacFMAProfileDefaults"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAProfileDefaults)",
+    "Name": "crf01_macfmaprofiledefaults_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAProfileDefaults"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAProfileDefaults",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAProfileDefaults)",
+    "Name": "crf01_macfmaprofiledefaults_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAProfileDefaults"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAProfileDefaults",
+    "Type": "OptionSetInfo"
+  }
+]

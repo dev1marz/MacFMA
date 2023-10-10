@@ -1014,585 +1014,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 12,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 20,
-                  "snippet": {
-                    "text": ".Attachment"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 9,
-                  "charOffset": 31,
-                  "snippet": {
-                    "text": ".FileName"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 37,
-                  "charOffset": 4,
-                  "snippet": {
-                    "text": "IsBlank(ThisItem.Attachment.FileName)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "IsBlank"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 63,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 71,
-                  "snippet": {
-                    "text": ".Attachment"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 9,
-                  "charOffset": 82,
-                  "snippet": {
-                    "text": ".FileName"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 100,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 108,
-                  "snippet": {
-                    "text": ".Attachment"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 119,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "MarzV2Transactions"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "MarzV2Transactions"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 83,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,\"crf01_attachment\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Item"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Item",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 23,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "'Gallery(ScreenName)_3'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Item",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Gallery(ScreenName)_3"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Item"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Item",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 9,
-                  "charOffset": 23,
-                  "snippet": {
-                    "text": ".Selected"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Item",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.DataSource"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.DataSource",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "MarzV2Transactions"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DataSource",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "MarzV2Transactions"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "VendorVisitScreen.VendorVisitGallery.Items"
                 }
               ],
@@ -1866,7 +1287,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1943,7 +1364,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2023,7 +1444,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2103,7 +1524,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2180,7 +1601,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2260,7 +1681,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2340,7 +1761,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2417,7 +1838,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2497,7 +1918,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2577,7 +1998,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2654,7 +2075,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2734,7 +2155,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2854,7 +2275,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2974,7 +2395,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3171,7 +2592,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3208,7 +2629,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3248,7 +2669,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3325,7 +2746,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3362,7 +2783,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3439,7 +2860,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3476,7 +2897,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3556,7 +2977,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3633,7 +3054,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3713,7 +3134,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3830,7 +3251,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3907,7 +3328,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3987,7 +3408,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4064,7 +3485,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4144,7 +3565,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4224,7 +3645,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4301,7 +3722,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4381,7 +3802,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4461,7 +3882,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4538,7 +3959,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4618,7 +4039,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4695,7 +4116,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4772,7 +4193,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4849,7 +4270,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4926,7 +4347,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5008,7 +4429,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -5128,7 +4549,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -5208,7 +4629,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -5365,7 +4786,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5402,7 +4823,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5442,7 +4863,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -5519,7 +4940,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5556,7 +4977,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5633,7 +5054,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5670,7 +5091,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5750,7 +5171,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -5827,7 +5248,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -5907,7 +5328,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -6024,7 +5445,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -6101,7 +5522,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -6181,7 +5602,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -6258,7 +5679,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -6338,7 +5759,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -6418,7 +5839,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -6495,7 +5916,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -6575,7 +5996,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -6655,7 +6076,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -6732,7 +6153,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -6812,7 +6233,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -6932,7 +6353,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7012,7 +6433,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7292,7 +6713,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7372,7 +6793,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7452,1069 +6873,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 15,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".ExpenseAccount"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
           "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "MarzV2Transactions"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "MarzV2Transactions"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 87,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,\"crf01_ExpenseAccount\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 10,
-                  "snippet": {
-                    "text": "MarzV2Transactions"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "MarzV2Transactions"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 21,
-                  "charOffset": 29,
-                  "snippet": {
-                    "text": ".crf01_ExpenseAccount"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 51,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "Choices([@MarzV2Transactions].crf01_ExpenseAccount)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Choices"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".Notes"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "MarzV2Transactions"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "MarzV2Transactions"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 78,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,\"crf01_notes\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".TotalValue"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "MarzV2Transactions"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "MarzV2Transactions"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 83,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,\"crf01_totalvalue\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "MarzV2Transactions"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "MarzV2Transactions"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 88,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@MarzV2Transactions], DataSourceInfo.MaxLength, \"crf01_transactiontype\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".TransactionType"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "MarzV2Transactions"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "MarzV2Transactions"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 88,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,\"crf01_transactiontype\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "MarzV2Transactions"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "MarzV2Transactions"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 86,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@MarzV2Transactions], DataSourceInfo.MaxLength, \"crf01_transactionid\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".TransactionID"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "MarzV2Transactions"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "MarzV2Transactions"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 86,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@MarzV2Transactions],DataSourceInfo.DisplayName,\"crf01_transactionid\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
         },
         {
           "locations": [
@@ -10304,36 +8663,6 @@
                 "member": "AccessibleLabel",
                 "module": "VendorScreen",
                 "type": "VendorScreen.'Form(ScreenName)_3'.Address_DataCard2.DataCardValue51"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.DataCardValue19_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.DataCardValue19_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Attachment_DataCard3_3.DataCardValue19_3"
               }
             }
           ],
@@ -13591,19 +11920,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3.AccessibleLabel"
+                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.DefaultFacility_DataCard1.DataCardValue64.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3.AccessibleLabel",
+                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.DefaultFacility_DataCard1.DataCardValue64.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.ExpenseAccount_DataCard1_3.DataCardValue21_3"
+                "type": "ProfileScreen.'AddForm(ScreenName)_2'.DefaultFacility_DataCard1.DataCardValue64"
               }
             }
           ],
@@ -13621,19 +11950,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.DataCardValue30_3.AccessibleLabel"
+                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ContactEmail_DataCard1.DataCardValue63.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.DataCardValue30_3.AccessibleLabel",
+                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.ContactEmail_DataCard1.DataCardValue63.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Notes_DataCard1_3.DataCardValue30_3"
+                "type": "ProfileScreen.'AddForm(ScreenName)_2'.ContactEmail_DataCard1.DataCardValue63"
               }
             }
           ],
@@ -13651,79 +11980,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.DataCardValue31_3.AccessibleLabel"
+                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Name_DataCard1.DataCardValue33.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.DataCardValue31_3.AccessibleLabel",
+                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.Name_DataCard1.DataCardValue33.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TotalValue_DataCard2_3.DataCardValue31_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.DataCardValue32_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.DataCardValue32_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionType_DataCard1_3.DataCardValue32_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.DataCardValue35_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.DataCardValue35_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ProfileScreen",
-                "type": "ProfileScreen.'AddForm(ScreenName)_2'.TransactionID_DataCard1_3.DataCardValue35_3"
+                "type": "ProfileScreen.'AddForm(ScreenName)_2'.Name_DataCard1.DataCardValue33"
               }
             }
           ],
@@ -14399,10 +12668,10 @@
               }
             },
             {
-              "id": "app-ErrInvalidDot",
+              "id": "app-ErrInvalidArgs-Func",
               "messageStrings": {
                 "issue": {
-                  "text": "Invalid use of '.'"
+                  "text": "The function '{0}' has some invalid arguments."
                 }
               },
               "properties": {
@@ -14413,10 +12682,10 @@
               }
             },
             {
-              "id": "app-ErrInvalidArgs-Func",
+              "id": "app-ErrInvalidDot",
               "messageStrings": {
                 "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
+                  "text": "Invalid use of '.'"
                 }
               },
               "properties": {

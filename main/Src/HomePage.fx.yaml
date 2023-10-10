@@ -5,7 +5,7 @@ HomePage As screen:
     OnVisible: |-
         =Set(MarzAccentColour,RGBA(255, 140, 0, 1)); 
         Set(ScreenDisplayName,"Home");
-        
+        Set(loggedInUser,User().Email);
         
         Set(varNavHeaderHeight,60);
         Set(varNavPaneHeight,60);
