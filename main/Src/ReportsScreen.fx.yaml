@@ -100,7 +100,16 @@ ReportsScreen As screen:
         Height: =597
         HtmlText: |-
             ="<h4>Report from " & StartDatePicker & " to " & EndDatePicker &"</h4>"
-            & "<h5>Work Orders</h5>"
+            & "<h5>Work Orders</h5>" &"
+            <table border='1' width='100%'>" &
+            "<thead><tr><th>Creation Date</th><th>Action Required</th><th>Priority</th></thead>" &
+            "<tbody>" &
+            Concat(colAllWorkOrders, "<tr>
+            <td>" & 'Created On' & "</td>
+            <td>" & ActionRequired & "</td>
+            <th> " & Priority &"</th>
+            </tr>") & 
+            "</tbody></table>"
         Width: =572
         X: =30
         Y: =226
