@@ -318,8 +318,9 @@ FullNavMenuV2 As CanvasComponent:
                 LayoutMinHeight: =70
                 LayoutMinWidth: =280
                 OnSelect: |-
-                    =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(DataCapContainerVis,true);
+                    =//Set(varNavCompHeight,contHeaderBar.Height);
+                    //Set(DataCapContainerVis,true);
+                    If(DataCapContainer.Visible= true ,Set(DataCapContainerVis, false ),Set(DataCapContainerVis, true ));
                 Size: =12
                 Text: ="Data Capture"
                 Width: =Parent.Width-Parent.PaddingLeft

@@ -16,6 +16,7 @@
       "crf01_address": "Address",
       "crf01_contactnumber": "ContactNumber",
       "crf01_crf01_macfmaareas_Facility_crf01_macfmafa": "MacFMAAreas",
+      "crf01_crf01_macfmaprofiledefaults_DefaultFacili": "MacFMAProfileDefaults",
       "crf01_Estate": "Estate",
       "crf01_facilityid": "FacilityID",
       "crf01_HeadOfFacility": "HeadOfFacility",

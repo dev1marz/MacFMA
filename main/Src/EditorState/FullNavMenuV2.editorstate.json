@@ -433,7 +433,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnCaptureWorkOrder",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1476,7 +1476,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnDataCapture",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2164,7 +2164,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnElecmeterRecording",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2474,7 +2474,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnElecmeterRecording_1",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2784,7 +2784,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnElectricityMeterRecords",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7324,7 +7324,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnMaintanance",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7634,7 +7634,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnManageWorkOrder",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10449,7 +10449,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnVendorVisit",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10759,7 +10759,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnWatermeterRecording",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11387,7 +11387,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnWaterMeters",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11886,7 +11886,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contDocCapBtn",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12170,7 +12170,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contDocCapMenu",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12403,7 +12403,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contFacManBtn",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12665,7 +12665,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contFacManMenu",
-      "ParentIndex": 1,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13155,7 +13155,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contFleetManMenu",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13577,7 +13577,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contHomeBtn",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14333,7 +14333,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contUtilManMenu",
-      "ParentIndex": 9,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14576,7 +14576,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataCapContainer",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

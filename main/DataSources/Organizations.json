@@ -363,6 +363,7 @@
       "organization_crf01_macfmaassets": "MacFMAAssets",
       "organization_crf01_macfmaelectricmeterreadings": "MacFMAElectricMeterReadings",
       "organization_crf01_macfmamaintainances": "MacFMAMaintainances",
+      "organization_crf01_macfmaprofiledefaults": "MacFMAProfileDefaults",
       "organization_crf01_macfmarooms": "MacFMARooms",
       "organization_crf01_macfmastaffs": "MacFMAStaffs",
       "organization_crf01_macfmawatermeterreading": "MacFMAWatermeterReadings",

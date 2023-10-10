@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macfmaprofiledefaults",
+    "MaxGetRowsCount": 500,
     "Name": "MacFMAProfileDefaults",
     "NativeCDSDataSourceInfoNameMapping": {
       "createdby": "Created By",

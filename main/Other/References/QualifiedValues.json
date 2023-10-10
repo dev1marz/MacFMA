@@ -112,6 +112,13 @@
       }
     },
     {
+      "Kind": "default.cds_crf01_macfmaprofiledefaults_forms",
+      "Namespace": "MacFMAProfileDefaults (Forms)",
+      "Values": {
+        "Information": "f7305f2a-5d67-4115-8a2d-3afe998e2b61"
+      }
+    },
+    {
       "Kind": "default.cds_crf01_macfmalocations_forms",
       "Namespace": "MacFMALocations (Forms)",
       "Values": {
@@ -565,13 +572,6 @@
       "Namespace": "PropSExpenseAccounts (Forms)",
       "Values": {
         "Information": "aae08838-9e95-4051-8aaf-ebf37e4adcda"
-      }
-    },
-    {
-      "Kind": "default.cds_crf01_macfmaprofiledefaults_forms",
-      "Namespace": "MacFMAProfileDefaults (Forms)",
-      "Values": {
-        "Information": "f7305f2a-5d67-4115-8a2d-3afe998e2b61"
       }
     }
   ]
