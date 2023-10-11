@@ -37,6 +37,7 @@ AreaScreen As screen:
         ZIndex: =2
 
         ZoneItem As label:
+            AutoHeight: =true
             Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
@@ -50,10 +51,12 @@ AreaScreen As screen:
             Text: =ThisItem.AreaID
             VerticalAlign: =VerticalAlign.Top
             Width: =282
-            Y: =17.00
+            X: =15
+            Y: =9
             ZIndex: =1
 
         OccupantGroupItem As label:
+            AutoHeight: =true
             Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
@@ -67,8 +70,8 @@ AreaScreen As screen:
             Text: =ThisItem.Facility.FacilityID
             VerticalAlign: =VerticalAlign.Top
             Width: =282
-            X: =297
-            Y: =17
+            X: =303
+            Y: =16
             ZIndex: =2
 
     AreasForm As form:
