@@ -110,7 +110,7 @@ ReportsScreen As screen:
             Concat(colAllWorkOrders, "<tr>
             <td>" & 'Created On' & "</td>
             <td>" & ActionRequired & "</td>
-            <th> " & Priority &"</th>
+            <td> " & Priority &"</td>
             </tr>") & 
             "</tbody></table>"
         Size: =14
