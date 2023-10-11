@@ -12190,6 +12190,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "FacilityScreen.FaciltyForm_1.Estate_DataCard1.DataCardValue52.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FacilityScreen.FaciltyForm_1.Estate_DataCard1.DataCardValue52.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "FacilityScreen",
+                "type": "FacilityScreen.FaciltyForm_1.Estate_DataCard1.DataCardValue52"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varNavPaneHeight"
                 }
               ],
