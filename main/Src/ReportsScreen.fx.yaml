@@ -113,6 +113,7 @@ ReportsScreen As screen:
             <th> " & Priority &"</th>
             </tr>") & 
             "</tbody></table>"
+        Size: =14
         Width: =572
         X: =30
         Y: =226
