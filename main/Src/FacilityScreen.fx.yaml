@@ -64,7 +64,7 @@ FacilityScreen As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20.00
-            Text: =ThisItem.ContactNumber
+            Text: =ThisItem.Estate.EstateID
             VerticalAlign: =VerticalAlign.Top
             Width: =282
             X: =297
@@ -726,7 +726,7 @@ FacilityScreen As screen:
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =21.00
-            Text: ="Contact Number"
+            Text: ="Estate Name"
             Width: =290
             X: =27
             Y: =0.00
