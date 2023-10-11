@@ -90,9 +90,7 @@ ReportsScreen As screen:
         Height: =57
         Icon: =Icon.Search
         OnSelect: |-
-            =ClearCollect(colAllWorkOrders,Filter(MacFMAWorkOrders,'Created On'>= StartDatePicker.SelectedDate && 'Created On'<=EndDatePicker.SelectedDate));
-            
-            ClearCollect(colAllWorkOrders,MacFMAWorkOrders);
+            =ClearCollect(colAllWorkOrders,MacFMAWorkOrders);
             ClearCollect(colAllWorkOrders,Filter(colAllWorkOrders,'Created On'>= StartDatePicker.SelectedDate));
             ClearCollect(colAllWorkOrders,Filter(colAllWorkOrders,'Created On'<= EndDatePicker.SelectedDate));
         Width: =44
