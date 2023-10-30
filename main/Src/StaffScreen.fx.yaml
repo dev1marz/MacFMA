@@ -77,7 +77,7 @@ StaffScreen As screen:
         DefaultMode: =If(ScreenState = 1,FormMode.Edit,FormMode.View)
         Height: =430.00
         Item: =StaffsGallery.Selected
-        OnFailure: =NewForm(StaffsForm);Notify("Error!", NotificationType.Error)
+        OnFailure: =Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New
         OnSuccess: =Notify("Success",NotificationType.Success)
         Width: =640
