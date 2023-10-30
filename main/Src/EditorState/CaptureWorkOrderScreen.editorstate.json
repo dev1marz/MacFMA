@@ -78,7 +78,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ActionRequired_DataCard1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -546,7 +546,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%AddPicture.ID%",
       "Name": "AddPicture1",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -778,7 +778,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Area_DataCard3",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3185,7 +3185,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CreatedBy_DataCard2",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5375,7 +5375,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey72",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9444,7 +9444,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage69",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11141,7 +11141,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image_DataCard1",
-      "ParentIndex": 0,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11283,7 +11283,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "Image1",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12055,7 +12055,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PersonResponsible_DataCard1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12202,7 +12202,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Priority_DataCard1",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12357,7 +12357,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Problem_DataCard1",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14194,7 +14194,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible69",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

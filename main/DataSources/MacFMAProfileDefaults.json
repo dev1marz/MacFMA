@@ -24,6 +24,7 @@
       "crf01_macfmaprofiledefaults_SyncErrors": "Sync Errors",
       "crf01_macfmaprofiledefaultsid": "MacFMAProfileDefaults",
       "crf01_name": "Name",
+      "crf01_role": "Role",
       "importsequencenumber": "Import Sequence Number",
       "modifiedby": "Modified By",
       "modifiedon": "Modified On",
