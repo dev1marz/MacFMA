@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |-
+    OnStart: |
         =
         Set(varNavHeaderHeight,60);
         Set(varNavPaneHeight,60);

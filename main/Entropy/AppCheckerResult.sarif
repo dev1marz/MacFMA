@@ -12430,6 +12430,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varProf"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varProf",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varProf",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.MARZ_SK-03 mini"
                 }
               ],

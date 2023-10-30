@@ -151,7 +151,7 @@
             "Name": "iconMenu",
             "Parent": "contHeaderBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 834,
+            "PublishOrderIndex": 850,
             "Rules": [
               {
                 "Category": "Design",
@@ -486,7 +486,7 @@
             "Name": "HeaderTitle",
             "Parent": "contHeaderBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 835,
+            "PublishOrderIndex": 851,
             "Rules": [
               {
                 "Category": "Data",
@@ -904,7 +904,7 @@
             "Name": "iconBack",
             "Parent": "contHeaderBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 836,
+            "PublishOrderIndex": 852,
             "Rules": [
               {
                 "Category": "Design",
@@ -1165,7 +1165,7 @@
         "Name": "contHeaderBar",
         "Parent": "FullNavMenuV2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 833,
+        "PublishOrderIndex": 849,
         "Rules": [
           {
             "Category": "Design",
@@ -1478,7 +1478,7 @@
                 "Name": "iconHome",
                 "Parent": "contHomeBtn",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 839,
+                "PublishOrderIndex": 855,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1853,7 +1853,7 @@
                 "Name": "btnHome",
                 "Parent": "contHomeBtn",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 840,
+                "PublishOrderIndex": 856,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2190,7 +2190,7 @@
             "Name": "contHomeBtn",
             "Parent": "contMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 838,
+            "PublishOrderIndex": 854,
             "Rules": [
               {
                 "Category": "Design",
@@ -2501,7 +2501,7 @@
                 "Name": "iconDocCap",
                 "Parent": "contDocCapBtn",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 842,
+                "PublishOrderIndex": 858,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2882,7 +2882,7 @@
                 "Name": "btnDocCap",
                 "Parent": "contDocCapBtn",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 843,
+                "PublishOrderIndex": 859,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3219,7 +3219,7 @@
             "Name": "contDocCapBtn",
             "Parent": "contMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 841,
+            "PublishOrderIndex": 857,
             "Rules": [
               {
                 "Category": "Design",
@@ -3510,7 +3510,7 @@
                 "Name": "btnExpenseAccounts",
                 "Parent": "contDocCapMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 845,
+                "PublishOrderIndex": 861,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3876,7 +3876,7 @@
                 "Name": "btnTransactions",
                 "Parent": "contDocCapMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 846,
+                "PublishOrderIndex": 862,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -4242,7 +4242,7 @@
                 "Name": "btnFileUpload",
                 "Parent": "contDocCapMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 847,
+                "PublishOrderIndex": 863,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -4645,7 +4645,7 @@
             "Name": "contDocCapMenu",
             "Parent": "contMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 844,
+            "PublishOrderIndex": 860,
             "Rules": [
               {
                 "Category": "Design",
@@ -4981,7 +4981,7 @@
                 "Name": "iconFacMan",
                 "Parent": "contFacManBtn",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 849,
+                "PublishOrderIndex": 865,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -5348,7 +5348,7 @@
                 "Name": "btnFacMan",
                 "Parent": "contFacManBtn",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 850,
+                "PublishOrderIndex": 866,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -5685,7 +5685,7 @@
             "Name": "contFacManBtn",
             "Parent": "contMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 848,
+            "PublishOrderIndex": 864,
             "Rules": [
               {
                 "Category": "Design",
@@ -5977,7 +5977,7 @@
                 "Name": "btnDataCapture",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 852,
+                "PublishOrderIndex": 868,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -6361,7 +6361,7 @@
                     "Name": "btnRooms",
                     "Parent": "DataCapContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 854,
+                    "PublishOrderIndex": 870,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -6740,7 +6740,7 @@
                     "Name": "btnStaff",
                     "Parent": "DataCapContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 855,
+                    "PublishOrderIndex": 871,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -7112,7 +7112,7 @@
                     "Name": "btnResidents",
                     "Parent": "DataCapContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 856,
+                    "PublishOrderIndex": 872,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -7478,7 +7478,7 @@
                     "Name": "btnAreas",
                     "Parent": "DataCapContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 857,
+                    "PublishOrderIndex": 873,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -7844,7 +7844,7 @@
                     "Name": "btnFacilities",
                     "Parent": "DataCapContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 858,
+                    "PublishOrderIndex": 874,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -8210,7 +8210,7 @@
                     "Name": "btnEstates",
                     "Parent": "DataCapContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 859,
+                    "PublishOrderIndex": 875,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -8576,7 +8576,7 @@
                     "Name": "btnVendors",
                     "Parent": "DataCapContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 860,
+                    "PublishOrderIndex": 876,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -8942,7 +8942,7 @@
                     "Name": "btnEquiptmentAssets",
                     "Parent": "DataCapContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 861,
+                    "PublishOrderIndex": 877,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -9301,7 +9301,7 @@
                 "Name": "DataCapContainer",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 853,
+                "PublishOrderIndex": 869,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -9595,7 +9595,7 @@
                 "Name": "btnVendorVisit",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 862,
+                "PublishOrderIndex": 878,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -9961,7 +9961,7 @@
                 "Name": "btnMaintanance",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 863,
+                "PublishOrderIndex": 879,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -10327,7 +10327,7 @@
                 "Name": "btnCaptureWorkOrder",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 864,
+                "PublishOrderIndex": 880,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -10693,7 +10693,7 @@
                 "Name": "btnManageWorkOrder",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 865,
+                "PublishOrderIndex": 881,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -11059,7 +11059,7 @@
                 "Name": "btnWatermeterRecording",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 866,
+                "PublishOrderIndex": 882,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -11425,7 +11425,7 @@
                 "Name": "btnElecmeterRecording",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 867,
+                "PublishOrderIndex": 883,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -11791,7 +11791,7 @@
                 "Name": "btnDashboards",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 868,
+                "PublishOrderIndex": 884,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -12157,7 +12157,7 @@
                 "Name": "btnReporting",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 869,
+                "PublishOrderIndex": 885,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -12534,7 +12534,7 @@
                     "Name": "btnFacilityTaskManagement",
                     "Parent": "contUtilManMenu",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 871,
+                    "PublishOrderIndex": 887,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -12914,7 +12914,7 @@
                     "Name": "btnFacilityTaskRecords",
                     "Parent": "contUtilManMenu",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 872,
+                    "PublishOrderIndex": 888,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -13294,7 +13294,7 @@
                     "Name": "btnElectricityMeters",
                     "Parent": "contUtilManMenu",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 873,
+                    "PublishOrderIndex": 889,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -13666,7 +13666,7 @@
                     "Name": "btnElectricityMeterRecords",
                     "Parent": "contUtilManMenu",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 874,
+                    "PublishOrderIndex": 890,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -14040,7 +14040,7 @@
                     "Name": "btnWaterMeters",
                     "Parent": "contUtilManMenu",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 875,
+                    "PublishOrderIndex": 891,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -14412,7 +14412,7 @@
                     "Name": "btnWaterMeterRecords",
                     "Parent": "contUtilManMenu",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 876,
+                    "PublishOrderIndex": 892,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -14793,7 +14793,7 @@
                 "Name": "contUtilManMenu",
                 "Parent": "contFacManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 870,
+                "PublishOrderIndex": 886,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -15108,7 +15108,7 @@
             "Name": "contFacManMenu",
             "Parent": "contMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 851,
+            "PublishOrderIndex": 867,
             "Rules": [
               {
                 "Category": "Design",
@@ -15438,7 +15438,7 @@
                 "Name": "iconFleetMan",
                 "Parent": "contFleetManBtn",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 878,
+                "PublishOrderIndex": 894,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -15805,7 +15805,7 @@
                 "Name": "btnFleetMan",
                 "Parent": "contFleetManBtn",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 879,
+                "PublishOrderIndex": 895,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -16142,7 +16142,7 @@
             "Name": "contFleetManBtn",
             "Parent": "contMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 877,
+            "PublishOrderIndex": 893,
             "Rules": [
               {
                 "Category": "Design",
@@ -16433,7 +16433,7 @@
                 "Name": "btnFuelSubmissions",
                 "Parent": "contFleetManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 881,
+                "PublishOrderIndex": 897,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -16799,7 +16799,7 @@
                 "Name": "btnFuelRecords",
                 "Parent": "contFleetManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 882,
+                "PublishOrderIndex": 898,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -17165,7 +17165,7 @@
                 "Name": "btnVehicles",
                 "Parent": "contFleetManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 883,
+                "PublishOrderIndex": 899,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -17531,7 +17531,7 @@
                 "Name": "btnVehicleInspection",
                 "Parent": "contFleetManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 884,
+                "PublishOrderIndex": 900,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -17897,7 +17897,7 @@
                 "Name": "btnVehicleInspectionRecords",
                 "Parent": "contFleetManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 885,
+                "PublishOrderIndex": 901,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -18244,7 +18244,7 @@
                 "Name": "iconMenu_1",
                 "Parent": "contFleetManMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 886,
+                "PublishOrderIndex": 902,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -18553,7 +18553,7 @@
             "Name": "contFleetManMenu",
             "Parent": "contMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 880,
+            "PublishOrderIndex": 896,
             "Rules": [
               {
                 "Category": "Design",
@@ -18876,7 +18876,7 @@
                 "Name": "iconClose_1",
                 "Parent": "contProfile",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 888,
+                "PublishOrderIndex": 904,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -19250,7 +19250,7 @@
                 "Name": "btnClose_1",
                 "Parent": "contProfile",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 889,
+                "PublishOrderIndex": 905,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -19580,7 +19580,7 @@
             "Name": "contProfile",
             "Parent": "contMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 887,
+            "PublishOrderIndex": 903,
             "Rules": [
               {
                 "Category": "Design",
@@ -19891,7 +19891,7 @@
                 "Name": "iconClose",
                 "Parent": "contClose",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 891,
+                "PublishOrderIndex": 907,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -20265,7 +20265,7 @@
                 "Name": "btnClose",
                 "Parent": "contClose",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 892,
+                "PublishOrderIndex": 908,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -20595,7 +20595,7 @@
             "Name": "contClose",
             "Parent": "contMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 890,
+            "PublishOrderIndex": 906,
             "Rules": [
               {
                 "Category": "Design",
@@ -20905,7 +20905,7 @@
         "Name": "contMenu",
         "Parent": "FullNavMenuV2",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 837,
+        "PublishOrderIndex": 853,
         "Rules": [
           {
             "Category": "Design",
