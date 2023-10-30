@@ -895,8 +895,9 @@ CaptureWorkOrderScreen As screen:
             AddPicture1 As addMedia:
                 BorderColor: =RGBA(197, 203, 207, 1)
                 Fill: =RGBA(0, 0, 0, 1)
-                Height: =320
-                Width: =Parent.Width - 60
+                Height: =147
+                UseMobileCamera: =true
+                Width: =560
                 X: =30
                 Y: =DataCardKey72.Y + DataCardKey72.Height + 5
                 ZIndex: =3
