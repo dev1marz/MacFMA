@@ -534,7 +534,7 @@ WorkOrderManagementScreen As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="crf01_PersonResponsible"
             Default: =ThisItem.PersonResponsible
-            DisplayMode: =Parent.DisplayMode
+            DisplayMode: =If(varProf="Management",DisplayMode.Edit,DisplayMode.View)
             DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_PersonResponsible")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
@@ -628,7 +628,7 @@ WorkOrderManagementScreen As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="crf01_dateissued"
             Default: =ThisItem.DateIssued
-            DisplayMode: =Parent.DisplayMode
+            DisplayMode: =If(varProf="Management",DisplayMode.Edit,DisplayMode.View)
             DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_dateissued")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
@@ -715,7 +715,7 @@ WorkOrderManagementScreen As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="crf01_datecompleted"
             Default: =ThisItem.DateCompleted
-            DisplayMode: =Parent.DisplayMode
+            DisplayMode: =If(varProf="Management",DisplayMode.Edit,DisplayMode.View)
             DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_datecompleted")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
@@ -802,7 +802,7 @@ WorkOrderManagementScreen As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="crf01_Area"
             Default: =ThisItem.Area
-            DisplayMode: =Parent.DisplayMode
+            DisplayMode: =If(varProf="Management",DisplayMode.Edit,DisplayMode.View)
             DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_Area")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
