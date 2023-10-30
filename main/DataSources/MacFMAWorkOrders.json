@@ -14,6 +14,7 @@
       "createdonbehalfby": "Created By (Delegate)",
       "crf01_actionrequired": "ActionRequired",
       "crf01_Area": "Area",
+      "crf01_completed": "Completed",
       "crf01_completedby": "CompletedBy",
       "crf01_CreatedBy": "CreatedBy",
       "crf01_datecompleted": "DateCompleted",
@@ -29,6 +30,7 @@
       "crf01_macfmaworkorders_ProcessSession": "Process Sessions",
       "crf01_macfmaworkorders_SyncErrors": "Sync Errors",
       "crf01_macfmaworkordersid": "MacFMAWorkOrders",
+      "crf01_note": "Note",
       "crf01_orderid": "OrderID",
       "crf01_PersonResponsible": "PersonResponsible",
       "crf01_priority": "Priority",
@@ -82,6 +84,26 @@
     },
     "OptionSetTypeKey": "PicklistType",
     "RelatedColumnInvariantName": "crf01_priority",
+    "RelatedEntityName": "MacFMAWorkOrders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Completed (MacFMAWorkOrders)",
+    "Name": "crf01_macfmaworkorders_crf01_completed",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "crf01_completed",
+        "OptionSetReferenceEntityName": "MacFMAWorkOrders"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "crf01_completed",
     "RelatedEntityName": "MacFMAWorkOrders",
     "Type": "OptionSetInfo"
   },
