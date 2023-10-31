@@ -201,7 +201,7 @@ ReportsScreen As screen:
                 "<thead><tr><th>Creation Date</th><th>Problem</th><th>Action Required</th><th>Priority</th></thead>" &
                 "<tbody>" &
                 Concat(colAllWorkOrders, "<tr>
-                <td>" & 'Created On' & "</td>
+                <td>" & Left('Created On',10) & "</td>
                 <td>" & Problem & "</td>
                 <td>" & ActionRequired & "</td>
                 <td> " & Priority &"</td>
