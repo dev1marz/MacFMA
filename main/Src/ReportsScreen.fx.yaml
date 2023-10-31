@@ -2,7 +2,9 @@ ReportsScreen As screen:
     ContentLanguage: =""
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Reporting Screen");
+    OnVisible: |-
+        =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Reporting Screen");
+        Set(varPDF,0);
     Width: =
 
     Label5_21 As label:
@@ -187,6 +189,7 @@ ReportsScreen As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
+        Visible: =!varPDF
         X: =30
         Y: =212
         ZIndex: =4
@@ -345,4 +348,28 @@ ReportsScreen As screen:
     FullNavMenuV2_19 As FullNavMenuV2:
         Width: =640
         ZIndex: =6
+
+    Icon3 As icon.DocumentPDF:
+        BorderColor: =RGBA(53, 61, 63, 1)
+        Color: =RGBA(53, 61, 63, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(214, 221, 224, 1)
+        Icon: =Icon.DocumentPDF
+        OnSelect: |-
+            =Set(myPDF,PDF(HTMLContainer,{DPI:100,ExpandContainers: true}));
+            
+            Set(varPDF,1);
+        X: =562
+        Y: =180
+        ZIndex: =7
+
+    PdfViewer1 As pdfViewer:
+        Document: =myPDF
+        Height: =623
+        Visible: =varPDF
+        Width: =534
+        X: =13
+        Y: =199
+        ZIndex: =8
 
