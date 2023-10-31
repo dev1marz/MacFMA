@@ -106,10 +106,11 @@ ReportsScreen As screen:
             ="<h4>Report from " & StartDatePicker & " to " & EndDatePicker &"</h4>"
             & "<h5>Work Orders</h5>" &"
             <table border='1' width='100%'>" &
-            "<thead><tr><th>Creation Date</th><th>Action Required</th><th>Priority</th></thead>" &
+            "<thead><tr><th>Creation Date</th><th>Problem</th><th>Action Required</th><th>Priority</th></thead>" &
             "<tbody>" &
             Concat(colAllWorkOrders, "<tr>
             <td>" & 'Created On' & "</td>
+            <td>" & Problem & "</td>
             <td>" & ActionRequired & "</td>
             <td> " & Priority &"</td>
             </tr>") & 
