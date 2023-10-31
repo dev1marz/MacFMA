@@ -18,29 +18,7 @@ ReportsScreen As screen:
         Text: ="Made by Marz"
         Width: =640
         Y: =1083
-        ZIndex: =2
-
-    HtmlText2 As htmlViewer:
-        Fill: =RGBA(243, 245, 245, 1)
-        Height: =597
-        HtmlText: |-
-            ="<h4>Report from " & StartDatePicker & " to " & EndDatePicker &"</h4>"
-            & "<h5>Work Orders</h5>" &"
-            <table border='1' width='100%'>" &
-            "<thead><tr><th>Creation Date</th><th>Problem</th><th>Action Required</th><th>Priority</th></thead>" &
-            "<tbody>" &
-            Concat(colAllWorkOrders, "<tr>
-            <td>" & 'Created On' & "</td>
-            <td>" & Problem & "</td>
-            <td>" & ActionRequired & "</td>
-            <td> " & Priority &"</td>
-            </tr>") & 
-            "</tbody></table>"
-        Size: =14
-        Width: =500
-        X: =30
-        Y: =226
-        ZIndex: =7
+        ZIndex: =1
 
     DataTable1 As dataTable.datatable:
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -72,7 +50,7 @@ ReportsScreen As screen:
         Width: =640
         X: =0
         Y: =837
-        ZIndex: =8
+        ZIndex: =2
 
         "'Created On_Column1' As dataTableColumn.dateTimeColumn":
             AutoWidth: =false
@@ -201,6 +179,49 @@ ReportsScreen As screen:
             Y: =0
             ZIndex: =10
 
+    HTMLContainer As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(180, 214, 250, 1)
+        Height: =610
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        X: =30
+        Y: =212
+        ZIndex: =4
+
+        HtmlText2 As htmlViewer:
+            Fill: =RGBA(243, 245, 245, 1)
+            Height: =494
+            HtmlText: |-
+                ="<h4>Report from " & StartDatePicker & " to " & EndDatePicker &"</h4>"
+                & "<h5>Work Orders</h5>" &"
+                <table border='1' width='100%'>" &
+                "<thead><tr><th>Creation Date</th><th>Problem</th><th>Action Required</th><th>Priority</th></thead>" &
+                "<tbody>" &
+                Concat(colAllWorkOrders, "<tr>
+                <td>" & 'Created On' & "</td>
+                <td>" & Problem & "</td>
+                <td>" & ActionRequired & "</td>
+                <td> " & Priority &"</td>
+                </tr>") & 
+                "</tbody></table>"
+            Size: =14
+            Width: =500
+            Y: =116
+            ZIndex: =1
+
+        Image3 As image:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =104
+            Image: ='Macadamia Properties'
+            Width: =500
+            Y: =12
+            ZIndex: =2
+
     ReportFilterContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(214, 221, 224, 1)
@@ -211,7 +232,7 @@ ReportsScreen As screen:
         RadiusTopRight: =4
         X: =30
         Y: =60
-        ZIndex: =9
+        ZIndex: =5
 
         EndDateLabel As label:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -277,7 +298,7 @@ ReportsScreen As screen:
             Y: =5
             ZIndex: =4
 
-        Icon3 As icon.Search:
+        SearchIcon3 As icon.Search:
             BorderColor: =RGBA(197, 203, 207, 1)
             Color: =RGBA(197, 203, 207, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -294,7 +315,7 @@ ReportsScreen As screen:
             Y: =80
             ZIndex: =5
 
-        Dropdown1 As dropdown:
+        EstateReportDropdown As dropdown:
             AllowEmptySelection: =true
             BorderColor: =RGBA(197, 203, 207, 1)
             ChevronBackground: =RGBA(100, 118, 132, 1)
@@ -323,5 +344,5 @@ ReportsScreen As screen:
 
     FullNavMenuV2_19 As FullNavMenuV2:
         Width: =640
-        ZIndex: =10
+        ZIndex: =6
 
