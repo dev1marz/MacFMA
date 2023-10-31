@@ -934,6 +934,104 @@ CaptureWorkOrderScreen As screen:
                 Y: =DataCardKey72.Y
                 ZIndex: =5
 
+        Attachment_DataCard1 As typedDataCard.fileEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_attachment"
+            Default: |-
+                =If(!IsBlank(ThisItem.Attachment.FileName), Table({DisplayName: ThisItem.Attachment.FileName, Value: ThisItem.Attachment.Value}), Blank())
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_attachment")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue65.Attachments
+            Width: =640
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey70 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue65 As attachments:
+                AddAttachmentText: ="Upload file"
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =170
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                IsInDataCard: =true
+                ItemColor: =RGBA(255, 255, 255, 1)
+                ItemFill: =RGBA(100, 118, 132, 1)
+                ItemHoverColor: =RGBA(255, 255, 255, 1)
+                ItemHoverFill: =RGBA(62, 74, 83, 1)
+                Items: =Parent.Default
+                MaxAttachments: =1
+                MaxAttachmentsText: =""
+                NoAttachmentsText: ="There is no file."
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey70.Y + DataCardKey70.Height + 5
+                ZIndex: =2
+
+            ErrorMessage67 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue65.Y + DataCardValue65.Height
+                ZIndex: =3
+
+            StarVisible67 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey70.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey70.Y
+                ZIndex: =4
+
     CaptureWorkOrderSearchInput As text:
         BorderColor: =RGBA(197, 203, 207, 1)
         BorderThickness: =2

@@ -184,7 +184,7 @@ ReportsScreen As screen:
     HTMLContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(180, 214, 250, 1)
-        Height: =610
+        Height: =Image3.Height+HtmlText2.Height
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -192,9 +192,10 @@ ReportsScreen As screen:
         Visible: =!varPDF
         X: =30
         Y: =212
-        ZIndex: =4
+        ZIndex: =3
 
         HtmlText2 As htmlViewer:
+            AutoHeight: =true
             Fill: =RGBA(243, 245, 245, 1)
             Height: =494
             HtmlText: |-
@@ -235,7 +236,7 @@ ReportsScreen As screen:
         RadiusTopRight: =4
         X: =30
         Y: =60
-        ZIndex: =5
+        ZIndex: =4
 
         EndDateLabel As label:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -345,10 +346,6 @@ ReportsScreen As screen:
             Y: =80
             ZIndex: =6
 
-    FullNavMenuV2_19 As FullNavMenuV2:
-        Width: =640
-        ZIndex: =6
-
     Icon3 As icon.DocumentPDF:
         BorderColor: =RGBA(53, 61, 63, 1)
         Color: =RGBA(53, 61, 63, 1)
@@ -357,12 +354,13 @@ ReportsScreen As screen:
         Fill: =RGBA(214, 221, 224, 1)
         Icon: =Icon.DocumentPDF
         OnSelect: |-
-            =Set(myPDF,PDF(HTMLContainer,{DPI:100,ExpandContainers: true}));
+            =HtmlText2.AutoHeight=true;
+            Set(myPDF,PDF(HTMLContainer,{DPI:70,Margin:"10pt",ExpandContainers: true}));
             
             Set(varPDF,1);
         X: =562
         Y: =180
-        ZIndex: =7
+        ZIndex: =5
 
     PdfViewer1 As pdfViewer:
         Document: =myPDF
@@ -371,5 +369,62 @@ ReportsScreen As screen:
         Width: =534
         X: =13
         Y: =199
+        ZIndex: =6
+
+    DataCardValue65_1 As attachments:
+        AddAttachmentText: ="Upload file"
+        BorderColor: =
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderThickness: =4
+        Height: =62
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(62, 74, 83, 1)
+        IsInDataCard: =true
+        ItemColor: =RGBA(255, 255, 255, 1)
+        ItemFill: =RGBA(100, 118, 132, 1)
+        ItemHoverColor: =RGBA(255, 255, 255, 1)
+        ItemHoverFill: =RGBA(62, 74, 83, 1)
+        Items: |-
+            ={Name: "EstateReport.pdf",Value:myPDF}
+        MaxAttachments: =1
+        MaxAttachmentsText: =""
+        NoAttachmentsText: ="There is no file."
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(197, 203, 207, 1)
+        Size: =21
+        Tooltip: =
+        Width: =78
+        X: =562
+        Y: =270
+        ZIndex: =7
+
+    Icon3_2 As icon.DocumentPDF:
+        BorderColor: =RGBA(53, 61, 63, 1)
+        Color: =RGBA(53, 61, 63, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(214, 221, 224, 1)
+        Icon: =Icon.Download
+        OnSelect: |-
+            =HtmlText2.AutoHeight=true;
+            Set(myPDF,PDF(HTMLContainer,{DPI:70,Margin:"10pt",ExpandContainers: true}));
+            
+            Set(varPDF,1);
+        X: =562
+        Y: =270
         ZIndex: =8
+
+    FullNavMenuV2_19 As FullNavMenuV2:
+        Width: =640
+        ZIndex: =9
 
