@@ -361,7 +361,7 @@ WorkOrderManagementScreen As screen:
             Update: =DataCardValue41.Text
             Width: =640
             X: =0
-            Y: =1
+            Y: =2
             ZIndex: =1
 
             DataCardKey44 As label:
@@ -452,7 +452,7 @@ WorkOrderManagementScreen As screen:
             Update: =DataCardValue44.Text
             Width: =640
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =1
 
             DataCardKey47 As label:
@@ -542,7 +542,7 @@ WorkOrderManagementScreen As screen:
             Update: =DataCardValue47.Selected
             Width: =640
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =1
 
             DataCardKey51 As label:
@@ -636,7 +636,7 @@ WorkOrderManagementScreen As screen:
             Update: =DateValue6.SelectedDate
             Width: =640
             X: =0
-            Y: =4
+            Y: =5
             ZIndex: =1
 
             DataCardKey53 As label:
@@ -708,93 +708,6 @@ WorkOrderManagementScreen As screen:
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey53.Y
-                ZIndex: =7
-
-        DateCompleted_DataCard1 As typedDataCard.dateTimeEditCard:
-            BorderColor: =RGBA(197, 203, 207, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="crf01_datecompleted"
-            Default: =ThisItem.DateCompleted
-            DisplayMode: =If(varProf="Management",DisplayMode.Edit,DisplayMode.View)
-            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_datecompleted")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DateValue7.SelectedDate
-            Width: =640
-            X: =0
-            Y: =5
-            ZIndex: =1
-
-            DataCardKey58 As label:
-                AutoHeight: =true
-                Color: =RGBA(197, 203, 207, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DateValue7 As datepicker:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                CalendarHeaderFill: =RGBA(100, 118, 132, 1)
-                Color: =RGBA(255, 255, 255, 1)
-                DefaultDate: =Parent.Default
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                EndYear: =Year(Today())+100
-                Fill: =RGBA(0, 0, 0, 1)
-                Height: =70
-                HoverDateFill: =RGBA(62, 74, 83, 1)
-                IconBackground: =RGBA(100, 118, 132, 1)
-                IsEditable: =true
-                PaddingBottom: =0
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SelectedDateFill: =RGBA(100, 118, 132, 1)
-                Size: =24
-                StartYear: =1899
-                Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) / 2
-                X: =30
-                Y: =DataCardKey58.Y + DataCardKey58.Height + 5
-                ZIndex: =2
-
-            ErrorMessage62 As label:
-                AutoHeight: =true
-                Color: =RGBA(255, 51, 51, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DateValue7.Y + DateValue7.Height
-                ZIndex: =6
-
-            StarVisible62 As label:
-                Align: =Align.Center
-                Color: =RGBA(197, 203, 207, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey58.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey58.Y
                 ZIndex: =7
 
         Area_DataCard6 As typedDataCard.comboBoxEditCard:
@@ -1064,6 +977,101 @@ WorkOrderManagementScreen As screen:
                 Y: =DataCardKey75.Y
                 ZIndex: =4
 
+        Completed_DataCard1 As typedDataCard.comboBoxOptionSetSingleEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_completed"
+            Default: =ThisItem.Completed
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_completed")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue68.Selected.Value
+            Width: =640
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            DataCardKey71 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue68 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DefaultSelectedItems: =[Parent.Default]
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =70
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                IsSearchable: =false
+                Items: =Choices('Completed (MacFMAWorkOrders)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey71.Y + DataCardKey71.Height + 5
+                ZIndex: =2
+
+            ErrorMessage68 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue68.Y + DataCardValue68.Height
+                ZIndex: =3
+
+            StarVisible68 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey71.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey71.Y
+                ZIndex: =4
+
         "'Created On_DataCard1' As typedDataCard.textualViewCard":
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1076,7 +1084,7 @@ WorkOrderManagementScreen As screen:
             Required: =false
             Width: =640
             X: =0
-            Y: =0
+            Y: =1
             ZIndex: =3
 
             DataCardKey35 As label:

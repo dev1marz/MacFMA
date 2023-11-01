@@ -535,7 +535,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataCardValue65_1",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -891,6 +891,14 @@
           "InvariantPropertyName": "Items",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -1054,6 +1062,11 @@
         {
           "Category": "Design",
           "PropertyName": "Size",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -2834,7 +2847,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon3_2",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
