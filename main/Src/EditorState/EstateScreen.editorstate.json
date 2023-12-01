@@ -134,6 +134,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnAdd(ScreenName)_6",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -468,6 +469,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnCancel(ScreenName)_6",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -795,6 +797,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnConfirmAdd(AddingItem)_6",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1123,6 +1126,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnEdit(ScreenName)_6",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1397,6 +1401,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey21",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1702,6 +1707,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue20",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1998,6 +2004,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage56",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2287,6 +2294,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EstateAddEditBtns",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2518,6 +2526,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EstateConfirmCancelBtns",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2737,6 +2746,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "EstateForm",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2907,6 +2917,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EstateGallery",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3122,6 +3133,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EstateID_DataCard1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3241,6 +3253,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EstateScreen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3411,6 +3424,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EstateSearchInput",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3681,6 +3695,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "FullNavMenuV2_9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3819,6 +3834,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GalleryLabelsContainer_8",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3996,6 +4012,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate2_21",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4087,6 +4104,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_7",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4429,6 +4447,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PersonNameLabel_7",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4700,6 +4719,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible56",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4974,6 +4994,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGalleryTitle.ID%",
       "Name": "Title4_18",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [

@@ -69,6 +69,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Container1_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -373,6 +374,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DocumentCapturingNavigation_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -606,6 +608,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "MainMenuComponent",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -777,6 +780,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "NavigateFleetManagment_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1104,6 +1108,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "NavigateManageFacility_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [

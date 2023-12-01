@@ -26,7 +26,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ActionRequired_Column1",
-      "ParentIndex": 2,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -126,7 +127,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Area_Column1",
-      "ParentIndex": 1,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -226,7 +228,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Created By_Column1",
-      "ParentIndex": 3,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -334,6 +337,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Created On_Column1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -535,6 +539,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataCardValue65_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -911,6 +916,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataTable1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1099,7 +1105,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DateCompleted_Column1",
-      "ParentIndex": 5,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1192,7 +1199,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DateIssued_Column1",
-      "ParentIndex": 4,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1333,6 +1341,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EndDateLabel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1600,6 +1609,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EndDatePicker",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1912,6 +1922,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EstateReportDropdown",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2183,6 +2194,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "FullNavMenuV2_19",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2288,6 +2300,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HTMLContainer",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2470,6 +2483,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2633,6 +2647,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2847,6 +2862,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon3_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3024,6 +3040,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Image3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3250,6 +3267,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_21",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3495,6 +3513,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PdfViewer1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3610,7 +3629,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PersonResponsible_Column1",
-      "ParentIndex": 7,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3703,7 +3723,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Priority_Column1",
-      "ParentIndex": 6,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3796,7 +3817,8 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Problem_Column1",
-      "ParentIndex": 8,
+      "OptimizeForDevices": "Off",
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3906,6 +3928,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ReportFilterContainer",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4060,6 +4083,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ReportsScreen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4169,6 +4193,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SearchIcon3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4370,6 +4395,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "StartDateLabel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4644,6 +4670,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "StartDatePicker",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [

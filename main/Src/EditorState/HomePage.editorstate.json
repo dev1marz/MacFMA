@@ -48,6 +48,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "FullNavMenuV2_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -132,6 +133,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HomePage",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -263,6 +265,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -553,6 +556,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WelcomeLabel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [

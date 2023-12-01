@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "bb311578-44d3-481e-a05c-f4c3a3ad4098",
+    "Name": "MacPFMAFileUpload",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "7133feb9-7b8f-ee11-be36-6045bda0048e"
+  }
+]

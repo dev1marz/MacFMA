@@ -151,6 +151,7 @@
       "fiscalyearformatsuffix": "Suffix for Fiscal Year",
       "fiscalyearformatyear": "Fiscal Year Format Year",
       "fiscalyearperiodconnect": "Fiscal Year Period Connector",
+      "flowruntimetoliveinseconds": "Time to live (in seconds) for flow run",
       "fullnameconventioncode": "Full Name Display Order",
       "futureexpansionwindow": "Future Expansion Window",
       "generatealertsforerrors": "Generate Alerts For Errors",

@@ -78,6 +78,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AreaID_DataCard1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -189,6 +190,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AreaScreen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -318,6 +320,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AreasEditAddBtnContainer",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -556,6 +559,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AreasEditBtnContainer",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -775,6 +779,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "AreasForm",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -923,6 +928,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AreasGallery",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1132,6 +1138,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AreasLabels",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1371,6 +1378,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AreasSearchInput",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1655,6 +1663,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey19",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1929,6 +1938,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2253,6 +2263,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue18",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2598,6 +2609,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2946,6 +2958,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EditZoneBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3227,6 +3240,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage53",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3508,6 +3522,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage54",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3790,6 +3805,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Facility_DataCard1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3915,6 +3931,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "FullNavMenuV2_12",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3992,6 +4009,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate2_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4083,6 +4101,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_14",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4425,6 +4444,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LoationNameLabel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4761,6 +4781,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "NewZoneBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5031,6 +5052,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "OccupantGroupItem",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5353,6 +5375,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RoomContactNumberLabel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -5682,6 +5705,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ShopCancelBtn",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6002,6 +6026,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ShopConfirmButton",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6278,6 +6303,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible53",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6559,6 +6585,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible54",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6841,6 +6868,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGalleryTitle.ID%",
       "Name": "ZoneItem",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [

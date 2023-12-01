@@ -62,6 +62,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Dropdown2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -304,6 +305,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FacilityInspectionReportScreen",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -404,6 +406,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "FullNavMenuV2_28",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -519,6 +522,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery(ScreenName)_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -674,6 +678,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate3_4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -743,6 +748,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -879,6 +885,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1045,6 +1052,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1269,6 +1277,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label(SearchItem)_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1545,6 +1554,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label5_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1783,6 +1793,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PDFContainer",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1936,6 +1947,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PowerBIContainer",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2153,6 +2165,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SearchInput_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2435,6 +2448,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TransactionNumber_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [

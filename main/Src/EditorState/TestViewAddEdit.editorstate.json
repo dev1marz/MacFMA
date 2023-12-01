@@ -19,6 +19,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TestViewAddEdit",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

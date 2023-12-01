@@ -16,6 +16,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "bad541a0-212f-4465-bf45-963cc8ae22eb",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -53,6 +54,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "f771c017-3357-4d2e-8f6b-f90b2a0b4c8f",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -102,6 +104,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Test_7F478737223C4B69",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [],
