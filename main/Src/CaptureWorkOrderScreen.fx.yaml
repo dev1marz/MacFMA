@@ -12,6 +12,18 @@ CaptureWorkOrderScreen As screen:
         Collect(colFacility,MacFMAFacilities);ClearCollect(colArea," ");
         Collect(colArea,MacFMAAreas)
 
+    Image1 As image:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =320
+        Image: =First(DataCardValue65.Attachments).Value
+        Visible: =false
+        Width: =320
+        X: =130
+        Y: =92
+        ZIndex: =1
+
     Label5_5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -25,7 +37,7 @@ CaptureWorkOrderScreen As screen:
         Text: ="Made by Marz"
         Width: =640
         Y: =1083
-        ZIndex: =1
+        ZIndex: =2
 
     WorkOrderDataTable As dataTable.datatable:
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -57,7 +69,7 @@ CaptureWorkOrderScreen As screen:
         Width: =640
         X: =0
         Y: =635
-        ZIndex: =2
+        ZIndex: =3
 
         crf01_problem_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -126,7 +138,7 @@ CaptureWorkOrderScreen As screen:
         Width: =579
         X: =30
         Y: =92
-        ZIndex: =3
+        ZIndex: =4
 
         Label1 As label:
             Align: =Align.Center
@@ -289,7 +301,7 @@ CaptureWorkOrderScreen As screen:
         Visible: =ScreenState
         Width: =640
         Y: =81
-        ZIndex: =4
+        ZIndex: =5
 
         Problem_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -1062,7 +1074,7 @@ CaptureWorkOrderScreen As screen:
         Width: =579
         X: =30
         Y: =538
-        ZIndex: =5
+        ZIndex: =6
 
     CaptureWorkOrderAddBtnContainer As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
@@ -1075,7 +1087,7 @@ CaptureWorkOrderScreen As screen:
         Visible: =If(ScreenState = 0,true)
         Width: =640
         Y: =412
-        ZIndex: =6
+        ZIndex: =7
 
         "'AddItemBtn(ScreenName)_1' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1112,7 +1124,7 @@ CaptureWorkOrderScreen As screen:
         Visible: =If(ScreenState = 1,true)
         Width: =640
         Y: =531.00
-        ZIndex: =7
+        ZIndex: =8
 
         "'BtnAddItemConfirm(ScreenName)_1' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1167,17 +1179,5 @@ CaptureWorkOrderScreen As screen:
 
     FullNavMenuV2_10 As FullNavMenuV2:
         Width: =640
-        ZIndex: =8
-
-    Image1 As image:
-        BorderColor: =RGBA(197, 203, 207, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =320
-        Image: =First(DataCardValue65.Attachments).Value
-        Visible: =false
-        Width: =320
-        X: =130
-        Y: =92
         ZIndex: =9
 
