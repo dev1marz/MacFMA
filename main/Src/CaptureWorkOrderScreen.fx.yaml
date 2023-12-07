@@ -1140,13 +1140,14 @@ CaptureWorkOrderScreen As screen:
             OnSelect: |
                 =SubmitForm(CaptureWorkOrderAddForm);
                 Set(varImageName,Last(MacFMAWorkOrders).OrderID);
-                MacPFMAFileUpload.Run(
-                     {
+                MacPFMAFileUpload.Run(varImageName,{file:{
+                
                         contentBytes: Image1.Image,
                          name: varImageName
                      
-                     }
-                 );
+                     }}
+                
+                     );
                 Set(ScreenState,0);
                 ClearCollect(colWorkOrders,MacFMAWorkOrders)
             PaddingBottom: =5.00
