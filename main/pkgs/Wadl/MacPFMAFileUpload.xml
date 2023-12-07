@@ -25,10 +25,10 @@
             <doc title="The api version" />
           </param>
           <representation mediaType="application/json">
-            <param style="plain" name="file" path="/file" type="service:ManualTriggerInput_file_def">
+            <param style="plain" name="file" path="/file" type="service:ManualTriggerInput_file_def" required="true">
               <doc title="File Content" />
             </param>
-            <param style="plain" name="text" path="/text" type="xs:string" required="true">
+            <param style="plain" name="text" path="/text" type="xs:string">
               <doc title="Name" />
             </param>
           </representation>
