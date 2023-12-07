@@ -68,7 +68,6 @@
       "keeprecentscreensloaded": true,
       "longlivingcache": false,
       "mobilenativerendering": false,
-      "namedformulas": false,
       "nativecdsexperimental": true,
       "onegrid": false,
       "optimizedforteamsmeeting": false,
@@ -98,7 +97,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 162,
+    "BindingErrorCount": 163,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",

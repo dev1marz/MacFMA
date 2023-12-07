@@ -8,10 +8,8 @@
         <property name="name" type="string" />
         <property name="contentBytes" typeRef="ManualTriggerInput_file_def_contentBytes_def" />
       </object>
-      <string name="ManualTriggerInput_text_def" />
       <object name="ManualTriggerInput">
         <property name="file" typeRef="ManualTriggerInput_file_def" />
-        <property name="text" type="string" />
       </object>
     </jsonTypes>
   </grammars>
@@ -27,9 +25,6 @@
           <representation mediaType="application/json">
             <param style="plain" name="file" path="/file" type="service:ManualTriggerInput_file_def" required="true">
               <doc title="File Content" />
-            </param>
-            <param style="plain" name="text" path="/text" type="xs:string" required="true">
-              <doc title="OrderNum" />
             </param>
           </representation>
         </request>

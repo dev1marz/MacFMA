@@ -79,7 +79,7 @@
       "MetaDataIDKey": "",
       "Name": "ActionRequired_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -574,7 +574,7 @@
       "MetaDataIDKey": "",
       "Name": "Area_DataCard3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1301,7 +1301,7 @@
       "MetaDataIDKey": "",
       "Name": "Attachment_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3132,7 +3132,7 @@
       "MetaDataIDKey": "",
       "Name": "CreatedBy_DataCard2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5333,7 +5333,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey58",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8446,7 +8446,7 @@
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue69",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10430,7 +10430,7 @@
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage62",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12963,7 +12963,7 @@
       "MetaDataIDKey": "",
       "Name": "Note_DataCard2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13111,7 +13111,7 @@
       "MetaDataIDKey": "",
       "Name": "PersonResponsible_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13259,7 +13259,7 @@
       "MetaDataIDKey": "",
       "Name": "Priority_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13415,7 +13415,7 @@
       "MetaDataIDKey": "",
       "Name": "Problem_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15259,7 +15259,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible62",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
