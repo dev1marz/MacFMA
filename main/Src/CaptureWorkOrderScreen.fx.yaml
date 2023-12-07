@@ -1139,7 +1139,7 @@ CaptureWorkOrderScreen As screen:
             LayoutMinWidth: =280
             OnSelect: |
                 =SubmitForm(CaptureWorkOrderAddForm);
-                Set(varImageName, First(Sort(MacFMAWorkOrders, OrderID, SortOrder.Descending)).OrderID);
+                Set(varImageName, Value(Last(MacFMAWorkOrders).OrderID)));
                 MacPFMAFileUpload.Run(
                     {
                 
