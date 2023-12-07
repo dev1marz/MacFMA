@@ -1129,11 +1129,10 @@ CaptureWorkOrderScreen As screen:
                 =SubmitForm(CaptureWorkOrderAddForm);
                 Set(varImageName,Last(MacFMAWorkOrders).OrderID);
                 MacPFMAFileUpload.Run(
-                     {file:
-                            {
-                         name: varImageName,
-                         contentBytes: Last(DataCardValue65.Attachments).Value
-                     }
+                     {
+                        contentBytes: Image1.Image,
+                         name: varImageName
+                     
                      }
                  );
                 Set(ScreenState,0);
@@ -1169,4 +1168,16 @@ CaptureWorkOrderScreen As screen:
     FullNavMenuV2_10 As FullNavMenuV2:
         Width: =640
         ZIndex: =8
+
+    Image1 As image:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =320
+        Image: =First(DataCardValue65.Attachments).Value
+        Visible: =false
+        Width: =320
+        X: =130
+        Y: =92
+        ZIndex: =9
 
