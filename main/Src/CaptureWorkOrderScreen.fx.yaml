@@ -1140,13 +1140,12 @@ CaptureWorkOrderScreen As screen:
             OnSelect: |
                 =SubmitForm(CaptureWorkOrderAddForm);
                 Set(varImageName,Last(MacFMAWorkOrders).OrderID);
-                MacPFMAFileUpload.Run(varImageName,{file:{
+                MacPFMAFileUpload.Run(varImageName,{
                 
-                        contentBytes: Image1.Image,
+                        contentBytes: First(DataCardValue65.Attachments).Value,
                          name: varImageName
                      
-                     }}
-                
+                     }
                      );
                 Set(ScreenState,0);
                 ClearCollect(colWorkOrders,MacFMAWorkOrders)
