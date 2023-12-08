@@ -200,8 +200,8 @@ ReportsScreen As screen:
             Fill: =RGBA(243, 245, 245, 1)
             Height: =494
             HtmlText: |-
-                ="<h4>Report from " & StartDatePicker & " to " & EndDatePicker &"</h4>"
-                & "<h5>Work Orders</h5>" &"
+                ="<h4>Report from " & StartDatePicker & " to " & EndDatePicker &"</h4>
+                
                 <table border='1' width='100%'>" &
                 "<thead><tr><th>Creation Date</th><th>Problem</th><th>Action Required</th><th>Priority</th><th>Completed</th></thead>" &
                 "<tbody>" &

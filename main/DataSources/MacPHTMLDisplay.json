@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "0443fb62-eaa8-4bc8-96e9-7fe0affdc40a",
+    "Name": "MacPHTMLDisplay",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "f288b4b6-f094-ee11-be37-6045bda0048e"
+  }
+]
