@@ -185,7 +185,7 @@ ReportsScreen As screen:
     HTMLContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(180, 214, 250, 1)
-        Height: =Image3.Height+HtmlText2.Height
+        Height: =594
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -196,9 +196,8 @@ ReportsScreen As screen:
         ZIndex: =3
 
         HtmlText2 As htmlViewer:
-            AutoHeight: =true
             Fill: =RGBA(243, 245, 245, 1)
-            Height: =494
+            Height: =590
             HtmlText: |-
                 ="<h4>Report from " & StartDatePicker & " to " & EndDatePicker &"</h4>
                 
@@ -215,18 +214,8 @@ ReportsScreen As screen:
                 "</tbody></table>"
             Size: =14
             Width: =500
-            Y: =116
+            Y: =3
             ZIndex: =1
-
-        Image3 As image:
-            BorderColor: =RGBA(197, 203, 207, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =104
-            Image: ='Macadamia Properties'
-            Width: =500
-            Y: =12
-            ZIndex: =2
 
     ReportFilterContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light

@@ -12576,6 +12576,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.Macadamia Properties"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.Macadamia Properties",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Macadamia Properties",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "CaptureWorkOrderScreen.OnVisible"
                 }
               ],
