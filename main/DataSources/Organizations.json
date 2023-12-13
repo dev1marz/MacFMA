@@ -371,6 +371,7 @@
       "organization_crf01_macfmaworkorders": "MacFMAWorkOrders",
       "organization_crf01_macvendorsandcontracs": "MacVendorsAndContracs",
       "organization_crf01_macvendorvisits": "MacVendorVisits",
+      "organization_crf01_marztestbusinessprocessflow": "MarzTestBusinessProcessFlow",
       "organization_crf01_marzv2electricalmeterreadings": "MarzV2ElectricalMeterReadings",
       "organization_crf01_marzv2electricalmeters": "MarzV2ElectricalMeters",
       "organization_crf01_marzv2expenseaccounts": "MarzV2ExpenseAccounts",

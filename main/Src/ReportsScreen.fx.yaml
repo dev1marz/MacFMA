@@ -2,9 +2,10 @@ ReportsScreen As screen:
     ContentLanguage: =""
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: |-
+    OnVisible: |
         =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Reporting Screen");
         Set(varPDF,0);
+        Set(varHTML,"");
     Width: =
 
     Label5_21 As label:
@@ -198,21 +199,9 @@ ReportsScreen As screen:
         HtmlText2 As htmlViewer:
             Fill: =RGBA(243, 245, 245, 1)
             Height: =590
-            HtmlText: |-
-                ="<h4>Report from " & StartDatePicker & " to " & EndDatePicker &"</h4>
-                
-                <table border='1' width='100%'>" &
-                "<thead><tr><th>Creation Date</th><th>Problem</th><th>Action Required</th><th>Priority</th><th>Completed</th></thead>" &
-                "<tbody>" &
-                Concat(colAllWorkOrders, "<tr>
-                <td>" & Left('Created On',10) & "</td>
-                <td>" & Problem & "</td>
-                <td>" & ActionRequired & "</td>
-                <td> " & Priority &"</td>
-                <td> " & Completed&"</td>
-                </tr>") & 
-                "</tbody></table>"
+            HtmlText: =
             Size: =14
+            Visible: =!varPDF
             Width: =500
             Y: =3
             ZIndex: =1

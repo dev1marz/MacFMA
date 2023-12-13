@@ -25,6 +25,7 @@
       "crf01_macfmaprofiledefaultsid": "MacFMAProfileDefaults",
       "crf01_name": "Name",
       "crf01_role": "Role",
+      "crf01_securitylevel": "SecurityLevel",
       "importsequencenumber": "Import Sequence Number",
       "modifiedby": "Modified By",
       "modifiedon": "Modified On",
