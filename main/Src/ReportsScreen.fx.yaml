@@ -2,10 +2,16 @@ ReportsScreen As screen:
     ContentLanguage: =""
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: |
+    OnVisible: |-
         =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Reporting Screen");
         Set(varPDF,0);
         Set(varHTML,"");
+        ClearCollect(varWorkOrders,MacFMAWorkOrders);
+        //Set(varWO, Concat(colAllWorkOrders,
+        //Left('Created On',10),", " & Problem,  ActionRequired & Priority & Completed));
+        
+        
+        //MacPHTMLDisplay.Run(varWorkOrders);
     Width: =
 
     Label5_21 As label:

@@ -981,7 +981,7 @@
   "DoesTestStepsMetadataExist": true,
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/13/2023 09:53:21",
+  "HeaderLastSavedDateTimeUTC": "12/13/2023 15:50:16",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "23af83e5-4b06-4783-92cc-5c427b13045a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/d276640cc117438abc049b72a575063e-edcfcb5d4e465853\"",
@@ -1270,7 +1270,8 @@
     "Users\\systemuser_preferredaddresscode": 206,
     "Users\\systemuser_preferredemailcode": 207,
     "Users\\systemuser_preferredphonecode": 208,
-    "Users\\systemuser_setupuser": 193
+    "Users\\systemuser_setupuser": 193,
+    "varWorkOrders": 255
   },
   "OrderGroupControls": {
     "FacilityManGroup_1": {
