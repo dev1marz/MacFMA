@@ -21,7 +21,7 @@ HomePage As screen:
 
     QuickCaptureContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =225
+        Height: =495
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
