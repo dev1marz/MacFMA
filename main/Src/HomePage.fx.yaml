@@ -28,14 +28,14 @@ HomePage As screen:
         RadiusTopRight: =4
         Width: =570
         X: =35
-        Y: =312
+        Y: =207
         ZIndex: =1
 
         QuickCaptureForm As form:
             BorderColor: =RGBA(197, 203, 207, 1)
             DataSource: =MacFMAQuickCaptures
             DefaultMode: =FormMode.New
-            Height: =705
+            Height: =591
             Width: =570
             ZIndex: =1
 
@@ -401,6 +401,59 @@ HomePage As screen:
                     Y: =DataCardKey81.Y
                     ZIndex: =5
 
+        QuickCaptureConfirmCancelBtns As groupContainer.horizontalAutoLayoutContainer:
+            Height: =124.00
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =10
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Visible: =If(ScreenState = 1,true)
+            Width: =538
+            Y: =581
+            ZIndex: =2
+
+            "'BtnConfirmAdd(AddingItem)_9' As button":
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(141, 198, 63, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =70.00
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: =SubmitForm(EstateForm);Set(ScreenState,0)
+                PaddingBottom: =5.00
+                PaddingLeft: =5.00
+                Size: =24.00
+                Text: ="Confirm"
+                Width: =280
+                Y: =0.00
+                ZIndex: =1
+
+            "'BtnCancel(ScreenName)_9' As button":
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(255, 51, 51, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =70.00
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: =ViewForm(EstateForm);Set(ScreenState,0)
+                PaddingBottom: =5.00
+                PaddingLeft: =5.00
+                Size: =24.00
+                Text: ="Cancel"
+                Width: =280
+                Y: =0.00
+                ZIndex: =2
+
     Label5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -430,8 +483,8 @@ HomePage As screen:
             ="Welcome  " & User().FullName &"
             (hit the menu on the top left)"
         Width: =436
-        X: =102
-        Y: =164
+        X: =92
+        Y: =108
         ZIndex: =3
 
     FullNavMenuV2_1 As FullNavMenuV2:
