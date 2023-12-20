@@ -573,6 +573,13 @@
       "Values": {
         "Information": "aae08838-9e95-4051-8aaf-ebf37e4adcda"
       }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmaquickcaptures_forms",
+      "Namespace": "MacFMAQuickCaptures (Forms)",
+      "Values": {
+        "Information": "ae6c2629-29d8-4956-b55f-42c4c62aeb17"
+      }
     }
   ]
 }

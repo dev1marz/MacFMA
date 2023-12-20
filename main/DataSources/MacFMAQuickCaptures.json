@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmaquickcaptureses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmaquickcaptures",
+    "Name": "MacFMAQuickCaptures",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_Area": "Area",
+      "crf01_Facility": "Facility",
+      "crf01_id": "ID",
+      "crf01_image": "Image",
+      "crf01_imageid": "crf01_ImageId",
+      "crf01_macfmaquickcaptures_AsyncOperations": "System Jobs",
+      "crf01_macfmaquickcaptures_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmaquickcaptures_DuplicateBaseRecord": "Duplicate Records (crf01_macfmaquickcaptures_DuplicateBaseRecord)",
+      "crf01_macfmaquickcaptures_DuplicateMatchingRecord": "Duplicate Records (crf01_macfmaquickcaptures_DuplicateMatchingRecord)",
+      "crf01_macfmaquickcaptures_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmaquickcaptures_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmaquickcaptures_ProcessSession": "Process Sessions",
+      "crf01_macfmaquickcaptures_SyncErrors": "Sync Errors",
+      "crf01_macfmaquickcapturesid": "MacFMAQuickCaptures",
+      "crf01_problem": "Problem",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAQuickCaptures",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAQuickCaptures (Views)",
+    "Name": "_crf01_macfmaquickcaptures_views",
+    "RelatedEntityName": "MacFMAQuickCaptures",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "19b40091-f68f-4544-8ab5-0285a78606e3": "MacFMAQuickCaptures Advanced Find View",
+      "3040736c-9ed4-423e-b8e2-cff9dd35eab7": "MacFMAQuickCaptures Lookup View",
+      "9a0ccfc8-b9fb-43cb-aa9f-041e60d03931": "MacFMAQuickCaptures Associated View",
+      "cd92afe4-9544-42a0-bf93-8eb9f1accc8b": "Active MacFMAQuickCaptures",
+      "f35178a1-e445-4f4b-bb34-2e79f998b6f4": "Inactive MacFMAQuickCaptures"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAQuickCaptures)",
+    "Name": "crf01_macfmaquickcaptures_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAQuickCaptures"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAQuickCaptures",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAQuickCaptures)",
+    "Name": "crf01_macfmaquickcaptures_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAQuickCaptures"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAQuickCaptures",
+    "Type": "OptionSetInfo"
+  }
+]
