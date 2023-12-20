@@ -19,6 +19,17 @@ HomePage As screen:
         Set(varNavCompHeight,varNavHeaderHeight);
         Set(varNavCompWidth,App.ActiveScreen.Width);
 
+    QuickCaptureContainer As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =225
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        X: =70
+        Y: =340
+        ZIndex: =1
+
     Label5 As label:
         Align: =Align.Center
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -32,7 +43,7 @@ HomePage As screen:
         Text: ="Made by Marz"
         Width: =640
         Y: =1083
-        ZIndex: =1
+        ZIndex: =2
 
     WelcomeLabel As label:
         Align: =Align.Center
@@ -49,10 +60,10 @@ HomePage As screen:
             (hit the menu on the top left)"
         Width: =436
         X: =102
-        Y: =347
-        ZIndex: =2
+        Y: =164
+        ZIndex: =3
 
     FullNavMenuV2_1 As FullNavMenuV2:
         Width: =640
-        ZIndex: =3
+        ZIndex: =4
 

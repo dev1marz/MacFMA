@@ -12786,19 +12786,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.SearchIcon3.OnSelect"
+                  "fullyQualifiedName": "ReportsScreen.OnVisible"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.SearchIcon3.OnSelect",
+                  "fullyQualifiedName": "ReportsScreen.OnVisible",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "OnSelect",
+                "member": "OnVisible",
                 "module": "ReportsScreen",
-                "type": "ReportsScreen.ReportFilterContainer.SearchIcon3"
+                "type": "ReportsScreen"
               }
             }
           ],
@@ -12816,19 +12816,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReportsScreen.OnVisible"
+                  "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.SearchIcon3.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReportsScreen.OnVisible",
+                  "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.SearchIcon3.OnSelect",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "OnVisible",
+                "member": "OnSelect",
                 "module": "ReportsScreen",
-                "type": "ReportsScreen"
+                "type": "ReportsScreen.ReportFilterContainer.SearchIcon3"
               }
             }
           ],
