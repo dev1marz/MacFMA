@@ -31,6 +31,7 @@
       "crf01_macfmaareas_ProcessSession": "Process Sessions",
       "crf01_macfmaareas_SyncErrors": "Sync Errors",
       "crf01_macfmaareasid": "MacFMAAreas",
+      "crf01_macfmaquickcaptures_Area_crf01_macfmaarea": "MacFMAQuickCaptures",
       "importsequencenumber": "Import Sequence Number",
       "modifiedby": "Modified By",
       "modifiedon": "Modified On",

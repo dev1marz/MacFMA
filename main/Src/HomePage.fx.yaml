@@ -409,7 +409,6 @@ HomePage As screen:
             LayoutMode: =LayoutMode.Auto
             PaddingBottom: =0.00
             PaddingLeft: =0.00
-            Visible: =If(ScreenState = 1,true)
             Width: =538
             Y: =581
             ZIndex: =2
@@ -425,7 +424,10 @@ HomePage As screen:
                 HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =280
-                OnSelect: =SubmitForm(EstateForm);Set(ScreenState,0)
+                OnSelect: |-
+                    =SubmitForm(QuickCaptureForm);
+                    
+                    Set(ScreenState,0)
                 PaddingBottom: =5.00
                 PaddingLeft: =5.00
                 Size: =24.00

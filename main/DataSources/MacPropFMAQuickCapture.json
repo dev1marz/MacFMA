@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "85aa2516-1993-47b5-91b2-4e5de6b4e7f6",
+    "Name": "MacPropFMAQuickCapture",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "8bcc8700-b5a4-ee11-be37-6045bda0048e"
+  }
+]

@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macfmaquickcaptures",
+    "MaxGetRowsCount": 500,
     "Name": "MacFMAQuickCaptures",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

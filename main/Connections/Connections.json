@@ -37,6 +37,38 @@
     "dependents": [],
     "id": "23af83e5-4b06-4783-92cc-5c427b13045a"
   },
+  "7f72e78e-c533-429d-97ae-25e7e720b230": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "8bcc8700-b5a4-ee11-be37-6045bda0048e"
+        },
+        "workflowName": {
+          "value": "b65b2812-8fce-4dc8-a294-d22b35e1ce94"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "8bcc8700-b5a4-ee11-be37-6045bda0048e"
+        },
+        "workflowName": {
+          "value": "b65b2812-8fce-4dc8-a294-d22b35e1ce94"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "MacPropFMAQuickCapture"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "a0e1f15a-1228-4eb4-bf6c-a593eeb35367"
+    },
+    "dependents": [],
+    "id": "7f72e78e-c533-429d-97ae-25e7e720b230"
+  },
   "9639d55e-cabf-4196-a2e3-80206959c1e9": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -95,7 +127,8 @@
     "dependencies": {},
     "dependents": [
       "23af83e5-4b06-4783-92cc-5c427b13045a",
-      "9639d55e-cabf-4196-a2e3-80206959c1e9"
+      "9639d55e-cabf-4196-a2e3-80206959c1e9",
+      "7f72e78e-c533-429d-97ae-25e7e720b230"
     ],
     "id": "a0e1f15a-1228-4eb4-bf6c-a593eeb35367"
   },

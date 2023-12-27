@@ -29,6 +29,7 @@
       "crf01_macfmafacilities_ProcessSession": "Process Sessions",
       "crf01_macfmafacilities_SyncErrors": "Sync Errors",
       "crf01_macfmafacilitiesid": "MacFMAFacilities",
+      "crf01_macfmaquickcaptures_Facility_crf01_macfma": "MacFMAQuickCaptures",
       "importsequencenumber": "Import Sequence Number",
       "modifiedby": "Modified By",
       "modifiedon": "Modified On",

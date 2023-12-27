@@ -5614,14 +5614,7 @@
         "LayoutOverflowY",
         "LayoutWrap",
         "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "true",
-          "InvariantPropertyName": "Visible",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Visible",
         "RadiusTopLeft",
         "RadiusTopRight",
         "RadiusBottomLeft",
