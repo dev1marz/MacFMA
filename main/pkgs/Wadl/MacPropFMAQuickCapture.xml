@@ -3,11 +3,11 @@
   <grammars>
     <jsonTypes targetNamespace="https://europe-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <string name="ManualTriggerInput_text_def" />
-      <base64Binary name="ManualTriggerInput_file_def_contentBytes_def" />
       <string name="ManualTriggerInput_file_def_name_def" />
+      <base64Binary name="ManualTriggerInput_file_def_contentBytes_def" />
       <object name="ManualTriggerInput_file_def">
-        <property name="contentBytes" typeRef="ManualTriggerInput_file_def_contentBytes_def" />
         <property name="name" type="string" />
+        <property name="contentBytes" typeRef="ManualTriggerInput_file_def_contentBytes_def" />
       </object>
       <object name="ManualTriggerInput">
         <property name="text" type="string" />
@@ -25,8 +25,8 @@
             <doc title="The api version" />
           </param>
           <representation mediaType="application/json">
-            <param style="plain" name="text" path="/text" type="xs:string" required="true">
-              <doc title="Input" />
+            <param style="plain" name="text" path="/text" type="xs:string">
+              <doc title="RecordID" />
             </param>
             <param style="plain" name="file" path="/file" type="service:ManualTriggerInput_file_def" required="true">
               <doc title="File Content" />

@@ -326,10 +326,10 @@ HomePage As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@MacFMAQuickCaptures],DataSourceInfo.DisplayName,"crf01_image")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =250
+                Height: =50
                 Required: =false
                 Update: =Image3.Image
-                Width: =525
+                Width: =570
                 X: =0
                 Y: =3
                 ZIndex: =1
@@ -339,7 +339,7 @@ HomePage As screen:
                     Color: =RGBA(197, 203, 207, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Height: =48
-                    Size: =16
+                    Size: =21
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -352,24 +352,25 @@ HomePage As screen:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     DisplayMode: =Parent.DisplayMode
-                    Height: =217
+                    Height: =AddPicture1.Height
                     Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
                     Tooltip: =Parent.DisplayName
                     Width: =AddPicture1.Width
-                    X: =30
-                    Y: =50
+                    X: =AddPicture1.X
+                    Y: =AddPicture1.Y
                     ZIndex: =2
 
                 AddPicture1 As addMedia:
                     BorderColor: =RGBA(197, 203, 207, 1)
                     Fill: =RGBA(0, 0, 0, 1)
-                    Height: =217
+                    Height: =320
+                    OnChange: =Set(varQCImage,ThisItem.Image)
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =50
+                    Y: =DataCardKey81.Y + DataCardKey81.Height + 5
                     ZIndex: =3
 
-                ErrorMessage75 As label:
+                ErrorMessage77 As label:
                     AutoHeight: =true
                     Color: =RGBA(255, 51, 51, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -388,7 +389,7 @@ HomePage As screen:
                     Y: =Image3.Y + Image3.Height
                     ZIndex: =4
 
-                StarVisible75 As label:
+                StarVisible77 As label:
                     Align: =Align.Center
                     Color: =RGBA(197, 203, 207, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -400,6 +401,50 @@ HomePage As screen:
                     Wrap: =false
                     Y: =DataCardKey81.Y
                     ZIndex: =5
+
+            ID_DataCard1 As typedDataCard.textualViewCard:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="crf01_id"
+                Default: =ThisItem.ID
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@MacFMAQuickCaptures],DataSourceInfo.DisplayName,"crf01_id")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =false
+                Width: =570
+                X: =0
+                Y: =4
+                ZIndex: =1
+
+                DataCardKey82 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(197, 203, 207, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =48
+                    Size: =21
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue76 As label:
+                    AutoHeight: =true
+                    BorderColor: =RGBA(197, 203, 207, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisplayMode: =Parent.DisplayMode
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =21
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey82.Y + DataCardKey82.Height + 5
+                    ZIndex: =2
 
         QuickCaptureConfirmCancelBtns As groupContainer.horizontalAutoLayoutContainer:
             Height: =124.00
@@ -426,7 +471,8 @@ HomePage As screen:
                 LayoutMinWidth: =280
                 OnSelect: |-
                     =SubmitForm(QuickCaptureForm);
-                    MacPropFMAQuickCapture.Run("",Image3.Image);
+                    MacPropFMAQuickCapture.Run(Text(DataCardValue76.Text),{
+                             contentBytes: Image3.Image});
                     Set(ScreenState,0)
                 PaddingBottom: =5.00
                 PaddingLeft: =5.00

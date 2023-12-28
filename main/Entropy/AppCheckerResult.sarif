@@ -1103,10 +1103,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 6,
-                  "charOffset": 67,
+                  "charLength": 26,
+                  "charOffset": 57,
                   "snippet": {
-                    "text": ".Image"
+                    "text": "Text(DataCardValue76.Text)"
                   }
                 }
               },
@@ -1120,7 +1120,7 @@
           "message": {
             "arguments": [
               "Record",
-              "Image"
+              "Text"
             ],
             "id": "issue"
           },
@@ -1144,10 +1144,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 43,
-                  "charOffset": 31,
+                  "charLength": 93,
+                  "charOffset": 30,
                   "snippet": {
-                    "text": "MacPropFMAQuickCapture.Run(\"\",Image3.Image)"
+                    "text": "MacPropFMAQuickCapture.Run(Text(DataCardValue76.Text),{\n         contentBytes: Image3.Image})"
                   }
                 }
               },
@@ -9387,36 +9387,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomePage.QuickCaptureContainer.QuickCaptureForm.Image_DataCard1.AddPicture1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "HomePage.QuickCaptureContainer.QuickCaptureForm.Image_DataCard1.AddPicture1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "HomePage",
-                "type": "HomePage.QuickCaptureContainer.QuickCaptureForm.Image_DataCard1.AddPicture1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "StaffScreen.StaffsForm.StaffID_DataCard1.DataCardValue1.AccessibleLabel"
                 }
               ],
@@ -12627,6 +12597,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "HomePage.QuickCaptureContainer.QuickCaptureForm.Image_DataCard1.AddPicture1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomePage.QuickCaptureContainer.QuickCaptureForm.Image_DataCard1.AddPicture1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "HomePage",
+                "type": "HomePage.QuickCaptureContainer.QuickCaptureForm.Image_DataCard1.AddPicture1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varNavPaneHeight"
                 }
               ],
@@ -12728,6 +12728,36 @@
               },
               "properties": {
                 "member": "varHTML",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varQCImage"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varQCImage",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varQCImage",
                 "module": "App",
                 "type": "App"
               }
