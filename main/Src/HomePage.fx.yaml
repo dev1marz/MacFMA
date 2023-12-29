@@ -35,9 +35,9 @@ HomePage As screen:
             BorderColor: =RGBA(197, 203, 207, 1)
             DataSource: =MacFMAQuickCaptures
             DefaultMode: =FormMode.New
-            Height: =591
+            Height: =354
             Width: =570
-            ZIndex: =1
+            ZIndex: =3
 
             Problem_DataCard3 As typedDataCard.textualEditCard:
                 BorderColor: =RGBA(197, 203, 207, 1)
@@ -318,133 +318,34 @@ HomePage As screen:
                     Y: =DataCardKey79.Y
                     ZIndex: =4
 
-            Image_DataCard1 As typedDataCard.addLargePictureCard:
+        AddMediaWithImage1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =3
+
+            UploadedImage1 As image:
                 BorderColor: =RGBA(197, 203, 207, 1)
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="crf01_image"
-                Default: =ThisItem.Image
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@MacFMAQuickCaptures],DataSourceInfo.DisplayName,"crf01_image")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                Required: =false
-                Update: =Image3.Image
-                Width: =570
-                X: =0
-                Y: =3
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =108
+                Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
+                ImagePosition: =ImagePosition.Fill
+                Width: =492
+                X: =23
+                Y: =377
                 ZIndex: =1
 
-                DataCardKey81 As label:
-                    AutoHeight: =true
-                    Color: =RGBA(197, 203, 207, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Height: =48
-                    Size: =21
-                    Text: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    Wrap: =false
-                    X: =30
-                    Y: =10
-                    ZIndex: =1
-
-                Image3 As image:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    DisplayMode: =Parent.DisplayMode
-                    Height: =AddPicture1.Height
-                    Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
-                    Tooltip: =Parent.DisplayName
-                    Width: =AddPicture1.Width
-                    X: =AddPicture1.X
-                    Y: =AddPicture1.Y
-                    ZIndex: =2
-
-                AddPicture1 As addMedia:
-                    BorderColor: =RGBA(197, 203, 207, 1)
-                    Fill: =RGBA(0, 0, 0, 1)
-                    Height: =320
-                    OnChange: =Set(varQCImage,ThisItem.Image)
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey81.Y + DataCardKey81.Height + 5
-                    ZIndex: =3
-
-                ErrorMessage77 As label:
-                    AutoHeight: =true
-                    Color: =RGBA(255, 51, 51, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FontWeight: =FontWeight.Semibold
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =24
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =Image3.Y + Image3.Height
-                    ZIndex: =4
-
-                StarVisible77 As label:
-                    Align: =Align.Center
-                    Color: =RGBA(197, 203, 207, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Height: =DataCardKey81.Height
-                    Size: =21
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey81.Y
-                    ZIndex: =5
-
-            ID_DataCard1 As typedDataCard.textualViewCard:
+            AddMediaButton1 As addMedia:
                 BorderColor: =RGBA(197, 203, 207, 1)
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="crf01_id"
-                Default: =ThisItem.ID
-                DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@MacFMAQuickCaptures],DataSourceInfo.DisplayName,"crf01_id")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =40
-                Required: =false
-                Width: =570
-                X: =0
-                Y: =4
-                ZIndex: =1
-
-                DataCardKey82 As label:
-                    AutoHeight: =true
-                    Color: =RGBA(197, 203, 207, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    Height: =48
-                    Size: =21
-                    Text: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    Wrap: =false
-                    X: =30
-                    Y: =10
-                    ZIndex: =1
-
-                DataCardValue76 As label:
-                    AutoHeight: =true
-                    BorderColor: =RGBA(197, 203, 207, 1)
-                    Color: =RGBA(255, 255, 255, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisplayMode: =Parent.DisplayMode
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =21
-                    Text: =Parent.Default
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey82.Y + DataCardKey82.Height + 5
-                    ZIndex: =2
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =108
+                Size: =25
+                Width: =492
+                X: =23
+                Y: =377
+                ZIndex: =2
 
         QuickCaptureConfirmCancelBtns As groupContainer.horizontalAutoLayoutContainer:
             Height: =124.00
@@ -456,7 +357,7 @@ HomePage As screen:
             PaddingLeft: =0.00
             Width: =538
             Y: =581
-            ZIndex: =2
+            ZIndex: =4
 
             "'BtnConfirmAdd(AddingItem)_9' As button":
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
