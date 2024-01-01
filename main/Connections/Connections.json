@@ -96,9 +96,41 @@
     "dependents": [
       "23af83e5-4b06-4783-92cc-5c427b13045a",
       "9639d55e-cabf-4196-a2e3-80206959c1e9",
-      "facba027-6b6c-475b-87c8-386842be2e7c"
+      "c170e9cf-b857-4591-bc4f-9ec8e6fa34fb"
     ],
     "id": "a0e1f15a-1228-4eb4-bf6c-a593eeb35367"
+  },
+  "c170e9cf-b857-4591-bc4f-9ec8e6fa34fb": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {
+          "value": "8bcc8700-b5a4-ee11-be37-6045bda0048e"
+        },
+        "workflowName": {
+          "value": "b65b2812-8fce-4dc8-a294-d22b35e1ce94"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {
+          "value": "8bcc8700-b5a4-ee11-be37-6045bda0048e"
+        },
+        "workflowName": {
+          "value": "b65b2812-8fce-4dc8-a294-d22b35e1ce94"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "MacPropFMAQuickCapture"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "a0e1f15a-1228-4eb4-bf6c-a593eeb35367"
+    },
+    "dependents": [],
+    "id": "c170e9cf-b857-4591-bc4f-9ec8e6fa34fb"
   },
   "e1b67c14-08d1-4ba8-b03e-ca5ad0b701c6": {
     "connectionRef": {
@@ -116,43 +148,5 @@
     "dependencies": {},
     "dependents": [],
     "id": "e1b67c14-08d1-4ba8-b03e-ca5ad0b701c6"
-  },
-  "facba027-6b6c-475b-87c8-386842be2e7c": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "a0e1f15a-1228-4eb4-bf6c-a593eeb35367": {
-          "value": "shared_sharepointonline"
-        },
-        "workflowEntityId": {
-          "value": "8bcc8700-b5a4-ee11-be37-6045bda0048e"
-        },
-        "workflowName": {
-          "value": "b65b2812-8fce-4dc8-a294-d22b35e1ce94"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_sharepointonline": {
-          "value": "a0e1f15a-1228-4eb4-bf6c-a593eeb35367"
-        },
-        "workflowEntityId": {
-          "value": "8bcc8700-b5a4-ee11-be37-6045bda0048e"
-        },
-        "workflowName": {
-          "value": "b65b2812-8fce-4dc8-a294-d22b35e1ce94"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "MacPropFMAQuickCapture"
-    ],
-    "dependencies": {
-      "shared_sharepointonline": "a0e1f15a-1228-4eb4-bf6c-a593eeb35367"
-    },
-    "dependents": [],
-    "id": "facba027-6b6c-475b-87c8-386842be2e7c"
   }
 }
