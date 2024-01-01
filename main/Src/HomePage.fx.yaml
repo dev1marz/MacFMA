@@ -374,7 +374,9 @@ HomePage As screen:
                 OnSelect: |-
                     =SubmitForm(QuickCaptureForm);
                     MacPropFMAQuickCapture.Run({
-                             contentBytes: UploadedImage1.Image});
+                             contentBytes: UploadedImage1.Image,
+                             name: Text(varQCNum)}
+                             ,varQCNum);
                     Set(ScreenState,0)
                 PaddingBottom: =5.00
                 PaddingLeft: =5.00
