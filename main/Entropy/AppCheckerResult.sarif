@@ -6449,7 +6449,7 @@
                 },
                 "region": {
                   "charLength": 12,
-                  "charOffset": 112,
+                  "charOffset": 221,
                   "snippet": {
                     "text": "varImageName"
                   }
@@ -6489,10 +6489,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 181,
+                  "charLength": 150,
                   "charOffset": 90,
                   "snippet": {
-                    "text": "MacPFMAFileUpload.Run(varImageName,\n    {\n\n        contentBytes: First(DataCardValue65.Attachments).Value,\n         name: First(DataCardValue65.Attachments).Name\n     \n     }\n     )"
+                    "text": "MacPFMAFileUpload.Run({\n        contentBytes: First(DataCardValue65.Attachments).Value,\n        name: Text(varImageName)}\n        ,varImageName\n     )"
                   }
                 }
               },
