@@ -372,8 +372,8 @@ HomePage As screen:
                 LayoutMinHeight: =70
                 LayoutMinWidth: =280
                 OnSelect: |-
-                    =Set(varQCNum,Last(MacFMAQuickCaptures).ID);
-                    SubmitForm(QuickCaptureForm);
+                    =SubmitForm(QuickCaptureForm);
+                    Set(varQCNum,Last(MacFMAQuickCaptures).ID);
                     MacPropFMAQuickCapture.Run({
                              contentBytes: UploadedImage1.Image,
                              name: Text(varQCNum)}
