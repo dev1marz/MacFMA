@@ -371,12 +371,13 @@ HomePage As screen:
                 HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =280
-                OnSelect: |
+                OnSelect: |-
                     =SubmitForm(QuickCaptureForm);
                     MacPropFMAQuickCapture.Run({
                              contentBytes: UploadedImage1.Image,
                              name: Text(varQCNum)}
                              ,varQCNum);
+                    UploadedImage1.Image="";
                 PaddingBottom: =5.00
                 PaddingLeft: =5.00
                 Size: =24.00
