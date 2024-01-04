@@ -36,7 +36,7 @@ HomePage As screen:
             DataSource: =MacFMAQuickCaptures
             DefaultMode: =FormMode.New
             Height: =354
-            OnSuccess: =Set(varQCNum,Last(MacFMAQuickCaptures).ID)
+            OnSuccess: =
             Width: =570
             ZIndex: =3
 
@@ -372,7 +372,8 @@ HomePage As screen:
                 LayoutMinHeight: =70
                 LayoutMinWidth: =280
                 OnSelect: |-
-                    =SubmitForm(QuickCaptureForm);
+                    =Set(varQCNum,Last(MacFMAQuickCaptures).ID);
+                    SubmitForm(QuickCaptureForm);
                     MacPropFMAQuickCapture.Run({
                              contentBytes: UploadedImage1.Image,
                              name: Text(varQCNum)}
