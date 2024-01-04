@@ -374,12 +374,12 @@ HomePage As screen:
                 LayoutMinHeight: =70
                 LayoutMinWidth: =280
                 OnSelect: |-
-                    =/*SubmitForm(QuickCaptureForm);
+                    =SubmitForm(QuickCaptureForm);
                     Set(varQCNum,Last(MacFMAQuickCaptures).ID);
                     MacPropFMAQuickCapture.Run({
                              contentBytes: UploadedImage1.Image,
                              name: Text(varQCNum)}
-                             ,varQCNum);*/
+                             ,varQCNum);
                     Set(varRes,true);
                 PaddingBottom: =5.00
                 PaddingLeft: =5.00
