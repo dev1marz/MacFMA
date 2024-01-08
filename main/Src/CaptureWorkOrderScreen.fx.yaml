@@ -25,7 +25,7 @@ CaptureWorkOrderScreen As screen:
         Text: ="Made by Marz"
         Width: =640
         Y: =1083
-        ZIndex: =2
+        ZIndex: =1
 
     WorkOrderDataTable As dataTable.datatable:
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -57,7 +57,7 @@ CaptureWorkOrderScreen As screen:
         Width: =640
         X: =0
         Y: =635
-        ZIndex: =3
+        ZIndex: =2
 
         crf01_problem_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -126,7 +126,7 @@ CaptureWorkOrderScreen As screen:
         Width: =579
         X: =30
         Y: =92
-        ZIndex: =4
+        ZIndex: =3
 
         Label1 As label:
             Align: =Align.Center
@@ -278,18 +278,148 @@ CaptureWorkOrderScreen As screen:
             Y: =233
             ZIndex: =7
 
+    CaptureWorkOrderSearchInput As text:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: |
+            =If(ScreenState =1,DisplayMode.Disabled)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderThickness: =4
+        Height: =63.00
+        HintText: ="Search Order By Estate, Facility or Area"
+        HoverBorderColor: =RGBA(197, 203, 207, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(62, 74, 83, 1)
+        PaddingBottom: =5.00
+        PaddingLeft: =12.00
+        Size: =21.00
+        Visible: =!ScreenState
+        Width: =579
+        X: =30
+        Y: =538
+        ZIndex: =4
+
+    CaptureWorkOrderAddBtnContainer As groupContainer.horizontalAutoLayoutContainer:
+        Height: =124.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Visible: =If(ScreenState = 0,true)
+        Width: =640
+        Y: =412
+        ZIndex: =5
+
+        "'AddItemBtn(ScreenName)_1' As button":
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =If(NavigationMenu = 1, DisplayMode.Disabled)
+            Fill: =RGBA(102, 182, 227, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: |-
+                =ResetForm(CaptureWorkOrderAddForm);Set(ScreenState,1);
+                
+                Set(varFilterCont,0)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Add Work Order"
+            Width: =280
+            Y: =0.00
+            ZIndex: =2
+
+    CaptureWorkOrderConfirmCancelBtnContainer As groupContainer.horizontalAutoLayoutContainer:
+        Height: =109.00
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Visible: =If(ScreenState = 1,true)
+        Width: =640
+        Y: =531.00
+        ZIndex: =6
+
+        "'BtnAddItemConfirm(ScreenName)_1' As button":
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(141, 198, 63, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: |
+                =SubmitForm(CaptureWorkOrderAddForm);
+                Set(varImageName, (Last(MacFMAWorkOrders).OrderID));
+                MacPFMAFileUpload.Run({
+                        contentBytes: Image1.Image,
+                        name: Text(varImageName)}
+                        ,varImageName
+                     );
+                
+                     MacPropFMAQuickCapture.Run({
+                         contentBytes: UploadedImage1.Image,
+                         name: Text(varQCNum)}
+                         ,varQCNum);
+                Set(ScreenState,0);
+                ClearCollect(colWorkOrders,MacFMAWorkOrders)
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Confirm"
+            Width: =280
+            Y: =0.00
+            ZIndex: =1
+
+        "'BtnCancelAdd(ScreenName)_1' As button":
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 51, 51, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70.00
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =Set(ScreenState,0);
+            PaddingBottom: =5.00
+            PaddingLeft: =5.00
+            Size: =24.00
+            Text: ="Cancel"
+            Width: =280
+            Y: =0.00
+            ZIndex: =2
+
     CaptureWorkOrderAddForm As form:
         BorderColor: =RGBA(197, 203, 207, 1)
         DataSource: =MacFMAWorkOrders
         DefaultMode: =If(ScreenState = 1,FormMode.New,FormMode.View)
-        Height: =450
+        Height: =392
         Item: =WorkOrderDataTable.Selected
         OnFailure: =Notify("Error!", NotificationType.Error)
         OnSuccess: =Notify("Success",NotificationType.Success)
         Visible: =ScreenState
-        Width: =640
-        Y: =81
-        ZIndex: =5
+        Width: =609
+        Y: =139
+        ZIndex: =7
 
         Problem_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -940,137 +1070,100 @@ CaptureWorkOrderScreen As screen:
                 Y: =DataCardKey58.Y
                 ZIndex: =4
 
-    CaptureWorkOrderSearchInput As text:
-        BorderColor: =RGBA(197, 203, 207, 1)
-        BorderThickness: =2
-        Color: =RGBA(255, 255, 255, 1)
-        Default: =""
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: |
-            =If(ScreenState =1,DisplayMode.Disabled)
-        Fill: =RGBA(0, 0, 0, 1)
-        FocusedBorderThickness: =4
-        Height: =63.00
-        HintText: ="Search Order By Estate, Facility or Area"
-        HoverBorderColor: =RGBA(197, 203, 207, 1)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(62, 74, 83, 1)
-        PaddingBottom: =5.00
-        PaddingLeft: =12.00
-        Size: =21.00
-        Visible: =!ScreenState
-        Width: =579
-        X: =30
-        Y: =538
-        ZIndex: =6
-
-    CaptureWorkOrderAddBtnContainer As groupContainer.horizontalAutoLayoutContainer:
-        Height: =124.00
-        LayoutAlignItems: =LayoutAlignItems.Center
-        LayoutGap: =10
-        LayoutJustifyContent: =LayoutJustifyContent.Center
-        LayoutMode: =LayoutMode.Auto
-        PaddingBottom: =0.00
-        PaddingLeft: =0.00
-        Visible: =If(ScreenState = 0,true)
-        Width: =640
-        Y: =412
-        ZIndex: =7
-
-        "'AddItemBtn(ScreenName)_1' As button":
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =If(NavigationMenu = 1, DisplayMode.Disabled)
-            Fill: =RGBA(102, 182, 227, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =70.00
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: |-
-                =ResetForm(CaptureWorkOrderAddForm);Set(ScreenState,1);
-                
-                Set(varFilterCont,0)
-            PaddingBottom: =5.00
-            PaddingLeft: =5.00
-            Size: =24.00
-            Text: ="Add Work Order"
-            Width: =280
-            Y: =0.00
-            ZIndex: =2
-
-    CaptureWorkOrderConfirmCancelBtnContainer As groupContainer.horizontalAutoLayoutContainer:
-        Height: =109.00
-        LayoutAlignItems: =LayoutAlignItems.Center
-        LayoutGap: =10
-        LayoutJustifyContent: =LayoutJustifyContent.Center
-        LayoutMode: =LayoutMode.Auto
-        PaddingBottom: =0.00
-        PaddingLeft: =0.00
-        Visible: =If(ScreenState = 1,true)
-        Width: =640
-        Y: =531.00
-        ZIndex: =8
-
-        "'BtnAddItemConfirm(ScreenName)_1' As button":
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(141, 198, 63, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =70.00
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: |
-                =SubmitForm(CaptureWorkOrderAddForm);
-                Set(varImageName, (Last(MacFMAWorkOrders).OrderID));
-                MacPFMAFileUpload.Run({
-                        contentBytes: First(DataCardValue65.Attachments).Value,
-                        name: Text(varImageName)}
-                        ,varImageName
-                     );
-                
-                     MacPropFMAQuickCapture.Run({
-                         contentBytes: UploadedImage1.Image,
-                         name: Text(varQCNum)}
-                         ,varQCNum);
-                Set(ScreenState,0);
-                ClearCollect(colWorkOrders,MacFMAWorkOrders)
-            PaddingBottom: =5.00
-            PaddingLeft: =5.00
-            Size: =24.00
-            Text: ="Confirm"
-            Width: =280
-            Y: =0.00
+        Image_DataCard1 As typedDataCard.addLargePictureCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_image"
+            Default: =ThisItem.Image
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_image")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Image1.Image
+            Width: =609
+            X: =0
+            Y: =7
             ZIndex: =1
 
-        "'BtnCancelAdd(ScreenName)_1' As button":
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(255, 51, 51, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =70.00
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: =Set(ScreenState,0);
-            PaddingBottom: =5.00
-            PaddingLeft: =5.00
-            Size: =24.00
-            Text: ="Cancel"
-            Width: =280
-            Y: =0.00
-            ZIndex: =2
+            DataCardKey70 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            Image1 As image:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Height: =AddPicture1.Height
+                Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                Tooltip: =Parent.DisplayName
+                Width: =AddPicture1.Width
+                X: =AddPicture1.X
+                Y: =AddPicture1.Y
+                ZIndex: =2
+
+            AddPicture1 As addMedia:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =320
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey70.Y + DataCardKey70.Height + 5
+                ZIndex: =3
+
+            ErrorMessage67 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Image1.Y + Image1.Height
+                ZIndex: =4
+
+            StarVisible67 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey70.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey70.Y
+                ZIndex: =5
 
     FullNavMenuV2_10 As FullNavMenuV2:
         Width: =640
+        ZIndex: =8
+
+    Image3 As image:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =320
+        Width: =320
+        X: =30
+        Y: =567
         ZIndex: =9
 
