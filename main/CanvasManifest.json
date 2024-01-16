@@ -136,7 +136,6 @@
     "ViewTemplate",
     "ViewAddTemplate",
     "ProfileScreen",
-    "FacilityInspectionReportScreen",
     "CaptureWorkOrderScreen",
     "WorkOrderManagementScreen",
     "EstateScreen",
@@ -152,6 +151,7 @@
     "WatermeterReadingScreen",
     "ElectricalmeterReadingScreen",
     "DashboardScreen",
-    "ReportsScreen"
+    "ReportsScreen",
+    "FacilityInspectionReportScreen"
   ]
 }
