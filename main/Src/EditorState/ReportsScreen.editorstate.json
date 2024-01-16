@@ -2414,7 +2414,14 @@
           "NameMapSourceSchema": "?"
         },
         "WrapCount",
-        "TemplateSize",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "92",
+          "InvariantPropertyName": "TemplateSize",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "TemplatePadding",
         "Layout",
         "Transition",
@@ -3696,7 +3703,14 @@
         "X",
         "Y",
         "Width",
-        "Height",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "60",
+          "InvariantPropertyName": "Height",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Fill",
         "DisabledFill",
         "PressedFill",
