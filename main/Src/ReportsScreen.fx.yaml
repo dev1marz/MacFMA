@@ -226,18 +226,6 @@ ReportsScreen As screen:
             Y: =3
             ZIndex: =3
 
-            Image5 As image:
-                AlignInContainer: =AlignInContainer.Center
-                BorderColor: =RGBA(197, 203, 207, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Image: ='Macadamia Properties'
-                LayoutMinHeight: =320
-                LayoutMinWidth: =320
-                Width: =500
-                Y: =3
-                ZIndex: =1
-
             "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(197, 203, 207, 1)
@@ -245,6 +233,8 @@ ReportsScreen As screen:
                 Height: =200
                 Items: =varWorkOrders
                 Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
                 TemplateSize: =50
@@ -328,6 +318,18 @@ ReportsScreen As screen:
                     X: =100
                     Y: =8
                     ZIndex: =6
+
+            Image5 As image:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Image: ='Macadamia Properties'
+                LayoutMinHeight: =320
+                LayoutMinWidth: =320
+                Width: =500
+                Y: =3
+                ZIndex: =1
 
     ReportFilterContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -449,6 +451,20 @@ ReportsScreen As screen:
             X: =4
             Y: =80
             ZIndex: =6
+
+        Icon4 As icon.Reset:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            Color: =RGBA(197, 203, 207, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(139, 154, 159, 1)
+            Height: =57
+            Icon: =Icon.Reset
+            OnSelect: =ClearCollect(varWorkOrders,MacFMAWorkOrders);
+            Width: =55
+            X: =371
+            Y: =80
+            ZIndex: =7
 
     Icon3 As icon.DocumentPDF:
         BorderColor: =RGBA(53, 61, 63, 1)
