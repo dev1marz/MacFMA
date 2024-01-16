@@ -12,6 +12,8 @@ ReportsScreen As screen:
         
         
         //MacPHTMLDisplay.Run(varWorkOrders);
+        
+        ClearCollect(colAllWorkOrders,MacFMAWorkOrders);
     Width: =
 
     Label5_21 As label:
@@ -240,12 +242,12 @@ ReportsScreen As screen:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(197, 203, 207, 1)
                 DelayItemLoading: =true
-                Height: =500
+                Height: =200
                 Items: =varWorkOrders
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
-                TemplateSize: =70
+                TemplateSize: =50
                 Width: =500
                 ZIndex: =1
 
@@ -263,7 +265,6 @@ ReportsScreen As screen:
                     RadiusTopRight: =8
                     Width: =60
                     X: =440
-                    Y: =8
                     ZIndex: =1
 
                 Title2 As label:
@@ -280,13 +281,14 @@ ReportsScreen As screen:
                         =Text(ThisItem.'Created On',DateTimeFormat.ShortDate)
                     VerticalAlign: =VerticalAlign.Top
                     Width: =86
-                    Y: =33
+                    Y: =7
                     ZIndex: =2
 
                 Separator3 As rectangle:
                     BorderColor: =RGBA(197, 203, 207, 1)
+                    BorderThickness: =1
                     Fill: =RGBA(0, 0, 0, 1)
-                    Height: =1
+                    Height: =0
                     OnSelect: =Select(Parent)
                     Width: =Parent.TemplateWidth
                     Y: =Parent.TemplateHeight - Self.Height
@@ -304,9 +306,9 @@ ReportsScreen As screen:
                     Size: =12
                     Text: =ThisItem.ActionRequired
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =236
-                    X: =244
-                    Y: =32
+                    Width: =183
+                    X: =229
+                    Y: =8
                     ZIndex: =5
 
                 Title2_2 As label:
@@ -323,8 +325,8 @@ ReportsScreen As screen:
                         =ThisItem.Area.AreaID
                     VerticalAlign: =VerticalAlign.Top
                     Width: =129
-                    X: =115
-                    Y: =33
+                    X: =100
+                    Y: =8
                     ZIndex: =6
 
     ReportFilterContainer As groupContainer.manualLayoutContainer:
@@ -438,6 +440,7 @@ ReportsScreen As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(62, 74, 83, 1)
             Items: =MacFMAEstates
+            OnChange: =ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.SelectedText.EstateID))
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(197, 203, 207, 1)
             SelectionFill: =RGBA(100, 118, 132, 1)
