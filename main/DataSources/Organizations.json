@@ -25,6 +25,7 @@
       "allowautounsubscribeacknowledgement": "Allow Automatic Unsubscribe Acknowledgement",
       "allowclientmessagebarad": "Allow Outlook Client Message Bar Advertisement",
       "allowconnectorsonpowerfxactions": "Enable connectors on power fx actions.",
+      "allowedapplicationsfordvaccess": "List of Applications that are in allow list for the accessing DV resources.",
       "allowediprangeforfirewall": "List of IP Ranges to be allowed by the firewall rule",
       "allowediprangeforstorageaccesssignatures": "List of IP Ranges to be allowed for generating the SAS URIs.",
       "allowedmimetypes": "List of allowed mime types.",
@@ -46,6 +47,7 @@
       "allowwebexcelexport": "Allow Export to Excel",
       "amdesignator": "AM Designator",
       "appdesignerexperienceenabled": "Enable App Designer Experience for this Organization",
+      "applicationbasedaccesscontrolmode": "Application Based Access Control Mode",
       "appointmentricheditorexperience": "Enable Rich Editing Experience for Appointment (appointmentricheditorexperience)",
       "appointmentwithteamsmeeting": "Enable teams Meeting experience for appointment",
       "appointmentwithteamsmeetingv2": "Enable Teams meetings for appointments",
@@ -59,6 +61,7 @@
       "basecurrencyprecision": "Base Currency Precision",
       "basecurrencysymbol": "Base Currency Symbol",
       "bingmapsapikey": "Bing Maps API Key",
+      "blockedapplicationsfordvaccess": "List of Applications that are in block list for the accessing DV resources.",
       "blockedattachments": "Block Attachments",
       "blockedmimetypes": "List of blocked mime types.",
       "bounddashboarddefaultcardexpanded": "Display cards in expanded state for Interactive Dashboard",
@@ -1018,6 +1021,27 @@
     },
     "OptionSetTypeKey": "BooleanType",
     "RelatedColumnInvariantName": "appdesignerexperienceenabled",
+    "RelatedEntityName": "Organizations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Application Based Access Control Mode.",
+    "Name": "organization_applicationbasedaccesscontrolmode",
+    "OptionSetInfoNameMapping": {
+      "0": "Disabled",
+      "1": "Enabled",
+      "2": "AuditMode"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "applicationbasedaccesscontrolmode",
+        "OptionSetReferenceEntityName": "Organizations"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "applicationbasedaccesscontrolmode",
     "RelatedEntityName": "Organizations",
     "Type": "OptionSetInfo"
   },

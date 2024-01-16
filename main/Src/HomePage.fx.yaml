@@ -21,7 +21,7 @@ HomePage As screen:
 
     QuickCaptureContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =705
+        Height: =712
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -35,7 +35,7 @@ HomePage As screen:
             BorderColor: =RGBA(197, 203, 207, 1)
             DataSource: =MacFMAQuickCaptures
             DefaultMode: =FormMode.New
-            Height: =354
+            Height: =581
             OnSuccess: =
             Width: =570
             ZIndex: =3
@@ -319,36 +319,88 @@ HomePage As screen:
                     Y: =DataCardKey79.Y
                     ZIndex: =4
 
-        AddMediaWithImage1 As group:
-            Height: =5
-            Width: =5
-            X: =40
-            Y: =40
-            ZIndex: =3
-
-            UploadedImage1 As image:
+            Image_DataCard3 As typedDataCard.addLargePictureCard:
                 BorderColor: =RGBA(197, 203, 207, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =108
-                Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
-                ImagePosition: =ImagePosition.Fill
-                Width: =492
-                X: =23
-                Y: =377
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="crf01_image"
+                Default: =ThisItem.Image
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@MacFMAQuickCaptures],DataSourceInfo.DisplayName,"crf01_image")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =228
+                Required: =false
+                Update: =Image4.Image
+                Width: =570
+                X: =0
+                Y: =3
                 ZIndex: =1
 
-            AddMediaButton1 As addMedia:
-                BorderColor: =RGBA(197, 203, 207, 1)
-                Fill: =RGBA(0, 0, 0, 1)
-                Height: =108
-                Reset: =varRes
-                Size: =25
-                UseMobileCamera: =true
-                Width: =492
-                X: =23
-                Y: =377
-                ZIndex: =2
+                DataCardKey72 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(197, 203, 207, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =48
+                    Size: =21
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                Image4 As image:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =137
+                    Image: =If(IsBlank(AddPicture3.Media), Parent.Default, AddPicture3.Media)
+                    Tooltip: =Parent.DisplayName
+                    Width: =AddPicture3.Width
+                    X: =AddPicture3.X
+                    Y: =AddPicture3.Y
+                    ZIndex: =2
+
+                AddPicture3 As addMedia:
+                    BorderColor: =RGBA(197, 203, 207, 1)
+                    Fill: =RGBA(0, 0, 0, 1)
+                    Height: =137
+                    Width: =495
+                    X: =45
+                    Y: =DataCardKey72.Y + DataCardKey72.Height + 5
+                    ZIndex: =3
+
+                ErrorMessage75 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(255, 51, 51, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =24
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =Image4.Y + Image4.Height
+                    ZIndex: =4
+
+                StarVisible75 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(197, 203, 207, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =DataCardKey72.Height
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey72.Y
+                    ZIndex: =5
 
         QuickCaptureConfirmCancelBtns As groupContainer.horizontalAutoLayoutContainer:
             Height: =124.00
@@ -376,10 +428,10 @@ HomePage As screen:
                 OnSelect: |-
                     =SubmitForm(QuickCaptureForm);
                     Set(varQCNum,Last(MacFMAQuickCaptures).ID);
-                    MacPropFMAQuickCapture.Run({
+                    /*MacPropFMAQuickCapture.Run({
                              contentBytes: UploadedImage1.Image,
                              name: Text(varQCNum)}
-                             ,varQCNum);
+                             ,varQCNum);*/
                     Set(varRes,true);
                 PaddingBottom: =5.00
                 PaddingLeft: =5.00
