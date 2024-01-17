@@ -12709,6 +12709,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Problem_DataCard5.DataCardValue81.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Problem_DataCard5.DataCardValue81.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.QCToWorkOrderForm.Problem_DataCard5.DataCardValue81"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.ActionRequired_DataCard3.DataCardValue80.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.ActionRequired_DataCard3.DataCardValue80.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.QCToWorkOrderForm.ActionRequired_DataCard3.DataCardValue80"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "QuickCaptureManagementScreen.QCManagementForm.Problem_DataCard4.DataCardValue77.AccessibleLabel"
                 }
               ],
@@ -12932,6 +12992,186 @@
                 "member": "AccessibleLabel",
                 "module": "QuickCaptureManagementScreen",
                 "type": "QuickCaptureManagementScreen.QCManagementForm.Image_DataCard4.AddPicture4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Priority_DataCard3.DataCardValue82.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Priority_DataCard3.DataCardValue82.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.QCToWorkOrderForm.Priority_DataCard3.DataCardValue82"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.PersonResponsible_DataCard3.DataCardValue83.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.PersonResponsible_DataCard3.DataCardValue83.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.QCToWorkOrderForm.PersonResponsible_DataCard3.DataCardValue83"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Note_DataCard3.DataCardValue84.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Note_DataCard3.DataCardValue84.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.QCToWorkOrderForm.Note_DataCard3.DataCardValue84"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Image_DataCard5.AddPicture5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Image_DataCard5.AddPicture5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.QCToWorkOrderForm.Image_DataCard5.AddPicture5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Attachment_DataCard2.DataCardValue85.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Attachment_DataCard2.DataCardValue85.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.QCToWorkOrderForm.Attachment_DataCard2.DataCardValue85"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Area_DataCard9.DataCardValue86.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.QCToWorkOrderForm.Area_DataCard9.DataCardValue86.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.QCToWorkOrderForm.Area_DataCard9.DataCardValue86"
               }
             }
           ],

@@ -40,10 +40,11 @@ QuickCaptureManagementScreen As screen:
         TemplateFill: =If(ThisItem.IsSelected,Color.LightBlue ,RGBA(0, 0, 0, 0))
         TemplatePadding: =0.00
         TemplateSize: =32
+        Visible: =!ScreenState
         Width: =585
         X: =27
         Y: =697
-        ZIndex: =3
+        ZIndex: =2
 
         Title4_28 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -92,7 +93,7 @@ QuickCaptureManagementScreen As screen:
         Visible: =ScreenState
         Width: =640
         Y: =87
-        ZIndex: =4
+        ZIndex: =3
 
         Problem_DataCard4 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -116,7 +117,7 @@ QuickCaptureManagementScreen As screen:
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
-                Size: =21
+                Size: =13
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
@@ -136,7 +137,7 @@ QuickCaptureManagementScreen As screen:
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 1)
                 FocusedBorderThickness: =4
-                Height: =70
+                Height: =42
                 HoverBorderColor: =RGBA(197, 203, 207, 1)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(62, 74, 83, 1)
@@ -146,7 +147,7 @@ QuickCaptureManagementScreen As screen:
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Size: =21
+                Size: =13
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
@@ -193,7 +194,7 @@ QuickCaptureManagementScreen As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MacFMAQuickCaptures],DataSourceInfo.DisplayName,"crf01_Area")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =93
             Required: =false
             Update: =DataCardValue71.Selected
             Width: =640
@@ -206,7 +207,7 @@ QuickCaptureManagementScreen As screen:
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
-                Size: =21
+                Size: =13
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
@@ -229,7 +230,7 @@ QuickCaptureManagementScreen As screen:
                 DisplayFields: =["crf01_areaid"]
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 1)
-                Height: =70
+                Height: =50
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(62, 74, 83, 1)
                 Items: =Choices([@MacFMAQuickCaptures].crf01_Area)
@@ -240,7 +241,7 @@ QuickCaptureManagementScreen As screen:
                 SearchItems: =Search(Choices([@MacFMAQuickCaptures].crf01_Area),DataCardValue71.SearchText,"crf01_areaid")
                 SelectionFill: =RGBA(100, 118, 132, 1)
                 SelectMultiple: =false
-                Size: =21
+                Size: =13
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
@@ -399,7 +400,7 @@ QuickCaptureManagementScreen As screen:
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
-                Size: =21
+                Size: =13
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
@@ -422,7 +423,7 @@ QuickCaptureManagementScreen As screen:
                 DisplayFields: =["crf01_facilityid"]
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 1)
-                Height: =70
+                Height: =50
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(62, 74, 83, 1)
                 Items: =Choices([@MacFMAQuickCaptures].crf01_Facility)
@@ -433,7 +434,7 @@ QuickCaptureManagementScreen As screen:
                 SearchItems: =Search(Choices([@MacFMAQuickCaptures].crf01_Facility),DataCardValue76.SearchText,"crf01_facilityid")
                 SelectionFill: =RGBA(100, 118, 132, 1)
                 SelectMultiple: =false
-                Size: =21
+                Size: =13
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
@@ -576,7 +577,7 @@ QuickCaptureManagementScreen As screen:
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
-                Size: =21
+                Size: =13
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
@@ -593,7 +594,7 @@ QuickCaptureManagementScreen As screen:
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =21
+                Size: =13
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
@@ -611,7 +612,7 @@ QuickCaptureManagementScreen As screen:
         Visible: =If(ScreenState = 1,true)
         Width: =640
         Y: =502
-        ZIndex: =5
+        ZIndex: =4
 
         "'BtnConfirmAdd(AddingItem)_10' As button":
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -677,7 +678,7 @@ QuickCaptureManagementScreen As screen:
         Width: =573
         X: =36
         Y: =536
-        ZIndex: =6
+        ZIndex: =5
 
     QCManagementAddEditBtns As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
@@ -690,7 +691,7 @@ QuickCaptureManagementScreen As screen:
         Visible: =If(ScreenState = 0,true)
         Width: =640
         Y: =412
-        ZIndex: =7
+        ZIndex: =6
 
         BtnEditQC As button:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -723,7 +724,7 @@ QuickCaptureManagementScreen As screen:
         Width: =600
         X: =19
         Y: =626
-        ZIndex: =8
+        ZIndex: =7
 
         PersonNameLabel_9 As label:
             BorderColor: =RGBA(232, 234, 236, 1)
@@ -740,6 +741,7 @@ QuickCaptureManagementScreen As screen:
             PaddingLeft: =5.00
             Size: =21.00
             Text: ="Problem"
+            Visible: =!ScreenState
             Width: =300
             X: =290
             Y: =1.00
@@ -759,10 +761,754 @@ QuickCaptureManagementScreen As screen:
             PaddingLeft: =5.00
             Size: =21.00
             Text: ="Area"
+            Visible: =!ScreenState
             Width: =290
             X: =27
             Y: =1.00
             ZIndex: =2
+
+    QCToWorkOrderForm As form:
+        BorderColor: =RGBA(197, 203, 207, 1)
+        DataSource: =MacFMAWorkOrders
+        Visible: =ScreenState
+        Width: =640
+        Y: =605
+        ZIndex: =8
+
+        ActionRequired_DataCard3 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_actionrequired"
+            Default: =ThisItem.ActionRequired
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_actionrequired")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@MacFMAWorkOrders], DataSourceInfo.MaxLength, "crf01_actionrequired")
+            Required: =false
+            Update: =DataCardValue80.Text
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey88 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue80 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =50
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey88.Y + DataCardKey88.Height + 5
+                ZIndex: =2
+
+            ErrorMessage81 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue80.Y + DataCardValue80.Height
+                ZIndex: =3
+
+            StarVisible81 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey88.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey88.Y
+                ZIndex: =4
+
+        Problem_DataCard5 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_problem"
+            Default: =ThisItem.Problem
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_problem")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =108
+            MaxLength: =DataSourceInfo([@MacFMAWorkOrders], DataSourceInfo.MaxLength, "crf01_problem")
+            Required: =true
+            Update: =DataCardValue81.Text
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey89 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue81 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =DataCardValue77
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =50
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey89.Y + DataCardKey89.Height + 5
+                ZIndex: =2
+
+            ErrorMessage82 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue81.Y + DataCardValue81.Height
+                ZIndex: =3
+
+            StarVisible82 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey89.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey89.Y
+                ZIndex: =4
+
+        Priority_DataCard3 As typedDataCard.comboBoxOptionSetSingleEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_priority"
+            Default: =ThisItem.Priority
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_priority")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue82.Selected.Value
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey90 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue82 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DefaultSelectedItems: =[Parent.Default]
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =50
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                IsSearchable: =false
+                Items: =Choices(MacFMA)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey90.Y + DataCardKey90.Height + 5
+                ZIndex: =2
+
+            ErrorMessage83 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue82.Y + DataCardValue82.Height
+                ZIndex: =3
+
+            StarVisible83 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey90.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey90.Y
+                ZIndex: =4
+
+        PersonResponsible_DataCard3 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_PersonResponsible"
+            Default: =ThisItem.PersonResponsible
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_PersonResponsible")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =108
+            Required: =false
+            Update: =DataCardValue83.Selected
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey91 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue83 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["crf01_staffid"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =50
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Items: =Choices([@MacFMAWorkOrders].crf01_PersonResponsible)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SearchFields: =["crf01_staffid"]
+                SearchItems: =Search(Choices([@MacFMAWorkOrders].crf01_PersonResponsible),DataCardValue83.SearchText,"crf01_staffid")
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                SelectMultiple: =false
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey91.Y + DataCardKey91.Height + 5
+                ZIndex: =2
+
+            ErrorMessage84 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue83.Y + DataCardValue83.Height
+                ZIndex: =3
+
+            StarVisible84 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey91.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey91.Y
+                ZIndex: =4
+
+        Note_DataCard3 As typedDataCard.textualMultiLineEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_note"
+            Default: =ThisItem.Note
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_note")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue84.Text
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey92 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue84 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =55
+                HoverBorderColor: =RGBA(197, 203, 207, 1)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey92.Y + DataCardKey92.Height + 5
+                ZIndex: =2
+
+            ErrorMessage85 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue84.Y + DataCardValue84.Height
+                ZIndex: =3
+
+            StarVisible85 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey92.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey92.Y
+                ZIndex: =4
+
+        Image_DataCard5 As typedDataCard.addLargePictureCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_image"
+            Default: =ThisItem.Image
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_image")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Image6.Image
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey93 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            Image6 As image:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Height: =AddPicture5.Height
+                Image: =Image3
+                Tooltip: =Parent.DisplayName
+                Width: =AddPicture5.Width
+                X: =AddPicture5.X
+                Y: =AddPicture5.Y
+                ZIndex: =2
+
+            AddPicture5 As addMedia:
+                BorderColor: =RGBA(197, 203, 207, 1)
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =95
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =10
+                ZIndex: =3
+
+            ErrorMessage86 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Image6.Y + Image6.Height
+                ZIndex: =4
+
+            StarVisible86 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey93.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey93.Y
+                ZIndex: =5
+
+        Attachment_DataCard2 As typedDataCard.fileEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_attachment"
+            Default: |-
+                =If(!IsBlank(ThisItem.Attachment.FileName), Table({DisplayName: ThisItem.Attachment.FileName, Value: ThisItem.Attachment.Value}), Blank())
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_attachment")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue85.Attachments
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey94 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue85 As attachments:
+                AddAttachmentText: ="Upload file"
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Height: =104
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                IsInDataCard: =true
+                ItemColor: =RGBA(255, 255, 255, 1)
+                ItemFill: =RGBA(100, 118, 132, 1)
+                ItemHoverColor: =RGBA(255, 255, 255, 1)
+                ItemHoverFill: =RGBA(62, 74, 83, 1)
+                Items: =Parent.Default
+                MaxAttachments: =1
+                MaxAttachmentsText: =""
+                NoAttachmentsText: ="There is no file."
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey94.Y + DataCardKey94.Height + 5
+                ZIndex: =2
+
+            ErrorMessage87 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue85.Y + DataCardValue85.Height
+                ZIndex: =3
+
+            StarVisible87 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey94.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey94.Y
+                ZIndex: =4
+
+        Area_DataCard9 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(197, 203, 207, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crf01_Area"
+            Default: =ThisItem.Area
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@MacFMAWorkOrders],DataSourceInfo.DisplayName,"crf01_Area")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue86.Selected
+            Width: =640
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey95 As label:
+                AutoHeight: =true
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue86 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(100, 118, 132, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["crf01_areaid"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =70
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(62, 74, 83, 1)
+                Items: =Choices([@MacFMAWorkOrders].crf01_Area)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(197, 203, 207, 1)
+                SearchFields: =["crf01_areaid"]
+                SearchItems: =Search(Choices([@MacFMAWorkOrders].crf01_Area),DataCardValue86.SearchText,"crf01_areaid")
+                SelectionFill: =RGBA(100, 118, 132, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey95.Y + DataCardKey95.Height + 5
+                ZIndex: =2
+
+            ErrorMessage88 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue86.Y + DataCardValue86.Height
+                ZIndex: =3
+
+            StarVisible88 As label:
+                Align: =Align.Center
+                Color: =RGBA(197, 203, 207, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey95.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey95.Y
+                ZIndex: =4
 
     FullNavMenuV2_20 As FullNavMenuV2:
         Width: =640
