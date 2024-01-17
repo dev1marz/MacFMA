@@ -195,7 +195,7 @@ WorkOrderManagementScreen As screen:
         Selectable: =If(ScreenState =0, true)
         TemplateFill: =If(ThisItem.IsSelected,Color.LightBlue ,RGBA(0, 0, 0, 0))
         TemplatePadding: =0.00
-        TemplateSize: =61
+        TemplateSize: =32
         Width: =585
         X: =27
         Y: =697
@@ -205,18 +205,17 @@ WorkOrderManagementScreen As screen:
             Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =40.00
+            Height: =25
             OnSelect: =Select(Parent)
             PaddingBottom: =0.00
             PaddingLeft: =0.00
             PaddingRight: =0
             PaddingTop: =0
-            Size: =20.00
             Text: =ThisItem.Problem
             VerticalAlign: =VerticalAlign.Top
             Width: =300
-            X: =17
-            Y: =16.00
+            X: =6
+            Y: =3
             ZIndex: =1
 
         Title4_21 As label:
@@ -224,18 +223,17 @@ WorkOrderManagementScreen As screen:
             Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =40.00
+            Height: =25
             OnSelect: =Select(Parent)
             PaddingBottom: =0.00
             PaddingLeft: =0.00
             PaddingRight: =0
             PaddingTop: =0
-            Size: =20.00
             Text: =ThisItem.ActionRequired
             VerticalAlign: =VerticalAlign.Top
             Width: =255
             X: =321
-            Y: =16.00
+            Y: =3
             ZIndex: =5
 
     WorkOrderManagementForm As form:
