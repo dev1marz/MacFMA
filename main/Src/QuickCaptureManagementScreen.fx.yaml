@@ -186,10 +186,10 @@ QuickCaptureManagementScreen As screen:
             Y: =233
             ZIndex: =7
 
-    "WorkOrderManagementGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+    "QCManagementGallery As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         BorderColor: =RGBA(243, 245, 245, 1)
         Height: =386
-        Items: = If(IsBlank(WorkOrderManagementSearchInput_1.Text),MacFMAWorkOrders,Filter(MacFMAWorkOrders,(WorkOrderManagementSearchInput_1.Text in Problem Or WorkOrderManagementSearchInput_1.Text in ActionRequired)))
+        Items: = If(IsBlank(QCManagementSearchInput.Text),MacFMAQuickCaptures,Filter(MacFMAQuickCaptures,(QCManagementSearchInput.Text in Problem Or  QCManagementSearchInput.Text in Area.AreaID )))
         Layout: =Layout.Vertical
         OnSelect: =
         Selectable: =If(ScreenState =0, true)
@@ -229,20 +229,20 @@ QuickCaptureManagementScreen As screen:
             PaddingLeft: =0.00
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.ActionRequired
+            Text: =ThisItem.Area.AreaID
             VerticalAlign: =VerticalAlign.Top
             Width: =255
             X: =321
             Y: =3
             ZIndex: =5
 
-    WorkOrderManagementForm_1 As form:
+    QCManagementForm As form:
         BorderColor: =RGBA(197, 203, 207, 1)
         DataSource: =MacFMAWorkOrders
         DefaultMode: =If(ScreenState = 1,FormMode.Edit,FormMode.View)
         Height: =430.00
-        Item: =WorkOrderManagementGallery_1.Selected
-        OnFailure: =NewForm(WorkOrderManagementForm_1);Notify("Error!", NotificationType.Error)
+        Item: =QCManagementGallery.Selected
+        OnFailure: =NewForm(QCManagementForm);Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New
         OnSuccess: =Notify("Success",NotificationType.Success)
         Visible: =ScreenState
@@ -1114,7 +1114,7 @@ QuickCaptureManagementScreen As screen:
                 Y: =DataCardKey35_1.Y + DataCardKey35_1.Height + 5
                 ZIndex: =2
 
-    WorkOrderManagementConfirmCancelBtns_1 As groupContainer.horizontalAutoLayoutContainer:
+    QCManagementConfirmCancelBtns As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutGap: =10
@@ -1138,7 +1138,7 @@ QuickCaptureManagementScreen As screen:
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
-            OnSelect: =SubmitForm(WorkOrderManagementForm_1);Set(ScreenState,0)
+            OnSelect: =SubmitForm(QCManagementForm);Set(ScreenState,0)
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
@@ -1158,7 +1158,7 @@ QuickCaptureManagementScreen As screen:
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
-            OnSelect: =ViewForm(WorkOrderManagementForm_1);Set(ScreenState,0)
+            OnSelect: =ViewForm(QCManagementForm);Set(ScreenState,0)
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
@@ -1167,7 +1167,7 @@ QuickCaptureManagementScreen As screen:
             Y: =0.00
             ZIndex: =2
 
-    WorkOrderManagementSearchInput_1 As text:
+    QCManagementSearchInput As text:
         BorderColor: =RGBA(197, 203, 207, 1)
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
@@ -1193,7 +1193,7 @@ QuickCaptureManagementScreen As screen:
         Y: =536
         ZIndex: =6
 
-    WorkOrderManagementAddEditBtns_1 As groupContainer.horizontalAutoLayoutContainer:
+    QCManagementAddEditBtns As groupContainer.horizontalAutoLayoutContainer:
         Height: =124.00
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutGap: =10
@@ -1206,7 +1206,7 @@ QuickCaptureManagementScreen As screen:
         Y: =412
         ZIndex: =7
 
-        "'BtnEdit(ScreenName)_8' As button":
+        BtnEditQC As button:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1217,7 +1217,7 @@ QuickCaptureManagementScreen As screen:
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
-            OnSelect: =Set(ScreenState,1);WorkOrderManagementForm_1.DisplayMode.Edit
+            OnSelect: =Set(ScreenState,1);QCManagementForm.DisplayMode.Edit
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
@@ -1272,7 +1272,7 @@ QuickCaptureManagementScreen As screen:
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =21.00
-            Text: ="Action Required"
+            Text: ="Area"
             Width: =290
             X: =27
             Y: =1.00
