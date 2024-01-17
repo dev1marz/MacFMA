@@ -12709,96 +12709,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.EstateDropdown_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.EstateDropdown_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "QuickCaptureManagementScreen",
-                "type": "QuickCaptureManagementScreen.FilterContainer_2.EstateDropdown_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.FacilityDropdown_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.FacilityDropdown_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "QuickCaptureManagementScreen",
-                "type": "QuickCaptureManagementScreen.FilterContainer_2.FacilityDropdown_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.AreaDropdown_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.AreaDropdown_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "QuickCaptureManagementScreen",
-                "type": "QuickCaptureManagementScreen.FilterContainer_2.AreaDropdown_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "QuickCaptureManagementScreen.QCManagementSearchInput.AccessibleLabel"
                 }
               ],
@@ -13200,6 +13110,36 @@
               },
               "properties": {
                 "member": "varHTML",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.WorkOrderCapContainerVis"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.WorkOrderCapContainerVis",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "WorkOrderCapContainerVis",
                 "module": "App",
                 "type": "App"
               }

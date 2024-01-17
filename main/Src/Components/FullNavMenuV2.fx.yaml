@@ -498,6 +498,82 @@ FullNavMenuV2 As CanvasComponent:
                     Width: =Parent.Width-Parent.PaddingLeft
                     ZIndex: =8
 
+            btnWorkOrderCapture As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =//Set(varNavCompHeight,contHeaderBar.Height);
+                    //Set(WorkOrderCapContainerVis,true);
+                    If(WorkOrderCapContainer.Visible= true ,Set(WorkOrderCapContainerVis, false ),Set(WorkOrderCapContainerVis, true ));
+                Size: =12
+                Text: ="Work Order Capture"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =3
+
+            WorkOrderCapContainer As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                Height: =6*varNavPaneBtnsHeight*0.75+6*varNavPaneGapHeight
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =8
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Visible: =DataCapContainerVis
+                Width: =208
+                ZIndex: =4
+
+                btnCaptureWorkOrder As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(100, 118, 132, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =varNavPaneBtnsHeight*0.75
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |-
+                        =Set(varNavCompHeight,contHeaderBar.Height);
+                        Set(contUtilManMenuVis,false);Navigate(CaptureWorkOrderScreen);
+                    Size: =12
+                    Text: ="Capture Work Order"
+                    Width: =Parent.Width-Parent.PaddingLeft
+                    ZIndex: =9
+
+                btnManageWorkOrder As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(100, 118, 132, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =varNavPaneBtnsHeight*0.75
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =280
+                    OnSelect: |-
+                        =Set(varNavCompHeight,contHeaderBar.Height);
+                        Set(contUtilManMenuVis,false);Navigate(WorkOrderManagementScreen);
+                    Size: =12
+                    Text: ="Manage Work Order"
+                    Width: =Parent.Width-Parent.PaddingLeft
+                    ZIndex: =10
+
             btnVendorVisit As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -515,7 +591,7 @@ FullNavMenuV2 As CanvasComponent:
                 Size: =12
                 Text: ="Vendor Visits"
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =3
+                ZIndex: =5
 
             btnMaintanance As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -533,44 +609,6 @@ FullNavMenuV2 As CanvasComponent:
                     Set(contUtilManMenuVis,false);Navigate(MaintainanceScreen);
                 Size: =12
                 Text: ="Maintanance Schedule"
-                Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =4
-
-            btnCaptureWorkOrder As button:
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(100, 118, 132, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =varNavPaneBtnsHeight*0.75
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                LayoutMinHeight: =70
-                LayoutMinWidth: =280
-                OnSelect: |-
-                    =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);Navigate(CaptureWorkOrderScreen);
-                Size: =12
-                Text: ="Capture Work Order"
-                Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =5
-
-            btnManageWorkOrder As button:
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(100, 118, 132, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =varNavPaneBtnsHeight*0.75
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-                LayoutMinHeight: =70
-                LayoutMinWidth: =280
-                OnSelect: |-
-                    =Set(varNavCompHeight,contHeaderBar.Height);
-                    Set(contUtilManMenuVis,false);Navigate(WorkOrderManagementScreen);
-                Size: =12
-                Text: ="Manage Work Order"
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =6
 
@@ -614,6 +652,25 @@ FullNavMenuV2 As CanvasComponent:
                 Width: =Parent.Width-Parent.PaddingLeft
                 ZIndex: =8
 
+            btnEquiptmentAssets_1 As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(100, 118, 132, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =varNavPaneBtnsHeight*0.75
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: |-
+                    =Set(varNavCompHeight,contHeaderBar.Height);
+                    Set(contUtilManMenuVis,false);Navigate(EquiptmentAndAssetsScreen);
+                Size: =12
+                Text: ="Equipment & Assets"
+                Width: =Parent.Width-Parent.PaddingLeft
+                ZIndex: =9
+
             btnDashboards As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -632,7 +689,7 @@ FullNavMenuV2 As CanvasComponent:
                 Size: =12
                 Text: ="Dashboards"
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =9
+                ZIndex: =10
 
             btnReporting As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -652,7 +709,7 @@ FullNavMenuV2 As CanvasComponent:
                 Size: =12
                 Text: ="Reports"
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =10
+                ZIndex: =11
 
             contUtilManMenu As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -671,7 +728,7 @@ FullNavMenuV2 As CanvasComponent:
                 RadiusTopRight: =4
                 Visible: =contUtilManMenuVis
                 Width: =Parent.Width-Parent.PaddingLeft
-                ZIndex: =11
+                ZIndex: =12
 
                 btnFacilityTaskManagement As button:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -1121,6 +1178,7 @@ FullNavMenuV2 As CanvasComponent:
                 Set(contFleetManMenuVis, false);
                 Set(contUtilManMenuVis,false);
                 Set(DataCapContainerVis,false);
+                Set(WorkOrderCapContainerVis,false);
                 Set(colBtn, RGBA(100, 118, 132, 1));
                 Set(colMenu, RGBA(0, 0, 0, 0.2));
                 //If(varContMenuWidth=0;Set(varContMenuWidth;contMenuWidth);Set(varContMenuWidth;0));;
