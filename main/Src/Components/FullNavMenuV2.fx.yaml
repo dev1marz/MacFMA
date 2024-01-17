@@ -320,6 +320,7 @@ FullNavMenuV2 As CanvasComponent:
                 OnSelect: |-
                     =//Set(varNavCompHeight,contHeaderBar.Height);
                     //Set(DataCapContainerVis,true);
+                    Set(WorkOrderCapContainerVis, false );
                     If(DataCapContainer.Visible= true ,Set(DataCapContainerVis, false ),Set(DataCapContainerVis, true ));
                 Size: =12
                 Text: ="Data Capture"
@@ -348,7 +349,7 @@ FullNavMenuV2 As CanvasComponent:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(122, 138, 143, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =varNavPaneBtnsHeight*0.75
                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -369,7 +370,7 @@ FullNavMenuV2 As CanvasComponent:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(122, 138, 143, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =varNavPaneBtnsHeight*0.75
                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -388,7 +389,7 @@ FullNavMenuV2 As CanvasComponent:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(122, 138, 143, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =varNavPaneBtnsHeight*0.75
                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -407,7 +408,7 @@ FullNavMenuV2 As CanvasComponent:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(122, 138, 143, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =varNavPaneBtnsHeight*0.75
                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -426,7 +427,7 @@ FullNavMenuV2 As CanvasComponent:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(122, 138, 143, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =varNavPaneBtnsHeight*0.75
                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -445,7 +446,7 @@ FullNavMenuV2 As CanvasComponent:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(122, 138, 143, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =varNavPaneBtnsHeight*0.75
                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -464,7 +465,7 @@ FullNavMenuV2 As CanvasComponent:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(122, 138, 143, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =varNavPaneBtnsHeight*0.75
                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -512,6 +513,7 @@ FullNavMenuV2 As CanvasComponent:
                 OnSelect: |-
                     =//Set(varNavCompHeight,contHeaderBar.Height);
                     //Set(WorkOrderCapContainerVis,true);
+                    Set(DataCapContainerVis,false);
                     If(WorkOrderCapContainer.Visible= true ,Set(WorkOrderCapContainerVis, false ),Set(WorkOrderCapContainerVis, true ));
                 Size: =12
                 Text: ="Work Order Capture"
@@ -522,7 +524,7 @@ FullNavMenuV2 As CanvasComponent:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 FillPortions: =0
-                Height: =3*varNavPaneBtnsHeight*0.75+3*varNavPaneGapHeight
+                Height: =2*varNavPaneBtnsHeight*0.75+4*varNavPaneGapHeight
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutGap: =8
                 LayoutMinHeight: =112
@@ -532,7 +534,7 @@ FullNavMenuV2 As CanvasComponent:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Visible: =DataCapContainerVis
+                Visible: =WorkOrderCapContainerVis
                 Width: =208
                 ZIndex: =4
 
@@ -540,7 +542,7 @@ FullNavMenuV2 As CanvasComponent:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(122, 138, 143, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =varNavPaneBtnsHeight*0.75
                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -559,7 +561,7 @@ FullNavMenuV2 As CanvasComponent:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(122, 138, 143, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =varNavPaneBtnsHeight*0.75
                     HoverColor: =RGBA(255, 255, 255, 1)
@@ -578,7 +580,7 @@ FullNavMenuV2 As CanvasComponent:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(100, 118, 132, 1)
+                    Fill: =RGBA(122, 138, 143, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =varNavPaneBtnsHeight*0.75
                     HoverColor: =RGBA(255, 255, 255, 1)
