@@ -435,7 +435,7 @@
       "MetaDataIDKey": "",
       "Name": "btnCaptureWorkOrder",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1480,7 +1480,7 @@
       "MetaDataIDKey": "",
       "Name": "btnDashboards",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2482,7 +2482,7 @@
       "MetaDataIDKey": "",
       "Name": "btnElecmeterRecording",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7347,7 +7347,7 @@
       "MetaDataIDKey": "",
       "Name": "btnMaintanance",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7658,7 +7658,7 @@
       "MetaDataIDKey": "",
       "Name": "btnManageWorkOrder",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7969,7 +7969,7 @@
       "MetaDataIDKey": "",
       "Name": "btnReporting",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10793,7 +10793,7 @@
       "MetaDataIDKey": "",
       "Name": "btnVendorVisit",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11104,7 +11104,7 @@
       "MetaDataIDKey": "",
       "Name": "btnWatermeterRecording",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12235,7 +12235,7 @@
       "MetaDataIDKey": "",
       "Name": "contDocCapBtn",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12520,7 +12520,7 @@
       "MetaDataIDKey": "",
       "Name": "contDocCapMenu",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12754,7 +12754,7 @@
       "MetaDataIDKey": "",
       "Name": "contFacManBtn",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13017,7 +13017,7 @@
       "MetaDataIDKey": "",
       "Name": "contFacManMenu",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13246,7 +13246,7 @@
       "MetaDataIDKey": "",
       "Name": "contFleetManBtn",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13509,7 +13509,7 @@
       "MetaDataIDKey": "",
       "Name": "contFleetManMenu",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13933,7 +13933,7 @@
       "MetaDataIDKey": "",
       "Name": "contHomeBtn",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14692,7 +14692,7 @@
       "MetaDataIDKey": "",
       "Name": "contUtilManMenu",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14943,7 +14943,7 @@
       "MetaDataIDKey": "",
       "Name": "DataCapContainer",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

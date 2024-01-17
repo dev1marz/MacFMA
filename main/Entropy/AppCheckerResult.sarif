@@ -12629,6 +12629,456 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Priority_DataCard2_1.DataCardValue21_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Priority_DataCard2_1.DataCardValue21_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Priority_DataCard2_1.DataCardValue21_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Problem_DataCard2_1.DataCardValue41_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Problem_DataCard2_1.DataCardValue41_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Problem_DataCard2_1.DataCardValue41_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.ActionRequired_DataCard2_1.DataCardValue44_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.ActionRequired_DataCard2_1.DataCardValue44_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.ActionRequired_DataCard2_1.DataCardValue44_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.PersonResponsible_DataCard2_1.DataCardValue47_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.PersonResponsible_DataCard2_1.DataCardValue47_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.PersonResponsible_DataCard2_1.DataCardValue47_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.DateIssued_DataCard2_1.DateValue6_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.DateIssued_DataCard2_1.DateValue6_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.DateIssued_DataCard2_1.DateValue6_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Area_DataCard6_1.DataCardValue66_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Area_DataCard6_1.DataCardValue66_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Area_DataCard6_1.DataCardValue66_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Image_DataCard2_1.AddPicture2_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Image_DataCard2_1.AddPicture2_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Image_DataCard2_1.AddPicture2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Note_DataCard1_1.DataCardValue67_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Note_DataCard1_1.DataCardValue67_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Note_DataCard1_1.DataCardValue67_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Completed_DataCard1_1.DataCardValue68_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Completed_DataCard1_1.DataCardValue68_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementForm_1.Completed_DataCard1_1.DataCardValue68_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.EstateDropdown_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.EstateDropdown_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.FilterContainer_2.EstateDropdown_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.FacilityDropdown_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.FacilityDropdown_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.FilterContainer_2.FacilityDropdown_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.AreaDropdown_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.FilterContainer_2.AreaDropdown_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.FilterContainer_2.AreaDropdown_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementSearchInput_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementSearchInput_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementSearchInput_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementGallery_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementGallery_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementGallery_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementGallery_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.WorkOrderManagementGallery_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen.WorkOrderManagementGallery_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varNavPaneHeight"
                 }
               ],
@@ -13199,49 +13649,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CaptureWorkOrderScreen.OnVisible"
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.OnVisible"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CaptureWorkOrderScreen.OnVisible",
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.OnVisible",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "OnVisible",
-                "module": "CaptureWorkOrderScreen",
-                "type": "CaptureWorkOrderScreen"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "WorkOrderManagementScreen.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "WorkOrderManagementScreen.OnVisible",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "WorkOrderManagementScreen",
-                "type": "WorkOrderManagementScreen"
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen"
               }
             }
           ],
@@ -13319,6 +13739,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "CaptureWorkOrderScreen.OnVisible"
                 }
               ],
@@ -13362,6 +13812,126 @@
                 "member": "OnVisible",
                 "module": "WorkOrderManagementScreen",
                 "type": "WorkOrderManagementScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CaptureWorkOrderScreen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CaptureWorkOrderScreen.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "CaptureWorkOrderScreen",
+                "type": "CaptureWorkOrderScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "WorkOrderManagementScreen",
+                "type": "WorkOrderManagementScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "QuickCaptureManagementScreen.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "QuickCaptureManagementScreen",
+                "type": "QuickCaptureManagementScreen"
               }
             }
           ],

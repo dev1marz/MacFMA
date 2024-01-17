@@ -138,6 +138,7 @@
     "ProfileScreen",
     "CaptureWorkOrderScreen",
     "WorkOrderManagementScreen",
+    "QuickCaptureManagementScreen",
     "EstateScreen",
     "VendorScreen",
     "VendorVisitScreen",
