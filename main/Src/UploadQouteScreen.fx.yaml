@@ -1,7 +1,7 @@
 UploadQouteScreen As screen:
     Fill: =RGBA(29, 29, 29, 1)
     LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
-    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"setScreenName");
+    OnVisible: =Set(NavigationMenu,0);Set(ScreenState,0);Set(ScreenDisplayName,"Upload Qoutes");
 
     AddFormQoute As form:
         BorderColor: =RGBA(197, 203, 207, 1)
@@ -512,7 +512,7 @@ UploadQouteScreen As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =4
-            Text: =ThisItem.createdon
+            Text: =Text(ThisItem.'Created On',DateTimeFormat.ShortDate,"en-GB")
             Width: =100
             X: =0
             Y: =0

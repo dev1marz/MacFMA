@@ -22,6 +22,7 @@
       "crf01_dateissued": "DateIssued",
       "crf01_image": "Image",
       "crf01_imageid": "crf01_ImageId",
+      "crf01_macfmaqoutes_WorkOrder_crf01_macfmaworkor": "MacFMAQoutes",
       "crf01_macfmaworkorders_AsyncOperations": "System Jobs",
       "crf01_macfmaworkorders_BulkDeleteFailures": "Bulk Delete Failures",
       "crf01_macfmaworkorders_DuplicateBaseRecord": "Duplicate Records (crf01_macfmaworkorders_DuplicateBaseRecord)",

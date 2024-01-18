@@ -15,6 +15,7 @@
       "crf01_address": "Address",
       "crf01_contactnumber": "ContactNumber",
       "crf01_crf01_macvendorvisits_Vendor_crf01_macven": "MacVendorVisits",
+      "crf01_macfmaqoutes_Vendor_crf01_macvendorsandco": "MacFMAQoutes",
       "crf01_macvendorsandcontracs_AsyncOperations": "System Jobs",
       "crf01_macvendorsandcontracs_BulkDeleteFailures": "Bulk Delete Failures",
       "crf01_macvendorsandcontracs_DuplicateBaseRecord": "Duplicate Records (crf01_macvendorsandcontracs_DuplicateBaseRecord)",

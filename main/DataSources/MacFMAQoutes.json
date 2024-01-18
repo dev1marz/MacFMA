@@ -6,12 +6,14 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "crf01_macfmaqoutes",
+    "MaxGetRowsCount": 500,
     "Name": "MacFMAQoutes",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",
+      "crf01_approved": "Approved",
       "crf01_macfmaqoutes_AsyncOperations": "System Jobs",
       "crf01_macfmaqoutes_BulkDeleteFailures": "Bulk Delete Failures",
       "crf01_macfmaqoutes_FileAttachments": "FileAttachments",
@@ -54,6 +56,26 @@
       "90d52182-0926-4eac-8f72-b2e60e1f0168": "MacFMAQoutes Associated View",
       "b1b666f2-6130-400b-9e44-23de0600d840": "Active MacFMAQoutes"
     }
+  },
+  {
+    "DisplayName": "Approved (MacFMAQoutes)",
+    "Name": "crf01_macfmaqoutes_crf01_approved",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "crf01_approved",
+        "OptionSetReferenceEntityName": "MacFMAQoutes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "crf01_approved",
+    "RelatedEntityName": "MacFMAQoutes",
+    "Type": "OptionSetInfo"
   },
   {
     "DisplayName": "Status (MacFMAQoutes)",

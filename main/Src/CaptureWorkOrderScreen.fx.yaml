@@ -109,7 +109,7 @@ CaptureWorkOrderScreen As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =4
-            Text: =ThisItem.createdon
+            Text: =Text(ThisItem.'Created On',DateTimeFormat.ShortDate,"en-GB")
             Width: =100
             X: =0
             Y: =0
