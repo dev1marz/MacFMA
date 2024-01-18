@@ -38,6 +38,7 @@
       "crf01_PersonResponsible": "PersonResponsible",
       "crf01_priority": "Priority",
       "crf01_problem": "Problem",
+      "crf01_Room": "Room",
       "importsequencenumber": "Import Sequence Number",
       "modifiedby": "Modified By",
       "modifiedon": "Modified On",

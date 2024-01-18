@@ -8322,7 +8322,7 @@
       "MetaDataIDKey": "",
       "Name": "btnManageQoute",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10559,7 +10559,7 @@
       "MetaDataIDKey": "",
       "Name": "btnUploadQoute",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13379,7 +13379,7 @@
       "MetaDataIDKey": "",
       "Name": "btnWorkOrderCapture",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14165,7 +14165,7 @@
       "MetaDataIDKey": "",
       "Name": "contDocCapMenu",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14399,7 +14399,7 @@
       "MetaDataIDKey": "",
       "Name": "contFacManBtn",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14662,7 +14662,7 @@
       "MetaDataIDKey": "",
       "Name": "contFacManMenu",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16588,7 +16588,7 @@
       "MetaDataIDKey": "",
       "Name": "DataCapContainer",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19856,7 +19856,7 @@
       "MetaDataIDKey": "",
       "Name": "WorkOrderCapContainer",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

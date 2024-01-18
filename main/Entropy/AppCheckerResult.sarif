@@ -13389,6 +13389,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CaptureWorkOrderScreen.CaptureWorkOrderAddForm.Room_DataCard1.DataCardValue95.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CaptureWorkOrderScreen.CaptureWorkOrderAddForm.Room_DataCard1.DataCardValue95.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CaptureWorkOrderScreen",
+                "type": "CaptureWorkOrderScreen.CaptureWorkOrderAddForm.Room_DataCard1.DataCardValue95"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "QouteManagementScreen.QouteManagementForm.Approved_DataCard1.DataCardValue94.AccessibleLabel"
                 }
               ],
