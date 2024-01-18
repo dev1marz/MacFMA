@@ -256,7 +256,7 @@ ReportsScreen As screen:
                     Width: =187
                     Wrap: =false
                     X: =11
-                    Y: =15
+                    Y: =35
                     ZIndex: =2
 
                 Label2_1 As label:
@@ -271,8 +271,22 @@ ReportsScreen As screen:
                     Width: =187
                     Wrap: =false
                     X: =11
-                    Y: =40
+                    Y: =55
                     ZIndex: =3
+
+                Label2_2 As label:
+                    BorderColor: =RGBA(197, 203, 207, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =20
+                    Size: =8
+                    Text: |-
+                        ="Facility Manager:  "& LookUp(MacFMAFacilities,FacilityReportDropdown.SelectedText.Value=HeadOfFacility)
+                    Width: =187
+                    Wrap: =false
+                    X: =11
+                    Y: =15
+                    ZIndex: =4
 
             AreasLabels_1 As groupContainer.horizontalAutoLayoutContainer:
                 BorderColor: =RGBA(220, 224, 226, 1)
