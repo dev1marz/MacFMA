@@ -15772,7 +15772,14 @@
         "PrimaryColor1",
         "PrimaryColor2",
         "PrimaryColor3",
-        "SelectedFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(100, 118, 132, .2)",
+          "InvariantPropertyName": "SelectedFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "SelectedColor",
         "HoverFill",
         "HoverColor",

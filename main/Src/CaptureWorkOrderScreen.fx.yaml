@@ -52,7 +52,7 @@ CaptureWorkOrderScreen As screen:
         PrimaryColor2: =RGBA(197, 203, 207, 1)
         PrimaryColor3: =RGBA(62, 74, 83, 1)
         SelectedColor: =RGBA(255, 255, 255, 1)
-        SelectedFill: =RGBA(100, 118, 132, .2)
+        SelectedFill: =Color.LightBlue
         Size: =14
         Width: =640
         X: =0
