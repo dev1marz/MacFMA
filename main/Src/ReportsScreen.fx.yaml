@@ -377,11 +377,10 @@ ReportsScreen As screen:
                     LayoutMinHeight: =70
                     LayoutMinWidth: =560
                     PaddingBottom: =5.00
-                    PaddingLeft: =15
                     PaddingRight: =0
                     Size: =13
                     Text: ="Problem"
-                    Width: =130
+                    Width: =190
                     X: =27
                     Y: =0.00
                     ZIndex: =4
@@ -396,7 +395,7 @@ ReportsScreen As screen:
                     LayoutMinHeight: =70
                     LayoutMinWidth: =560
                     PaddingBottom: =5.00
-                    PaddingLeft: =30
+                    PaddingLeft: =20
                     Size: =13
                     Text: ="Image"
                     Width: =100
