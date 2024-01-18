@@ -226,6 +226,18 @@ ReportsScreen As screen:
             Y: =3
             ZIndex: =3
 
+            Image5 As image:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(197, 203, 207, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Image: ='Macadamia Properties'
+                LayoutMinHeight: =320
+                LayoutMinWidth: =320
+                Width: =500
+                Y: =3
+                ZIndex: =1
+
             "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(197, 203, 207, 1)
@@ -239,7 +251,7 @@ ReportsScreen As screen:
                 TemplatePadding: =0
                 TemplateSize: =50
                 Width: =500
-                ZIndex: =1
+                ZIndex: =2
 
                 Image7 As image:
                     BorderColor: =RGBA(197, 203, 207, 1)
@@ -318,18 +330,6 @@ ReportsScreen As screen:
                     X: =100
                     Y: =8
                     ZIndex: =6
-
-            Image5 As image:
-                AlignInContainer: =AlignInContainer.Center
-                BorderColor: =RGBA(197, 203, 207, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Image: ='Macadamia Properties'
-                LayoutMinHeight: =320
-                LayoutMinWidth: =320
-                Width: =500
-                Y: =3
-                ZIndex: =1
 
     ReportFilterContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
