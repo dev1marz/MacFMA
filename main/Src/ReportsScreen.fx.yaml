@@ -194,12 +194,13 @@ ReportsScreen As screen:
     HTMLContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =594
+        Height: =625
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Visible: =!varPDF
+        Width: =580
         X: =30
         Y: =212
         ZIndex: =3
@@ -216,13 +217,14 @@ ReportsScreen As screen:
 
         Container1 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =591
+            Height: =622
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
+            Width: =580
             Y: =3
             ZIndex: =3
 
@@ -237,6 +239,7 @@ ReportsScreen As screen:
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
+                Width: =580
                 ZIndex: =1
 
                 Image5 As image:
@@ -245,7 +248,7 @@ ReportsScreen As screen:
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     Image: ='Macadamia Properties'
                     Width: =360
-                    X: =140
+                    X: =212
                     ZIndex: =1
 
                 Label2 As label:
@@ -403,7 +406,7 @@ ReportsScreen As screen:
 
             "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
                 AlignInContainer: =AlignInContainer.SetByContainer
-                BorderColor: =RGBA(197, 203, 207, 1)
+                BorderThickness: =1
                 DelayItemLoading: =true
                 Height: =200
                 Items: =varWorkOrders
@@ -413,7 +416,7 @@ ReportsScreen As screen:
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
                 TemplateSize: =50
-                Width: =500
+                Width: =580
                 ZIndex: =3
 
                 Image7 As image:
@@ -429,7 +432,7 @@ ReportsScreen As screen:
                     RadiusTopLeft: =8
                     RadiusTopRight: =8
                     Width: =60
-                    X: =440
+                    X: =475
                     ZIndex: =1
 
                 Title2 As label:
@@ -473,6 +476,7 @@ ReportsScreen As screen:
                     Text: =ThisItem.ActionRequired
                     VerticalAlign: =VerticalAlign.Top
                     Width: =183
+                    Wrap: =false
                     X: =280
                     Y: =8
                     ZIndex: =5
@@ -519,6 +523,7 @@ ReportsScreen As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
+        Width: =580
         X: =30
         Y: =60
         ZIndex: =4
@@ -686,8 +691,8 @@ ReportsScreen As screen:
             Set(myPDF,PDF(HTMLContainer,{DPI:70,Margin:"10pt",ExpandContainers: true}));
             
             Set(varPDF,1);
-        X: =562
-        Y: =180
+        X: =547
+        Y: =72
         ZIndex: =5
 
     PdfViewer1 As pdfViewer:
@@ -732,8 +737,8 @@ ReportsScreen As screen:
         Size: =21
         Tooltip: =
         Width: =78
-        X: =562
-        Y: =270
+        X: =547
+        Y: =144
         ZIndex: =7
 
     Icon3_2 As icon.DocumentPDF:
@@ -743,13 +748,9 @@ ReportsScreen As screen:
         DisabledColor: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(214, 221, 224, 1)
         Icon: =Icon.Download
-        OnSelect: |-
-            =HtmlText2.AutoHeight=true;
-            Set(myPDF,PDF(HTMLContainer,{DPI:70,Margin:"10pt",ExpandContainers: true}));
-            
-            Set(varPDF,1);
-        X: =562
-        Y: =270
+        OnSelect: =
+        X: =546
+        Y: =142
         ZIndex: =8
 
     FullNavMenuV2_19 As FullNavMenuV2:
