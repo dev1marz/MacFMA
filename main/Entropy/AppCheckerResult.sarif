@@ -8800,19 +8800,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReportsScreen.HTMLContainer.Container1.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "ReportsScreen.HTMLContainer.Container1.WorkOrderReportGallery.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReportsScreen.HTMLContainer.Container1.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "ReportsScreen.HTMLContainer.Container1.WorkOrderReportGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReportsScreen",
-                "type": "ReportsScreen.HTMLContainer.Container1.Gallery1"
+                "type": "ReportsScreen.HTMLContainer.Container1.WorkOrderReportGallery"
               }
             }
           ],
@@ -8830,19 +8830,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReportsScreen.HTMLContainer.Container1.Gallery1.TabIndex"
+                  "fullyQualifiedName": "ReportsScreen.HTMLContainer.Container1.WorkOrderReportGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReportsScreen.HTMLContainer.Container1.Gallery1.TabIndex",
+                  "fullyQualifiedName": "ReportsScreen.HTMLContainer.Container1.WorkOrderReportGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ReportsScreen",
-                "type": "ReportsScreen.HTMLContainer.Container1.Gallery1"
+                "type": "ReportsScreen.HTMLContainer.Container1.WorkOrderReportGallery"
               }
             }
           ],
