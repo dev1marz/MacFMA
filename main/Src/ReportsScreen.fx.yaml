@@ -413,7 +413,8 @@ ReportsScreen As screen:
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
-                TemplateFill: =If(Text(ThisItem.Priority)="High",Color.Red,RGBA(0, 0, 0, 0))
+                TemplateFill: |
+                    =If(Text(ThisItem.Priority)="High",Color.Red,If(Text(ThisItem.Priority)="Medium",Color.Orange,If(Text(ThisItem.Priority)="Low",Color.GreenYellow,RGBA(0,0,0,0))))
                 TemplatePadding: =0
                 TemplateSize: =50
                 Width: =580
