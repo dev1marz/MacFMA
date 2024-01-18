@@ -23,6 +23,7 @@
       "crf01_macfmarooms_ProcessSession": "Process Sessions",
       "crf01_macfmarooms_SyncErrors": "Sync Errors",
       "crf01_macfmaroomsid": "MacFMARooms",
+      "crf01_macfmaworkorders_Room_crf01_macfmarooms": "MacFMAWorkOrders",
       "crf01_roomid": "RoomID",
       "importsequencenumber": "Import Sequence Number",
       "modifiedby": "Modified By",

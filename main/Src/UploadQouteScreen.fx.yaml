@@ -145,7 +145,7 @@ UploadQouteScreen As screen:
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
                 Color: =RGBA(255, 255, 255, 1)
                 Default: =WorkOrderDataTable_1.Selected
-                DefaultSelectedItems: =Parent.Default
+                DefaultSelectedItems: =WorkOrderDataTable_1.Selected
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
