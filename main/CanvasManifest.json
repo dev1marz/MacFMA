@@ -137,6 +137,7 @@
     "ViewAddTemplate",
     "ProfileScreen",
     "CaptureWorkOrderScreen",
+    "UploadQouteScreen",
     "WorkOrderManagementScreen",
     "QuickCaptureManagementScreen",
     "EstateScreen",

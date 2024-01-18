@@ -581,6 +581,13 @@
       "Values": {
         "Information": "aae08838-9e95-4051-8aaf-ebf37e4adcda"
       }
+    },
+    {
+      "Kind": "default.cds_crf01_macfmaqoutes_forms",
+      "Namespace": "MacFMAQoutes (Forms)",
+      "Values": {
+        "Information": "ef8a35d7-2fff-4192-b512-a0f2e7779d72"
+      }
     }
   ]
 }

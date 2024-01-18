@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crf01_macfmaqouteses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crf01_macfmaqoutes",
+    "Name": "MacFMAQoutes",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "crf01_macfmaqoutes_AsyncOperations": "System Jobs",
+      "crf01_macfmaqoutes_BulkDeleteFailures": "Bulk Delete Failures",
+      "crf01_macfmaqoutes_FileAttachments": "FileAttachments",
+      "crf01_macfmaqoutes_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "crf01_macfmaqoutes_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "crf01_macfmaqoutes_ProcessSession": "Process Sessions",
+      "crf01_macfmaqoutes_SyncErrors": "Sync Errors",
+      "crf01_macfmaqoutesid": "MacFMAQoutes",
+      "crf01_qoute": "Qoute",
+      "crf01_qoutenumber": "QouteNumber",
+      "crf01_Vendor": "Vendor",
+      "crf01_WorkOrder": "WorkOrder",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "MacFMAQoutes",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "MacFMAQoutes (Views)",
+    "Name": "_crf01_macfmaqoutes_views",
+    "RelatedEntityName": "MacFMAQoutes",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "45d93b7f-11bf-46ab-a0a9-455d43404be9": "MacFMAQoutes Lookup View",
+      "650ca388-c37c-4cd2-9640-af8cf520f220": "Inactive MacFMAQoutes",
+      "749c0f45-7838-4b31-8bb5-1ae7059c06c6": "MacFMAQoutes Advanced Find View",
+      "90d52182-0926-4eac-8f72-b2e60e1f0168": "MacFMAQoutes Associated View",
+      "b1b666f2-6130-400b-9e44-23de0600d840": "Active MacFMAQoutes"
+    }
+  },
+  {
+    "DisplayName": "Status (MacFMAQoutes)",
+    "Name": "crf01_macfmaqoutes_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "MacFMAQoutes"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "MacFMAQoutes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (MacFMAQoutes)",
+    "Name": "crf01_macfmaqoutes_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "MacFMAQoutes"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "MacFMAQoutes",
+    "Type": "OptionSetInfo"
+  }
+]

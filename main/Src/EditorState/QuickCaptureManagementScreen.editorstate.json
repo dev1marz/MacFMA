@@ -79,7 +79,7 @@
       "MetaDataIDKey": "",
       "Name": "ActionRequired_DataCard3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -811,7 +811,7 @@
       "MetaDataIDKey": "",
       "Name": "Area_DataCard9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1125,7 +1125,7 @@
       "MetaDataIDKey": "",
       "Name": "Attachment_DataCard2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15749,7 +15749,7 @@
       "MetaDataIDKey": "",
       "Name": "Image_DataCard5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16620,7 +16620,7 @@
       "MetaDataIDKey": "",
       "Name": "Note_DataCard3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17487,7 +17487,7 @@
       "MetaDataIDKey": "",
       "Name": "PersonResponsible_DataCard3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17635,7 +17635,7 @@
       "MetaDataIDKey": "",
       "Name": "Priority_DataCard3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
