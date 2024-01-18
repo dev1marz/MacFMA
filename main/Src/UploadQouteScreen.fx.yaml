@@ -36,7 +36,6 @@ UploadQouteScreen As screen:
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
-                Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
@@ -70,7 +69,7 @@ UploadQouteScreen As screen:
                 SearchItems: =Search(Choices([@MacFMAQoutes].crf01_Vendor),DataCardValue79.SearchText,"crf01_vendorid")
                 SelectionFill: =RGBA(100, 118, 132, 1)
                 SelectMultiple: =false
-                Size: =21
+                Size: =14
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
@@ -130,7 +129,6 @@ UploadQouteScreen As screen:
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
-                Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
@@ -164,7 +162,7 @@ UploadQouteScreen As screen:
                 SearchItems: =Search(Choices([@MacFMAQoutes].crf01_WorkOrder),DataCardValue88.SearchText,"crf01_orderid")
                 SelectionFill: =RGBA(100, 118, 132, 1)
                 SelectMultiple: =false
-                Size: =21
+                Size: =14
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
@@ -225,7 +223,6 @@ UploadQouteScreen As screen:
                 Color: =RGBA(197, 203, 207, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Height: =48
-                Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
@@ -244,7 +241,7 @@ UploadQouteScreen As screen:
                 DisplayMode: =Parent.DisplayMode
                 Fill: =RGBA(0, 0, 0, 1)
                 FocusedBorderThickness: =4
-                Height: =170
+                Height: =135
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(62, 74, 83, 1)
                 IsInDataCard: =true
@@ -262,7 +259,7 @@ UploadQouteScreen As screen:
                 PaddingTop: =5
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(197, 203, 207, 1)
-                Size: =21
+                Size: =14
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
