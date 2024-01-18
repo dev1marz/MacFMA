@@ -227,8 +227,12 @@ ReportsScreen As screen:
             ZIndex: =3
 
             Container5 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
+                FillPortions: =0
                 Height: =100
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
