@@ -477,7 +477,16 @@ ReportsScreen As screen:
             Fill: =RGBA(139, 154, 159, 1)
             Height: =57
             Icon: =Icon.Reset
-            OnSelect: =ClearCollect(varWorkOrders,MacFMAWorkOrders);
+            OnSelect: |-
+                =Set(varPDF,0);
+                ClearCollect(varWorkOrders,MacFMAWorkOrders);
+                ClearCollect(colAllWorkOrders,MacFMAWorkOrders);
+                
+                ClearCollect(
+                    varWorkOrders,
+                    SortByColumns(
+                        varWorkOrders,"crf01_completed",SortOrder.Ascending
+                ))
             Width: =55
             X: =371
             Y: =80

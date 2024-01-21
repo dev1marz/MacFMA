@@ -14230,6 +14230,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.Icon4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.Icon4.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ReportsScreen",
+                "type": "ReportsScreen.ReportFilterContainer.Icon4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.SearchIcon3.OnSelect"
                 }
               ],
