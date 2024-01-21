@@ -450,7 +450,7 @@ ReportsScreen As screen:
             ChevronHoverBackground: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             ChevronHoverFill: =RGBA(255, 255, 255, 1)
             Color: =RGBA(255, 255, 255, 1)
-            Default: =" "
+            Default: =""
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -459,7 +459,9 @@ ReportsScreen As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(62, 74, 83, 1)
             Items: =MacFMAEstates
-            OnChange: =ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.Selected.EstateID))
+            OnChange: |-
+                =ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.Selected.EstateID));
+                Set(varFac,true);
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(197, 203, 207, 1)
             SelectionFill: =RGBA(100, 118, 132, 1)
@@ -486,7 +488,10 @@ ReportsScreen As screen:
                     varWorkOrders,
                     SortByColumns(
                         varWorkOrders,"crf01_completed",SortOrder.Ascending
-                ))
+                ));
+                
+                Set(varFac,false);
+                Reset(EstateDropdown)
             Width: =55
             X: =371
             Y: =80
@@ -515,6 +520,7 @@ ReportsScreen As screen:
             PressedFill: =RGBA(197, 203, 207, 1)
             SelectionFill: =RGBA(100, 118, 132, 1)
             Size: =14
+            Visible: =varFac
             Width: =172
             X: =187
             Y: =80
