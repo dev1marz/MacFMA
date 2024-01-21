@@ -14,7 +14,7 @@ ReportsScreen As screen:
         ClearCollect(
             varWorkOrders,
             SortByColumns(
-                varWorkOrders,"crf01_completed",SortOrder.Descending
+                varWorkOrders,"crf01_completed",SortOrder.Ascending
         ))
     Width: =
 
