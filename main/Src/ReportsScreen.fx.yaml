@@ -31,170 +31,10 @@ ReportsScreen As screen:
         Y: =1083
         ZIndex: =1
 
-    DataTable1 As dataTable.datatable:
-        BorderColor: =RGBA(197, 203, 207, 1)
-        BorderStyle: =BorderStyle.Solid
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(0, 0, 0, 0)
-        Font: =Font.'Open Sans'
-        FontWeight: =FontWeight.Normal
-        HeadingColor: =RGBA(255, 255, 255, 1)
-        HeadingFill: =RGBA(100, 118, 132, 1)
-        HeadingFont: =Font.'Open Sans'
-        HeadingFontWeight: =FontWeight.Normal
-        HeadingSize: =16
-        Height: =246
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(62, 74, 83, .2)
-        InputFill: =RGBA(0, 0, 0, 1)
-        InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =MacFMAWorkOrders
-        LinkColor: =ColorFade(RGBA(0, 134, 208, 1), 30%)
-        PrimaryColor1: =RGBA(100, 118, 132, 1)
-        PrimaryColor2: =RGBA(197, 203, 207, 1)
-        PrimaryColor3: =RGBA(62, 74, 83, 1)
-        SelectedColor: =RGBA(255, 255, 255, 1)
-        SelectedFill: =RGBA(100, 118, 132, .2)
-        Size: =14
-        Visible: =true
-        Width: =640
-        X: =0
-        Y: =837
-        ZIndex: =2
-
-        "'Created On_Column1' As dataTableColumn.dateTimeColumn":
-            AutoWidth: =false
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Created On"
-            FieldName: ="createdon"
-            FieldVariantName: ="dateTimeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =2
-            Text: =Text(ThisItem.'Created On',DateTimeFormat.ShortDate)
-            Width: =130
-            X: =0
-            Y: =0
-            ZIndex: =2
-
-        Area_Column1 As dataTableColumn.complexTypeColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Area"
-            FieldName: ="crf01_Area"
-            FieldVariantName: ="complexTypeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.Area.AreaID
-            Width: =100
-            X: =178
-            Y: =0
-            ZIndex: =3
-
-        ActionRequired_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="ActionRequired"
-            FieldName: ="crf01_actionrequired"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.ActionRequired
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =4
-
-        "'Created By_Column1' As dataTableColumn.complexTypeColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Created By"
-            FieldName: ="createdby"
-            FieldVariantName: ="complexTypeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =5
-            Text: =ThisItem.'Created By'.'Full Name'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =5
-
-        DateIssued_Column1 As dataTableColumn.dateTimeColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="DateIssued"
-            FieldName: ="crf01_dateissued"
-            FieldVariantName: ="dateTimeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =6
-            Text: =Text(ThisItem.DateIssued,DateTimeFormat.LongDateTime)
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =6
-
-        DateCompleted_Column1 As dataTableColumn.dateTimeColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="DateCompleted"
-            FieldName: ="crf01_datecompleted"
-            FieldVariantName: ="dateTimeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =7
-            Text: =Text(ThisItem.DateCompleted,DateTimeFormat.LongDateTime)
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =7
-
-        Priority_Column1 As dataTableColumn.complexOptionSetColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Priority"
-            FieldName: ="crf01_priority"
-            FieldVariantName: ="complexOptionSetColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =8
-            Text: =ThisItem.Priority
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =8
-
-        PersonResponsible_Column1 As dataTableColumn.complexTypeColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="PersonResponsible"
-            FieldName: ="crf01_PersonResponsible"
-            FieldVariantName: ="complexTypeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =9
-            Text: =ThisItem.PersonResponsible.StaffID
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =9
-
-        Problem_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Problem"
-            FieldName: ="crf01_problem"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =10
-            Text: =ThisItem.Problem
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =10
-
     HTMLContainer As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =625
+        Height: =871
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -205,19 +45,9 @@ ReportsScreen As screen:
         Y: =212
         ZIndex: =3
 
-        HtmlText2 As htmlViewer:
-            Fill: =RGBA(243, 245, 245, 1)
-            Height: =590
-            HtmlText: =
-            Size: =14
-            Visible: =false
-            Width: =500
-            Y: =3
-            ZIndex: =1
-
         Container1 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =622
+            Height: =868
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
@@ -688,8 +518,7 @@ ReportsScreen As screen:
         Fill: =RGBA(214, 221, 224, 1)
         Icon: =Icon.DocumentPDF
         OnSelect: |-
-            =HtmlText2.AutoHeight=true;
-            Set(myPDF,PDF(HTMLContainer,{DPI:70,Margin:"10pt",ExpandContainers: true}));
+            =Set(myPDF,PDF(HTMLContainer,{DPI:70,Margin:"10pt",ExpandContainers: true}));
             
             Set(varPDF,1);
         X: =547
@@ -698,9 +527,9 @@ ReportsScreen As screen:
 
     PdfViewer1 As pdfViewer:
         Document: =myPDF
-        Height: =623
+        Height: =884
         Visible: =varPDF
-        Width: =534
+        Width: =597
         X: =13
         Y: =199
         ZIndex: =6
