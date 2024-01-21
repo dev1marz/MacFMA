@@ -7,13 +7,15 @@ ReportsScreen As screen:
         Set(varPDF,0);
         Set(varHTML,"");
         ClearCollect(varWorkOrders,MacFMAWorkOrders);
-        //Set(varWO, Concat(colAllWorkOrders,
-        //Left('Created On',10),", " & Problem,  ActionRequired & Priority & Completed));
         
-        
-        //MacPHTMLDisplay.Run(varWorkOrders);
         
         ClearCollect(colAllWorkOrders,MacFMAWorkOrders);
+        
+        ClearCollect(
+            varWorkOrders,
+            SortByColumns(
+                varWorkOrders,"crf01_completed",SortOrder.Descending
+        ))
     Width: =
 
     Label5_21 As label:
