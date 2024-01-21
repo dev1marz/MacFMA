@@ -3827,7 +3827,7 @@
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey53",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8447,7 +8447,7 @@
       "MetaDataIDKey": "%DateFieldValue.ID%",
       "Name": "DateValue2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10215,7 +10215,7 @@
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage61",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16946,7 +16946,7 @@
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible61",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
