@@ -6279,6 +6279,160 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "HourValue3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "WorkOrderManagementScreen",
+                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "HourValue3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 10,
+                  "snippet": {
+                    "text": ".Y"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "WorkOrderManagementScreen",
+                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 15,
+                  "snippet": {
+                    "text": "HourValue3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "WorkOrderManagementScreen",
+                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "HourValue3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 25,
+                  "snippet": {
+                    "text": ".Height"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "WorkOrderManagementScreen",
+                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.ErrorMessage68"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "WatermeterReadingScreen.WatermeterReadingGallery_1.Items"
                 }
               ],
@@ -10060,19 +10214,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateIssued_DataCard2.DateValue6.AccessibleLabel"
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.DateValue3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateIssued_DataCard2.DateValue6.AccessibleLabel",
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.DateValue3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "WorkOrderManagementScreen",
-                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.DateIssued_DataCard2.DateValue6"
+                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.DateCompleted_DataCard1.DateValue3"
               }
             }
           ],
@@ -10120,79 +10274,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.Image_DataCard2.AddPicture2.AccessibleLabel"
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.CompletedBy_DataCard1.DataCardValue65.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.Image_DataCard2.AddPicture2.AccessibleLabel",
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.CompletedBy_DataCard1.DataCardValue65.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "WorkOrderManagementScreen",
-                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.Image_DataCard2.AddPicture2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.Note_DataCard1.DataCardValue67.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.Note_DataCard1.DataCardValue67.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "WorkOrderManagementScreen",
-                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.Note_DataCard1.DataCardValue67"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.Completed_DataCard1.DataCardValue68.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.Completed_DataCard1.DataCardValue68.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "WorkOrderManagementScreen",
-                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.Completed_DataCard1.DataCardValue68"
+                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.CompletedBy_DataCard1.DataCardValue65"
               }
             }
           ],
@@ -13684,6 +13778,96 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.Image_DataCard2.AddPicture2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.Image_DataCard2.AddPicture2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "WorkOrderManagementScreen",
+                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.Image_DataCard2.AddPicture2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.Note_DataCard1.DataCardValue67.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.Note_DataCard1.DataCardValue67.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "WorkOrderManagementScreen",
+                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.Note_DataCard1.DataCardValue67"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateIssued_DataCard1.DateValue2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.WorkOrderManagementForm.DateIssued_DataCard1.DateValue2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "WorkOrderManagementScreen",
+                "type": "WorkOrderManagementScreen.WorkOrderManagementForm.DateIssued_DataCard1.DateValue2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 10
         },
         {
           "locations": [
