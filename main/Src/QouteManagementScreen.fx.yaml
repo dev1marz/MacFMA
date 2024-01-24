@@ -88,7 +88,24 @@ QouteManagementScreen As screen:
         Item: =QouteManagementGallery.Selected
         OnFailure: =NewForm(QouteManagementForm);Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New
-        OnSuccess: =Notify("Success",NotificationType.Success)
+        OnSuccess: |-
+            =Notify("Success",NotificationType.Success);
+            Set(varFacFam,LookUp(MacFMAWorkOrders,OrderID=QouteManagementGallery.Selected.WorkOrder.OrderID,Area));
+            
+            If(varBeginState="No",If(varCurrentState="Yes",Office365Outlook.SendEmailV2(
+                txt_EmailTo.Text,
+                txt_Subject.Text,
+                "Please find attached qoute that has been approved",
+                {
+                    Attachments: ForAll(
+                    DataCardValue92.Attachments,
+                        {
+                            ContentBytes: Value,
+                            Name: Name
+                        }
+                    )
+                }
+            )),)
         Visible: =ScreenState
         Width: =640
         Y: =87
@@ -335,6 +352,8 @@ QouteManagementScreen As screen:
                 HoverFill: =RGBA(62, 74, 83, 1)
                 IsSearchable: =false
                 Items: =Choices('Approved (MacFMAQoutes)')
+                OnChange: =Set(varCurrentState,Text(DataCardValue94.Selected.Value))
+                OnSelect: =Set(varBeginState,ThisItem.Approved)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(197, 203, 207, 1)
