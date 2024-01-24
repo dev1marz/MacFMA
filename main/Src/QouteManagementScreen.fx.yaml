@@ -90,7 +90,8 @@ QouteManagementScreen As screen:
         OnReset: =FormMode.New
         OnSuccess: |-
             =Notify("Success",NotificationType.Success);
-            Set(varFacFam,LookUp(MacFMAWorkOrders,OrderID=QouteManagementGallery.Selected.WorkOrder.OrderID,Area));
+            Set(varArea,LookUp(MacFMAWorkOrders,OrderID=QouteManagementGallery.Selected.WorkOrder.OrderID,Area));
+            Set(varFacil,LookUp(MacFMAWorkOrders,OrderID=QouteManagementGallery.Selected.WorkOrder.OrderID,Area));
             
             If(varBeginState="No",If(varCurrentState="Yes",Office365Outlook.SendEmailV2(
                 txt_EmailTo.Text,

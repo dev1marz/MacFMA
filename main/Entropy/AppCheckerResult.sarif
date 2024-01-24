@@ -864,7 +864,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 526,
+                  "charOffset": 628,
                   "snippet": {
                     "text": ")"
                   }
@@ -900,7 +900,7 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charOffset": 527,
+                  "charOffset": 629,
                   "snippet": {
                     "text": ""
                   }
@@ -941,7 +941,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 168,
+                  "charOffset": 270,
                   "snippet": {
                     "text": "="
                   }
@@ -982,7 +982,7 @@
                 },
                 "region": {
                   "charLength": 325,
-                  "charOffset": 199,
+                  "charOffset": 301,
                   "snippet": {
                     "text": "Office365Outlook.SendEmailV2(\r\n    txt_EmailTo.Text,\r\n    txt_Subject.Text,\r\n    \"Please find attached qoute that has been approved\",\r\n    {\r\n        Attachments: ForAll(\r\n        DataCardValue92.Attachments,\r\n            {\r\n                ContentBytes: Value,\r\n                Name: Name\r\n            }\r\n        )\r\n    }\r\n)"
                   }
@@ -1023,7 +1023,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 234,
+                  "charOffset": 336,
                   "snippet": {
                     "text": "txt_EmailTo"
                   }
@@ -1063,7 +1063,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 245,
+                  "charOffset": 347,
                   "snippet": {
                     "text": ".Text"
                   }
@@ -1100,7 +1100,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 257,
+                  "charOffset": 359,
                   "snippet": {
                     "text": "txt_Subject"
                   }
@@ -1140,7 +1140,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 268,
+                  "charOffset": 370,
                   "snippet": {
                     "text": ".Text"
                   }
@@ -1177,7 +1177,7 @@
                 },
                 "region": {
                   "charLength": 351,
-                  "charOffset": 174,
+                  "charOffset": 276,
                   "snippet": {
                     "text": "If(varCurrentState=\"Yes\",Office365Outlook.SendEmailV2(\r\n    txt_EmailTo.Text,\r\n    txt_Subject.Text,\r\n    \"Please find attached qoute that has been approved\",\r\n    {\r\n        Attachments: ForAll(\r\n        DataCardValue92.Attachments,\r\n            {\r\n                ContentBytes: Value,\r\n                Name: Name\r\n            }\r\n        )\r\n    }\r\n))"
                   }
@@ -1217,7 +1217,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 526,
+                  "charOffset": 628,
                   "snippet": {
                     "text": ")"
                   }
@@ -1254,7 +1254,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 154,
+                  "charOffset": 256,
                   "snippet": {
                     "text": "("
                   }
@@ -14269,17 +14269,47 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varFacFam"
+                  "fullyQualifiedName": "App.varArea"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.varFacFam",
+                  "fullyQualifiedName": "App.varArea",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "varFacFam",
+                "member": "varArea",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varFacil"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varFacil",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varFacil",
                 "module": "App",
                 "type": "App"
               }
