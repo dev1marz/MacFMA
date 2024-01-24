@@ -29,7 +29,7 @@ ElectricalmeterReadingScreen As screen:
         Selectable: =If(ScreenState =0, true)
         TemplateFill: =If(ThisItem.IsSelected,Color.LightBlue ,RGBA(0, 0, 0, 0))
         TemplatePadding: =0.00
-        TemplateSize: =104.00
+        TemplateSize: =64
         Width: =585
         X: =27
         Y: =777
@@ -81,7 +81,7 @@ ElectricalmeterReadingScreen As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20.00
-            Text: =ThisItem.'Created On'
+            Text: =Text(ThisItem.'Created On',DateTimeFormat.ShortDateTime24,"en-GB")
             VerticalAlign: =VerticalAlign.Top
             Width: =205
             X: =380
