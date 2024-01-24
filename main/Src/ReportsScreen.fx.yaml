@@ -15,7 +15,11 @@ ReportsScreen As screen:
             varWorkOrders,
             SortByColumns(
                 varWorkOrders,"crf01_completed",SortOrder.Ascending
-        ))
+        ));
+        Set(varSDate,false);
+        Set(varEDate,false);
+        Set(varEChange,false);
+        Set(varFChange,false);
     Width: =
 
     Label5_21 As label:
@@ -386,6 +390,7 @@ ReportsScreen As screen:
             Height: =57
             HoverDateFill: =RGBA(62, 74, 83, 1)
             IconBackground: =RGBA(100, 118, 132, 1)
+            OnChange: =Set(varSDate,true)
             SelectedDateFill: =RGBA(100, 118, 132, 1)
             Size: =12
             Width: =173
@@ -404,6 +409,7 @@ ReportsScreen As screen:
             Height: =57
             HoverDateFill: =RGBA(62, 74, 83, 1)
             IconBackground: =RGBA(100, 118, 132, 1)
+            OnChange: =Set(varEDate,true)
             SelectedDateFill: =RGBA(100, 118, 132, 1)
             Size: =12
             Width: =152
@@ -460,8 +466,8 @@ ReportsScreen As screen:
             HoverFill: =RGBA(62, 74, 83, 1)
             Items: =MacFMAEstates
             OnChange: |-
-                =ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.Selected.EstateID));
-                Set(varFac,true);
+                =ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.SelectedText.Value));
+                Set(varEChange,true)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(197, 203, 207, 1)
             SelectionFill: =RGBA(100, 118, 132, 1)
@@ -492,7 +498,16 @@ ReportsScreen As screen:
                 
                 
                 Set(varFac,false);
-                Reset(EstateDropdown)
+                Reset(EstateReportDropdown);
+                Reset(FacilityReportDropdown);
+                Reset(StartDatePicker);
+                Reset(EndDatePicker);
+                
+                
+                Set(varSDate,false);
+                Set(varEDate,false);
+                Set(varEChange,false);
+                Set(varFChange,false);
             Width: =55
             X: =371
             Y: =80
@@ -516,12 +531,13 @@ ReportsScreen As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(62, 74, 83, 1)
             Items: =MacFMAFacilities
-            OnChange: =ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=FacilityReportDropdown.Selected.FacilityID))
+            OnChange: |-
+                =ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=FacilityReportDropdown.Selected.FacilityID));
+                Set(varFChange,true)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(197, 203, 207, 1)
             SelectionFill: =RGBA(100, 118, 132, 1)
             Size: =14
-            Visible: =varFac
             Width: =172
             X: =187
             Y: =80
