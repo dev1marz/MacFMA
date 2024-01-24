@@ -89,7 +89,7 @@ QouteManagementScreen As screen:
         OnFailure: =NewForm(QouteManagementForm);Notify("Error!", NotificationType.Error)
         OnReset: |-
             =FormMode.New;
-            Set(varCurrentState,"")
+            Set(varCurrentState,Text(DataCardValue94.Selected.Value))
         OnSuccess: |-
             =Notify("Success",NotificationType.Success);
             
