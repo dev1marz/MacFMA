@@ -282,7 +282,7 @@ ReportsScreen As screen:
                     PaddingTop: =0
                     Size: =12
                     Text: |
-                        =Text(ThisItem.'Created On',DateTimeFormat.ShortDate)
+                        =Text(ThisItem.'Created On',DateTimeFormat.ShortDate,"en-GB")
                     VerticalAlign: =VerticalAlign.Top
                     Width: =86
                     Y: =7

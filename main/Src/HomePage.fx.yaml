@@ -411,6 +411,7 @@ HomePage As screen:
             PaddingBottom: =0.00
             PaddingLeft: =0.00
             Width: =538
+            X: =16
             Y: =581
             ZIndex: =4
 

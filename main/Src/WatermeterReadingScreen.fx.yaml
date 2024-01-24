@@ -82,11 +82,11 @@ WatermeterReadingScreen As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20.00
-            Text: =Text(ThisItem.'Created On',DateTimeFormat.ShortDateTime24)
+            Text: =Text(ThisItem.'Created On',DateTimeFormat.ShortDateTime24,"en-GB")
             VerticalAlign: =VerticalAlign.Top
-            Width: =205
-            X: =380
-            Y: =16
+            Width: =237
+            X: =337
+            Y: =11
             ZIndex: =6
 
     WatermeterReadingForm_1 As form:

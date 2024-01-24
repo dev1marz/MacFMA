@@ -154,7 +154,6 @@
     "WatermeterReadingScreen",
     "ElectricalmeterReadingScreen",
     "DashboardScreen",
-    "ReportsScreen",
-    "FacilityInspectionReportScreen"
+    "ReportsScreen"
   ]
 }
