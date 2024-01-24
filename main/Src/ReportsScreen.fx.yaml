@@ -390,7 +390,9 @@ ReportsScreen As screen:
             Height: =57
             HoverDateFill: =RGBA(62, 74, 83, 1)
             IconBackground: =RGBA(100, 118, 132, 1)
-            OnChange: =Set(varSDate,true)
+            OnChange: |-
+                =Set(varSDate,true);
+                Set(varEDate,true);
             SelectedDateFill: =RGBA(100, 118, 132, 1)
             Size: =12
             Width: =173
