@@ -89,11 +89,11 @@ QouteManagementScreen As screen:
         OnFailure: =NewForm(QouteManagementForm);Notify("Error!", NotificationType.Error)
         OnReset: |-
             =FormMode.New;
-            Set(varCurrentState,Text(DataCardValue94.Selected.Value))
+            Set(varCurrentState,"")
         OnSuccess: |-
             =Notify("Success",NotificationType.Success);
             
-            If(Text(varBeginState)="No",If(Text(varCurrentState)="Yes",Office365Outlook.SendEmailV2(varFacilEmail,"Vendor Qoute Approved","Please find attached qoute that has been approved",
+            If(Text(varBeginState)="No",If(Text(varCurrentState)="Yes",Office365Outlook.SendEmailV2(varFacilHead,"Vendor Qoute Approved","Please find attached qoute that has been approved",
                 {
                     Attachments: ForAll(
                     DataCardValue92.Attachments,
@@ -351,7 +351,7 @@ QouteManagementScreen As screen:
                 IsSearchable: =false
                 Items: =Choices('Approved (MacFMAQoutes)')
                 OnChange: =Set(varCurrentState,Text(DataCardValue94.Selected.Value))
-                OnSelect: =Set(varBeginState,ThisItem.Approved)
+                OnSelect: =Set(varBeginState,Text(QouteManagementGallery.Selected.Approved))
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(197, 203, 207, 1)
@@ -467,9 +467,11 @@ QouteManagementScreen As screen:
             LayoutMinHeight: =70
             LayoutMinWidth: =280
             OnSelect: |-
-                =Set(varArea,LookUp(MacFMAWorkOrders,OrderID=QouteManagementGallery.Selected.WorkOrder.OrderID,Area));
-                Set(varFacilEmail,LookUp(MacFMAAreas,AreaID=varArea.AreaID,Facility.HeadOfFacility.EmailID));
+                =Set(varArea,LookUp(MacFMAWorkOrders,QouteManagementGallery.Selected.WorkOrder.OrderID=OrderID,Area.AreaID));
                 
+                Set(varFacilHead,LookUp(MacFMAAreas,AreaID=varArea,Facility.HeadOfFacility.StaffID));
+                
+                Set(varFacilHead,LookUp(MacFMAStaffs,StaffID=varFacilHead,EmailID));
                 SubmitForm(QouteManagementForm);Set(ScreenState,0)
             PaddingBottom: =5.00
             PaddingLeft: =5.00
