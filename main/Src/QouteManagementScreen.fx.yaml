@@ -87,11 +87,11 @@ QouteManagementScreen As screen:
         Height: =430.00
         Item: =QouteManagementGallery.Selected
         OnFailure: =NewForm(QouteManagementForm);Notify("Error!", NotificationType.Error)
-        OnReset: =FormMode.New
+        OnReset: |-
+            =FormMode.New;
+            Set(varCurrentState,Text(DataCardValue94.Selected.Value))
         OnSuccess: |-
             =Notify("Success",NotificationType.Success);
-            Set(varArea,LookUp(MacFMAWorkOrders,OrderID=QouteManagementGallery.Selected.WorkOrder.OrderID,Area));
-            Set(varFacilEmail,LookUp(MacFMAAreas,AreaID=varArea.AreaID,Facility.HeadOfFacility.EmailID));
             
             If(Text(varBeginState)="No",If(Text(varCurrentState)="Yes",Office365Outlook.SendEmailV2(varFacilEmail,"Vendor Qoute Approved","Please find attached qoute that has been approved",
                 {
@@ -466,7 +466,11 @@ QouteManagementScreen As screen:
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
-            OnSelect: =SubmitForm(QouteManagementForm);Set(ScreenState,0)
+            OnSelect: |-
+                =Set(varArea,LookUp(MacFMAWorkOrders,OrderID=QouteManagementGallery.Selected.WorkOrder.OrderID,Area));
+                Set(varFacilEmail,LookUp(MacFMAAreas,AreaID=varArea.AreaID,Facility.HeadOfFacility.EmailID));
+                
+                SubmitForm(QouteManagementForm);Set(ScreenState,0)
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
