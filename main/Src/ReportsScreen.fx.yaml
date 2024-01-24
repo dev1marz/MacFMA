@@ -439,7 +439,10 @@ ReportsScreen As screen:
             Height: =57
             Icon: =Icon.Search
             OnSelect: |-
-                =ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.SelectedText.Value));
+                =If(varEChange=true, ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.SelectedText.Value)));
+                
+                If(varFChange=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,Area.Facility.FacilityID=FacilityReportDropdown.SelectedText.Value)));
+                
                 
                 ClearCollect(colAllWorkOrders,MacFMAWorkOrders);
                 ClearCollect(colAllWorkOrders,Filter(colAllWorkOrders,'Created On'>= StartDatePicker.SelectedDate));
