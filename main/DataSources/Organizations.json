@@ -401,6 +401,7 @@
       "organization_crf01_propsbcoprogresstypes": "PropSBCOProgressTypes",
       "organization_crf01_propsoccupancygroup": "PropSOccupancyGroups",
       "organization_crf01_propsperson": "PropSPersons",
+      "organization_crf01_testappdeployemnt": "TestAppDeployemnt",
       "organization_crf01_testmarzprojmanangement": "TestMarzProjManangement",
       "organization_crf01_tfyv2electricmeterreadings": "TFYV2ElectricMeterReadings",
       "organization_crf01_tfyv2electricmeters": "TFYV2ElectricMeters",
