@@ -49,7 +49,7 @@ ReportsScreen As screen:
         Width: =580
         X: =30
         Y: =212
-        ZIndex: =3
+        ZIndex: =2
 
         Container1 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -362,7 +362,7 @@ ReportsScreen As screen:
         Width: =580
         X: =30
         Y: =60
-        ZIndex: =4
+        ZIndex: =3
 
         EndDateLabel As label:
             BorderColor: =RGBA(197, 203, 207, 1)
@@ -560,29 +560,43 @@ ReportsScreen As screen:
             Set(varPDF,1);
         X: =547
         Y: =72
-        ZIndex: =5
+        ZIndex: =4
 
     PdfViewer1 As pdfViewer:
         Document: =myPDF
-        Height: =884
+        Height: =871
         Visible: =varPDF
         Width: =597
         X: =13
-        Y: =199
+        Y: =212
+        ZIndex: =5
+
+    DownloadIcon As icon.DocumentPDF:
+        BorderColor: =RGBA(53, 61, 63, 1)
+        Color: =RGBA(53, 61, 63, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(214, 221, 224, 1)
+        Icon: =Icon.Download
+        OnSelect: =
+        Visible: =varPDF
+        X: =546
+        Y: =135
         ZIndex: =6
 
     DataCardValue65_1 As attachments:
         AddAttachmentText: ="Upload file"
         BorderColor: =
-        BorderThickness: =2
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.View
-        Fill: =RGBA(0, 0, 0, 1)
+        DropTargetBorderColor: =RGBA(0, 0, 0, 0)
+        DropTargetTextColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =62
+        Height: =64
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(62, 74, 83, 1)
         IsInDataCard: =true
@@ -597,32 +611,17 @@ ReportsScreen As screen:
         NoAttachmentsText: ="There is no file."
         PaddingBottom: =5
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-        PaddingRight: =5
-        PaddingTop: =5
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(197, 203, 207, 1)
-        Size: =21
+        Size: =30
         Tooltip: =
         Visible: =varPDF
-        Width: =78
-        X: =547
-        Y: =144
-        ZIndex: =7
-
-    DownloadIcon As icon.DocumentPDF:
-        BorderColor: =RGBA(53, 61, 63, 1)
-        Color: =RGBA(53, 61, 63, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(214, 221, 224, 1)
-        Icon: =Icon.Download
-        OnSelect: =
-        Visible: =varPDF
+        Width: =64
         X: =546
-        Y: =142
-        ZIndex: =8
+        Y: =135
+        ZIndex: =7
 
     FullNavMenuV2_19 As FullNavMenuV2:
         Width: =640
-        ZIndex: =9
+        ZIndex: =8
 
