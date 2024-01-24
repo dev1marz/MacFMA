@@ -29,7 +29,7 @@ WatermeterReadingScreen As screen:
         Selectable: =If(ScreenState =0, true)
         TemplateFill: =If(ThisItem.IsSelected,Color.LightBlue ,RGBA(0, 0, 0, 0))
         TemplatePadding: =0.00
-        TemplateSize: =104.00
+        TemplateSize: =61
         Width: =585
         X: =27
         Y: =777
@@ -48,7 +48,7 @@ WatermeterReadingScreen As screen:
             Text: =ThisItem.Area.AreaID
             VerticalAlign: =VerticalAlign.Top
             Width: =140
-            X: =17
+            X: =10
             Y: =16.00
             ZIndex: =1
 
@@ -66,7 +66,7 @@ WatermeterReadingScreen As screen:
             Text: =ThisItem.MeterReading
             VerticalAlign: =VerticalAlign.Top
             Width: =125
-            X: =168
+            X: =183
             Y: =16
             ZIndex: =5
 
@@ -75,13 +75,14 @@ WatermeterReadingScreen As screen:
             Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
+            Height: =45
             OnSelect: =Select(Parent)
             PaddingBottom: =0.00
             PaddingLeft: =0.00
             PaddingRight: =0
             PaddingTop: =0
             Size: =20.00
-            Text: =ThisItem.'Created On'
+            Text: =Text(ThisItem.'Created On',DateTimeFormat.ShortDateTime24)
             VerticalAlign: =VerticalAlign.Top
             Width: =205
             X: =380
