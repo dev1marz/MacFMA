@@ -411,7 +411,9 @@ ReportsScreen As screen:
             Height: =57
             HoverDateFill: =RGBA(62, 74, 83, 1)
             IconBackground: =RGBA(100, 118, 132, 1)
-            OnChange: =Set(varEDate,true)
+            OnChange: |-
+                =Set(varSDate,true);
+                Set(varEDate,true);
             SelectedDateFill: =RGBA(100, 118, 132, 1)
             Size: =12
             Width: =152
@@ -440,15 +442,14 @@ ReportsScreen As screen:
             Fill: =RGBA(139, 154, 159, 1)
             Height: =57
             Icon: =Icon.Search
-            OnSelect: |-
+            OnSelect: |
                 =If(varEChange=true, ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.Selected.EstateID)));
                 
                 If(varFChange=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,Area.Facility.FacilityID=FacilityReportDropdown.Selected.FacilityID)));
                 
+                If(varSDate=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,'Created On'>= StartDatePicker.SelectedDate)));
                 
-                ClearCollect(colAllWorkOrders,MacFMAWorkOrders);
-                ClearCollect(colAllWorkOrders,Filter(colAllWorkOrders,'Created On'>= StartDatePicker.SelectedDate));
-                ClearCollect(colAllWorkOrders,Filter(colAllWorkOrders,'Created On'<= EndDatePicker.SelectedDate));
+                If(varEDate=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,'Created On'<= EndDatePicker.SelectedDate)));
             Width: =44
             X: =446
             Y: =80
