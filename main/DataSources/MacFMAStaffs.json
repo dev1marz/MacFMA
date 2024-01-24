@@ -19,6 +19,7 @@
       "crf01_crf01_macfmaworkorders_CreatedBy_crf01_ma": "MacFMAWorkOrders (crf01_crf01_macfmaworkorders_CreatedBy_crf01_ma)",
       "crf01_crf01_macfmaworkorders_PersonResponsible_": "MacFMAWorkOrders (crf01_crf01_macfmaworkorders_PersonResponsible_)",
       "crf01_department": "Department",
+      "crf01_emailid": "EmailID",
       "crf01_idnumber": "IDNumber",
       "crf01_macfmastaffs_AsyncOperations": "System Jobs",
       "crf01_macfmastaffs_BulkDeleteFailures": "Bulk Delete Failures",
