@@ -439,9 +439,9 @@ ReportsScreen As screen:
             Height: =57
             Icon: =Icon.Search
             OnSelect: |-
-                =If(varEChange=true, ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.SelectedText.Value)));
+                =If(varEChange=true, ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.Selected.EstateID)));
                 
-                If(varFChange=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,Area.Facility.FacilityID=FacilityReportDropdown.SelectedText.Value)));
+                If(varFChange=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,Area.Facility.FacilityID=FacilityReportDropdown.Selected.FacilityID)));
                 
                 
                 ClearCollect(colAllWorkOrders,MacFMAWorkOrders);
@@ -544,7 +544,7 @@ ReportsScreen As screen:
             Y: =80
             ZIndex: =8
 
-    Icon3 As icon.DocumentPDF:
+    PDFIcon As icon.DocumentPDF:
         BorderColor: =RGBA(53, 61, 63, 1)
         Color: =RGBA(53, 61, 63, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -605,7 +605,7 @@ ReportsScreen As screen:
         Y: =144
         ZIndex: =7
 
-    Icon3_2 As icon.DocumentPDF:
+    DownloadIcon As icon.DocumentPDF:
         BorderColor: =RGBA(53, 61, 63, 1)
         Color: =RGBA(53, 61, 63, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)

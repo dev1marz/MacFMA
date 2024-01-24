@@ -12070,36 +12070,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.SearchIcon3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.SearchIcon3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ReportsScreen",
-                "type": "ReportsScreen.ReportFilterContainer.SearchIcon3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.SearchIcon3.TabIndex"
                 }
               ],
@@ -12130,19 +12100,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReportsScreen.Icon3.AccessibleLabel"
+                  "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.SearchIcon3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReportsScreen.Icon3.AccessibleLabel",
+                  "fullyQualifiedName": "ReportsScreen.ReportFilterContainer.SearchIcon3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReportsScreen",
-                "type": "ReportsScreen.Icon3"
+                "type": "ReportsScreen.ReportFilterContainer.SearchIcon3"
               }
             }
           ],
@@ -12160,19 +12130,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReportsScreen.Icon3.TabIndex"
+                  "fullyQualifiedName": "ReportsScreen.PDFIcon.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReportsScreen.Icon3.TabIndex",
+                  "fullyQualifiedName": "ReportsScreen.PDFIcon.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReportsScreen",
+                "type": "ReportsScreen.PDFIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReportsScreen.PDFIcon.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReportsScreen.PDFIcon.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ReportsScreen",
-                "type": "ReportsScreen.Icon3"
+                "type": "ReportsScreen.PDFIcon"
               }
             }
           ],
