@@ -490,6 +490,7 @@ ReportsScreen As screen:
                         varWorkOrders,"crf01_completed",SortOrder.Ascending
                 ));
                 
+                
                 Set(varFac,false);
                 Reset(EstateDropdown)
             Width: =55
