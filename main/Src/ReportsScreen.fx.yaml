@@ -439,7 +439,9 @@ ReportsScreen As screen:
             Height: =57
             Icon: =Icon.Search
             OnSelect: |-
-                =ClearCollect(colAllWorkOrders,MacFMAWorkOrders);
+                =ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.SelectedText.Value));
+                
+                ClearCollect(colAllWorkOrders,MacFMAWorkOrders);
                 ClearCollect(colAllWorkOrders,Filter(colAllWorkOrders,'Created On'>= StartDatePicker.SelectedDate));
                 ClearCollect(colAllWorkOrders,Filter(colAllWorkOrders,'Created On'<= EndDatePicker.SelectedDate));
             Width: =44
@@ -465,9 +467,7 @@ ReportsScreen As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(62, 74, 83, 1)
             Items: =MacFMAEstates
-            OnChange: |-
-                =ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.SelectedText.Value));
-                Set(varEChange,true)
+            OnChange: =Set(varEChange,true)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(197, 203, 207, 1)
             SelectionFill: =RGBA(100, 118, 132, 1)
