@@ -457,7 +457,9 @@ ReportsScreen As screen:
             Height: =57
             Icon: =Icon.Search
             OnSelect: |
-                =If(varEChange=true, ClearCollect(varWorkOrders,Filter(colAllWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.Selected.EstateID)));
+                =ClearCollect(varWorkOrders,colAllWorkOrders);
+                ClearCollect(col1,Filter(varWorkOrders,Area.Facility.Estate.EstateID=EstateReportDropdown.Selected.EstateID));
+                If(varEChange=true, ClearCollect(varWorkOrders,col1));
                 
                 If(varFChange=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,Area.Facility.FacilityID=FacilityReportDropdown.Selected.FacilityID)));
                 

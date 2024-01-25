@@ -559,7 +559,7 @@ FacilityScreen As screen:
         Fill: =RGBA(0, 0, 0, 1)
         FocusedBorderThickness: =4
         Height: =61.00
-        HintText: ="Search Zone by Number"
+        HintText: ="Search Facility by Name or Estate"
         HoverBorderColor: =RGBA(197, 203, 207, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(62, 74, 83, 1)
