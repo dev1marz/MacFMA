@@ -56,6 +56,7 @@ WorkOrderManagementScreen As screen:
             ZIndex: =1
 
         EstateDropdown_1 As dropdown:
+            AllowEmptySelection: =true
             BorderColor: =RGBA(197, 203, 207, 1)
             ChevronBackground: =RGBA(100, 118, 132, 1)
             ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
@@ -71,7 +72,9 @@ WorkOrderManagementScreen As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(62, 74, 83, 1)
             Items: =colEstates
-            OnChange: =ClearCollect(colWorkOrders,Filter(colWorkOrders,EstateDropdown_1.SelectedText.EstateID=WorkOrderManagementGallery.Selected.Area.Facility.Estate.EstateID))
+            OnChange: |-
+                =ClearCollect(colWorkOrders,MacFMAWorkOrders);
+                ClearCollect(colWorkOrders,Filter(colWorkOrders,EstateDropdown_1.SelectedText.Value=Area.Facility.Estate.EstateID))
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(197, 203, 207, 1)
             SelectionFill: =RGBA(100, 118, 132, 1)
@@ -93,7 +96,8 @@ WorkOrderManagementScreen As screen:
             OnCheck: =Set(varEstateDrop,1)
             OnUncheck: |-
                 =Set(varEstateDrop,0);
-                ClearCollect(colWorkOrders,MacFMAWorkOrders)
+                ClearCollect(colWorkOrders,MacFMAWorkOrders);
+                Reset(EstateDropdown_1)
             Size: =21
             Text: ="Estates"
             Width: =260

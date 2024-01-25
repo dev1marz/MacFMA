@@ -14169,6 +14169,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.FilterContainer_1.EstateDropdown_1.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WorkOrderManagementScreen.FilterContainer_1.EstateDropdown_1.OnChange",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "WorkOrderManagementScreen",
+                "type": "WorkOrderManagementScreen.FilterContainer_1.EstateDropdown_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "WorkOrderManagementScreen.OnVisible"
                 }
               ],
