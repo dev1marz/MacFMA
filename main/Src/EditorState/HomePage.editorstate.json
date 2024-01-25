@@ -5959,6 +5959,15 @@
           "InvariantPropertyName": "OnReset",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        "Item",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnFailure",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -5983,6 +5992,11 @@
         {
           "Category": "Data",
           "PropertyName": "DataSource",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Item",
           "RuleProviderType": "Unknown"
         },
         {
@@ -6038,6 +6052,11 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnReset",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnFailure",
           "RuleProviderType": "Unknown"
         }
       ],

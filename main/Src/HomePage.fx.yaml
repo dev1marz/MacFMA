@@ -36,7 +36,8 @@ HomePage As screen:
             DataSource: =MacFMAQuickCaptures
             DefaultMode: =FormMode.New
             Height: =581
-            OnSuccess: =
+            OnFailure: =NewForm(QuickCaptureForm)
+            OnSuccess: =NewForm(QuickCaptureForm)
             Width: =570
             ZIndex: =3
 
