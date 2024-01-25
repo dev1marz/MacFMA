@@ -189,7 +189,11 @@ WorkOrderManagementScreen As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(62, 74, 83, 1)
             Items: =colArea
-            OnChange: =ClearCollect(colWorkOrders,Filter(colWorkOrders,Area.AreaID=AreaDropdown.Selected.AreaID))
+            OnChange: |+
+                =ClearCollect(colWorkOrders,MacFMAWorkOrders);
+                
+                ClearCollect(colWorkOrders,Filter(colWorkOrders,Area.AreaID=AreaDropdown.Selected.AreaID));
+                
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(197, 203, 207, 1)
             SelectionFill: =RGBA(100, 118, 132, 1)
