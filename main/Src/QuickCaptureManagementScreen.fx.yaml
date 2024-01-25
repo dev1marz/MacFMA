@@ -750,7 +750,9 @@ QuickCaptureManagementScreen As screen:
             HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
             LayoutMinHeight: =70
             LayoutMinWidth: =280
-            OnSelect: =Set(ScreenState,1);QCManagementForm.DisplayMode.Edit
+            OnSelect: |-
+                =Set(ScreenState,1);QCManagementForm.DisplayMode.Edit;
+                NewForm(QCToWorkOrderForm)
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
@@ -817,6 +819,7 @@ QuickCaptureManagementScreen As screen:
         BorderColor: =RGBA(197, 203, 207, 1)
         DataSource: =MacFMAWorkOrders
         Height: =478
+        OnReset: =NewForm(QCToWorkOrderForm)
         OnSuccess: |-
             =Remove(MacFMAQuickCaptures,QCManagementGallery.Selected);
             Set(ScreenState,0)

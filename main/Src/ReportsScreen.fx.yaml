@@ -99,7 +99,7 @@ ReportsScreen As screen:
                     Width: =187
                     Wrap: =false
                     X: =11
-                    Y: =35
+                    Y: =46
                     ZIndex: =2
 
                 Label2_1 As label:
@@ -114,7 +114,7 @@ ReportsScreen As screen:
                     Width: =187
                     Wrap: =false
                     X: =11
-                    Y: =55
+                    Y: =66
                     ZIndex: =3
 
                 Label2_2 As label:
@@ -128,8 +128,22 @@ ReportsScreen As screen:
                     Width: =187
                     Wrap: =false
                     X: =11
-                    Y: =15
+                    Y: =26
                     ZIndex: =4
+
+                Label2_3 As label:
+                    BorderColor: =RGBA(197, 203, 207, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =20
+                    Size: =8
+                    Text: |-
+                        ="Report Date:  " & Text(Today(),DateTimeFormat.ShortDate,"en-GB")
+                    Width: =187
+                    Wrap: =false
+                    X: =11
+                    Y: =6
+                    ZIndex: =5
 
             AreasLabels_1 As groupContainer.horizontalAutoLayoutContainer:
                 BorderColor: =RGBA(220, 224, 226, 1)
