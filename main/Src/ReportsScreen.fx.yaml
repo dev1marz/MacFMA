@@ -461,9 +461,9 @@ ReportsScreen As screen:
                 
                 If(varFChange=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,Area.Facility.FacilityID=FacilityReportDropdown.Selected.FacilityID)));
                 
-                If(varSDate=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,'Created On'>= StartDatePicker.SelectedDate)));
+                //If(varSDate=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,'Created On'>= StartDatePicker.SelectedDate)));
                 
-                If(varEDate=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,'Created On'<= EndDatePicker.SelectedDate)));
+                //If(varEDate=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,'Created On'<= EndDatePicker.SelectedDate)));
             Width: =44
             X: =446
             Y: =80

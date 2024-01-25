@@ -10,6 +10,8 @@
     "Name": "MacFMAFacilities",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
+      "cr27d_crf01_macfmaelectricmeterreadings_Facilit": "MacFMAElectricMeterReadings",
+      "cr27d_crf01_macfmawatermeterreading_Facility_cr": "MacFMAWatermeterReadings",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",

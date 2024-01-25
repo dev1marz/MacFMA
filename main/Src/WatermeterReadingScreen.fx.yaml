@@ -45,7 +45,7 @@ WatermeterReadingScreen As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20.00
-            Text: =ThisItem.Area.AreaID
+            Text: =ThisItem.crf01_Area.AreaID
             VerticalAlign: =VerticalAlign.Top
             Width: =140
             X: =10
@@ -106,7 +106,7 @@ WatermeterReadingScreen As screen:
             BorderColor: =RGBA(197, 203, 207, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="crf01_Area"
-            Default: =ThisItem.Area
+            Default: =ThisItem.crf01_Area
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@MacFMAWatermeterReadings],DataSourceInfo.DisplayName,"crf01_Area")
             Fill: =RGBA(0, 0, 0, 0)

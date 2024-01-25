@@ -9,10 +9,12 @@
     "MaxGetRowsCount": 500,
     "Name": "MacFMAElectricMeterReadings",
     "NativeCDSDataSourceInfoNameMapping": {
+      "cr27d_datecreated": "DateCreated",
+      "cr27d_Facility": "Facility",
+      "cr27d_note": "Note",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",
-      "crf01_Area": "Area",
       "crf01_macfmaelectricmeterreadings_AsyncOperations": "System Jobs",
       "crf01_macfmaelectricmeterreadings_BulkDeleteFailures": "Bulk Delete Failures",
       "crf01_macfmaelectricmeterreadings_DuplicateBaseRecord": "Duplicate Records (crf01_macfmaelectricmeterreadings_DuplicateBaseRecord)",
