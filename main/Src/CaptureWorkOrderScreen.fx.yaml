@@ -710,7 +710,7 @@ CaptureWorkOrderScreen As screen:
             Update: =DataCardValue95.Selected
             Width: =609
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =1
 
             DataCardKey104 As label:
@@ -804,7 +804,7 @@ CaptureWorkOrderScreen As screen:
             Update: =DataCardValue23.Selected
             Width: =640
             X: =0
-            Y: =4
+            Y: =3
             ZIndex: =1
 
             DataCardKey24 As label:
