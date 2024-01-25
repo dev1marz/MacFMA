@@ -316,7 +316,7 @@ ReportsScreen As screen:
                     AutoHeight: =true
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
-                    Height: =26
+                    Height: =34
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
                     PaddingLeft: =0
@@ -463,9 +463,9 @@ ReportsScreen As screen:
                 
                 If(varFChange=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,Area.Facility.FacilityID=FacilityReportDropdown.Selected.FacilityID)));
                 
-                //If(varSDate=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,'Created On'>= StartDatePicker.SelectedDate)));
+                If(varSDate=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,'Created On'>= StartDatePicker.SelectedDate)));
                 
-                //If(varEDate=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,'Created On'<= EndDatePicker.SelectedDate)));
+                If(varEDate=true, ClearCollect(varWorkOrders,Filter(varWorkOrders,'Created On'<= EndDatePicker.SelectedDate)));
             Width: =44
             X: =446
             Y: =80
