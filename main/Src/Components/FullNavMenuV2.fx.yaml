@@ -99,10 +99,6 @@ FullNavMenuV2 As CanvasComponent:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
             ZIndex: =2
 
             iconDocCap As icon.Document:
@@ -125,6 +121,7 @@ FullNavMenuV2 As CanvasComponent:
             btnDocCap As button:
                 Align: =Align.Left
                 BorderStyle: =BorderStyle.None
+                BorderThickness: =0
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -141,6 +138,7 @@ FullNavMenuV2 As CanvasComponent:
                     Set(contFacManMenuVis, false );
                     Set(contFleetManMenuVis,false);
                     Set(contUtilManMenuVis,false);
+                PaddingTop: =0
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
@@ -912,7 +910,7 @@ FullNavMenuV2 As CanvasComponent:
             DropShadow: =DropShadow.Light
             FillPortions: =0
             Height: =varNavPaneBtnsHeight
-            LayoutMinHeight: =112
+            LayoutMinHeight: =0
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
