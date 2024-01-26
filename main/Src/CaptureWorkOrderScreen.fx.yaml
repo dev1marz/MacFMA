@@ -10,7 +10,9 @@ CaptureWorkOrderScreen As screen:
         Collect(colEstates,MacFMAEstates);
         ClearCollect(colFacility," ");
         Collect(colFacility,MacFMAFacilities);ClearCollect(colArea," ");
-        Collect(colArea,MacFMAAreas)
+        Collect(colArea,MacFMAAreas);
+        
+        Set(varPersResp,"");
 
     Label5_5 As label:
         Align: =Align.Center
@@ -651,6 +653,7 @@ CaptureWorkOrderScreen As screen:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(62, 74, 83, 1)
                 Items: =Choices([@MacFMAWorkOrders].crf01_PersonResponsible)
+                OnChange: =Set(varPersResp,DataCardValue30.Selected.StaffID)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(197, 203, 207, 1)

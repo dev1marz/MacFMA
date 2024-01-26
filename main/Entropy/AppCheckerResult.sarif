@@ -14232,6 +14232,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varPersResp"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varPersResp",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varPersResp",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.MARZ_SK-03 mini"
                 }
               ],
