@@ -577,6 +577,7 @@
       "requireapprovalforqueueemail": "Is Approval For Queue Email Required",
       "requireapprovalforuseremail": "Is Approval For User Email Required",
       "resolvesimilarunresolvedemailaddress": "Apply same email address to all unresolved matches when you manually resolve it for one",
+      "restrictGuestUserAccess": "Restrict guest users access to the organization",
       "restrictstatusupdate": "Restrict Status Update",
       "reverseproxyipaddresses": "List of reverse proxy IP addresses to be allowed.",
       "rierrorstatus": "Error status of Relationship Insights provisioning.",
@@ -1994,6 +1995,10 @@
       },
       "OptionSetReferenceItem94": {
         "OptionSetReferenceColumnName": "userratingenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem95": {
+        "OptionSetReferenceColumnName": "restrictGuestUserAccess",
         "OptionSetReferenceEntityName": "Organizations"
       }
     },
