@@ -1958,19 +1958,19 @@
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem86": {
-        "OptionSetReferenceColumnName": "sendbulkemailinuci",
+        "OptionSetReferenceColumnName": "restrictGuestUserAccess",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem87": {
-        "OptionSetReferenceColumnName": "servestaticresourcesfromazurecdn",
+        "OptionSetReferenceColumnName": "sendbulkemailinuci",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem88": {
-        "OptionSetReferenceColumnName": "sessionrecordingenabled",
+        "OptionSetReferenceColumnName": "servestaticresourcesfromazurecdn",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem89": {
-        "OptionSetReferenceColumnName": "sessiontimeoutenabled",
+        "OptionSetReferenceColumnName": "sessionrecordingenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem9": {
@@ -1978,27 +1978,27 @@
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem90": {
-        "OptionSetReferenceColumnName": "suppressvalidationemails",
+        "OptionSetReferenceColumnName": "sessiontimeoutenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem91": {
-        "OptionSetReferenceColumnName": "tablescopeddvsearchinapps",
+        "OptionSetReferenceColumnName": "suppressvalidationemails",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem92": {
-        "OptionSetReferenceColumnName": "textanalyticsenabled",
+        "OptionSetReferenceColumnName": "tablescopeddvsearchinapps",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem93": {
-        "OptionSetReferenceColumnName": "usequickfindviewforgridsearch",
+        "OptionSetReferenceColumnName": "textanalyticsenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem94": {
-        "OptionSetReferenceColumnName": "userratingenabled",
+        "OptionSetReferenceColumnName": "usequickfindviewforgridsearch",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem95": {
-        "OptionSetReferenceColumnName": "restrictGuestUserAccess",
+        "OptionSetReferenceColumnName": "userratingenabled",
         "OptionSetReferenceEntityName": "Organizations"
       }
     },

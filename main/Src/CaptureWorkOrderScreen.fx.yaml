@@ -424,7 +424,7 @@ CaptureWorkOrderScreen As screen:
             Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: "& DataCardValue31.Text &", Action Required: "& DataCardValue17.Text & " in " & DataCardValue23.Selected.AreaID & "," & DataCardValue23.Selected.Facility.FacilityID & ",Priority:, " & DataCardValue2.Selected.Value,
                 {
                     Attachments: ForAll(
-                    DataCardValue92.Attachments,
+                    Image1.Image
                         {
                             ContentBytes: Value,
                             Name: Name
