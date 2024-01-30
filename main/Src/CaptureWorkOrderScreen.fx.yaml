@@ -1223,7 +1223,7 @@ CaptureWorkOrderScreen As screen:
                 Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
                 OnSelect: |-
                     =ClearCollect( ImageCollection,
-                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image, '@odata.type':""});
+                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image});
                 Tooltip: =Parent.DisplayName
                 Width: =AddPicture1.Width
                 X: =AddPicture1.X
@@ -1236,10 +1236,10 @@ CaptureWorkOrderScreen As screen:
                 Height: =182
                 OnChange: |-
                     =ClearCollect( ImageCollection,
-                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image, '@odata.type':""});
+                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image});
                 OnSelect: |-
                     =ClearCollect( ImageCollection,
-                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image, '@odata.type':""});
+                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image});
                 Width: =Parent.Width - 60
                 X: =30
                 Y: =DataCardKey70.Y + DataCardKey70.Height + 5
