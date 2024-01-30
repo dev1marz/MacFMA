@@ -1281,7 +1281,7 @@ CaptureWorkOrderScreen As screen:
             Height: =50
             Required: =true
             Update: =DataCardValue78.Selected.Value
-            Visible: =false
+            Visible: =true
             Width: =609
             X: =0
             Y: =9
