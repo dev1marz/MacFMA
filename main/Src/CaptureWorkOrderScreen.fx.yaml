@@ -380,7 +380,7 @@ CaptureWorkOrderScreen As screen:
                          contentBytes: UploadedImage1.Image,
                          name: Text(varQCNum)}
                          ,varQCNum);*/
-                Set(ScreenState,0);
+                //Set(ScreenState,0);
                 ClearCollect(colWorkOrders,MacFMAWorkOrders)
             PaddingBottom: =5.00
             PaddingLeft: =5.00
@@ -422,6 +422,7 @@ CaptureWorkOrderScreen As screen:
             =Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: "& DataCardValue31.Text &", Action Required: "& DataCardValue17.Text & " in " & DataCardValue23.Selected.AreaID & "," & DataCardValue23.Selected.Facility.FacilityID & ",Priority:, " & DataCardValue2.Selected.Value,
                 {Attachments: ImageCollection, IsHtml:true}
             );
+            
             Notify("Success",NotificationType.Success);
             
         Visible: =ScreenState
