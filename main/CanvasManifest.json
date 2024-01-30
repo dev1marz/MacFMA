@@ -99,7 +99,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 180,
+    "BindingErrorCount": 179,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -117,7 +117,7 @@
     "ManualOfflineProfileId": "",
     "Name": "MacFMA V1",
     "OriginatingVersion": "1.325",
-    "ParserErrorCount": 4,
+    "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {
