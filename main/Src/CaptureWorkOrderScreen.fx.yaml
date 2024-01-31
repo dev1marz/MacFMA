@@ -421,7 +421,7 @@ CaptureWorkOrderScreen As screen:
         OnSuccess: |+
             =Set(varImg,JSON(Image1.Image,JSONFormat.IncludeBinaryData));
             
-            Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: \n <img src=" & varImg & ">"
+            Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: "
             );
             
             Notify("Success",NotificationType.Success);
