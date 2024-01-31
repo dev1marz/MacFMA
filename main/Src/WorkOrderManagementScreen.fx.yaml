@@ -595,6 +595,18 @@ WorkOrderManagementScreen As screen:
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(62, 74, 83, 1)
                 Items: =Choices([@MacFMAWorkOrders].crf01_PersonResponsible)
+                OnChange: |
+                    =Set(varPersResp,DataCardValue30.Selected.StaffID);
+                    
+                    Set(varSurResp,LookUp(MacFMAStaffs,StaffID=DataCardValue30.Selected.StaffID,Surname));
+                    
+                    Set(varRespEmail,LookUp(MacFMAStaffs,StaffID=DataCardValue30.Selected.StaffID,EmailID));
+                OnSelect: |
+                    =Set(varPersResp,DataCardValue30.Selected.StaffID);
+                    
+                    Set(varSurResp,LookUp(MacFMAStaffs,StaffID=DataCardValue30.Selected.StaffID,Surname));
+                    
+                    Set(varRespEmail,LookUp(MacFMAStaffs,StaffID=DataCardValue30.Selected.StaffID,EmailID));
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(197, 203, 207, 1)

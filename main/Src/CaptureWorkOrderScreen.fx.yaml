@@ -419,7 +419,7 @@ CaptureWorkOrderScreen As screen:
         OnFailure: =Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New;
         OnSuccess: |+
-            =Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: "
+            =Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: ",{Attachments: ImageCollection, IsHtml:true}
             );
             
             Notify("Success",NotificationType.Success);
@@ -1222,7 +1222,7 @@ CaptureWorkOrderScreen As screen:
                 Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
                 OnSelect: |-
                     =ClearCollect( ImageCollection,
-                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image});
+                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image, '@odata.type':""});
                 Tooltip: =Parent.DisplayName
                 Width: =AddPicture1.Width
                 X: =AddPicture1.X
@@ -1235,10 +1235,10 @@ CaptureWorkOrderScreen As screen:
                 Height: =182
                 OnChange: |-
                     =ClearCollect( ImageCollection,
-                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image});
+                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image, '@odata.type':""});
                 OnSelect: |-
                     =ClearCollect( ImageCollection,
-                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image});
+                      {Name: "WorkOrderImage.jpg", ContentBytes: Image1.Image, '@odata.type':""});
                 Width: =Parent.Width - 60
                 X: =30
                 Y: =DataCardKey70.Y + DataCardKey70.Height + 5
