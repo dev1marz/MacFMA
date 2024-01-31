@@ -381,7 +381,12 @@ CaptureWorkOrderScreen As screen:
                          name: Text(varQCNum)}
                          ,varQCNum);*/
                 //Set(ScreenState,0);
-                ClearCollect(colWorkOrders,MacFMAWorkOrders)
+                ClearCollect(colWorkOrders,MacFMAWorkOrders);
+                
+                Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: ",{Attachments:{Name: "WorkOrder.jpg",ContentBytes: AddPicture1.Media,'@odatatype':""
+                    }
+                }
+                );
             PaddingBottom: =5.00
             PaddingLeft: =5.00
             Size: =24.00
@@ -419,11 +424,7 @@ CaptureWorkOrderScreen As screen:
         OnFailure: =Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New;
         OnSuccess: |+
-            =Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: ",{Attachments:{Name: "WorkOrder.jpg",ContentBytes: AddPicture1.Media,'@odatatype':""
-                }
-            }
-            );
-            
+            =
             Notify("Success",NotificationType.Success);
             
         Visible: =ScreenState
