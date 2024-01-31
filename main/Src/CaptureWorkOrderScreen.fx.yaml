@@ -423,7 +423,7 @@ CaptureWorkOrderScreen As screen:
                 varRespEmail,
                 "New Work Order Assigned",
                 "Please find details about new work order; Problem: " & DataCardValue31.Text,
-                { Attachments: ImageCollection, IsHtml: true }
+                { Attachments: {Name: "WorkOrder.jpg", ContentBytes: Image1.Image, '@odata.type':"" }}
             );
             Notify("Success",NotificationType.Success);
             
@@ -1234,7 +1234,7 @@ CaptureWorkOrderScreen As screen:
                 Fill: =RGBA(0, 0, 0, 1)
                 Height: =182
                 OnChange: |-
-                    =Collect( ImageCollection,
+                    =ClearCollect( ImageCollection,
                       {Name: "WorkOrder.jpg", ContentBytes: Image1.Image, '@odata.type':""})
                 Width: =Parent.Width - 60
                 X: =30
