@@ -14685,36 +14685,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varImg"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varImg",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varImg",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.MARZ_SK-03 mini"
                 }
               ],

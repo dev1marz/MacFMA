@@ -538,7 +538,14 @@
         "Strikethrough",
         "Padding",
         "OnSelect",
-        "OnChange",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnChange",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "UseMobileCamera"
       ],
       "HasDynamicProperties": false,
