@@ -419,7 +419,11 @@ CaptureWorkOrderScreen As screen:
         OnFailure: =Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New;
         OnSuccess: |+
-            =Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: ",{Attachments: ImageCollection, IsHtml:true}
+            =Office365Outlook.SendEmailV2(
+                varRespEmail,
+                "New Work Order Assigned",
+                "Please find details about new work order; Problem: " & DataCardValue31.Text,
+                { Attachments: ImageCollection, IsHtml: true }
             );
             Notify("Success",NotificationType.Success);
             
