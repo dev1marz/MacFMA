@@ -1186,7 +1186,7 @@
   "DoesTestStepsMetadataExist": true,
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/31/2024 12:08:37",
+  "HeaderLastSavedDateTimeUTC": "01/31/2024 12:21:46",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "23af83e5-4b06-4783-92cc-5c427b13045a": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/d276640cc117438abc049b72a575063e-edcfcb5d4e465853\"",
@@ -1232,6 +1232,7 @@
     "CustomGallerySample": 238,
     "Documents": 243,
     "DropDownSample": 236,
+    "ImageCollection": 267,
     "MacFMAAreas": 252,
     "MacFMAAreas\\crf01_macfmaareas_statecode": 177,
     "MacFMAAreas\\crf01_macfmaareas_statuscode": 178,
@@ -1488,8 +1489,7 @@
     "Users\\systemuser_preferredemailcode": 209,
     "Users\\systemuser_preferredphonecode": 210,
     "Users\\systemuser_setupuser": 195,
-    "varWorkOrders": 265,
-    "volImg": 267
+    "varWorkOrders": 265
   },
   "OrderGroupControls": {
     "FacilityManGroup_1": {
