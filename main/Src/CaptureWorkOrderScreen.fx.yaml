@@ -383,8 +383,7 @@ CaptureWorkOrderScreen As screen:
                 //Set(ScreenState,0);
                 ClearCollect(colWorkOrders,MacFMAWorkOrders);
                 
-                Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: ",{Attachments:{Name: "WorkOrder.jpg",ContentBytes: AddPicture1.Media,'@odatatype':""
-                    }
+                Office365Outlook.SendEmailV2(varRespEmail,"New Work Order Assigned","Please find details about new work order; Problem: ",{Attachments:{Name: "WorkOrder.jpg",ContentBytes: AddPicture1.Media,'@odatatype':""}
                 }
                 );
             PaddingBottom: =5.00
