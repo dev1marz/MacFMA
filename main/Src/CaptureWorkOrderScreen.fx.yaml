@@ -425,8 +425,8 @@ CaptureWorkOrderScreen As screen:
             Office365Outlook.SendEmailV2(
                 varRespEmail,
                 "New Work Order Assigned",
-                "Please find details about new work order; Problem: " & DataCardValue31.Text,
-                { Attachments: {Name: "WorkOrder.jpg", ContentBytes: Image1.Image, '@odata.type':"" }}
+                "Please find details about new work order; Problem: " & DataCardValue31.Text & ", Action Required: "& DataCardValue17.Text & " Area/Room: " &  DataCardValue23.Selected.AreaID & DataCardValue95.Selected.RoomID
+                
             );
             Notify("Success",NotificationType.Success);
             
