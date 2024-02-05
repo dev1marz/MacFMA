@@ -263,7 +263,14 @@ WorkOrderManagementScreen As screen:
         NumberOfColumns: =1
         OnFailure: =NewForm(WorkOrderManagementForm);Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New
-        OnSuccess: =Notify("Success",NotificationType.Success)
+        OnSuccess: |-
+            =Office365Outlook.SendEmailV2(
+                varRespEmail,
+                "New Work Order Assigned",
+                "Please find details about new work order; Problem: " & DataCardValue41.Text & ", Action Required: "& DataCardValue44.Text & " Area/Room: " &  DataCardValue66.Selected.AreaID
+                
+            );
+            Notify("Success",NotificationType.Success);
         SnapToColumns: =false
         Visible: =ScreenState
         Width: =640

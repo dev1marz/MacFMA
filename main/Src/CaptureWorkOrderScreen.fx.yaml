@@ -369,6 +369,7 @@ CaptureWorkOrderScreen As screen:
             LayoutMinWidth: =280
             OnSelect: |
                 =SubmitForm(CaptureWorkOrderAddForm);
+                Set(ScreenState,0);
                 //Set(varImageName, (Last(MacFMAWorkOrders).OrderID));
                 /*MacPFMAFileUpload.Run({
                         contentBytes: Image1.Image,
@@ -418,7 +419,7 @@ CaptureWorkOrderScreen As screen:
         Item: =WorkOrderDataTable.Selected
         OnFailure: =Notify("Error!", NotificationType.Error)
         OnReset: =FormMode.New;
-        OnSuccess: |+
+        OnSuccess: |
             =Collect( ImageCollection,
               {Name: "WorkOrder.jpg", ContentBytes: Image1.Image, '@odata.type':""});
             
@@ -429,7 +430,6 @@ CaptureWorkOrderScreen As screen:
                 
             );
             Notify("Success",NotificationType.Success);
-            
         Visible: =ScreenState
         Width: =609
         Y: =139
